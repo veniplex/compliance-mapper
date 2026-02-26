@@ -3,6 +3,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const rateLimit = require('express-rate-limit');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,6 +27,22 @@ for (const controls of Object.values(controlsData)) {
     controlsById[control.id] = control;
   }
 }
+
+// Rate limiters
+const apiLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 200,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests, please try again later.' },
+});
+
+const staticLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 300,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 
 // ── Middleware ────────────────────────────────────────────────────────────────
 
@@ -193,7 +210,7 @@ router.get('/themes', (req, res) => {
   res.json({ data: themes });
 });
 
-app.use('/api', router);
+app.use('/api', apiLimiter, router);
 
 // ── 404 handler for unknown API routes ────────────────────────────────────────
 
@@ -202,7 +219,7 @@ app.use('/api/*', (_req, res) => {
 });
 
 // Serve the SPA for all other routes
-app.get('*', (_req, res) => {
+app.get('*', staticLimiter, (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
