@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compliance Mapper — Cybersecurity Framework Overlap</title>
+  <meta name="description" content="Map overlapping controls across ISO 27001, NIS2, GDPR, DORA, CIS Controls and NIST CSF." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="h-full bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-200">
+
+  <!-- ── Navigation ── -->
+  <header class="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center h-16 gap-4">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="text-2xl" aria-hidden="true">🛡️</span>
+        <span class="font-bold text-lg tracking-tight truncate">Compliance Mapper</span>
+        <span class="hidden sm:inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 ml-1">EU Cybersecurity</span>
+      </div>
+      <nav class="hidden sm:flex items-center gap-1 ml-4 text-sm font-medium" id="main-nav">
+        <button data-view="mapper" class="nav-btn active px-3 py-1.5 rounded-lg">Mapper</button>
+        <button data-view="frameworks" class="nav-btn px-3 py-1.5 rounded-lg">Frameworks</button>
+        <button data-view="apidocs" class="nav-btn px-3 py-1.5 rounded-lg">API</button>
+      </nav>
+      <div class="ml-auto flex items-center gap-2">
+        <button id="theme-toggle" aria-label="Toggle dark mode"
+          class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <!-- Mobile nav toggle -->
+        <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile nav -->
+    <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+      <div class="px-4 py-2 flex flex-col gap-1 text-sm font-medium">
+        <button data-view="mapper" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Mapper</button>
+        <button data-view="frameworks" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Frameworks</button>
+        <button data-view="apidocs" class="nav-btn mobile text-left px-3 py-2 rounded-lg">API Docs</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Main content ── -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- ════ Mapper View ════ -->
+    <section id="view-mapper" class="view-section">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold">Control Overlap Mapper</h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Select two frameworks to explore their overlapping and related controls.</p>
+      </div>
+
+      <!-- Framework selectors -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Source Framework</label>
+          <select id="select-from" class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
+            <option value="">All frameworks</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Target Framework</label>
+          <select id="select-to" class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
+            <option value="">All frameworks</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Filters row -->
+      <div class="flex flex-wrap gap-3 mb-6">
+        <div class="flex-1 min-w-48">
+          <input id="search-input" type="search" placeholder="Search controls or descriptions…"
+            class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" />
+        </div>
+        <div>
+          <select id="select-relationship" class="rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
+            <option value="">All relationships</option>
+            <option value="equivalent">Equivalent</option>
+            <option value="related">Related</option>
+          </select>
+        </div>
+        <div>
+          <select id="select-theme" class="rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
+            <option value="">All themes</option>
+          </select>
+        </div>
+        <button id="clear-filters" class="px-4 py-2.5 text-sm rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-600 dark:text-gray-400">
+          Clear
+        </button>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="flex items-center gap-4 mb-4 text-sm text-gray-500 dark:text-gray-400">
+        <span id="mapping-count" class="font-medium text-gray-700 dark:text-gray-300"></span>
+        <span class="flex items-center gap-1">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>Equivalent
+        </span>
+        <span class="flex items-center gap-1">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400"></span>Related
+        </span>
+      </div>
+
+      <!-- Mappings table -->
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider w-28">Rel.</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">Source Control</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">Target Control</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider hidden lg:table-cell">Theme</th>
+              </tr>
+            </thead>
+            <tbody id="mappings-tbody" class="divide-y divide-gray-100 dark:divide-gray-800 bg-white dark:bg-gray-950">
+              <tr><td colspan="4" class="text-center py-10 text-gray-400">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ Frameworks View ════ -->
+    <section id="view-frameworks" class="view-section hidden">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold">Supported Frameworks</h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Overview of all cybersecurity and privacy compliance frameworks indexed in this tool.</p>
+      </div>
+      <div id="frameworks-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="text-center py-10 text-gray-400 col-span-full">Loading…</div>
+      </div>
+    </section>
+
+    <!-- ════ API Docs View ════ -->
+    <section id="view-apidocs" class="view-section hidden">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold">REST API Documentation</h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Use the JSON API to integrate control mappings into your own tools and workflows.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Base URL -->
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+          <div class="bg-gray-50 dark:bg-gray-900 px-5 py-3 border-b border-gray-200 dark:border-gray-800">
+            <h2 class="font-semibold text-sm">Base URL</h2>
+          </div>
+          <div class="px-5 py-4">
+            <code id="api-base-url" class="text-blue-600 dark:text-blue-400 font-mono text-sm bg-blue-50 dark:bg-blue-950 px-2 py-1 rounded"></code>
+          </div>
+        </div>
+
+        <!-- Endpoint cards -->
+        <div id="api-endpoints" class="space-y-4"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Detail Modal ── -->
+  <div id="modal-overlay" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div id="modal-content" class="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white dark:bg-gray-900 shadow-2xl border border-gray-200 dark:border-gray-700">
+      <div class="sticky top-0 flex items-start justify-between p-5 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+        <h2 id="modal-title" class="font-bold text-lg pr-4"></h2>
+        <button id="modal-close" class="shrink-0 p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition" aria-label="Close">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="modal-body" class="p-5 space-y-4 text-sm"></div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

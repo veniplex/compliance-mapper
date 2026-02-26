@@ -1,0 +1,68 @@
+[
+  {
+    "id": "iso27001",
+    "name": "ISO/IEC 27001:2022",
+    "shortName": "ISO 27001",
+    "description": "International standard for information security management systems (ISMS). Provides requirements for establishing, implementing, maintaining, and continually improving an ISMS.",
+    "version": "2022",
+    "region": "International",
+    "type": "Standard",
+    "url": "https://www.iso.org/standard/82875.html",
+    "color": "#2563eb"
+  },
+  {
+    "id": "nis2",
+    "name": "NIS2 Directive",
+    "shortName": "NIS2",
+    "description": "EU Directive on measures for a high common level of cybersecurity across the Union (2022/2555). Replaces the original NIS Directive and significantly expands its scope.",
+    "version": "2022/2555",
+    "region": "European Union",
+    "type": "Regulation",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022L2555",
+    "color": "#0891b2"
+  },
+  {
+    "id": "gdpr",
+    "name": "General Data Protection Regulation",
+    "shortName": "GDPR",
+    "description": "EU regulation on data protection and privacy (2016/679). Sets rules for the processing of personal data and ensures the protection of fundamental rights of individuals.",
+    "version": "2016/679",
+    "region": "European Union",
+    "type": "Regulation",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "color": "#7c3aed"
+  },
+  {
+    "id": "dora",
+    "name": "Digital Operational Resilience Act",
+    "shortName": "DORA",
+    "description": "EU regulation on digital operational resilience for the financial sector (2022/2554). Harmonises ICT risk management requirements for financial entities across the EU.",
+    "version": "2022/2554",
+    "region": "European Union",
+    "type": "Regulation",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554",
+    "color": "#d97706"
+  },
+  {
+    "id": "cis",
+    "name": "CIS Controls v8",
+    "shortName": "CIS Controls",
+    "description": "Prioritised set of actions to protect organisations and data from known cyber attack vectors. Developed by the Center for Internet Security.",
+    "version": "v8",
+    "region": "International",
+    "type": "Framework",
+    "url": "https://www.cisecurity.org/controls",
+    "color": "#059669"
+  },
+  {
+    "id": "nistcsf",
+    "name": "NIST Cybersecurity Framework 2.0",
+    "shortName": "NIST CSF",
+    "description": "Voluntary framework for managing and reducing cybersecurity risk, organised around six core functions: Govern, Identify, Protect, Detect, Respond, Recover.",
+    "version": "2.0",
+    "region": "International",
+    "type": "Framework",
+    "url": "https://www.nist.gov/cyberframework",
+    "color": "#dc2626"
+  }
+]
