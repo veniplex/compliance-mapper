@@ -74,6 +74,7 @@ describe('GET /api/frameworks', () => {
     const { body } = await get('/api/frameworks');
     const ids = body.data.map(f => f.id);
     assert.ok(ids.includes('iso27001'));
+    assert.ok(ids.includes('iso27001-2013'));
     assert.ok(ids.includes('nis2'));
     assert.ok(ids.includes('gdpr'));
     assert.ok(ids.includes('dora'));
@@ -86,6 +87,14 @@ describe('GET /api/frameworks/:id', () => {
     assert.equal(status, 200);
     assert.equal(body.data.id, 'iso27001');
     assert.ok(body.data.name.includes('27001'));
+  });
+
+  test('returns iso27001-2013 framework', async () => {
+    const { status, body } = await get('/api/frameworks/iso27001-2013');
+    assert.equal(status, 200);
+    assert.equal(body.data.id, 'iso27001-2013');
+    assert.ok(body.data.name.includes('2013'));
+    assert.equal(body.data.version, '2013');
   });
 
   test('returns 404 for unknown framework', async () => {
@@ -101,6 +110,14 @@ describe('GET /api/frameworks/:id/controls', () => {
     assert.equal(status, 200);
     assert.ok(Array.isArray(body.data));
     assert.ok(body.data.length > 0);
+  });
+
+  test('returns controls for iso27001-2013', async () => {
+    const { status, body } = await get('/api/frameworks/iso27001-2013/controls');
+    assert.equal(status, 200);
+    assert.ok(Array.isArray(body.data));
+    assert.ok(body.data.length >= 114, 'Expected all 114 ISO 27001:2013 controls');
+    assert.ok(body.data.every(c => c.frameworkId === 'iso27001-2013'));
   });
 
   test('controls have required fields', async () => {
@@ -173,6 +190,15 @@ describe('GET /api/mappings', () => {
     const { body } = await get('/api/mappings?from=iso27001');
     assert.ok(body.data.length > 0);
     assert.ok(body.data.every(m => m.sourceControl.frameworkId === 'iso27001'));
+  });
+
+  test('from=iso27001-2013 filter returns mappings to iso27001', async () => {
+    const { body } = await get('/api/mappings?from=iso27001-2013&to=iso27001');
+    assert.ok(body.data.length > 0);
+    for (const m of body.data) {
+      assert.equal(m.sourceControl.frameworkId, 'iso27001-2013');
+      assert.equal(m.targetControl.frameworkId, 'iso27001');
+    }
   });
 
   test('to= filter works', async () => {
