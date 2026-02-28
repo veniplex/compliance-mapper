@@ -1,5 +1,8 @@
 'use strict';
 
+// Set a test API key before the app is loaded so the middleware uses it
+process.env.API_KEYS = 'test-api-key-123';
+
 const { test, describe, before, after } = require('node:test');
 const assert = require('node:assert/strict');
 const http = require('node:http');
@@ -23,16 +26,29 @@ after(() => new Promise(resolve => {
   server.close(resolve);
 }));
 
-function get(path) {
+function get(path, headers = {}) {
   return new Promise((resolve, reject) => {
-    http.get(`${baseUrl}${path}`, res => {
+    const url = new URL(`${baseUrl}${path}`);
+    const merged = { 'x-api-key': 'test-api-key-123', ...headers };
+    // Remove undefined values so callers can opt out of default headers
+    const filteredHeaders = Object.fromEntries(
+      Object.entries(merged).filter(([, v]) => v !== undefined)
+    );
+    const options = {
+      hostname: url.hostname,
+      port: url.port,
+      path: url.pathname + url.search,
+      method: 'GET',
+      headers: filteredHeaders,
+    };
+    http.request(options, res => {
       let body = '';
       res.setEncoding('utf8');
       res.on('data', chunk => { body += chunk; });
       res.on('end', () => {
         resolve({ status: res.statusCode, headers: res.headers, body: JSON.parse(body) });
       });
-    }).on('error', reject);
+    }).on('error', reject).end();
   });
 }
 
@@ -246,5 +262,24 @@ describe('Unknown API route', () => {
     const { status, body } = await get('/api/nonexistent-route');
     assert.equal(status, 404);
     assert.ok(body.error);
+  });
+});
+
+describe('API key authentication', () => {
+  test('returns 401 when x-api-key header is missing', async () => {
+    const { status, body } = await get('/api/frameworks', { 'x-api-key': undefined });
+    assert.equal(status, 401);
+    assert.ok(body.error);
+  });
+
+  test('returns 403 when x-api-key is invalid', async () => {
+    const { status, body } = await get('/api/frameworks', { 'x-api-key': 'wrong-key' });
+    assert.equal(status, 403);
+    assert.ok(body.error);
+  });
+
+  test('returns 200 when x-api-key is valid', async () => {
+    const { status } = await get('/api/frameworks', { 'x-api-key': 'test-api-key-123' });
+    assert.equal(status, 200);
   });
 });
