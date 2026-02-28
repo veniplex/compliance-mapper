@@ -4,12 +4,10 @@
 const state = {
   frameworks: [],
   mappings: [],
-  filtered: [],
-  themes: [],
   controlsData: {},
   controlIndex: {},
   selectedFramework: null,
-  currentView: 'mapper',
+  currentView: 'frameworks',
 };
 
 /* ── API helpers ────────────────────────────────────────────────────── */
@@ -78,7 +76,7 @@ function escHtml(str) {
 
 /* ── Populate selects ────────────────────────────────────────────────── */
 function populateFrameworkSelects(frameworks) {
-  ['select-from', 'select-to', 'ctable-fw-select'].forEach(id => {
+  ['ctable-fw-select'].forEach(id => {
     const sel = document.getElementById(id);
     frameworks.forEach(fw => {
       const opt = document.createElement('option');
@@ -101,7 +99,7 @@ function populateThemeSelect(themes) {
 
 /* ── Stats banner ────────────────────────────────────────────────────── */
 function renderStatsBanner(stats) {
-  const banner = document.getElementById('stats-banner');
+  const banner = document.getElementById('fw-stats-banner');
   const items = [
     { label: 'Frameworks', value: stats.frameworkCount },
     { label: 'Controls', value: stats.controlCount },
@@ -112,11 +110,11 @@ function renderStatsBanner(stats) {
     })),
   ];
   banner.innerHTML = items.map(item =>
-    `<span class="inline-flex items-center gap-1 text-gray-600 dark:text-gray-400">
+    `<span class="inline-flex items-center gap-1.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl px-3 py-1.5">
       <span class="font-bold text-gray-800 dark:text-gray-200">${item.value}</span>
-      <span>${escHtml(item.label)}</span>
+      <span class="text-gray-500 dark:text-gray-400">${escHtml(item.label)}</span>
     </span>`
-  ).join('<span class="text-gray-300 dark:text-gray-700">·</span>');
+  ).join('');
   banner.classList.remove('hidden');
 }
 
@@ -738,21 +736,17 @@ async function init() {
   initTheme();
 
   try {
-    const [frameworks, mappings, themes, stats] = await Promise.all([
+    const [frameworks, mappings, stats] = await Promise.all([
       apiFetch('/frameworks'),
       apiFetch('/mappings'),
-      apiFetch('/themes'),
       apiFetch('/stats'),
     ]);
 
     state.frameworks = frameworks;
     state.mappings = mappings;
-    state.filtered = mappings;
-    state.themes = themes;
 
     // Populate UI
     populateFrameworkSelects(frameworks);
-    populateThemeSelect(themes);
     renderStatsBanner(stats);
 
     // Load controls for framework page (keyed by fw id)
@@ -771,26 +765,15 @@ async function init() {
       });
     });
 
-    renderMappings();
     renderFrameworksPage(frameworks, controlsData, mappings);
     renderApiDocs();
 
-    // Hook up filter controls
-    ['select-from', 'select-to', 'select-relationship', 'select-theme'].forEach(id => {
-      document.getElementById(id).addEventListener('change', applyFilters);
-    });
-    document.getElementById('search-input').addEventListener('input', applyFilters);
-
-    document.getElementById('clear-filters').addEventListener('click', () => {
-      document.getElementById('select-from').value = '';
-      document.getElementById('select-to').value = '';
-      document.getElementById('select-relationship').value = '';
-      document.getElementById('select-theme').value = '';
-      document.getElementById('search-input').value = '';
-      applyFilters();
-    });
-
-    document.getElementById('export-csv').addEventListener('click', exportCSV);
+    // Preselect ISO 27001:2022 in Controls Table
+    const ctableSelect = document.getElementById('ctable-fw-select');
+    if (state.controlsData['iso27001']) {
+      ctableSelect.value = 'iso27001';
+      renderControlsTable('iso27001');
+    }
 
   // Click / keyboard handler on mapping icons (delegated, attached once)
   document.getElementById('ctable-container').addEventListener('click', e => {
@@ -812,8 +795,8 @@ async function init() {
 
   } catch (err) {
     console.error('Failed to load data:', err);
-    document.getElementById('mappings-tbody').innerHTML =
-      `<tr><td colspan="4" class="text-center py-12 text-red-500">Failed to load data. Please refresh.</td></tr>`;
+    document.getElementById('ctable-container').innerHTML =
+      `<p class="text-center py-12 text-red-500">Failed to load data. Please refresh.</p>`;
   }
 }
 
