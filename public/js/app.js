@@ -78,7 +78,7 @@ function escHtml(str) {
 
 /* ── Populate selects ────────────────────────────────────────────────── */
 function populateFrameworkSelects(frameworks) {
-  ['select-from', 'select-to'].forEach(id => {
+  ['select-from', 'select-to', 'ctable-fw-select'].forEach(id => {
     const sel = document.getElementById(id);
     frameworks.forEach(fw => {
       const opt = document.createElement('option');
@@ -445,6 +445,112 @@ function openControlMappingModal(controlId) {
   });
 }
 
+/* ── Controls mapping table view ─────────────────────────────────────── */
+function renderControlsTable(fwId) {
+  const container = document.getElementById('ctable-container');
+
+  if (!fwId) {
+    container.innerHTML = '<p class="text-center text-gray-400 py-10">Select a framework above to view its controls and mappings.</p>';
+    return;
+  }
+
+  const fw = state.frameworks.find(f => f.id === fwId);
+  if (!fw) return;
+
+  const controls = state.controlsData[fwId] || [];
+  const otherFrameworks = state.frameworks.filter(f => f.id !== fwId);
+
+  if (controls.length === 0) {
+    container.innerHTML = '<p class="text-center text-gray-400 py-10">No controls found for this framework.</p>';
+    return;
+  }
+
+  // Build index: controlId → frameworkId → [{ mappingId, relationship, otherControl }]
+  const controlMappingIndex = {};
+  controls.forEach(c => { controlMappingIndex[c.id] = {}; });
+
+  state.mappings.forEach(m => {
+    const src = m.sourceControl;
+    const tgt = m.targetControl;
+    let controlId = null;
+    let otherControl = null;
+
+    if (src && src.frameworkId === fwId && controlMappingIndex[src.id] !== undefined) {
+      controlId = src.id;
+      otherControl = tgt;
+    } else if (tgt && tgt.frameworkId === fwId && controlMappingIndex[tgt.id] !== undefined) {
+      controlId = tgt.id;
+      otherControl = src;
+    }
+
+    if (controlId && otherControl) {
+      const ofwId = otherControl.frameworkId;
+      if (!controlMappingIndex[controlId][ofwId]) controlMappingIndex[controlId][ofwId] = [];
+      controlMappingIndex[controlId][ofwId].push({
+        mappingId: m.id,
+        relationship: m.relationship,
+        otherControl,
+      });
+    }
+  });
+
+  const headerCells = otherFrameworks.map(ofw =>
+    `<th class="px-2 py-3 text-center font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">
+      <span class="fw-badge" style="background:${ofw.color}20;color:${ofw.color};border:1px solid ${ofw.color}40">${escHtml(ofw.shortName)}</span>
+    </th>`
+  ).join('');
+
+  const rows = controls.map(c => {
+    const mappingCells = otherFrameworks.map(ofw => {
+      const maps = controlMappingIndex[c.id][ofw.id] || [];
+      if (maps.length === 0) {
+        return `<td class="px-2 py-3 text-center"><span class="mapping-sym none" title="No mapping to ${escHtml(ofw.shortName)}">—</span></td>`;
+      }
+      const icons = maps.map(mp => {
+        const label = `${mp.relationship === 'equivalent' ? 'Equivalent' : 'Related'}: ${mp.otherControl.ref} — ${mp.otherControl.title}`;
+        return `<span class="mapping-sym ${escHtml(mp.relationship)} ctable-icon" tabindex="0" role="button"
+          data-mapping-id="${escHtml(mp.mappingId)}"
+          aria-label="${escHtml(label)}"
+          title="${escHtml(label)}"
+        >${mp.relationship === 'equivalent' ? '≡' : '~'}</span>`;
+      }).join('');
+      return `<td class="px-2 py-3 text-center">${icons}</td>`;
+    }).join('');
+
+    return `<tr>
+      <td class="px-4 py-3 ctable-control-col">
+        <div class="font-mono font-semibold text-xs" style="color:${fw.color}">${escHtml(c.ref)}</div>
+        <div class="font-medium text-xs mt-0.5">${escHtml(c.title)}</div>
+        <span class="text-xs px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 mt-1 inline-block">${escHtml(c.theme)}</span>
+      </td>
+      ${mappingCells}
+    </tr>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+            <tr>
+              <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider ctable-control-col">Control</th>
+              ${headerCells}
+            </tr>
+          </thead>
+          <tbody id="ctable-tbody" class="divide-y divide-gray-100 dark:divide-gray-800 bg-white dark:bg-gray-950">
+            ${rows}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="mt-3 text-xs text-gray-500 dark:text-gray-400 text-center">
+      <span class="mapping-sym equivalent" style="display:inline-flex">≡</span> Equivalent &nbsp;
+      <span class="mapping-sym related" style="display:inline-flex">~</span> Related &nbsp;
+      <span class="mapping-sym none" style="display:inline-flex">—</span> No mapping &nbsp;· Click an icon to view details
+    </p>
+  `;
+}
+
 /* ── API Docs page ───────────────────────────────────────────────────── */
 function renderApiDocs() {
   const base = `${window.location.origin}/api`;
@@ -620,7 +726,23 @@ async function init() {
       applyFilters();
     });
 
-    document.getElementById('fw-back-btn').addEventListener('click', () => showView('frameworks'));
+  // Click / keyboard handler on mapping icons (delegated, attached once)
+  document.getElementById('ctable-container').addEventListener('click', e => {
+    const icon = e.target.closest('[data-mapping-id]');
+    if (icon) openMappingModal(icon.dataset.mappingId);
+  });
+  document.getElementById('ctable-container').addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      const icon = e.target.closest('[data-mapping-id]');
+      if (icon) { e.preventDefault(); openMappingModal(icon.dataset.mappingId); }
+    }
+  });
+
+  document.getElementById('fw-back-btn').addEventListener('click', () => showView('frameworks'));
+
+    document.getElementById('ctable-fw-select').addEventListener('change', e => {
+      renderControlsTable(e.target.value);
+    });
 
   } catch (err) {
     console.error('Failed to load data:', err);
