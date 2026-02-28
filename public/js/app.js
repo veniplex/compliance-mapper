@@ -6,6 +6,9 @@ const state = {
   mappings: [],
   filtered: [],
   themes: [],
+  controlsData: {},
+  controlIndex: {},
+  selectedFramework: null,
   currentView: 'mapper',
 };
 
@@ -262,7 +265,7 @@ function renderFrameworksPage(frameworks, controlsData, mappings) {
     };
     const typeClass = typeColors[fw.type] || '';
 
-    return `<div class="fw-card border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+    return `<div class="fw-card border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 cursor-pointer" data-fw-id="${escHtml(fw.id)}">
       <div class="h-1.5" style="background:${fw.color}"></div>
       <div class="p-5">
         <div class="flex items-start justify-between gap-2 mb-3">
@@ -278,12 +281,162 @@ function renderFrameworksPage(frameworks, controlsData, mappings) {
           <span class="font-semibold">${controlCount} <span class="font-normal text-gray-500">controls</span></span>
           <span class="font-semibold">${mappingCount} <span class="font-normal text-gray-500">mappings</span></span>
         </div>
-        <a href="${escHtml(fw.url)}" target="_blank" rel="noopener noreferrer"
-          class="mt-3 inline-block text-xs font-medium hover:underline"
-          style="color:${fw.color}">Official source ↗</a>
+        <div class="mt-3 flex items-center justify-between">
+          <a href="${escHtml(fw.url)}" target="_blank" rel="noopener noreferrer"
+            class="text-xs font-medium hover:underline"
+            style="color:${fw.color}" onclick="event.stopPropagation()">Official source ↗</a>
+          <span class="text-xs text-gray-400 dark:text-gray-500">View controls →</span>
+        </div>
       </div>
     </div>`;
   }).join('');
+
+  // Click card → show framework controls
+  grid.querySelectorAll('.fw-card[data-fw-id]').forEach(card => {
+    card.addEventListener('click', () => showFrameworkControls(card.dataset.fwId));
+  });
+}
+
+/* ── Framework controls view ─────────────────────────────────────────── */
+function showFrameworkControls(fwId) {
+  state.selectedFramework = fwId;
+  renderFrameworkControls();
+  showView('framework-controls');
+}
+
+function renderFrameworkControls() {
+  const fwId = state.selectedFramework;
+  const fw = state.frameworks.find(f => f.id === fwId);
+  const controls = state.controlsData[fwId] || [];
+
+  const header = document.getElementById('fw-controls-header');
+  header.innerHTML = `
+    <div class="flex items-center gap-3 mb-2">
+      <span class="fw-badge" style="background:${fw.color}20;color:${fw.color};border:1px solid ${fw.color}40">${escHtml(fw.shortName)}</span>
+      <h1 class="text-2xl font-bold">${escHtml(fw.name)}</h1>
+    </div>
+    <p class="text-sm text-gray-500 dark:text-gray-400">${escHtml(fw.description)}</p>
+    <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">${controls.length} controls — click a control to see its cross-framework mappings</p>
+  `;
+
+  const list = document.getElementById('fw-controls-list');
+  if (controls.length === 0) {
+    list.innerHTML = '<p class="text-gray-400 text-center py-10">No controls found.</p>';
+    return;
+  }
+
+  const groups = {};
+  controls.forEach(c => {
+    const g = c.category || 'Other';
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(c);
+  });
+
+  list.innerHTML = Object.entries(groups).map(([cat, ctrls]) => `
+    <div class="mb-6">
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">${escHtml(cat)}</h3>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden bg-white dark:bg-gray-950">
+        ${ctrls.map((c, i) => `
+          <div class="control-row flex items-start gap-3 px-4 py-3 cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors ${i > 0 ? 'border-t border-gray-100 dark:border-gray-800' : ''}" data-control-id="${escHtml(c.id)}">
+            <div class="shrink-0 mt-0.5">
+              <span class="inline-block font-mono text-xs font-bold px-2 py-0.5 rounded" style="background:${fw.color}20;color:${fw.color}">${escHtml(c.ref)}</span>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="font-semibold text-sm">${escHtml(c.title)}</div>
+              <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 leading-relaxed">${escHtml(c.description)}</div>
+              <span class="text-xs px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 mt-1.5 inline-block">${escHtml(c.theme)}</span>
+            </div>
+            <div class="shrink-0 self-center text-gray-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+
+  list.querySelectorAll('.control-row').forEach(row => {
+    row.addEventListener('click', () => openControlMappingModal(row.dataset.controlId));
+  });
+}
+
+/* ── Control mapping modal ───────────────────────────────────────────── */
+function openControlMappingModal(controlId) {
+  const entry = state.controlIndex[controlId];
+  if (!entry) return;
+  const { control, framework: fw } = entry;
+
+  const relatedMappings = state.mappings.filter(m =>
+    (m.sourceControl && m.sourceControl.id === controlId) ||
+    (m.targetControl && m.targetControl.id === controlId)
+  );
+
+  const otherFrameworks = state.frameworks.filter(f => f.id !== control.frameworkId);
+  const fwMappings = {};
+  relatedMappings.forEach(m => {
+    const isSource = m.sourceControl && m.sourceControl.id === controlId;
+    const otherControl = isSource ? m.targetControl : m.sourceControl;
+    if (!otherControl) return;
+    const ofwId = otherControl.frameworkId;
+    if (!fwMappings[ofwId]) fwMappings[ofwId] = [];
+    fwMappings[ofwId].push({ control: otherControl, relationship: m.relationship });
+  });
+
+  const totalEquivalent = relatedMappings.filter(m => m.relationship === 'equivalent').length;
+  const totalRelated = relatedMappings.filter(m => m.relationship === 'related').length;
+
+  document.getElementById('modal-title').innerHTML =
+    `<div class="flex items-center gap-2 flex-wrap">${fwBadge(fw)}<span class="font-mono font-bold">${escHtml(control.ref)}</span></div>` +
+    `<div class="text-base font-semibold mt-0.5">${escHtml(control.title)}</div>`;
+
+  document.getElementById('modal-body').innerHTML = `
+    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">${escHtml(control.description)}</p>
+    <div class="flex flex-wrap gap-2 mt-1">
+      <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">${escHtml(control.theme)}</span>
+      <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">${escHtml(control.category)}</span>
+    </div>
+
+    <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400 pt-1">
+      <span class="font-semibold text-gray-700 dark:text-gray-300">${relatedMappings.length} mapping${relatedMappings.length !== 1 ? 's' : ''}</span>
+      ${totalEquivalent > 0 ? `<span class="flex items-center gap-1.5"><span class="mapping-sym equivalent">≡</span>${totalEquivalent} equivalent</span>` : ''}
+      ${totalRelated > 0 ? `<span class="flex items-center gap-1.5"><span class="mapping-sym related">~</span>${totalRelated} related</span>` : ''}
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+      <table class="min-w-full text-sm">
+        <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+          <tr>
+            <th class="px-3 py-2 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Framework</th>
+            <th class="px-3 py-2 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Mapped Control(s)</th>
+            <th class="px-3 py-2 text-center text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Type</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 dark:divide-gray-800 bg-white dark:bg-gray-950">
+          ${otherFrameworks.map(ofw => {
+            const maps = fwMappings[ofw.id] || [];
+            if (maps.length === 0) {
+              return `<tr>
+                <td class="px-3 py-2.5">${fwBadge(ofw)}</td>
+                <td class="px-3 py-2.5 text-gray-400 text-xs">—</td>
+                <td class="px-3 py-2.5 text-center"><span class="mapping-sym none">—</span></td>
+              </tr>`;
+            }
+            return maps.map((mp, i) => `<tr>
+              <td class="px-3 py-2.5">${i === 0 ? fwBadge(ofw) : ''}</td>
+              <td class="px-3 py-2.5">
+                <div class="font-mono font-semibold text-xs">${escHtml(mp.control.ref)}</div>
+                <div class="text-xs text-gray-500 dark:text-gray-400">${escHtml(mp.control.title)}</div>
+              </td>
+              <td class="px-3 py-2.5 text-center"><span class="mapping-sym ${mp.relationship}" title="${mp.relationship === 'equivalent' ? 'Equivalent' : 'Related'}">${mp.relationship === 'equivalent' ? '≡' : '~'}</span></td>
+            </tr>`).join('');
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  document.getElementById('modal-overlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
 }
 
 /* ── API Docs page ───────────────────────────────────────────────────── */
@@ -432,6 +585,15 @@ async function init() {
     );
     const controlsEntries = await Promise.all(controlsDataPromises);
     const controlsData = Object.fromEntries(controlsEntries);
+    state.controlsData = controlsData;
+
+    // Build O(1) control lookup: controlId → { control, framework }
+    state.controlIndex = {};
+    frameworks.forEach(fw => {
+      (controlsData[fw.id] || []).forEach(c => {
+        state.controlIndex[c.id] = { control: c, framework: fw };
+      });
+    });
 
     renderMappings();
     renderFrameworksPage(frameworks, controlsData, mappings);
@@ -451,6 +613,8 @@ async function init() {
       document.getElementById('search-input').value = '';
       applyFilters();
     });
+
+    document.getElementById('fw-back-btn').addEventListener('click', () => showView('frameworks'));
 
   } catch (err) {
     console.error('Failed to load data:', err);

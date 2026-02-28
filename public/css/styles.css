@@ -101,6 +101,7 @@ tbody tr:hover {
   border-width: 1px;
   transition: box-shadow 0.15s, transform 0.15s;
   overflow: hidden;
+  cursor: pointer;
 }
 .fw-card:hover {
   box-shadow: 0 8px 24px -4px rgba(0,0,0,0.12);
@@ -108,6 +109,43 @@ tbody tr:hover {
 }
 .dark .fw-card:hover {
   box-shadow: 0 8px 24px -4px rgba(0,0,0,0.5);
+}
+
+/* ── Mapping status symbols ── */
+.mapping-sym {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+.mapping-sym.equivalent {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+.dark .mapping-sym.equivalent {
+  background-color: #14532d;
+  color: #86efac;
+}
+.mapping-sym.related {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+.dark .mapping-sym.related {
+  background-color: #422006;
+  color: #fde047;
+}
+.mapping-sym.none {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+}
+.dark .mapping-sym.none {
+  background-color: #1f2937;
+  color: #4b5563;
 }
 
 /* ── API code block ── */
