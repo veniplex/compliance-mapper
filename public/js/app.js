@@ -7,7 +7,7 @@ const state = {
   controlsData: {},
   controlIndex: {},
   selectedFramework: null,
-  currentView: 'controls-table',
+  currentView: 'frameworks',
 };
 
 /* ── API helpers ────────────────────────────────────────────────────── */
@@ -99,7 +99,7 @@ function populateThemeSelect(themes) {
 
 /* ── Stats banner ────────────────────────────────────────────────────── */
 function renderStatsBanner(stats) {
-  const banner = document.getElementById('stats-banner');
+  const banner = document.getElementById('fw-stats-banner');
   const items = [
     { label: 'Frameworks', value: stats.frameworkCount },
     { label: 'Controls', value: stats.controlCount },
@@ -110,11 +110,11 @@ function renderStatsBanner(stats) {
     })),
   ];
   banner.innerHTML = items.map(item =>
-    `<span class="inline-flex items-center gap-1 text-gray-600 dark:text-gray-400">
+    `<span class="inline-flex items-center gap-1.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl px-3 py-1.5">
       <span class="font-bold text-gray-800 dark:text-gray-200">${item.value}</span>
-      <span>${escHtml(item.label)}</span>
+      <span class="text-gray-500 dark:text-gray-400">${escHtml(item.label)}</span>
     </span>`
-  ).join('<span class="text-gray-300 dark:text-gray-700">·</span>');
+  ).join('');
   banner.classList.remove('hidden');
 }
 
@@ -736,9 +736,10 @@ async function init() {
   initTheme();
 
   try {
-    const [frameworks, mappings] = await Promise.all([
+    const [frameworks, mappings, stats] = await Promise.all([
       apiFetch('/frameworks'),
       apiFetch('/mappings'),
+      apiFetch('/stats'),
     ]);
 
     state.frameworks = frameworks;
@@ -746,6 +747,7 @@ async function init() {
 
     // Populate UI
     populateFrameworkSelects(frameworks);
+    renderStatsBanner(stats);
 
     // Load controls for framework page (keyed by fw id)
     const controlsDataPromises = frameworks.map(fw =>
@@ -765,6 +767,13 @@ async function init() {
 
     renderFrameworksPage(frameworks, controlsData, mappings);
     renderApiDocs();
+
+    // Preselect ISO 27001:2022 in Controls Table
+    const ctableSelect = document.getElementById('ctable-fw-select');
+    if (state.controlsData['iso27001']) {
+      ctableSelect.value = 'iso27001';
+      renderControlsTable('iso27001');
+    }
 
   // Click / keyboard handler on mapping icons (delegated, attached once)
   document.getElementById('ctable-container').addEventListener('click', e => {
