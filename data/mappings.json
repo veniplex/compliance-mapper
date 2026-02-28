@@ -570,7 +570,7 @@
     "id": "map-082",
     "sourceControlId": "iso27001-2013-A.5.1.2",
     "targetControlId": "iso27001-5.1",
-    "relationship": "subset",
+    "relationship": "related",
     "notes": "The review requirement from A.5.1.2 is incorporated into the broader ISO 27001:2022 control 5.1."
   },
   {
@@ -682,7 +682,7 @@
     "id": "map-098",
     "sourceControlId": "iso27001-2013-A.9.1.2",
     "targetControlId": "iso27001-5.15",
-    "relationship": "subset",
+    "relationship": "related",
     "notes": "Network access control from ISO 27001:2013 A.9.1.2 is a component of the broader ISO 27001:2022 access management control 5.15."
   },
   {
@@ -801,7 +801,7 @@
     "id": "map-115",
     "sourceControlId": "iso27001-2013-A.12.4.2",
     "targetControlId": "iso27001-8.15",
-    "relationship": "subset",
+    "relationship": "related",
     "notes": "Protection of log information from ISO 27001:2013 A.12.4.2 is incorporated into the broader logging control 8.15 in ISO 27001:2022."
   }
 ]
