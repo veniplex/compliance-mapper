@@ -57,6 +57,21 @@ document.getElementById('mobile-menu-btn').addEventListener('click', () => {
   document.getElementById('mobile-menu').classList.toggle('hidden');
 });
 
+/* ── Mapper internal tabs ────────────────────────────────────────────── */
+function showMapperTab(tabId) {
+  const panel = document.getElementById(`mapper-tab-${tabId}`);
+  if (!panel) return;
+  document.querySelectorAll('.mapper-tab-panel').forEach(p => p.classList.add('hidden'));
+  panel.classList.remove('hidden');
+  document.querySelectorAll('.mapper-tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tabId);
+  });
+}
+
+document.querySelectorAll('.mapper-tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => showMapperTab(btn.dataset.tab));
+});
+
 /* ── Framework colour helpers ────────────────────────────────────────── */
 function fwColor(fw) {
   return fw ? fw.color : '#6b7280';

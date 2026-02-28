@@ -1,5 +1,8 @@
 /* Additional styles not covered by Tailwind utilities */
 
+/* ── Visibility utility (fallback for when Tailwind CDN is unavailable) ── */
+.hidden { display: none !important; }
+
 /* ── Smooth transitions ── */
 * { box-sizing: border-box; }
 
@@ -179,6 +182,31 @@ tbody tr:hover {
   overflow-y: auto;
   white-space: pre;
   word-break: break-all;
+}
+
+/* ── Mapper tab buttons ── */
+.mapper-tab-btn {
+  color: #6b7280;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  margin-bottom: -1px;
+}
+.dark .mapper-tab-btn {
+  color: #9ca3af;
+}
+.mapper-tab-btn:hover {
+  color: #111827;
+}
+.dark .mapper-tab-btn:hover {
+  color: #f9fafb;
+}
+.mapper-tab-btn.active {
+  color: #1d4ed8;
+  border-bottom-color: #1d4ed8;
+}
+.dark .mapper-tab-btn.active {
+  color: #93c5fd;
+  border-bottom-color: #93c5fd;
 }
 
 /* ── Controls mapping table ── */
