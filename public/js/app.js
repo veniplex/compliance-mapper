@@ -379,7 +379,7 @@ function openControlMappingModal(controlId) {
     if (!otherControl) return;
     const ofwId = otherControl.frameworkId;
     if (!fwMappings[ofwId]) fwMappings[ofwId] = [];
-    fwMappings[ofwId].push({ control: otherControl, relationship: m.relationship });
+    fwMappings[ofwId].push({ control: otherControl, relationship: m.relationship, mappingId: m.id });
   });
 
   const totalEquivalent = relatedMappings.filter(m => m.relationship === 'equivalent').length;
@@ -421,7 +421,7 @@ function openControlMappingModal(controlId) {
                 <td class="px-3 py-2.5 text-center"><span class="mapping-sym none">—</span></td>
               </tr>`;
             }
-            return maps.map((mp, i) => `<tr>
+            return maps.map((mp, i) => `<tr class="cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors" data-mapping-id="${escHtml(mp.mappingId)}">
               <td class="px-3 py-2.5">${i === 0 ? fwBadge(ofw) : ''}</td>
               <td class="px-3 py-2.5">
                 <div class="font-mono font-semibold text-xs">${escHtml(mp.control.ref)}</div>
@@ -437,6 +437,12 @@ function openControlMappingModal(controlId) {
 
   document.getElementById('modal-overlay').classList.remove('hidden');
   document.body.style.overflow = 'hidden';
+
+  // Wire up mapped-control rows via event delegation → open the mapping detail
+  document.getElementById('modal-body').addEventListener('click', e => {
+    const row = e.target.closest('tr[data-mapping-id]');
+    if (row) openMappingModal(row.dataset.mappingId);
+  });
 }
 
 /* ── API Docs page ───────────────────────────────────────────────────── */
