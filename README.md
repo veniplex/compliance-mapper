@@ -51,4 +51,17 @@ npm test
 
 ## License
 
-[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) — free to use, share, and adapt for **non-commercial purposes** with attribution. Commercial use is not permitted. See the [LICENSE](LICENSE) file for details.
+This project is released under a custom **Non-Commercial Use License**. See the [LICENSE](LICENSE) file for the full terms.
+
+**Permitted ✅**
+- Personal use
+- Educational and research use
+- Open-source projects
+- Internal business use (running the software within your own organisation)
+
+**Prohibited ❌**
+- Selling this software or any derivative of it
+- Using this software to deliver paid services to clients (e.g. consulting, managed services, SaaS)
+- Bundling this software in any commercial product or offering
+
+For commercial licensing enquiries, open an issue or contact the maintainer via the repository.
