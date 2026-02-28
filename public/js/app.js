@@ -37,16 +37,30 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 });
 
 /* ── Navigation ─────────────────────────────────────────────────────── */
+const CONTROLS_TABLE_ANCHOR_ID = 'controls-table-anchor';
+
 function showView(viewId) {
+  // 'controls-table' is now part of the mapper overview; show mapper and scroll to it
+  const targetId = viewId === 'controls-table' ? 'mapper' : viewId;
+
   document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
-  document.getElementById(`view-${viewId}`).classList.remove('hidden');
+  document.getElementById(`view-${targetId}`).classList.remove('hidden');
 
   document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.view === viewId);
+    const isActive = btn.dataset.view === targetId ||
+      (targetId === 'mapper' && btn.dataset.view === 'controls-table');
+    btn.classList.toggle('active', isActive);
   });
 
-  state.currentView = viewId;
+  state.currentView = targetId;
   document.getElementById('mobile-menu').classList.add('hidden');
+
+  if (viewId === 'controls-table') {
+    requestAnimationFrame(() => {
+      const anchor = document.getElementById(CONTROLS_TABLE_ANCHOR_ID);
+      if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
 }
 
 document.querySelectorAll('.nav-btn').forEach(btn => {
@@ -55,21 +69,6 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
 
 document.getElementById('mobile-menu-btn').addEventListener('click', () => {
   document.getElementById('mobile-menu').classList.toggle('hidden');
-});
-
-/* ── Mapper internal tabs ────────────────────────────────────────────── */
-function showMapperTab(tabId) {
-  const panel = document.getElementById(`mapper-tab-${tabId}`);
-  if (!panel) return;
-  document.querySelectorAll('.mapper-tab-panel').forEach(p => p.classList.add('hidden'));
-  panel.classList.remove('hidden');
-  document.querySelectorAll('.mapper-tab-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.tab === tabId);
-  });
-}
-
-document.querySelectorAll('.mapper-tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => showMapperTab(btn.dataset.tab));
 });
 
 /* ── Framework colour helpers ────────────────────────────────────────── */
