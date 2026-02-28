@@ -181,6 +181,32 @@ tbody tr:hover {
   word-break: break-all;
 }
 
+/* ── Controls mapping table ── */
+.ctable-control-col {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 180px;
+  background-color: inherit;
+}
+.bg-white .ctable-control-col,
+tbody tr .ctable-control-col {
+  background-color: #ffffff;
+}
+.dark tbody tr .ctable-control-col {
+  background-color: #030712;
+}
+.ctable-icon {
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.ctable-icon:hover,
+.ctable-icon:focus {
+  transform: scale(1.2);
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+
 /* ── Scrollbar styling ── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }

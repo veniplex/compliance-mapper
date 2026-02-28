@@ -33,6 +33,7 @@
       <nav class="hidden sm:flex items-center gap-1 ml-4 text-sm font-medium" id="main-nav">
         <button data-view="mapper" class="nav-btn active px-3 py-1.5 rounded-lg">Mapper</button>
         <button data-view="frameworks" class="nav-btn px-3 py-1.5 rounded-lg">Frameworks</button>
+        <button data-view="controls-table" class="nav-btn px-3 py-1.5 rounded-lg">Controls Table</button>
         <button data-view="apidocs" class="nav-btn px-3 py-1.5 rounded-lg">API</button>
       </nav>
       <div class="ml-auto flex items-center gap-2">
@@ -51,6 +52,7 @@
       <div class="px-4 py-2 flex flex-col gap-1 text-sm font-medium">
         <button data-view="mapper" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Mapper</button>
         <button data-view="frameworks" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Frameworks</button>
+        <button data-view="controls-table" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Controls Table</button>
         <button data-view="apidocs" class="nav-btn mobile text-left px-3 py-2 rounded-lg">API Docs</button>
       </div>
     </div>
@@ -158,6 +160,25 @@
       </div>
       <div id="fw-controls-list">
         <div class="text-center py-10 text-gray-400">Loading…</div>
+      </div>
+    </section>
+
+    <!-- ════ Controls Table View ════ -->
+    <section id="view-controls-table" class="view-section hidden">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold">Controls Mapping Table</h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Select a framework to see all its controls and their mappings to every other framework.</p>
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Framework</label>
+        <select id="ctable-fw-select" class="rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
+          <option value="">Select a framework…</option>
+        </select>
+      </div>
+
+      <div id="ctable-container">
+        <p class="text-center text-gray-400 py-10">Select a framework above to view its controls and mappings.</p>
       </div>
     </section>
 
