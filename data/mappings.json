@@ -558,5 +558,250 @@
     "targetControlId": "nis2-art21-d",
     "relationship": "related",
     "notes": "Cloud service management (ISO 27001 5.23) is an important component of supply chain security required by NIS2 Art. 21(2)(d)."
+  },
+  {
+    "id": "map-081",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2022 control 5.1 consolidates A.5.1.1 and A.5.1.2 from ISO 27001:2013 into a single policy control."
+  },
+  {
+    "id": "map-082",
+    "sourceControlId": "iso27001-2013-A.5.1.2",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "related",
+    "notes": "The review requirement from A.5.1.2 is incorporated into the broader ISO 27001:2022 control 5.1."
+  },
+  {
+    "id": "map-083",
+    "sourceControlId": "iso27001-2013-A.6.1.1",
+    "targetControlId": "iso27001-5.2",
+    "relationship": "equivalent",
+    "notes": "Information security roles and responsibilities are directly carried over from ISO 27001:2013 A.6.1.1 to ISO 27001:2022 5.2."
+  },
+  {
+    "id": "map-084",
+    "sourceControlId": "iso27001-2013-A.6.1.2",
+    "targetControlId": "iso27001-5.3",
+    "relationship": "equivalent",
+    "notes": "Segregation of duties is directly carried over from ISO 27001:2013 A.6.1.2 to ISO 27001:2022 5.3."
+  },
+  {
+    "id": "map-085",
+    "sourceControlId": "iso27001-2013-A.6.1.3",
+    "targetControlId": "iso27001-5.5",
+    "relationship": "equivalent",
+    "notes": "Contact with authorities is directly carried over from ISO 27001:2013 A.6.1.3 to ISO 27001:2022 5.5."
+  },
+  {
+    "id": "map-086",
+    "sourceControlId": "iso27001-2013-A.6.1.4",
+    "targetControlId": "iso27001-5.6",
+    "relationship": "equivalent",
+    "notes": "Contact with special interest groups is directly carried over from ISO 27001:2013 A.6.1.4 to ISO 27001:2022 5.6."
+  },
+  {
+    "id": "map-087",
+    "sourceControlId": "iso27001-2013-A.6.1.5",
+    "targetControlId": "iso27001-5.8",
+    "relationship": "equivalent",
+    "notes": "Information security in project management is directly carried over from ISO 27001:2013 A.6.1.5 to ISO 27001:2022 5.8."
+  },
+  {
+    "id": "map-088",
+    "sourceControlId": "iso27001-2013-A.7.1.1",
+    "targetControlId": "iso27001-6.1",
+    "relationship": "equivalent",
+    "notes": "Screening of personnel is directly carried over from ISO 27001:2013 A.7.1.1 to ISO 27001:2022 6.1."
+  },
+  {
+    "id": "map-089",
+    "sourceControlId": "iso27001-2013-A.7.1.2",
+    "targetControlId": "iso27001-6.2",
+    "relationship": "equivalent",
+    "notes": "Terms and conditions of employment are directly carried over from ISO 27001:2013 A.7.1.2 to ISO 27001:2022 6.2."
+  },
+  {
+    "id": "map-090",
+    "sourceControlId": "iso27001-2013-A.7.2.1",
+    "targetControlId": "iso27001-5.4",
+    "relationship": "equivalent",
+    "notes": "Management responsibilities for information security are directly carried over from ISO 27001:2013 A.7.2.1 to ISO 27001:2022 5.4."
+  },
+  {
+    "id": "map-091",
+    "sourceControlId": "iso27001-2013-A.7.2.2",
+    "targetControlId": "iso27001-6.3",
+    "relationship": "equivalent",
+    "notes": "Information security awareness, education and training is directly carried over from ISO 27001:2013 A.7.2.2 to ISO 27001:2022 6.3."
+  },
+  {
+    "id": "map-092",
+    "sourceControlId": "iso27001-2013-A.8.1.1",
+    "targetControlId": "iso27001-5.9",
+    "relationship": "equivalent",
+    "notes": "Asset inventory requirement is directly carried over from ISO 27001:2013 A.8.1.1 to ISO 27001:2022 5.9 (expanded to include associated assets)."
+  },
+  {
+    "id": "map-093",
+    "sourceControlId": "iso27001-2013-A.8.1.3",
+    "targetControlId": "iso27001-5.10",
+    "relationship": "equivalent",
+    "notes": "Acceptable use of assets is directly carried over from ISO 27001:2013 A.8.1.3 to ISO 27001:2022 5.10."
+  },
+  {
+    "id": "map-094",
+    "sourceControlId": "iso27001-2013-A.8.1.4",
+    "targetControlId": "iso27001-5.11",
+    "relationship": "equivalent",
+    "notes": "Return of assets is directly carried over from ISO 27001:2013 A.8.1.4 to ISO 27001:2022 5.11."
+  },
+  {
+    "id": "map-095",
+    "sourceControlId": "iso27001-2013-A.8.2.1",
+    "targetControlId": "iso27001-5.12",
+    "relationship": "equivalent",
+    "notes": "Classification of information is directly carried over from ISO 27001:2013 A.8.2.1 to ISO 27001:2022 5.12."
+  },
+  {
+    "id": "map-096",
+    "sourceControlId": "iso27001-2013-A.8.2.2",
+    "targetControlId": "iso27001-5.13",
+    "relationship": "equivalent",
+    "notes": "Labelling of information is directly carried over from ISO 27001:2013 A.8.2.2 to ISO 27001:2022 5.13."
+  },
+  {
+    "id": "map-097",
+    "sourceControlId": "iso27001-2013-A.9.1.1",
+    "targetControlId": "iso27001-5.15",
+    "relationship": "equivalent",
+    "notes": "Access control policy from ISO 27001:2013 A.9.1.1 is incorporated into the broader ISO 27001:2022 access management control 5.15."
+  },
+  {
+    "id": "map-098",
+    "sourceControlId": "iso27001-2013-A.9.1.2",
+    "targetControlId": "iso27001-5.15",
+    "relationship": "related",
+    "notes": "Network access control from ISO 27001:2013 A.9.1.2 is a component of the broader ISO 27001:2022 access management control 5.15."
+  },
+  {
+    "id": "map-099",
+    "sourceControlId": "iso27001-2013-A.9.2.3",
+    "targetControlId": "iso27001-8.2",
+    "relationship": "equivalent",
+    "notes": "Management of privileged access rights is directly carried over from ISO 27001:2013 A.9.2.3 to ISO 27001:2022 8.2."
+  },
+  {
+    "id": "map-100",
+    "sourceControlId": "iso27001-2013-A.10.1.1",
+    "targetControlId": "iso27001-8.24",
+    "relationship": "equivalent",
+    "notes": "Cryptographic controls policy is directly carried over from ISO 27001:2013 A.10.1.1 to ISO 27001:2022 8.24."
+  },
+  {
+    "id": "map-101",
+    "sourceControlId": "iso27001-2013-A.12.2.1",
+    "targetControlId": "iso27001-8.7",
+    "relationship": "equivalent",
+    "notes": "Controls against malware are directly carried over from ISO 27001:2013 A.12.2.1 to ISO 27001:2022 8.7."
+  },
+  {
+    "id": "map-102",
+    "sourceControlId": "iso27001-2013-A.12.4.1",
+    "targetControlId": "iso27001-8.15",
+    "relationship": "equivalent",
+    "notes": "Event logging requirements are directly carried over from ISO 27001:2013 A.12.4.1 to ISO 27001:2022 8.15."
+  },
+  {
+    "id": "map-103",
+    "sourceControlId": "iso27001-2013-A.12.6.1",
+    "targetControlId": "iso27001-8.8",
+    "relationship": "equivalent",
+    "notes": "Management of technical vulnerabilities is directly carried over from ISO 27001:2013 A.12.6.1 to ISO 27001:2022 8.8."
+  },
+  {
+    "id": "map-104",
+    "sourceControlId": "iso27001-2013-A.13.1.1",
+    "targetControlId": "iso27001-8.20",
+    "relationship": "equivalent",
+    "notes": "Network controls are directly carried over from ISO 27001:2013 A.13.1.1 to ISO 27001:2022 8.20."
+  },
+  {
+    "id": "map-105",
+    "sourceControlId": "iso27001-2013-A.14.2.1",
+    "targetControlId": "iso27001-8.25",
+    "relationship": "equivalent",
+    "notes": "Secure development policy is directly carried over from ISO 27001:2013 A.14.2.1 to ISO 27001:2022 8.25."
+  },
+  {
+    "id": "map-106",
+    "sourceControlId": "iso27001-2013-A.15.1.1",
+    "targetControlId": "iso27001-5.19",
+    "relationship": "equivalent",
+    "notes": "Supplier relationship security policy is directly carried over from ISO 27001:2013 A.15.1.1 to ISO 27001:2022 5.19."
+  },
+  {
+    "id": "map-107",
+    "sourceControlId": "iso27001-2013-A.16.1.1",
+    "targetControlId": "iso27001-5.24",
+    "relationship": "equivalent",
+    "notes": "Incident management responsibilities and procedures are directly carried over from ISO 27001:2013 A.16.1.1 to ISO 27001:2022 5.24."
+  },
+  {
+    "id": "map-108",
+    "sourceControlId": "iso27001-2013-A.16.1.5",
+    "targetControlId": "iso27001-5.26",
+    "relationship": "equivalent",
+    "notes": "Response to information security incidents is directly carried over from ISO 27001:2013 A.16.1.5 to ISO 27001:2022 5.26."
+  },
+  {
+    "id": "map-109",
+    "sourceControlId": "iso27001-2013-A.16.1.6",
+    "targetControlId": "iso27001-5.27",
+    "relationship": "equivalent",
+    "notes": "Learning from information security incidents is directly carried over from ISO 27001:2013 A.16.1.6 to ISO 27001:2022 5.27."
+  },
+  {
+    "id": "map-110",
+    "sourceControlId": "iso27001-2013-A.17.1.1",
+    "targetControlId": "iso27001-5.29",
+    "relationship": "equivalent",
+    "notes": "Planning information security continuity is directly carried over from ISO 27001:2013 A.17.1.1 to ISO 27001:2022 5.29."
+  },
+  {
+    "id": "map-111",
+    "sourceControlId": "iso27001-2013-A.17.2.1",
+    "targetControlId": "iso27001-5.30",
+    "relationship": "equivalent",
+    "notes": "Availability of information processing facilities is directly carried over from ISO 27001:2013 A.17.2.1 to ISO 27001:2022 5.30 (ICT readiness for business continuity)."
+  },
+  {
+    "id": "map-112",
+    "sourceControlId": "iso27001-2013-A.18.1.1",
+    "targetControlId": "iso27001-5.31",
+    "relationship": "equivalent",
+    "notes": "Identification of applicable legislation and contractual requirements is directly carried over from ISO 27001:2013 A.18.1.1 to ISO 27001:2022 5.31."
+  },
+  {
+    "id": "map-113",
+    "sourceControlId": "iso27001-2013-A.12.1.1",
+    "targetControlId": "iso27001-5.37",
+    "relationship": "equivalent",
+    "notes": "Documented operating procedures are directly carried over from ISO 27001:2013 A.12.1.1 to ISO 27001:2022 5.37."
+  },
+  {
+    "id": "map-114",
+    "sourceControlId": "iso27001-2013-A.12.1.2",
+    "targetControlId": "iso27001-8.9",
+    "relationship": "related",
+    "notes": "Change management from ISO 27001:2013 A.12.1.2 is related to the configuration management control 8.9 in ISO 27001:2022."
+  },
+  {
+    "id": "map-115",
+    "sourceControlId": "iso27001-2013-A.12.4.2",
+    "targetControlId": "iso27001-8.15",
+    "relationship": "related",
+    "notes": "Protection of log information from ISO 27001:2013 A.12.4.2 is incorporated into the broader logging control 8.15 in ISO 27001:2022."
   }
 ]
