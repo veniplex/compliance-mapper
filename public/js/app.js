@@ -4,12 +4,10 @@
 const state = {
   frameworks: [],
   mappings: [],
-  filtered: [],
-  themes: [],
   controlsData: {},
   controlIndex: {},
   selectedFramework: null,
-  currentView: 'mapper',
+  currentView: 'controls-table',
 };
 
 /* ── API helpers ────────────────────────────────────────────────────── */
@@ -78,7 +76,7 @@ function escHtml(str) {
 
 /* ── Populate selects ────────────────────────────────────────────────── */
 function populateFrameworkSelects(frameworks) {
-  ['select-from', 'select-to', 'ctable-fw-select'].forEach(id => {
+  ['ctable-fw-select'].forEach(id => {
     const sel = document.getElementById(id);
     frameworks.forEach(fw => {
       const opt = document.createElement('option');
@@ -738,22 +736,16 @@ async function init() {
   initTheme();
 
   try {
-    const [frameworks, mappings, themes, stats] = await Promise.all([
+    const [frameworks, mappings] = await Promise.all([
       apiFetch('/frameworks'),
       apiFetch('/mappings'),
-      apiFetch('/themes'),
-      apiFetch('/stats'),
     ]);
 
     state.frameworks = frameworks;
     state.mappings = mappings;
-    state.filtered = mappings;
-    state.themes = themes;
 
     // Populate UI
     populateFrameworkSelects(frameworks);
-    populateThemeSelect(themes);
-    renderStatsBanner(stats);
 
     // Load controls for framework page (keyed by fw id)
     const controlsDataPromises = frameworks.map(fw =>
@@ -771,26 +763,8 @@ async function init() {
       });
     });
 
-    renderMappings();
     renderFrameworksPage(frameworks, controlsData, mappings);
     renderApiDocs();
-
-    // Hook up filter controls
-    ['select-from', 'select-to', 'select-relationship', 'select-theme'].forEach(id => {
-      document.getElementById(id).addEventListener('change', applyFilters);
-    });
-    document.getElementById('search-input').addEventListener('input', applyFilters);
-
-    document.getElementById('clear-filters').addEventListener('click', () => {
-      document.getElementById('select-from').value = '';
-      document.getElementById('select-to').value = '';
-      document.getElementById('select-relationship').value = '';
-      document.getElementById('select-theme').value = '';
-      document.getElementById('search-input').value = '';
-      applyFilters();
-    });
-
-    document.getElementById('export-csv').addEventListener('click', exportCSV);
 
   // Click / keyboard handler on mapping icons (delegated, attached once)
   document.getElementById('ctable-container').addEventListener('click', e => {
@@ -812,8 +786,8 @@ async function init() {
 
   } catch (err) {
     console.error('Failed to load data:', err);
-    document.getElementById('mappings-tbody').innerHTML =
-      `<tr><td colspan="4" class="text-center py-12 text-red-500">Failed to load data. Please refresh.</td></tr>`;
+    document.getElementById('ctable-container').innerHTML =
+      `<p class="text-center py-12 text-red-500">Failed to load data. Please refresh.</p>`;
   }
 }
 

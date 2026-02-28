@@ -31,9 +31,8 @@
         <span class="hidden sm:inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 ml-1">EU Cybersecurity</span>
       </div>
       <nav class="hidden sm:flex items-center gap-1 ml-4 text-sm font-medium" id="main-nav">
-        <button data-view="mapper" class="nav-btn active px-3 py-1.5 rounded-lg">Mapper</button>
+        <button data-view="controls-table" class="nav-btn active px-3 py-1.5 rounded-lg">Controls Table</button>
         <button data-view="frameworks" class="nav-btn px-3 py-1.5 rounded-lg">Frameworks</button>
-        <button data-view="controls-table" class="nav-btn px-3 py-1.5 rounded-lg">Controls Table</button>
         <button data-view="apidocs" class="nav-btn px-3 py-1.5 rounded-lg">API</button>
       </nav>
       <div class="ml-auto flex items-center gap-2">
@@ -50,9 +49,8 @@
     <!-- Mobile nav -->
     <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
       <div class="px-4 py-2 flex flex-col gap-1 text-sm font-medium">
-        <button data-view="mapper" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Mapper</button>
-        <button data-view="frameworks" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Frameworks</button>
         <button data-view="controls-table" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Controls Table</button>
+        <button data-view="frameworks" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Frameworks</button>
         <button data-view="apidocs" class="nav-btn mobile text-left px-3 py-2 rounded-lg">API Docs</button>
       </div>
     </div>
@@ -60,89 +58,6 @@
 
   <!-- ── Main content ── -->
   <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-
-    <!-- ════ Mapper View ════ -->
-    <section id="view-mapper" class="view-section">
-      <div class="mb-6">
-        <h1 class="text-2xl font-bold">Control Overlap Mapper</h1>
-        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Select two frameworks to explore their overlapping and related controls.</p>
-        <!-- Stats banner -->
-        <div id="stats-banner" class="hidden mt-3 flex flex-wrap gap-4 text-sm"></div>
-      </div>
-
-      <!-- Framework selectors -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Source Framework</label>
-          <select id="select-from" class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
-            <option value="">All frameworks</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Target Framework</label>
-          <select id="select-to" class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
-            <option value="">All frameworks</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Filters row -->
-      <div class="flex flex-wrap gap-3 mb-6">
-        <div class="flex-1 min-w-48">
-          <input id="search-input" type="search" placeholder="Search controls or descriptions…"
-            class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition" />
-        </div>
-        <div>
-          <select id="select-relationship" class="rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
-            <option value="">All relationships</option>
-            <option value="equivalent">Equivalent</option>
-            <option value="related">Related</option>
-          </select>
-        </div>
-        <div>
-          <select id="select-theme" class="rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition">
-            <option value="">All themes</option>
-          </select>
-        </div>
-        <button id="clear-filters" class="px-4 py-2.5 text-sm rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-600 dark:text-gray-400">
-          Clear
-        </button>
-        <button id="export-csv" class="px-4 py-2.5 text-sm rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-600 dark:text-gray-400 flex items-center gap-1.5" title="Export current results as CSV">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Export CSV
-        </button>
-      </div>
-
-      <!-- Stats bar -->
-      <div class="flex items-center gap-4 mb-4 text-sm text-gray-500 dark:text-gray-400">
-        <span id="mapping-count" class="font-medium text-gray-700 dark:text-gray-300"></span>
-        <span class="flex items-center gap-1">
-          <span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>Equivalent
-        </span>
-        <span class="flex items-center gap-1">
-          <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400"></span>Related
-        </span>
-      </div>
-
-      <!-- Mappings table -->
-      <div class="rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
-        <div class="overflow-x-auto">
-          <table class="min-w-full text-sm">
-            <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider w-28">Rel.</th>
-                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">Source Control</th>
-                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">Target Control</th>
-                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider hidden lg:table-cell">Theme</th>
-              </tr>
-            </thead>
-            <tbody id="mappings-tbody" class="divide-y divide-gray-100 dark:divide-gray-800 bg-white dark:bg-gray-950">
-              <tr><td colspan="4" class="text-center py-10 text-gray-400">Loading…</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
 
     <!-- ════ Frameworks View ════ -->
     <section id="view-frameworks" class="view-section hidden">
@@ -170,7 +85,7 @@
     </section>
 
     <!-- ════ Controls Table View ════ -->
-    <section id="view-controls-table" class="view-section hidden">
+    <section id="view-controls-table" class="view-section">
       <div class="mb-6">
         <h1 class="text-2xl font-bold">Controls Mapping Table</h1>
         <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Select a framework to see all its controls and their mappings to every other framework.</p>
