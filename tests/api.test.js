@@ -276,6 +276,36 @@ describe('GET /api/themes', () => {
   });
 });
 
+describe('GET /api/stats', () => {
+  test('returns summary statistics', async () => {
+    const { status, body } = await get('/api/stats');
+    assert.equal(status, 200);
+    const s = body.data;
+    assert.ok(typeof s.frameworkCount === 'number', 'Missing frameworkCount');
+    assert.ok(typeof s.controlCount === 'number', 'Missing controlCount');
+    assert.ok(typeof s.mappingCount === 'number', 'Missing mappingCount');
+    assert.ok(s.frameworkCount >= 6, 'Expected at least 6 frameworks');
+    assert.ok(s.controlCount > 50, 'Expected many controls');
+    assert.ok(s.mappingCount >= 50, 'Expected at least 50 mappings');
+  });
+
+  test('controlsByFramework contains iso27001 and nis2', async () => {
+    const { body } = await get('/api/stats');
+    const cbf = body.data.controlsByFramework;
+    assert.ok(typeof cbf.iso27001 === 'number', 'Missing iso27001 key');
+    assert.ok(typeof cbf.nis2 === 'number', 'Missing nis2 key');
+  });
+
+  test('mappingsByRelationship counts sum to mappingCount', async () => {
+    const { body } = await get('/api/stats');
+    const mbr = body.data.mappingsByRelationship;
+    assert.ok(typeof mbr.equivalent === 'number', 'Missing equivalent count');
+    assert.ok(typeof mbr.related === 'number', 'Missing related count');
+    const total = Object.values(mbr).reduce((sum, n) => sum + n, 0);
+    assert.equal(total, body.data.mappingCount);
+  });
+});
+
 describe('CORS headers', () => {
   test('includes CORS headers on API responses', async () => {
     const { headers } = await get('/api/frameworks');

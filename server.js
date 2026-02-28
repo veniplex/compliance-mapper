@@ -216,6 +216,34 @@ router.get('/mappings/:id', (req, res) => {
 });
 
 /**
+ * GET /api/stats
+ * Returns summary statistics about the dataset.
+ */
+router.get('/stats', (_req, res) => {
+  const controlsByFramework = {};
+  for (const fw of frameworks) {
+    controlsByFramework[fw.id] = (controlsData[fw.id] || []).length;
+  }
+
+  const totalControls = Object.values(controlsByFramework).reduce((a, b) => a + b, 0);
+
+  const relationshipCounts = {};
+  for (const m of mappings) {
+    relationshipCounts[m.relationship] = (relationshipCounts[m.relationship] || 0) + 1;
+  }
+
+  res.json({
+    data: {
+      frameworkCount: frameworks.length,
+      controlCount: totalControls,
+      mappingCount: mappings.length,
+      controlsByFramework,
+      mappingsByRelationship: relationshipCounts,
+    },
+  });
+});
+
+/**
  * GET /api/themes
  * Returns unique themes available across all controls, optionally filtered by ?framework=.
  */
