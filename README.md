@@ -42,6 +42,7 @@ The app is available at `http://localhost:3000` (override with the `PORT` enviro
 | GET | `/api/controls/:id` | Get a single control |
 | GET | `/api/mappings` | Query mappings (`?from=`, `?to=`, `?control=`, `?relationship=`) |
 | GET | `/api/themes` | List unique themes across all controls |
+| GET | `/api/stats` | Get summary statistics (framework, control, and mapping counts) |
 
 ## Running Tests
 

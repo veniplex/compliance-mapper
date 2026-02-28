@@ -99,6 +99,61 @@ function populateThemeSelect(themes) {
   });
 }
 
+/* ── Stats banner ────────────────────────────────────────────────────── */
+function renderStatsBanner(stats) {
+  const banner = document.getElementById('stats-banner');
+  const items = [
+    { label: 'Frameworks', value: stats.frameworkCount },
+    { label: 'Controls', value: stats.controlCount },
+    { label: 'Mappings', value: stats.mappingCount },
+    ...Object.entries(stats.mappingsByRelationship || {}).map(([rel, count]) => ({
+      label: rel.charAt(0).toUpperCase() + rel.slice(1),
+      value: count,
+    })),
+  ];
+  banner.innerHTML = items.map(item =>
+    `<span class="inline-flex items-center gap-1 text-gray-600 dark:text-gray-400">
+      <span class="font-bold text-gray-800 dark:text-gray-200">${item.value}</span>
+      <span>${escHtml(item.label)}</span>
+    </span>`
+  ).join('<span class="text-gray-300 dark:text-gray-700">·</span>');
+  banner.classList.remove('hidden');
+}
+
+/* ── Export CSV ──────────────────────────────────────────────────────── */
+function exportCSV() {
+  const fwMap = {};
+  state.frameworks.forEach(fw => { fwMap[fw.id] = fw; });
+
+  const header = ['Mapping ID', 'Relationship', 'Source Framework', 'Source Ref', 'Source Title', 'Target Framework', 'Target Ref', 'Target Title', 'Theme', 'Notes'];
+
+  const rows = state.filtered.map(m => {
+    const src = m.sourceControl;
+    const tgt = m.targetControl;
+    return [
+      m.id,
+      m.relationship,
+      src ? (fwMap[src.frameworkId] ? fwMap[src.frameworkId].shortName : src.frameworkId) : '',
+      src ? src.ref : '',
+      src ? src.title : '',
+      tgt ? (fwMap[tgt.frameworkId] ? fwMap[tgt.frameworkId].shortName : tgt.frameworkId) : '',
+      tgt ? tgt.ref : '',
+      tgt ? tgt.title : '',
+      src ? src.theme : '',
+      m.notes || '',
+    ].map(v => `"${String(v).replace(/"/g, '""')}"`).join(',');
+  });
+
+  const csvContent = [header.join(','), ...rows].join('\n');
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'compliance-mappings.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 /* ── Apply filters ───────────────────────────────────────────────────── */
 function applyFilters() {
   const from = document.getElementById('select-from').value;
@@ -559,6 +614,13 @@ function renderApiDocs() {
   const endpoints = [
     {
       method: 'GET',
+      path: '/stats',
+      desc: 'Returns summary statistics about the dataset: framework count, total controls, total mappings, and per-relationship breakdowns.',
+      params: [],
+      example: '/stats',
+    },
+    {
+      method: 'GET',
       path: '/frameworks',
       desc: 'List all supported compliance frameworks.',
       params: [],
@@ -676,10 +738,11 @@ async function init() {
   initTheme();
 
   try {
-    const [frameworks, mappings, themes] = await Promise.all([
+    const [frameworks, mappings, themes, stats] = await Promise.all([
       apiFetch('/frameworks'),
       apiFetch('/mappings'),
       apiFetch('/themes'),
+      apiFetch('/stats'),
     ]);
 
     state.frameworks = frameworks;
@@ -690,6 +753,7 @@ async function init() {
     // Populate UI
     populateFrameworkSelects(frameworks);
     populateThemeSelect(themes);
+    renderStatsBanner(stats);
 
     // Load controls for framework page (keyed by fw id)
     const controlsDataPromises = frameworks.map(fw =>
@@ -725,6 +789,8 @@ async function init() {
       document.getElementById('search-input').value = '';
       applyFilters();
     });
+
+    document.getElementById('export-csv').addEventListener('click', exportCSV);
 
   // Click / keyboard handler on mapping icons (delegated, attached once)
   document.getElementById('ctable-container').addEventListener('click', e => {
