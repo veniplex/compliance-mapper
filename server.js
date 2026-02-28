@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -28,6 +30,25 @@ for (const controls of Object.values(controlsData)) {
   }
 }
 
+// ── API key authentication ─────────────────────────────────────────────────────
+
+function apiKeyMiddleware(req, res, next) {
+  const envKeys = process.env.API_KEYS;
+  if (!envKeys) return next(); // No keys configured – open access
+
+  const allowed = envKeys.split(',').map(k => k.trim()).filter(Boolean);
+  if (allowed.length === 0) return next();
+
+  const provided = req.headers['x-api-key'];
+  if (!provided) {
+    return res.status(401).json({ error: 'Missing API key. Provide a valid key in the x-api-key header.' });
+  }
+  if (!allowed.includes(provided)) {
+    return res.status(403).json({ error: 'Invalid API key.' });
+  }
+  next();
+}
+
 // Rate limiters
 const apiLimiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute
@@ -53,7 +74,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((_req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, x-api-key');
   next();
 });
 
@@ -210,7 +231,7 @@ router.get('/themes', (req, res) => {
   res.json({ data: themes });
 });
 
-app.use('/api', apiLimiter, router);
+app.use('/api', apiKeyMiddleware, apiLimiter, router);
 
 // ── 404 handler for unknown API routes ────────────────────────────────────────
 
