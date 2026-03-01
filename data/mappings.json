@@ -803,5 +803,194 @@
     "targetControlId": "iso27001-8.15",
     "relationship": "related",
     "notes": "Protection of log information from ISO 27001:2013 A.12.4.2 is incorporated into the broader logging control 8.15 in ISO 27001:2022."
+  },
+  {
+    "id": "map-116",
+    "sourceControlId": "bsi-gs-isms-1",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz ISMS.1 and ISO 27001:2022 5.1 both require a documented information security policy approved by management and subject to regular review within an established ISMS."
+  },
+  {
+    "id": "map-117",
+    "sourceControlId": "bsi-gs-orp-1",
+    "targetControlId": "iso27001-5.2",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz ORP.1 and ISO 27001:2022 5.2 both require that information security responsibilities are clearly defined, allocated and communicated throughout the organisation."
+  },
+  {
+    "id": "map-118",
+    "sourceControlId": "bsi-gs-orp-3",
+    "targetControlId": "iso27001-6.3",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz ORP.3 and ISO 27001:2022 6.3 both mandate regular security awareness, education and training tailored to the roles and responsibilities of personnel."
+  },
+  {
+    "id": "map-119",
+    "sourceControlId": "bsi-gs-orp-4",
+    "targetControlId": "iso27001-5.15",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz ORP.4 and ISO 27001:2022 5.15 both require a defined access control policy and process for granting, reviewing, and revoking user access rights based on the principle of least privilege."
+  },
+  {
+    "id": "map-120",
+    "sourceControlId": "bsi-gs-con-1",
+    "targetControlId": "iso27001-8.24",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz CON.1 and ISO 27001:2022 8.24 both require an organisation-wide cryptography policy that defines approved algorithms, key lengths and key management procedures."
+  },
+  {
+    "id": "map-121",
+    "sourceControlId": "bsi-gs-con-3",
+    "targetControlId": "iso27001-8.13",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz CON.3 and ISO 27001:2022 8.13 both require a documented backup policy covering schedule, retention, storage locations, protection of media, and regular testing of restoration procedures."
+  },
+  {
+    "id": "map-122",
+    "sourceControlId": "bsi-gs-der-1",
+    "targetControlId": "iso27001-8.16",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz DER.1 and ISO 27001:2022 8.16 both require continuous monitoring of systems and networks to detect anomalies, potential security events, and attack patterns in a timely manner."
+  },
+  {
+    "id": "map-123",
+    "sourceControlId": "bsi-gs-der-2",
+    "targetControlId": "iso27001-5.26",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz DER.2.1 and ISO 27001:2022 5.26 both require defined procedures for responding to information security incidents, including classification, escalation, containment, eradication, recovery, and post-incident review."
+  },
+  {
+    "id": "map-124",
+    "sourceControlId": "bsi-gs-der-4",
+    "targetControlId": "iso27001-5.29",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz DER.4 and ISO 27001:2022 5.29 both require documented and tested information security continuity plans that ensure critical functions can be maintained or rapidly restored during a disruption."
+  },
+  {
+    "id": "map-125",
+    "sourceControlId": "bsi-gs-net-1",
+    "targetControlId": "iso27001-8.20",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz NET.1.1 and ISO 27001:2022 8.20 both require that network security is addressed through defined architecture principles, segmentation, and documented controls to protect information in transit."
+  },
+  {
+    "id": "map-126",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "related",
+    "notes": "KRITIS §8a(1) BSIG and ISO 27001:2022 5.1 both require documented security policies; KRITIS is sector-specific and focuses on availability and resilience of critical infrastructure, whereas ISO 27001 provides a broader ISMS policy framework."
+  },
+  {
+    "id": "map-127",
+    "sourceControlId": "kritis-8a-1a",
+    "targetControlId": "iso27001-8.16",
+    "relationship": "related",
+    "notes": "KRITIS §8a(1a) BSIG and ISO 27001:2022 8.16 both address continuous monitoring and detection. KRITIS requires specific attack detection systems (Angriffserkennung), while ISO 27001 addresses broader monitoring activities."
+  },
+  {
+    "id": "map-128",
+    "sourceControlId": "kritis-8a-3",
+    "targetControlId": "iso27001-5.35",
+    "relationship": "related",
+    "notes": "KRITIS §8a(3) BSIG and ISO 27001:2022 5.35 both require periodic independent review of security measures. KRITIS mandates proof of compliance to BSI every two years; ISO 27001 requires independent review of the ISMS."
+  },
+  {
+    "id": "map-129",
+    "sourceControlId": "kritis-8b-4a",
+    "targetControlId": "iso27001-5.26",
+    "relationship": "related",
+    "notes": "KRITIS §8b(4a) BSIG and ISO 27001:2022 5.26 both address incident response; KRITIS additionally mandates external reporting of significant disruptions to BSI, whereas ISO 27001 focuses primarily on internal incident response procedures."
+  },
+  {
+    "id": "map-130",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "equivalent",
+    "notes": "KRITIS §8a(1) BSIG and NIS2 Art. 21(2)(a) both require risk analysis and state-of-the-art technical and organisational security measures to protect network and information systems."
+  },
+  {
+    "id": "map-131",
+    "sourceControlId": "kritis-8b-4a",
+    "targetControlId": "nis2-art23-1",
+    "relationship": "equivalent",
+    "notes": "KRITIS §8b(4a) BSIG and NIS2 Art. 23(1) both impose mandatory incident reporting obligations to the competent national authority without undue delay when significant disruptions occur."
+  },
+  {
+    "id": "map-132",
+    "sourceControlId": "kritis-8a-3",
+    "targetControlId": "nis2-art21-f",
+    "relationship": "related",
+    "notes": "KRITIS §8a(3) BSIG requires periodic proof of compliance provided to BSI; NIS2 Art. 21(2)(f) requires policies and procedures to assess the effectiveness of cybersecurity risk management measures."
+  },
+  {
+    "id": "map-133",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §30 transposes NIS2 Art. 21(2)(a) into German law, requiring essential entities to implement risk analysis policies and information system security measures as part of their risk management obligations."
+  },
+  {
+    "id": "map-134",
+    "sourceControlId": "nis2umsg-35",
+    "targetControlId": "nis2-art23-1",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §35 transposes NIS2 Art. 23(1) into German law, requiring significant incident notifications to BSI within identical timelines: early warning within 24 hours, detailed notification within 72 hours, and a final report within one month."
+  },
+  {
+    "id": "map-135",
+    "sourceControlId": "nis2umsg-38",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §38 transposes NIS2 Art. 20(1) into German law, requiring management bodies to approve cybersecurity measures, oversee their implementation, and take personal liability for failures in cybersecurity governance."
+  },
+  {
+    "id": "map-136",
+    "sourceControlId": "nis2umsg-39",
+    "targetControlId": "nis2-art21-d",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §39 transposes NIS2 Art. 21(2)(d) into German law, requiring essential and important entities to address supply chain cybersecurity risks including evaluation of supplier and service provider security practices."
+  },
+  {
+    "id": "map-137",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §30 and KRITIS §8a(1) BSIG both require state-of-the-art technical and organisational security measures. The NIS2UmsuCG broadens the scope beyond critical infrastructure sectors to include important entities, while KRITIS remains focused on critical infrastructure operators."
+  },
+  {
+    "id": "map-138",
+    "sourceControlId": "nis2umsg-35",
+    "targetControlId": "kritis-8b-4a",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §35 and KRITIS §8b(4a) BSIG both impose mandatory incident reporting obligations to BSI. The NIS2UmsuCG introduces structured timelines (24h/72h/1 month) that supplement and supersede the existing KRITIS reporting obligations."
+  },
+  {
+    "id": "map-139",
+    "sourceControlId": "nis2umsg-38",
+    "targetControlId": "kritis-8a-3",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG §38 establishes personal management liability for cybersecurity governance, while KRITIS §8a(3) requires periodic proof of compliance submitted to BSI. Both controls reinforce accountability for security measures at senior management level."
+  },
+  {
+    "id": "map-140",
+    "sourceControlId": "bsi-gs-isms-1",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "related",
+    "notes": "BSI IT-Grundschutz ISMS.1 and NIS2 Art. 21(2)(a) both address information security risk management governance. ISMS.1 provides a comprehensive ISMS process while NIS2 Art. 21(2)(a) focuses specifically on policies for risk analysis and information system security."
+  },
+  {
+    "id": "map-141",
+    "sourceControlId": "bsi-gs-der-2",
+    "targetControlId": "nis2-art21-b",
+    "relationship": "related",
+    "notes": "BSI IT-Grundschutz DER.2.1 and NIS2 Art. 21(2)(b) both cover incident handling, including detection, reporting, response and recovery. DER.2.1 provides detailed procedural guidance, while NIS2 Art. 21(2)(b) sets the minimum regulatory requirement."
+  },
+  {
+    "id": "map-142",
+    "sourceControlId": "bsi-gs-der-4",
+    "targetControlId": "nis2-art21-c",
+    "relationship": "related",
+    "notes": "BSI IT-Grundschutz DER.4 and NIS2 Art. 21(2)(c) both address business continuity and crisis management for IT systems. DER.4 provides detailed BCM guidance aligned with BSI standards, while NIS2 Art. 21(2)(c) establishes the regulatory requirement for backup management, disaster recovery, and crisis management."
   }
 ]

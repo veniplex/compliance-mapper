@@ -75,5 +75,38 @@
     "type": "Framework",
     "url": "https://www.nist.gov/cyberframework",
     "color": "#dc2626"
+  },
+  {
+    "id": "kritis",
+    "name": "KRITIS / IT-Sicherheitsgesetz 2.0",
+    "shortName": "KRITIS",
+    "description": "German regulation for operators of critical infrastructure (Kritische Infrastrukturen) under the BSI Act (BSIG) and IT Security Act 2.0 (IT-Sicherheitsgesetz 2.0, 2021). Mandates state-of-the-art technical and organisational security measures, attack detection systems, proof of compliance every two years, and incident reporting obligations for critical infrastructure operators.",
+    "version": "IT-SiG 2.0 (2021)",
+    "region": "Germany",
+    "type": "Regulation",
+    "url": "https://www.bsi.bund.de/EN/Themen/KRITIS-und-regulierte-Unternehmen/Kritische-Infrastrukturen/kritis_node.html",
+    "color": "#b91c1c"
+  },
+  {
+    "id": "nis2-umsg",
+    "name": "NIS2-Umsetzungsgesetz (NIS2UmsuCG)",
+    "shortName": "NIS2UmsuCG",
+    "description": "German national implementation of the EU NIS2 Directive (2022/2555). The NIS-2-Umsetzungs- und Cybersicherheitsstärkungsgesetz transposes the NIS2 requirements into German law, extends and replaces the existing IT Security Act framework, and introduces strengthened obligations for essential and important entities including management accountability and supply chain security.",
+    "version": "2024 (draft/enactment)",
+    "region": "Germany",
+    "type": "Regulation",
+    "url": "https://www.bmi.bund.de/SharedDocs/gesetzgebungsverfahren/DE/nis-2-umsetzungsgesetz.html",
+    "color": "#1e40af"
+  },
+  {
+    "id": "bsi-grundschutz",
+    "name": "BSI IT-Grundschutz",
+    "shortName": "BSI Grundschutz",
+    "description": "Comprehensive information security methodology published by Germany's Federal Office for Information Security (BSI). Consists of BSI Standards (200-1 through 200-4) and the IT-Grundschutz Compendium, providing building blocks for establishing and operating an ISMS. Widely used by German public authorities and recognised as equivalent to ISO/IEC 27001.",
+    "version": "Compendium 2023",
+    "region": "Germany",
+    "type": "Framework",
+    "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/it-grundschutz_node.html",
+    "color": "#065f46"
   }
 ]

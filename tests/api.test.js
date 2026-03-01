@@ -57,7 +57,7 @@ describe('GET /api/frameworks', () => {
     const { status, body } = await get('/api/frameworks');
     assert.equal(status, 200);
     assert.ok(Array.isArray(body.data));
-    assert.ok(body.data.length >= 6, 'Expected at least 6 frameworks');
+    assert.ok(body.data.length >= 9, 'Expected at least 9 frameworks');
   });
 
   test('each framework has required fields', async () => {
@@ -78,6 +78,9 @@ describe('GET /api/frameworks', () => {
     assert.ok(ids.includes('nis2'));
     assert.ok(ids.includes('gdpr'));
     assert.ok(ids.includes('dora'));
+    assert.ok(ids.includes('kritis'));
+    assert.ok(ids.includes('nis2-umsg'));
+    assert.ok(ids.includes('bsi-grundschutz'));
   });
 });
 
@@ -284,7 +287,7 @@ describe('GET /api/stats', () => {
     assert.ok(typeof s.frameworkCount === 'number', 'Missing frameworkCount');
     assert.ok(typeof s.controlCount === 'number', 'Missing controlCount');
     assert.ok(typeof s.mappingCount === 'number', 'Missing mappingCount');
-    assert.ok(s.frameworkCount >= 6, 'Expected at least 6 frameworks');
+    assert.ok(s.frameworkCount >= 9, 'Expected at least 9 frameworks');
     assert.ok(s.controlCount > 50, 'Expected many controls');
     assert.ok(s.mappingCount >= 50, 'Expected at least 50 mappings');
   });
