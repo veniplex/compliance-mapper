@@ -4,7 +4,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { pool } = require('../db');
-const { JWT_SECRET } = require('../middleware/auth');
+const { JWT_SECRET, requireAuth } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -29,6 +29,9 @@ router.post('/register', async (req, res) => {
   }
   if (typeof password !== 'string' || password.length < 8) {
     return res.status(400).json({ error: 'Password must be at least 8 characters long.' });
+  }
+  if (password.length > 128) {
+    return res.status(400).json({ error: 'Password must be at most 128 characters long.' });
   }
 
   try {
@@ -81,6 +84,28 @@ router.post('/login', async (req, res) => {
   } catch (err) {
     console.error('Login error:', err);
     res.status(500).json({ error: 'Login failed. Please try again.' });
+  }
+});
+
+/**
+ * GET /api/auth/me
+ * Validates the JWT and confirms the user still exists in the database.
+ * Returns 401 if the token is invalid or the user no longer exists.
+ */
+router.get('/me', requireAuth, async (req, res) => {
+  try {
+    const result = await pool.query(
+      'SELECT id, email, username FROM users WHERE id = $1',
+      [req.user.sub]
+    );
+    if (result.rows.length === 0) {
+      return res.status(401).json({ error: 'User no longer exists.' });
+    }
+    const user = result.rows[0];
+    res.json({ data: { id: user.id, email: user.email, username: user.username } });
+  } catch (err) {
+    console.error('Auth me error:', err);
+    res.status(500).json({ error: 'Failed to verify session.' });
   }
 });
 
