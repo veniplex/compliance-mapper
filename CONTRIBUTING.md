@@ -21,7 +21,7 @@ Thank you for your interest in contributing! This guide explains how to get set 
 
 ## Code of Conduct
 
-Please be respectful and constructive in all interactions. Harassment or abusive behaviour of any kind will not be tolerated.
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating you are expected to uphold this code. Please report unacceptable behaviour via [GitHub's private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability).
 
 ---
 
