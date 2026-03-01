@@ -85,17 +85,14 @@ function renderAuthArea() {
     return;
   }
   if (state.user) {
+    const displayName = escHtml(state.user.username || state.user.email);
     area.innerHTML = `
-      <span class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 truncate max-w-[9rem]">${escHtml(state.user.email)}</span>
+      <span class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 truncate max-w-[9rem]">${displayName}</span>
       <button id="settings-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Settings</button>
       <button id="signout-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign Out</button>
     `;
     document.getElementById('settings-btn').addEventListener('click', () => openSettings());
     document.getElementById('signout-btn').addEventListener('click', () => handleLogout(true));
-    const navBtn = document.getElementById('settings-nav-btn');
-    if (navBtn) navBtn.style.display = '';
-    const navBtnMobile = document.getElementById('settings-nav-btn-mobile');
-    if (navBtnMobile) navBtnMobile.style.display = '';
   } else {
     area.innerHTML = `
       <button id="signin-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign In</button>
@@ -103,10 +100,6 @@ function renderAuthArea() {
     `;
     document.getElementById('signin-btn').addEventListener('click', () => openAuthModal('signin'));
     document.getElementById('signup-btn').addEventListener('click', () => openAuthModal('signup'));
-    const navBtn = document.getElementById('settings-nav-btn');
-    if (navBtn) navBtn.style.display = 'none';
-    const navBtnMobile = document.getElementById('settings-nav-btn-mobile');
-    if (navBtnMobile) navBtnMobile.style.display = 'none';
   }
 }
 
@@ -504,11 +497,12 @@ function renderFrameworkProgressBar(fwId) {
   const total = controls.length;
   if (total === 0) { el.innerHTML = ''; return; }
   const completed = controls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+  const inProgress = controls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
   const pct = Math.round((completed / total) * 100);
   el.innerHTML = `
     <div class="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
       <div class="flex items-center justify-between text-xs mb-1">
-        <span class="text-gray-500 dark:text-gray-400">Progress</span>
+        <span class="text-gray-500 dark:text-gray-400">${completed} done${inProgress > 0 ? ` · ${inProgress} in progress` : ''}</span>
         <span class="font-semibold text-gray-700 dark:text-gray-300">${pct}%</span>
       </div>
       <div class="h-1.5 rounded-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
@@ -520,6 +514,38 @@ function renderFrameworkProgressBar(fwId) {
 
 function updateAllFrameworkProgressBars() {
   state.frameworks.forEach(fw => renderFrameworkProgressBar(fw.id));
+  renderOverallScore();
+}
+
+function renderOverallScore() {
+  const el = document.getElementById('overall-score-banner');
+  if (!el) return;
+  if (!state.user) { el.classList.add('hidden'); return; }
+
+  // Collect all controls across all frameworks
+  const allControls = Object.values(state.controlsData).flat();
+  const total = allControls.length;
+  if (total === 0) { el.classList.add('hidden'); return; }
+
+  const completed = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+  const inProgress = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
+  // Score: completed controls count fully, in-progress count half
+  const score = Math.round(((completed + inProgress * 0.5) / total) * 100);
+
+  el.innerHTML = `
+    <div class="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950">
+      <div class="flex items-center gap-2">
+        <span class="text-xl font-bold text-blue-700 dark:text-blue-300">${score}</span>
+        <span class="text-xs text-blue-600 dark:text-blue-400 font-medium">/ 100</span>
+      </div>
+      <div class="w-px h-6 bg-blue-200 dark:bg-blue-800"></div>
+      <div class="text-xs text-blue-600 dark:text-blue-400">
+        <span class="font-semibold">Overall compliance score</span>
+        <span class="ml-2 text-blue-500 dark:text-blue-500">${completed} completed · ${inProgress} in progress · ${total - completed - inProgress} not started</span>
+      </div>
+    </div>
+  `;
+  el.classList.remove('hidden');
 }
 
 /* ── Navigation ─────────────────────────────────────────────────────── */
