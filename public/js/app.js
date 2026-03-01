@@ -623,73 +623,73 @@ function renderDashboard() {
 
   container.innerHTML = `
     <!-- KPI summary row -->
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem">
-      <div style="border-radius:1rem;border:1px solid #e5e7eb;background:white;padding:1.25rem;display:flex;flex-direction:column;align-items:center;gap:4px">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 flex flex-col items-center gap-1">
         ${donutSvg(score, 'sm')}
-        <div style="font-size:0.75rem;font-weight:600;color:#374151">Overall Score</div>
+        <div class="text-xs font-semibold text-gray-600 dark:text-gray-400">Overall Score</div>
       </div>
-      <div style="border-radius:1rem;border:1px solid #e5e7eb;background:white;overflow:hidden">
-        <div style="height:4px;background:#22c55e"></div>
-        <div style="padding:1.25rem">
-          <div style="font-size:2rem;font-weight:700;color:#16a34a">${completed}</div>
-          <div style="font-size:0.875rem;font-weight:600;color:#374151;margin-top:4px">Completed</div>
-          <div style="font-size:0.75rem;color:#9ca3af;margin-top:2px">${completedPct}% of ${total} controls</div>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="h-1 bg-green-500"></div>
+        <div class="p-5">
+          <div class="text-3xl font-bold text-green-600 dark:text-green-400">${completed}</div>
+          <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-1">Completed</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${completedPct}% of ${total} controls</div>
         </div>
       </div>
-      <div style="border-radius:1rem;border:1px solid #e5e7eb;background:white;overflow:hidden">
-        <div style="height:4px;background:#f59e0b"></div>
-        <div style="padding:1.25rem">
-          <div style="font-size:2rem;font-weight:700;color:#d97706">${inProgress}</div>
-          <div style="font-size:0.875rem;font-weight:600;color:#374151;margin-top:4px">In Progress</div>
-          <div style="font-size:0.75rem;color:#9ca3af;margin-top:2px">${inProgressPct}% of ${total} controls</div>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="h-1 bg-amber-500"></div>
+        <div class="p-5">
+          <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">${inProgress}</div>
+          <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-1">In Progress</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${inProgressPct}% of ${total} controls</div>
         </div>
       </div>
-      <div style="border-radius:1rem;border:1px solid #e5e7eb;background:white;overflow:hidden">
-        <div style="height:4px;background:#94a3b8"></div>
-        <div style="padding:1.25rem">
-          <div style="font-size:2rem;font-weight:700;color:#475569">${open}</div>
-          <div style="font-size:0.875rem;font-weight:600;color:#374151;margin-top:4px">Open</div>
-          <div style="font-size:0.75rem;color:#9ca3af;margin-top:2px">${openPct}% of ${total} controls</div>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="h-1 bg-slate-400 dark:bg-slate-600"></div>
+        <div class="p-5">
+          <div class="text-3xl font-bold text-slate-600 dark:text-slate-300">${open}</div>
+          <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-1">Open</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${openPct}% of ${total} controls</div>
         </div>
       </div>
     </div>
 
     <!-- Per-framework table -->
-    <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" style="overflow:hidden">
-      <div style="padding:1rem 1.25rem;border-bottom:1px solid #e5e7eb">
-        <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300">Progress by Framework</h2>
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden">
+      <div class="px-5 py-4 border-b border-gray-200 dark:border-gray-700">
+        <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-200">Progress by Framework</h2>
       </div>
-      <div style="overflow-x:auto">
-        <table style="min-width:100%;font-size:0.875rem">
-          <thead class="bg-gray-50 dark:bg-gray-900" style="border-bottom:1px solid #e5e7eb">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
             <tr>
-              <th style="padding:0.75rem 1.25rem;text-align:left;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">Framework</th>
-              <th style="padding:0.75rem 1.25rem;text-align:right;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">Controls</th>
-              <th style="padding:0.75rem 1.25rem;text-align:right;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">Done</th>
-              <th style="padding:0.75rem 1.25rem;text-align:right;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">In Progress</th>
-              <th style="padding:0.75rem 1.25rem;text-align:right;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">Open</th>
-              <th style="padding:0.75rem 1.25rem;text-align:left;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;min-width:140px" class="text-gray-500 dark:text-gray-400">Progress</th>
+              <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Framework</th>
+              <th class="px-5 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Controls</th>
+              <th class="px-5 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Done</th>
+              <th class="px-5 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">In Progress</th>
+              <th class="px-5 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Open</th>
+              <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 min-w-[140px]">Progress</th>
             </tr>
           </thead>
           <tbody>
             ${fwRows.map(({ fw, tot, done, ip, op, pct, ipPct }) => `
-              <tr style="border-top:1px solid #f3f4f6;cursor:pointer" tabindex="0"
+              <tr class="border-t border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer" tabindex="0"
                 data-fw-id="${escHtml(fw.id)}"
                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showFrameworkControls(this.dataset.fwId)}">
-                <td style="padding:0.75rem 1.25rem">
+                <td class="px-5 py-3">
                   <span class="fw-badge" style="background:${fw.color}20;color:${fw.color};border:1px solid ${fw.color}40">${escHtml(fw.shortName)}</span>
                 </td>
-                <td style="padding:0.75rem 1.25rem;text-align:right" class="text-gray-600 dark:text-gray-400">${tot}</td>
-                <td style="padding:0.75rem 1.25rem;text-align:right;font-weight:500;color:#16a34a">${done}</td>
-                <td style="padding:0.75rem 1.25rem;text-align:right;font-weight:500;color:#d97706">${ip}</td>
-                <td style="padding:0.75rem 1.25rem;text-align:right" class="text-gray-500">${op}</td>
-                <td style="padding:0.75rem 1.25rem">
-                  <div style="display:flex;align-items:center;gap:8px">
-                    <div style="flex:1;height:8px;border-radius:9999px;background:#f3f4f6;overflow:hidden;display:flex">
-                      <div style="height:100%;background:#22c55e;width:${pct}%"></div>
-                      <div style="height:100%;background:#fbbf24;width:${ipPct}%"></div>
+                <td class="px-5 py-3 text-right text-gray-600 dark:text-gray-400">${tot}</td>
+                <td class="px-5 py-3 text-right font-medium text-green-600 dark:text-green-400">${done}</td>
+                <td class="px-5 py-3 text-right font-medium text-amber-600 dark:text-amber-400">${ip}</td>
+                <td class="px-5 py-3 text-right text-gray-500 dark:text-gray-400">${op}</td>
+                <td class="px-5 py-3">
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 h-2 rounded-full bg-gray-100 dark:bg-gray-700 overflow-hidden flex">
+                      <div class="h-full bg-green-500" style="width:${pct}%"></div>
+                      <div class="h-full bg-amber-400" style="width:${ipPct}%"></div>
                     </div>
-                    <span style="font-size:0.75rem;font-weight:600;width:2rem;text-align:right" class="text-gray-600 dark:text-gray-400">${pct}%</span>
+                    <span class="text-xs font-semibold w-8 text-right text-gray-600 dark:text-gray-400">${pct}%</span>
                   </div>
                 </td>
               </tr>
@@ -1534,8 +1534,11 @@ async function init() {
       renderControlsTable(e.target.value);
     });
 
-    // Load progress if user is already authenticated
-    if (state.token) await loadProgress();
+    // Load progress if user is already authenticated; land on dashboard
+    if (state.token) {
+      await loadProgress();
+      showView('dashboard');
+    }
 
   } catch (err) {
     console.error('Failed to load data:', err);
