@@ -30,7 +30,8 @@ async function authFetch(method, path, body) {
     headers,
     body: body !== undefined ? JSON.stringify(body) : undefined,
   });
-  const json = await res.json();
+  const text = await res.text();
+  const json = text ? JSON.parse(text) : {};
   if (!res.ok) {
     const err = new Error(json.error || 'Request failed');
     err.status = res.status;
