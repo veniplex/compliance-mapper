@@ -143,6 +143,7 @@
         <button data-settings-tab="profile" class="settings-tab-btn px-4 py-2 text-sm font-medium border-b-2 -mb-px transition-colors">Profile</button>
         <button data-settings-tab="password" class="settings-tab-btn px-4 py-2 text-sm font-medium border-b-2 -mb-px transition-colors">Password</button>
         <button data-settings-tab="apikeys" class="settings-tab-btn px-4 py-2 text-sm font-medium border-b-2 -mb-px transition-colors">API Keys</button>
+        <button data-settings-tab="preferences" class="settings-tab-btn px-4 py-2 text-sm font-medium border-b-2 -mb-px transition-colors">Preferences</button>
       </div>
 
       <!-- Profile tab -->
@@ -184,6 +185,22 @@
           <button type="submit" id="settings-password-submit"
             class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition disabled:opacity-60 disabled:cursor-not-allowed">Change Password</button>
         </form>
+      </div>
+
+      <!-- Preferences tab -->
+      <div id="settings-tab-preferences" class="settings-tab-content hidden max-w-md">
+        <div class="space-y-4">
+          <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300">Progress Tracking</h2>
+          <div class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <div class="flex-1">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="pref-apply-equivalent">Apply status to equivalent controls</label>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">When marking a control's progress, also apply the same status to all equivalent controls across other frameworks.</p>
+            </div>
+            <div class="shrink-0 mt-0.5">
+              <input type="checkbox" id="pref-apply-equivalent" class="w-4 h-4 rounded border-gray-300 dark:border-gray-700 text-blue-600 focus:ring-blue-500 cursor-pointer" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- API Keys tab -->

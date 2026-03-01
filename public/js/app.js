@@ -163,6 +163,9 @@ async function handleAuthSubmit(e) {
     await loadProgress();
     if (state.currentView === 'framework-controls' && state.selectedFramework) {
       renderFrameworkControls();
+    } else if (state.currentView === 'controls-table') {
+      const sel = document.getElementById('ctable-fw-select');
+      if (sel && sel.value) renderControlsTable(sel.value);
     }
   } catch (err) {
     errorEl.textContent = err.message || 'An error occurred. Please try again.';
@@ -179,9 +182,13 @@ function handleLogout(rerenderView) {
   setStoredAuth(null, null);
   renderAuthArea();
   updateAllProgressBadges();
+  updateAllFrameworkProgressBars();
   if (state.currentView === 'settings') showView('frameworks');
   else if (rerenderView && state.currentView === 'framework-controls' && state.selectedFramework) {
     renderFrameworkControls();
+  } else if (rerenderView && state.currentView === 'controls-table') {
+    const sel = document.getElementById('ctable-fw-select');
+    if (sel && sel.value) renderControlsTable(sel.value);
   }
 }
 
@@ -239,6 +246,15 @@ function initSettings() {
     const val = document.getElementById('settings-apikey-value').textContent;
     navigator.clipboard.writeText(val).catch(() => {});
   });
+
+  // Preferences tab
+  const prefCheckbox = document.getElementById('pref-apply-equivalent');
+  if (prefCheckbox) {
+    prefCheckbox.checked = getPreferences().applyToEquivalent !== false; // default true
+    prefCheckbox.addEventListener('change', () => {
+      setPreference('applyToEquivalent', prefCheckbox.checked);
+    });
+  }
 }
 
 function switchSettingsTab(tab) {
@@ -384,6 +400,18 @@ async function handleDeleteApiKey(keyId) {
   }
 }
 
+/* ── User preferences ───────────────────────────────────────────────── */
+
+function getPreferences() {
+  try { return JSON.parse(localStorage.getItem('preferences') || '{}'); } catch (e) { console.warn('Failed to parse preferences:', e); return {}; }
+}
+
+function setPreference(key, value) {
+  const prefs = getPreferences();
+  prefs[key] = value;
+  localStorage.setItem('preferences', JSON.stringify(prefs));
+}
+
 /* ── Progress tracking ──────────────────────────────────────────────── */
 
 const PROGRESS_CYCLE = ['not_started', 'in_progress', 'completed'];
@@ -402,6 +430,7 @@ async function loadProgress() {
     state.progress = {};
     entries.forEach(e => { state.progress[e.controlId] = e.status; });
     updateAllProgressBadges();
+    updateAllFrameworkProgressBars();
   } catch (err) {
     if (err.status === 401) handleLogout(false);
   }
@@ -430,15 +459,67 @@ function updateAllProgressBadges() {
 async function handleProgressClick(controlId) {
   const current = state.progress[controlId] || 'not_started';
   const next = PROGRESS_CYCLE[(PROGRESS_CYCLE.indexOf(current) + 1) % PROGRESS_CYCLE.length];
-  state.progress[controlId] = next; // optimistic update
+
+  const prefs = getPreferences();
+  const applyToEquivalent = prefs.applyToEquivalent !== false; // default true
+
+  const equivalentIds = applyToEquivalent ? getEquivalentControlIds(controlId) : [];
+  const idsToUpdate = [controlId, ...equivalentIds];
+
+  // Optimistic update
+  idsToUpdate.forEach(id => { state.progress[id] = next; });
   updateAllProgressBadges();
+  updateAllFrameworkProgressBars();
   try {
-    await authFetch('PUT', `/progress/${encodeURIComponent(controlId)}`, { status: next });
+    await Promise.all(idsToUpdate.map(id =>
+      authFetch('PUT', `/progress/${encodeURIComponent(id)}`, { status: next })
+    ));
   } catch (err) {
-    state.progress[controlId] = current; // revert
+    // Revert on failure
+    idsToUpdate.forEach(id => { state.progress[id] = current; });
     updateAllProgressBadges();
+    updateAllFrameworkProgressBars();
     console.error('Failed to update progress:', err);
   }
+}
+
+function getEquivalentControlIds(controlId) {
+  const ids = new Set();
+  state.mappings.forEach(m => {
+    if (m.relationship !== 'equivalent') return;
+    if (m.sourceControl && m.sourceControl.id === controlId && m.targetControl) {
+      ids.add(m.targetControl.id);
+    } else if (m.targetControl && m.targetControl.id === controlId && m.sourceControl) {
+      ids.add(m.sourceControl.id);
+    }
+  });
+  return Array.from(ids);
+}
+
+function renderFrameworkProgressBar(fwId) {
+  const el = document.querySelector(`.fw-progress-bar[data-fw-id="${fwId}"]`);
+  if (!el) return;
+  if (!state.user) { el.innerHTML = ''; return; }
+  const controls = state.controlsData[fwId] || [];
+  const total = controls.length;
+  if (total === 0) { el.innerHTML = ''; return; }
+  const completed = controls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+  const pct = Math.round((completed / total) * 100);
+  el.innerHTML = `
+    <div class="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
+      <div class="flex items-center justify-between text-xs mb-1">
+        <span class="text-gray-500 dark:text-gray-400">Progress</span>
+        <span class="font-semibold text-gray-700 dark:text-gray-300">${pct}%</span>
+      </div>
+      <div class="h-1.5 rounded-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
+        <div class="h-full rounded-full bg-green-500 transition-all" style="width:${pct}%"></div>
+      </div>
+    </div>
+  `;
+}
+
+function updateAllFrameworkProgressBars() {
+  state.frameworks.forEach(fw => renderFrameworkProgressBar(fw.id));
 }
 
 /* ── Navigation ─────────────────────────────────────────────────────── */
@@ -741,6 +822,7 @@ function renderFrameworksPage(frameworks, controlsData, mappings) {
           <span class="font-semibold">${controlCount} <span class="font-normal text-gray-500">controls</span></span>
           <span class="font-semibold">${mappingCount} <span class="font-normal text-gray-500">mappings</span></span>
         </div>
+        <div class="fw-progress-bar" data-fw-id="${escHtml(fw.id)}"></div>
         <div class="mt-3 flex items-center justify-between">
           <a href="${escHtml(fw.url)}" target="_blank" rel="noopener noreferrer"
             class="text-xs font-medium hover:underline"
@@ -885,8 +967,23 @@ function openControlMappingModal(controlId) {
   const totalRelated = relatedMappings.filter(m => m.relationship === 'related').length;
 
   document.getElementById('modal-title').innerHTML =
-    `<div class="flex items-center gap-2 flex-wrap">${fwBadge(fw)}<span class="font-mono font-bold">${escHtml(control.ref)}</span></div>` +
+    `<div class="flex items-center gap-2 flex-wrap">${fwBadge(fw)}<span class="font-mono font-bold">${escHtml(control.ref)}</span>${progressBadgeHtml(controlId)}</div>` +
     `<div class="text-base font-semibold mt-0.5">${escHtml(control.title)}</div>`;
+
+  // Wire up the progress button in the title
+  const modalProgressBtn = document.querySelector('#modal-title .progress-btn');
+  if (modalProgressBtn) {
+    modalProgressBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      handleProgressClick(modalProgressBtn.dataset.progressId);
+      // Re-render the title badge to reflect updated state
+      const updatedStatus = state.progress[controlId] || 'not_started';
+      modalProgressBtn.textContent = PROGRESS_ICONS[updatedStatus];
+      modalProgressBtn.className = `progress-btn ${PROGRESS_CLASSES[updatedStatus]}`;
+      modalProgressBtn.title = PROGRESS_LABELS[updatedStatus];
+      modalProgressBtn.setAttribute('aria-label', `Progress: ${PROGRESS_LABELS[updatedStatus]}. Click to change.`);
+    });
+  }
 
   document.getElementById('modal-body').innerHTML = `
     <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">${escHtml(control.description)}</p>
@@ -1021,6 +1118,7 @@ function renderControlsTable(fwId) {
         <div class="font-mono font-semibold text-xs" style="color:${fw.color}">${escHtml(c.ref)}</div>
         <div class="font-medium text-xs mt-0.5">${escHtml(c.title)}</div>
         <span class="text-xs px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 mt-1 inline-block">${escHtml(c.theme)}</span>
+        ${progressBadgeHtml(c.id) ? `<div class="mt-1">${progressBadgeHtml(c.id)}</div>` : ''}
       </td>
       ${mappingCells}
     </tr>`;
@@ -1232,6 +1330,8 @@ async function init() {
 
   // Click / keyboard handler on mapping icons (delegated, attached once)
   document.getElementById('ctable-container').addEventListener('click', e => {
+    const progressBtn = e.target.closest('.progress-btn');
+    if (progressBtn) { e.stopPropagation(); handleProgressClick(progressBtn.dataset.progressId); return; }
     const icon = e.target.closest('[data-mapping-id]');
     if (icon) openMappingModal(icon.dataset.mappingId);
   });
