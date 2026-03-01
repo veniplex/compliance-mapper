@@ -4,12 +4,15 @@ WORKDIR /app
 # Non-root user for better security
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 
-# Install production dependencies
+# Install all dependencies (including dev deps for CSS build)
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci
 
 # Copy application code
 COPY . .
+
+# Build CSS bundle and then remove dev dependencies
+RUN npm run build:css && npm prune --omit=dev
 
 # Drop privileges
 USER appuser

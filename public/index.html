@@ -5,20 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compliance Mapper — Cybersecurity Framework Overlap</title>
   <meta name="description" content="Map overlapping controls across ISO 27001, NIS2, GDPR, DORA, CIS Controls and NIST CSF." />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/tailwind.out.css" />
   <link rel="stylesheet" href="/css/styles.css" />
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
-        }
-      }
-    };
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body class="h-full bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-200">
 
@@ -31,10 +19,10 @@
         <span class="hidden sm:inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 ml-1">EU Cybersecurity</span>
       </div>
       <nav class="hidden sm:flex items-center gap-1 ml-4 text-sm font-medium" id="main-nav">
+        <button data-view="dashboard" class="nav-btn px-3 py-1.5 rounded-lg" id="dashboard-nav-btn" style="display:none">Dashboard</button>
         <button data-view="frameworks" class="nav-btn active px-3 py-1.5 rounded-lg">Frameworks</button>
         <button data-view="controls-table" class="nav-btn px-3 py-1.5 rounded-lg">Controls Table</button>
         <button data-view="apidocs" class="nav-btn px-3 py-1.5 rounded-lg">API</button>
-        <button data-view="settings" class="nav-btn px-3 py-1.5 rounded-lg" id="settings-nav-btn" style="display:none">Settings</button>
       </nav>
       <div class="ml-auto flex items-center gap-2">
         <div id="auth-area" class="flex items-center gap-2"></div>
@@ -51,10 +39,10 @@
     <!-- Mobile nav -->
     <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
       <div class="px-4 py-2 flex flex-col gap-1 text-sm font-medium">
+        <button data-view="dashboard" class="nav-btn mobile text-left px-3 py-2 rounded-lg" id="dashboard-nav-btn-mobile" style="display:none">Dashboard</button>
         <button data-view="frameworks" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Frameworks</button>
         <button data-view="controls-table" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Controls Table</button>
         <button data-view="apidocs" class="nav-btn mobile text-left px-3 py-2 rounded-lg">API Docs</button>
-        <button data-view="settings" class="nav-btn mobile text-left px-3 py-2 rounded-lg" id="settings-nav-btn-mobile" style="display:none">Settings</button>
       </div>
     </div>
   </header>
@@ -64,10 +52,13 @@
 
     <!-- ════ Frameworks View ════ -->
     <section id="view-frameworks" class="view-section">
-      <div class="mb-8">
-        <h1 class="text-3xl font-bold">Compliance Mapper</h1>
-        <p class="mt-2 text-base text-gray-600 dark:text-gray-400 max-w-3xl">Explore and compare cybersecurity &amp; privacy compliance frameworks. See how controls map across ISO 27001, NIS2, GDPR, DORA, CIS Controls and NIST CSF — so you can close gaps and reduce duplication.</p>
-        <div id="fw-stats-banner" class="hidden mt-4 flex flex-wrap gap-5 text-sm"></div>
+      <div class="mb-8" style="display:flex;align-items:flex-start;gap:2rem">
+        <div style="flex:1;min-width:0">
+          <h1 class="text-3xl font-bold">Compliance Mapper</h1>
+          <p class="mt-2 text-base text-gray-600 dark:text-gray-400 max-w-3xl">Explore and compare cybersecurity &amp; privacy compliance frameworks. See how controls map across ISO 27001, NIS2, GDPR, DORA, CIS Controls and NIST CSF — so you can close gaps and reduce duplication.</p>
+          <div id="fw-stats-banner" class="hidden mt-4 flex flex-wrap gap-5 text-sm"></div>
+        </div>
+        <div id="overall-score-banner" class="hidden" style="flex-shrink:0"></div>
       </div>
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Supported Frameworks</h2>
       <div id="frameworks-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -131,6 +122,17 @@
       </div>
     </section>
 
+    <!-- ════ Dashboard View ════ -->
+    <section id="view-dashboard" class="view-section hidden">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold">Dashboard</h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Overview of your compliance implementation progress across all frameworks.</p>
+      </div>
+      <div id="dashboard-content">
+        <p class="text-center text-gray-400 py-10">Loading…</p>
+      </div>
+    </section>
+
     <!-- ════ Settings View ════ -->
     <section id="view-settings" class="view-section hidden">
       <div class="mb-6">
@@ -143,6 +145,7 @@
         <button data-settings-tab="profile" class="settings-tab-btn px-4 py-2 text-sm font-medium border-b-2 -mb-px transition-colors">Profile</button>
         <button data-settings-tab="password" class="settings-tab-btn px-4 py-2 text-sm font-medium border-b-2 -mb-px transition-colors">Password</button>
         <button data-settings-tab="apikeys" class="settings-tab-btn px-4 py-2 text-sm font-medium border-b-2 -mb-px transition-colors">API Keys</button>
+        <button data-settings-tab="preferences" class="settings-tab-btn px-4 py-2 text-sm font-medium border-b-2 -mb-px transition-colors">Preferences</button>
       </div>
 
       <!-- Profile tab -->
@@ -184,6 +187,22 @@
           <button type="submit" id="settings-password-submit"
             class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition disabled:opacity-60 disabled:cursor-not-allowed">Change Password</button>
         </form>
+      </div>
+
+      <!-- Preferences tab -->
+      <div id="settings-tab-preferences" class="settings-tab-content hidden max-w-md">
+        <div class="space-y-4">
+          <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300">Progress Tracking</h2>
+          <div class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <div class="flex-1">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="pref-apply-equivalent">Apply status to equivalent controls</label>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">When marking a control's progress, also apply the same status to all equivalent controls across other frameworks.</p>
+            </div>
+            <div class="shrink-0 mt-0.5">
+              <input type="checkbox" id="pref-apply-equivalent" class="w-4 h-4 rounded border-gray-300 dark:border-gray-700 text-blue-600 focus:ring-blue-500 cursor-pointer" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- API Keys tab -->

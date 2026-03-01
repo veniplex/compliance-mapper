@@ -85,17 +85,18 @@ function renderAuthArea() {
     return;
   }
   if (state.user) {
+    const displayName = escHtml(state.user.username || state.user.email);
     area.innerHTML = `
-      <span class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 truncate max-w-[9rem]">${escHtml(state.user.email)}</span>
+      <span class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 truncate max-w-[9rem]">${displayName}</span>
       <button id="settings-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Settings</button>
       <button id="signout-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign Out</button>
     `;
     document.getElementById('settings-btn').addEventListener('click', () => openSettings());
     document.getElementById('signout-btn').addEventListener('click', () => handleLogout(true));
-    const navBtn = document.getElementById('settings-nav-btn');
-    if (navBtn) navBtn.style.display = '';
-    const navBtnMobile = document.getElementById('settings-nav-btn-mobile');
-    if (navBtnMobile) navBtnMobile.style.display = '';
+    const dashBtn = document.getElementById('dashboard-nav-btn');
+    if (dashBtn) dashBtn.style.display = '';
+    const dashBtnMobile = document.getElementById('dashboard-nav-btn-mobile');
+    if (dashBtnMobile) dashBtnMobile.style.display = '';
   } else {
     area.innerHTML = `
       <button id="signin-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign In</button>
@@ -103,10 +104,10 @@ function renderAuthArea() {
     `;
     document.getElementById('signin-btn').addEventListener('click', () => openAuthModal('signin'));
     document.getElementById('signup-btn').addEventListener('click', () => openAuthModal('signup'));
-    const navBtn = document.getElementById('settings-nav-btn');
-    if (navBtn) navBtn.style.display = 'none';
-    const navBtnMobile = document.getElementById('settings-nav-btn-mobile');
-    if (navBtnMobile) navBtnMobile.style.display = 'none';
+    const dashBtn = document.getElementById('dashboard-nav-btn');
+    if (dashBtn) dashBtn.style.display = 'none';
+    const dashBtnMobile = document.getElementById('dashboard-nav-btn-mobile');
+    if (dashBtnMobile) dashBtnMobile.style.display = 'none';
   }
 }
 
@@ -161,9 +162,7 @@ async function handleAuthSubmit(e) {
     closeAuthModal();
     renderAuthArea();
     await loadProgress();
-    if (state.currentView === 'framework-controls' && state.selectedFramework) {
-      renderFrameworkControls();
-    }
+    showView('dashboard');
   } catch (err) {
     errorEl.textContent = err.message || 'An error occurred. Please try again.';
     errorEl.classList.remove('hidden');
@@ -179,9 +178,13 @@ function handleLogout(rerenderView) {
   setStoredAuth(null, null);
   renderAuthArea();
   updateAllProgressBadges();
-  if (state.currentView === 'settings') showView('frameworks');
+  updateAllFrameworkProgressBars();
+  if (state.currentView === 'settings' || state.currentView === 'dashboard') showView('frameworks');
   else if (rerenderView && state.currentView === 'framework-controls' && state.selectedFramework) {
     renderFrameworkControls();
+  } else if (rerenderView && state.currentView === 'controls-table') {
+    const sel = document.getElementById('ctable-fw-select');
+    if (sel && sel.value) renderControlsTable(sel.value);
   }
 }
 
@@ -239,6 +242,15 @@ function initSettings() {
     const val = document.getElementById('settings-apikey-value').textContent;
     navigator.clipboard.writeText(val).catch(() => {});
   });
+
+  // Preferences tab
+  const prefCheckbox = document.getElementById('pref-apply-equivalent');
+  if (prefCheckbox) {
+    prefCheckbox.checked = getPreferences().applyToEquivalent !== false; // default true
+    prefCheckbox.addEventListener('change', () => {
+      setPreference('applyToEquivalent', prefCheckbox.checked);
+    });
+  }
 }
 
 function switchSettingsTab(tab) {
@@ -384,11 +396,58 @@ async function handleDeleteApiKey(keyId) {
   }
 }
 
+/* ── User preferences ───────────────────────────────────────────────── */
+
+function getPreferences() {
+  try { return JSON.parse(localStorage.getItem('preferences') || '{}'); } catch (e) { console.warn('Failed to parse preferences:', e); return {}; }
+}
+
+function setPreference(key, value) {
+  const prefs = getPreferences();
+  prefs[key] = value;
+  localStorage.setItem('preferences', JSON.stringify(prefs));
+}
+
 /* ── Progress tracking ──────────────────────────────────────────────── */
 
 const PROGRESS_CYCLE = ['not_started', 'in_progress', 'completed'];
 const PROGRESS_LABELS = { not_started: 'Not started', in_progress: 'In progress', completed: 'Completed' };
 const PROGRESS_ICONS = { not_started: '○', in_progress: '◐', completed: '●' };
+
+/* ── Score / donut constants ─────────────────────────────────────────── */
+const DONUT_R = 38;
+const DONUT_CIRC = 2 * Math.PI * DONUT_R;
+const SCORE_HIGH = 70;
+const SCORE_MED = 40;
+const RING_COLOR_HIGH = '#22c55e';
+const RING_COLOR_MED = '#f59e0b';
+const RING_COLOR_LOW = '#ef4444';
+
+function scoreRingColor(score) {
+  return score >= SCORE_HIGH ? RING_COLOR_HIGH : score >= SCORE_MED ? RING_COLOR_MED : RING_COLOR_LOW;
+}
+
+function donutSvg(score, size = 'md') {
+  const px = size === 'sm' ? 96 : 112;
+  const textPx = size === 'sm' ? 20 : 24;
+  const ringColor = scoreRingColor(score);
+  const dashOffset = DONUT_CIRC * (1 - score / 100);
+  return `
+    <div style="position:relative;width:${px}px;height:${px}px;flex-shrink:0">
+      <svg viewBox="0 0 100 100" style="width:100%;height:100%;display:block;transform:rotate(-90deg)"
+        role="img" aria-label="Overall compliance score: ${score} out of 100">
+        <circle cx="50" cy="50" r="${DONUT_R}" fill="none" stroke="#e5e7eb" stroke-width="10"/>
+        <circle cx="50" cy="50" r="${DONUT_R}" fill="none" stroke="${ringColor}" stroke-width="10"
+          stroke-dasharray="${DONUT_CIRC.toFixed(2)}" stroke-dashoffset="${dashOffset.toFixed(2)}"
+          stroke-linecap="round" style="transition:stroke-dashoffset 0.5s ease"/>
+      </svg>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <span style="font-size:${textPx}px;font-weight:700;line-height:1">${score}</span>
+        <span style="font-size:11px;color:#9ca3af;line-height:1;margin-top:2px">/ 100</span>
+      </div>
+    </div>
+  `;
+}
 const PROGRESS_CLASSES = {
   not_started: 'progress-not-started',
   in_progress: 'progress-in-progress',
@@ -402,6 +461,7 @@ async function loadProgress() {
     state.progress = {};
     entries.forEach(e => { state.progress[e.controlId] = e.status; });
     updateAllProgressBadges();
+    updateAllFrameworkProgressBars();
   } catch (err) {
     if (err.status === 401) handleLogout(false);
   }
@@ -430,15 +490,220 @@ function updateAllProgressBadges() {
 async function handleProgressClick(controlId) {
   const current = state.progress[controlId] || 'not_started';
   const next = PROGRESS_CYCLE[(PROGRESS_CYCLE.indexOf(current) + 1) % PROGRESS_CYCLE.length];
-  state.progress[controlId] = next; // optimistic update
+
+  const prefs = getPreferences();
+  const applyToEquivalent = prefs.applyToEquivalent !== false; // default true
+
+  const equivalentIds = applyToEquivalent ? getEquivalentControlIds(controlId) : [];
+  const idsToUpdate = [controlId, ...equivalentIds];
+
+  // Optimistic update
+  idsToUpdate.forEach(id => { state.progress[id] = next; });
   updateAllProgressBadges();
+  updateAllFrameworkProgressBars();
   try {
-    await authFetch('PUT', `/progress/${encodeURIComponent(controlId)}`, { status: next });
+    await Promise.all(idsToUpdate.map(id =>
+      authFetch('PUT', `/progress/${encodeURIComponent(id)}`, { status: next })
+    ));
   } catch (err) {
-    state.progress[controlId] = current; // revert
+    // Revert on failure
+    idsToUpdate.forEach(id => { state.progress[id] = current; });
     updateAllProgressBadges();
+    updateAllFrameworkProgressBars();
     console.error('Failed to update progress:', err);
   }
+}
+
+function getEquivalentControlIds(controlId) {
+  const ids = new Set();
+  state.mappings.forEach(m => {
+    if (m.relationship !== 'equivalent') return;
+    if (m.sourceControl && m.sourceControl.id === controlId && m.targetControl) {
+      ids.add(m.targetControl.id);
+    } else if (m.targetControl && m.targetControl.id === controlId && m.sourceControl) {
+      ids.add(m.sourceControl.id);
+    }
+  });
+  return Array.from(ids);
+}
+
+function renderFrameworkProgressBar(fwId) {
+  const el = document.querySelector(`.fw-progress-bar[data-fw-id="${fwId}"]`);
+  if (!el) return;
+  if (!state.user) { el.innerHTML = ''; return; }
+  const controls = state.controlsData[fwId] || [];
+  const total = controls.length;
+  if (total === 0) { el.innerHTML = ''; return; }
+  const completed = controls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+  const inProgress = controls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
+  const open = total - completed - inProgress;
+  const pct = Math.round((completed / total) * 100);
+  const parts = [`${completed} done`];
+  if (inProgress > 0) parts.push(`${inProgress} in progress`);
+  if (open > 0) parts.push(`${open} open`);
+  el.innerHTML = `
+    <div class="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
+      <div class="flex items-center justify-between text-xs mb-1">
+        <span class="text-gray-500 dark:text-gray-400">${parts.join(' · ')}</span>
+        <span class="font-semibold text-gray-700 dark:text-gray-300">${pct}%</span>
+      </div>
+      <div class="h-1.5 rounded-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
+        <div class="h-full rounded-full bg-green-500 transition-all" style="width:${pct}%"></div>
+      </div>
+    </div>
+  `;
+}
+
+function updateAllFrameworkProgressBars() {
+  state.frameworks.forEach(fw => renderFrameworkProgressBar(fw.id));
+  renderOverallScore();
+  if (state.currentView === 'dashboard') renderDashboard();
+}
+
+function renderOverallScore() {
+  const el = document.getElementById('overall-score-banner');
+  if (!el) return;
+  if (!state.user) { el.classList.add('hidden'); return; }
+
+  const allControls = Object.values(state.controlsData).flat();
+  const total = allControls.length;
+  if (total === 0) { el.classList.add('hidden'); return; }
+
+  const completed = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+  const inProgress = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
+  const open = total - completed - inProgress;
+  const score = Math.round(((completed + inProgress * 0.5) / total) * 100);
+
+  el.innerHTML = `
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      ${donutSvg(score)}
+      <div class="text-xs font-semibold text-gray-600 dark:text-gray-400">Overall Score</div>
+      <div class="text-xs text-gray-400 dark:text-gray-500 text-center" style="line-height:1.4">
+        <span class="text-green-600 dark:text-green-400 font-medium">${completed} done</span>
+        ${inProgress > 0 ? ` · <span class="text-amber-600 dark:text-amber-400 font-medium">${inProgress} in progress</span>` : ''}
+        ${open > 0 ? ` · ${open} open` : ''}
+      </div>
+    </div>
+  `;
+  el.classList.remove('hidden');
+}
+
+/* ── Dashboard ───────────────────────────────────────────────────────── */
+function renderDashboard() {
+  const container = document.getElementById('dashboard-content');
+  if (!container) return;
+  if (!state.user) {
+    container.innerHTML = '<p class="text-center text-gray-400 py-10">Sign in to view the dashboard.</p>';
+    return;
+  }
+
+  const allControls = Object.values(state.controlsData).flat();
+  const total = allControls.length;
+
+  const completed = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+  const inProgress = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
+  const open = total - completed - inProgress;
+  const score = total > 0 ? Math.round(((completed + inProgress * 0.5) / total) * 100) : 0;
+  const completedPct = total > 0 ? Math.round((completed / total) * 100) : 0;
+  const inProgressPct = total > 0 ? Math.round((inProgress / total) * 100) : 0;
+  const openPct = 100 - completedPct - inProgressPct;
+
+  // Per-framework stats
+  const fwRows = state.frameworks.map(fw => {
+    const controls = state.controlsData[fw.id] || [];
+    const tot = controls.length;
+    if (tot === 0) return null;
+    const done = controls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+    const ip = controls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
+    const op = tot - done - ip;
+    const pct = Math.round((done / tot) * 100);
+    const ipPct = Math.round((ip / tot) * 100);
+    return { fw, tot, done, ip, op, pct, ipPct };
+  }).filter(Boolean);
+
+  container.innerHTML = `
+    <!-- KPI summary row -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 flex flex-col items-center gap-1">
+        ${donutSvg(score, 'sm')}
+        <div class="text-xs font-semibold text-gray-600 dark:text-gray-400">Overall Score</div>
+      </div>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="h-1 bg-green-500"></div>
+        <div class="p-5">
+          <div class="text-3xl font-bold text-green-600 dark:text-green-400">${completed}</div>
+          <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-1">Completed</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${completedPct}% of ${total} controls</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="h-1 bg-amber-500"></div>
+        <div class="p-5">
+          <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">${inProgress}</div>
+          <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-1">In Progress</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${inProgressPct}% of ${total} controls</div>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="h-1 bg-slate-400 dark:bg-slate-600"></div>
+        <div class="p-5">
+          <div class="text-3xl font-bold text-slate-600 dark:text-slate-300">${open}</div>
+          <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-1">Open</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${openPct}% of ${total} controls</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Per-framework table -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden">
+      <div class="px-5 py-4 border-b border-gray-200 dark:border-gray-700">
+        <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-200">Progress by Framework</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+            <tr>
+              <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Framework</th>
+              <th class="px-5 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Controls</th>
+              <th class="px-5 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Done</th>
+              <th class="px-5 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">In Progress</th>
+              <th class="px-5 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Open</th>
+              <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 min-w-[140px]">Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${fwRows.map(({ fw, tot, done, ip, op, pct, ipPct }) => `
+              <tr class="border-t border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer" tabindex="0"
+                data-fw-id="${escHtml(fw.id)}"
+                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showFrameworkControls(this.dataset.fwId)}">
+                <td class="px-5 py-3">
+                  <span class="fw-badge" style="background:${fw.color}20;color:${fw.color};border:1px solid ${fw.color}40">${escHtml(fw.shortName)}</span>
+                </td>
+                <td class="px-5 py-3 text-right text-gray-600 dark:text-gray-400">${tot}</td>
+                <td class="px-5 py-3 text-right font-medium text-green-600 dark:text-green-400">${done}</td>
+                <td class="px-5 py-3 text-right font-medium text-amber-600 dark:text-amber-400">${ip}</td>
+                <td class="px-5 py-3 text-right text-gray-500 dark:text-gray-400">${op}</td>
+                <td class="px-5 py-3">
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 h-2 rounded-full bg-gray-100 dark:bg-gray-700 overflow-hidden flex">
+                      <div class="h-full bg-green-500" style="width:${pct}%"></div>
+                      <div class="h-full bg-amber-400" style="width:${ipPct}%"></div>
+                    </div>
+                    <span class="text-xs font-semibold w-8 text-right text-gray-600 dark:text-gray-400">${pct}%</span>
+                  </div>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+
+  // Click row → navigate to framework controls
+  container.querySelectorAll('tr[data-fw-id]').forEach(row => {
+    row.addEventListener('click', () => showFrameworkControls(row.dataset.fwId));
+  });
 }
 
 /* ── Navigation ─────────────────────────────────────────────────────── */
@@ -452,6 +717,8 @@ function showView(viewId) {
 
   state.currentView = viewId;
   document.getElementById('mobile-menu').classList.add('hidden');
+
+  if (viewId === 'dashboard') renderDashboard();
 }
 
 document.querySelectorAll('.nav-btn').forEach(btn => {
@@ -741,6 +1008,7 @@ function renderFrameworksPage(frameworks, controlsData, mappings) {
           <span class="font-semibold">${controlCount} <span class="font-normal text-gray-500">controls</span></span>
           <span class="font-semibold">${mappingCount} <span class="font-normal text-gray-500">mappings</span></span>
         </div>
+        <div class="fw-progress-bar" data-fw-id="${escHtml(fw.id)}"></div>
         <div class="mt-3 flex items-center justify-between">
           <a href="${escHtml(fw.url)}" target="_blank" rel="noopener noreferrer"
             class="text-xs font-medium hover:underline"
@@ -885,8 +1153,23 @@ function openControlMappingModal(controlId) {
   const totalRelated = relatedMappings.filter(m => m.relationship === 'related').length;
 
   document.getElementById('modal-title').innerHTML =
-    `<div class="flex items-center gap-2 flex-wrap">${fwBadge(fw)}<span class="font-mono font-bold">${escHtml(control.ref)}</span></div>` +
+    `<div class="flex items-center gap-2 flex-wrap">${fwBadge(fw)}<span class="font-mono font-bold">${escHtml(control.ref)}</span>${progressBadgeHtml(controlId)}</div>` +
     `<div class="text-base font-semibold mt-0.5">${escHtml(control.title)}</div>`;
+
+  // Wire up the progress button in the title
+  const modalProgressBtn = document.querySelector('#modal-title .progress-btn');
+  if (modalProgressBtn) {
+    modalProgressBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      handleProgressClick(modalProgressBtn.dataset.progressId);
+      // Re-render the title badge to reflect updated state
+      const updatedStatus = state.progress[controlId] || 'not_started';
+      modalProgressBtn.textContent = PROGRESS_ICONS[updatedStatus];
+      modalProgressBtn.className = `progress-btn ${PROGRESS_CLASSES[updatedStatus]}`;
+      modalProgressBtn.title = PROGRESS_LABELS[updatedStatus];
+      modalProgressBtn.setAttribute('aria-label', `Progress: ${PROGRESS_LABELS[updatedStatus]}. Click to change.`);
+    });
+  }
 
   document.getElementById('modal-body').innerHTML = `
     <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">${escHtml(control.description)}</p>
@@ -1021,6 +1304,7 @@ function renderControlsTable(fwId) {
         <div class="font-mono font-semibold text-xs" style="color:${fw.color}">${escHtml(c.ref)}</div>
         <div class="font-medium text-xs mt-0.5">${escHtml(c.title)}</div>
         <span class="text-xs px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 mt-1 inline-block">${escHtml(c.theme)}</span>
+        ${progressBadgeHtml(c.id) ? `<div class="mt-1">${progressBadgeHtml(c.id)}</div>` : ''}
       </td>
       ${mappingCells}
     </tr>`;
@@ -1232,6 +1516,8 @@ async function init() {
 
   // Click / keyboard handler on mapping icons (delegated, attached once)
   document.getElementById('ctable-container').addEventListener('click', e => {
+    const progressBtn = e.target.closest('.progress-btn');
+    if (progressBtn) { e.stopPropagation(); handleProgressClick(progressBtn.dataset.progressId); return; }
     const icon = e.target.closest('[data-mapping-id]');
     if (icon) openMappingModal(icon.dataset.mappingId);
   });
@@ -1248,8 +1534,11 @@ async function init() {
       renderControlsTable(e.target.value);
     });
 
-    // Load progress if user is already authenticated
-    if (state.token) await loadProgress();
+    // Load progress if user is already authenticated; land on dashboard
+    if (state.token) {
+      await loadProgress();
+      showView('dashboard');
+    }
 
   } catch (err) {
     console.error('Failed to load data:', err);
