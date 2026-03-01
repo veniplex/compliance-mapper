@@ -57,7 +57,7 @@ describe('GET /api/frameworks', () => {
     const { status, body } = await get('/api/frameworks');
     assert.equal(status, 200);
     assert.ok(Array.isArray(body.data));
-    assert.ok(body.data.length >= 6, 'Expected at least 6 frameworks');
+    assert.ok(body.data.length >= 9, 'Expected at least 9 frameworks');
   });
 
   test('each framework has required fields', async () => {
@@ -78,6 +78,9 @@ describe('GET /api/frameworks', () => {
     assert.ok(ids.includes('nis2'));
     assert.ok(ids.includes('gdpr'));
     assert.ok(ids.includes('dora'));
+    assert.ok(ids.includes('kritis'));
+    assert.ok(ids.includes('nis2-umsg'));
+    assert.ok(ids.includes('bsi-grundschutz'));
   });
 });
 
@@ -101,6 +104,27 @@ describe('GET /api/frameworks/:id', () => {
     const { status, body } = await get('/api/frameworks/unknown-fw');
     assert.equal(status, 404);
     assert.ok(body.error);
+  });
+
+  test('returns kritis framework', async () => {
+    const { status, body } = await get('/api/frameworks/kritis');
+    assert.equal(status, 200);
+    assert.equal(body.data.id, 'kritis');
+    assert.equal(body.data.region, 'Germany');
+  });
+
+  test('returns nis2-umsg framework', async () => {
+    const { status, body } = await get('/api/frameworks/nis2-umsg');
+    assert.equal(status, 200);
+    assert.equal(body.data.id, 'nis2-umsg');
+    assert.equal(body.data.region, 'Germany');
+  });
+
+  test('returns bsi-grundschutz framework', async () => {
+    const { status, body } = await get('/api/frameworks/bsi-grundschutz');
+    assert.equal(status, 200);
+    assert.equal(body.data.id, 'bsi-grundschutz');
+    assert.equal(body.data.region, 'Germany');
   });
 });
 
@@ -133,6 +157,30 @@ describe('GET /api/frameworks/:id/controls', () => {
   test('returns 404 for unknown framework', async () => {
     const { status } = await get('/api/frameworks/no-such/controls');
     assert.equal(status, 404);
+  });
+
+  test('returns controls for kritis', async () => {
+    const { status, body } = await get('/api/frameworks/kritis/controls');
+    assert.equal(status, 200);
+    assert.ok(Array.isArray(body.data));
+    assert.ok(body.data.length >= 11, 'Expected at least 11 KRITIS controls');
+    assert.ok(body.data.every(c => c.frameworkId === 'kritis'));
+  });
+
+  test('returns controls for nis2-umsg', async () => {
+    const { status, body } = await get('/api/frameworks/nis2-umsg/controls');
+    assert.equal(status, 200);
+    assert.ok(Array.isArray(body.data));
+    assert.ok(body.data.length >= 13, 'Expected at least 13 NIS2UmsuCG controls');
+    assert.ok(body.data.every(c => c.frameworkId === 'nis2-umsg'));
+  });
+
+  test('returns controls for bsi-grundschutz', async () => {
+    const { status, body } = await get('/api/frameworks/bsi-grundschutz/controls');
+    assert.equal(status, 200);
+    assert.ok(Array.isArray(body.data));
+    assert.ok(body.data.length >= 27, 'Expected at least 27 BSI Grundschutz controls');
+    assert.ok(body.data.every(c => c.frameworkId === 'bsi-grundschutz'));
   });
 });
 
@@ -243,6 +291,32 @@ describe('GET /api/mappings', () => {
     const { status } = await get('/api/mappings?to=bad-framework');
     assert.equal(status, 400);
   });
+
+  test('kritis to iso27001 mappings exist', async () => {
+    const { body } = await get('/api/mappings?from=kritis&to=iso27001');
+    assert.ok(body.data.length > 0, 'Expected mappings from kritis to iso27001');
+    assert.ok(body.data.every(m => m.sourceControl.frameworkId === 'kritis'));
+  });
+
+  test('bsi-grundschutz to iso27001 mappings exist', async () => {
+    const { body } = await get('/api/mappings?from=bsi-grundschutz&to=iso27001');
+    assert.ok(body.data.length > 0, 'Expected mappings from bsi-grundschutz to iso27001');
+  });
+
+  test('nis2-umsg to nis2 mappings exist', async () => {
+    const { body } = await get('/api/mappings?from=nis2-umsg&to=nis2');
+    assert.ok(body.data.length > 0, 'Expected mappings from nis2-umsg to nis2');
+  });
+
+  test('iso27001-2013 to bsi-grundschutz mappings exist', async () => {
+    const { body } = await get('/api/mappings?from=iso27001-2013&to=bsi-grundschutz');
+    assert.ok(body.data.length > 0, 'Expected mappings from iso27001-2013 to bsi-grundschutz');
+  });
+
+  test('cis to nistcsf mappings exist', async () => {
+    const { body } = await get('/api/mappings?from=cis&to=nistcsf');
+    assert.ok(body.data.length > 0, 'Expected mappings from cis to nistcsf');
+  });
 });
 
 describe('GET /api/mappings/:id', () => {
@@ -284,7 +358,7 @@ describe('GET /api/stats', () => {
     assert.ok(typeof s.frameworkCount === 'number', 'Missing frameworkCount');
     assert.ok(typeof s.controlCount === 'number', 'Missing controlCount');
     assert.ok(typeof s.mappingCount === 'number', 'Missing mappingCount');
-    assert.ok(s.frameworkCount >= 6, 'Expected at least 6 frameworks');
+    assert.ok(s.frameworkCount >= 9, 'Expected at least 9 frameworks');
     assert.ok(s.controlCount > 50, 'Expected many controls');
     assert.ok(s.mappingCount >= 50, 'Expected at least 50 mappings');
   });

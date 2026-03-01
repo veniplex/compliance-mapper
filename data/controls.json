@@ -2568,5 +2568,470 @@
       "category": "RECOVER",
       "theme": "Incident Management"
     }
+  ],
+  "kritis": [
+    {
+      "id": "kritis-8a-1",
+      "frameworkId": "kritis",
+      "ref": "§8a(1) BSIG",
+      "title": "State-of-the-art technical and organisational security measures",
+      "description": "Operators of critical infrastructure must implement appropriate technical and organisational measures to avoid disruptions of availability, integrity, authenticity and confidentiality of their IT systems, components and processes that are essential to the functioning of the critical infrastructure they operate. The measures must comply with the state of the art.",
+      "category": "Risk Management",
+      "theme": "Governance"
+    },
+    {
+      "id": "kritis-8a-1a",
+      "frameworkId": "kritis",
+      "ref": "§8a(1a) BSIG",
+      "title": "Systems for attack detection",
+      "description": "Operators of critical infrastructure must use systems for attack detection (Angriffserkennung). These systems must continuously analyse incoming and outgoing data traffic and system states in order to detect attacks and enable appropriate defensive and corrective actions.",
+      "category": "Security Operations",
+      "theme": "Threat Detection"
+    },
+    {
+      "id": "kritis-8a-3",
+      "frameworkId": "kritis",
+      "ref": "§8a(3) BSIG",
+      "title": "Proof of compliance every two years",
+      "description": "Operators of critical infrastructure must demonstrate to BSI, every two years, that the security measures required under §8a(1) and §8a(1a) have been implemented. Acceptable forms of proof include security audits, examinations, or certifications. BSI may request supplementary documentation or carry out its own investigation.",
+      "category": "Compliance",
+      "theme": "Audit and Accountability"
+    },
+    {
+      "id": "kritis-8b-3",
+      "frameworkId": "kritis",
+      "ref": "§8b(3) BSIG",
+      "title": "Registration with BSI",
+      "description": "Operators of critical infrastructure must register with BSI and designate a contact point that is reachable at all times. The contact point ensures the exchange of information between the operator and BSI and must be reported without undue delay.",
+      "category": "Governance",
+      "theme": "Governance"
+    },
+    {
+      "id": "kritis-8b-4a",
+      "frameworkId": "kritis",
+      "ref": "§8b(4a) BSIG",
+      "title": "Incident reporting to BSI",
+      "description": "Operators of critical infrastructure must report to BSI without undue delay any significant disruptions to the availability, integrity, authenticity or confidentiality of their IT systems that result in, or could result in, a failure or significant impairment of the critical infrastructure they operate.",
+      "category": "Incident Management",
+      "theme": "Incident Management"
+    },
+    {
+      "id": "kritis-8d",
+      "frameworkId": "kritis",
+      "ref": "§8d BSIG",
+      "title": "Critical components and manufacturers",
+      "description": "Components critical to the functioning of critical infrastructure (kritische Komponenten) may only be used after the operator has confirmed that the manufacturer has issued a declaration of trustworthiness. The Federal Ministry of the Interior may prohibit the use of critical components from manufacturers that do not provide sufficient trustworthiness guarantees.",
+      "category": "Supply Chain",
+      "theme": "Supply Chain Security"
+    },
+    {
+      "id": "kritis-8a-2",
+      "frameworkId": "kritis",
+      "ref": "§8a(2) BSIG",
+      "title": "Industry-specific security standards as compliance reference",
+      "description": "Operators of critical infrastructure may demonstrate compliance with §8a(1) by implementing security standards developed by industry associations and recognised by BSI (Branchenspezifische Sicherheitsstandards, B3S). BSI may reject such standards or request amendments if they do not adequately reflect the state of the art.",
+      "category": "Risk Management",
+      "theme": "Governance"
+    },
+    {
+      "id": "kritis-8a-4",
+      "frameworkId": "kritis",
+      "ref": "§8a(4) BSIG",
+      "title": "BSI audit and inspection powers",
+      "description": "BSI may at any time request documentation and evidence from critical infrastructure operators regarding the implementation of required security measures, or commission an independent third party to carry out an audit. BSI may also issue binding orders to remedy identified deficiencies within a set timeframe.",
+      "category": "Compliance",
+      "theme": "Audit and Accountability"
+    },
+    {
+      "id": "kritis-8b-4",
+      "frameworkId": "kritis",
+      "ref": "§8b(4) BSIG",
+      "title": "Contact point always reachable",
+      "description": "Operators of critical infrastructure must designate a permanent, always-reachable contact point (Kontaktstelle) for communication with BSI. This contact point must be reported to BSI and updated without undue delay in the event of any change. The contact point serves as the primary interface for BSI communications, warnings, and incident coordination.",
+      "category": "Governance",
+      "theme": "Governance"
+    },
+    {
+      "id": "kritis-8c",
+      "frameworkId": "kritis",
+      "ref": "§8c BSIG",
+      "title": "Obligations for digital infrastructure operators",
+      "description": "Operators of digital infrastructure (including internet exchange points, DNS service providers, TLD name registries, and cloud computing services) are subject to analogous security obligations as critical infrastructure operators. They must implement state-of-the-art measures, prove compliance, maintain a reachable contact point, and report significant security incidents to BSI.",
+      "category": "Risk Management",
+      "theme": "Governance"
+    },
+    {
+      "id": "kritis-8f",
+      "frameworkId": "kritis",
+      "ref": "§8f BSIG",
+      "title": "Security obligations for entities of special public interest (UNBÖFI)",
+      "description": "Entities of special public interest (Unternehmen im besonderen öffentlichen Interesse) — such as defence contractors, entities with significant economic importance, and providers of particularly important services — must submit self-declarations of implemented security measures to BSI, report significant incidents, and register with BSI, even if they do not qualify as critical infrastructure under the numerical thresholds.",
+      "category": "Risk Management",
+      "theme": "Governance"
+    }
+  ],
+  "nis2-umsg": [
+    {
+      "id": "nis2umsg-30",
+      "frameworkId": "nis2-umsg",
+      "ref": "§30 NIS2UmsuCG",
+      "title": "Risk management and minimum security measures for essential entities",
+      "description": "Essential entities must take appropriate and proportionate technical, operational and organisational measures to manage risks posed to the security of their network and information systems. Measures must address policies on risk analysis and information system security, incident handling, business continuity, supply chain security, security in acquisition and maintenance, effectiveness assessment, cyber hygiene and training, cryptography, human resources security and access control, and multi-factor authentication.",
+      "category": "Risk Management",
+      "theme": "Governance"
+    },
+    {
+      "id": "nis2umsg-32",
+      "frameworkId": "nis2-umsg",
+      "ref": "§32 NIS2UmsuCG",
+      "title": "Minimum security measures for important entities",
+      "description": "Important entities must implement the same minimum security measures as essential entities under §30, with the difference that supervisory obligations are triggered only after an incident or relevant indication, rather than on a proactive basis.",
+      "category": "Risk Management",
+      "theme": "Governance"
+    },
+    {
+      "id": "nis2umsg-35",
+      "frameworkId": "nis2-umsg",
+      "ref": "§35 NIS2UmsuCG",
+      "title": "Incident notification obligations",
+      "description": "Essential and important entities must notify BSI without undue delay of any significant incident affecting their network and information systems. An early warning must be submitted within 24 hours, a detailed incident notification within 72 hours, and a final report within one month of the initial notification.",
+      "category": "Incident Management",
+      "theme": "Incident Management"
+    },
+    {
+      "id": "nis2umsg-38",
+      "frameworkId": "nis2-umsg",
+      "ref": "§38 NIS2UmsuCG",
+      "title": "Management body responsibility and liability",
+      "description": "The management bodies of essential and important entities must approve the cybersecurity risk management measures, oversee their implementation, and can be held personally liable for breaches of these obligations. Management must undergo regular cybersecurity training to acquire sufficient knowledge and skills to identify and assess cybersecurity risks.",
+      "category": "Governance",
+      "theme": "Governance"
+    },
+    {
+      "id": "nis2umsg-39",
+      "frameworkId": "nis2-umsg",
+      "ref": "§39 NIS2UmsuCG",
+      "title": "Supply chain security",
+      "description": "Essential and important entities must address cybersecurity risks in their supply chains and supplier relationships, including security aspects of the relationships between each entity and its direct suppliers and service providers, and evaluate the overall security practices of the supply chain.",
+      "category": "Supply Chain",
+      "theme": "Supply Chain Security"
+    },
+    {
+      "id": "nis2umsg-43",
+      "frameworkId": "nis2-umsg",
+      "ref": "§43 NIS2UmsuCG",
+      "title": "Registration and information obligations",
+      "description": "Essential and important entities must register with BSI and provide relevant information including name, address, sector, contact details, and IP address ranges. Updates must be notified to BSI without undue delay. BSI maintains a register of essential and important entities.",
+      "category": "Governance",
+      "theme": "Governance"
+    },
+    {
+      "id": "nis2umsg-28",
+      "frameworkId": "nis2-umsg",
+      "ref": "§28 NIS2UmsuCG",
+      "title": "Classification of essential and important entities",
+      "description": "Entities are classified based on their sector and size. Essential entities: large entities (>250 employees or >€50M annual turnover) in Annex I sectors (energy, transport, banking, financial market infrastructure, health, drinking water, wastewater, digital infrastructure, ICT service management, public administration, space). Important entities: medium entities (>50 employees or >€10M turnover) in Annex I sectors, and large and medium entities in Annex II sectors (postal services, waste management, chemicals, food, manufacturing, digital providers, research). Certain entities are classified as essential regardless of size, including providers of public electronic communications networks, trust service providers, DNS service providers, and TLD registries.",
+      "category": "Governance",
+      "theme": "Governance"
+    },
+    {
+      "id": "nis2umsg-31",
+      "frameworkId": "nis2-umsg",
+      "ref": "§31 NIS2UmsuCG",
+      "title": "Minimum security measures — 12 categories",
+      "description": "Essential and important entities must implement measures across twelve minimum security categories: (1) risk analysis and information system security policies; (2) incident handling; (3) business continuity including backup management and disaster recovery; (4) supply chain security; (5) security in acquisition, development and maintenance of network and information systems; (6) policies to assess effectiveness of cybersecurity measures; (7) basic cyber hygiene and cybersecurity training; (8) cryptography and encryption policies; (9) human resources security, access control and asset management; (10) multi-factor or continuous authentication; (11) secure communications; (12) emergency communications systems.",
+      "category": "Risk Management",
+      "theme": "Governance"
+    },
+    {
+      "id": "nis2umsg-34",
+      "frameworkId": "nis2-umsg",
+      "ref": "§34 NIS2UmsuCG",
+      "title": "Supervisory and enforcement measures for essential entities",
+      "description": "Essential entities are subject to proactive, ex-ante supervision. BSI and sector-specific authorities may conduct on-site inspections, targeted security audits, scans of publicly accessible systems, and requests for evidence of compliance. BSI may issue binding corrective orders, impose operational restrictions, or temporarily prohibit operation in cases of significant non-compliance that poses an unacceptable risk.",
+      "category": "Compliance",
+      "theme": "Audit and Accountability"
+    },
+    {
+      "id": "nis2umsg-36",
+      "frameworkId": "nis2-umsg",
+      "ref": "§36 NIS2UmsuCG",
+      "title": "Voluntary incident reporting",
+      "description": "Entities not classified as essential or important, and classified entities reporting incidents below the significance threshold, may voluntarily notify BSI of incidents, cyber threats, and near-misses. BSI processes voluntary reports, may publish anonymised threat intelligence derived from them, and provides feedback to reporting entities. Voluntary reporting does not attract administrative sanctions.",
+      "category": "Incident Management",
+      "theme": "Incident Management"
+    },
+    {
+      "id": "nis2umsg-40",
+      "frameworkId": "nis2-umsg",
+      "ref": "§40 NIS2UmsuCG",
+      "title": "Use of European cybersecurity certification",
+      "description": "BSI may require essential and important entities to use products, services and processes certified under European cybersecurity certification schemes established pursuant to the EU Cybersecurity Act (Regulation 2019/881). Where a relevant scheme exists and the entity uses uncertified products, it must justify this to the supervisory authority. BSI operates Germany's national certification authority (Nationale Zertifizierungsstelle, NZS) for this purpose.",
+      "category": "Compliance",
+      "theme": "Governance"
+    },
+    {
+      "id": "nis2umsg-41",
+      "frameworkId": "nis2-umsg",
+      "ref": "§41 NIS2UmsuCG",
+      "title": "Information sharing and sector cooperation",
+      "description": "Essential and important entities are encouraged to participate in information sharing arrangements (ISACs or equivalent bodies) relevant to their sector. BSI may establish or designate such bodies and coordinates threat intelligence sharing with ENISA and EU member states. Entities that share cybersecurity information in good faith are granted liability protection for that disclosure.",
+      "category": "Governance",
+      "theme": "Governance"
+    },
+    {
+      "id": "nis2umsg-65",
+      "frameworkId": "nis2-umsg",
+      "ref": "§65 NIS2UmsuCG",
+      "title": "Administrative fines",
+      "description": "Violations of the security and reporting obligations may result in administrative fines of up to €10,000,000 or 2% of total worldwide annual turnover for essential entities, and €7,000,000 or 1.4% of turnover for important entities, whichever is higher. Management body members can be held personally liable and may face temporary bans from management functions for wilful or seriously negligent failures.",
+      "category": "Compliance",
+      "theme": "Governance"
+    }
+  ],
+  "bsi-grundschutz": [
+    {
+      "id": "bsi-gs-isms-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "ISMS.1",
+      "title": "Security Management",
+      "description": "The ISMS.1 building block covers the establishment, operation and continuous improvement of an information security management process. It requires a defined security policy, assigned responsibilities, documented security concept, and regular review of the overall ISMS.",
+      "category": "ISMS",
+      "theme": "Governance"
+    },
+    {
+      "id": "bsi-gs-orp-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "ORP.1",
+      "title": "Organisation",
+      "description": "The ORP.1 building block requires that information security responsibilities are clearly defined and allocated within the organisation. It covers the organisational structure, role definitions, and the processes for managing security-relevant decisions.",
+      "category": "Organisation and Personnel",
+      "theme": "Governance"
+    },
+    {
+      "id": "bsi-gs-orp-2",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "ORP.2",
+      "title": "Personnel",
+      "description": "The ORP.2 building block addresses the security aspects of employment, covering background checks for sensitive roles, contractual obligations, responsibilities upon change or termination of employment, and measures to protect against insider threats.",
+      "category": "Organisation and Personnel",
+      "theme": "Human Resources"
+    },
+    {
+      "id": "bsi-gs-orp-3",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "ORP.3",
+      "title": "Information Security Awareness and Training",
+      "description": "The ORP.3 building block requires that all employees receive regular and role-appropriate security awareness and training. It covers the development of a training programme, awareness campaigns, and measuring the effectiveness of security education.",
+      "category": "Organisation and Personnel",
+      "theme": "Security Awareness"
+    },
+    {
+      "id": "bsi-gs-orp-4",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "ORP.4",
+      "title": "Identity and Access Management",
+      "description": "The ORP.4 building block governs the management of user identities and access rights across all systems. It requires a defined process for granting, reviewing and revoking access rights, the use of the principle of least privilege, and the use of strong authentication methods.",
+      "category": "Organisation and Personnel",
+      "theme": "Access Control"
+    },
+    {
+      "id": "bsi-gs-con-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "CON.1",
+      "title": "Cryptography Concept",
+      "description": "The CON.1 building block requires the establishment of a cryptography policy covering the selection of approved algorithms and key lengths, key management processes, and the use of encryption to protect the confidentiality and integrity of sensitive information in storage and transit.",
+      "category": "Concepts and Requirements",
+      "theme": "Cryptography"
+    },
+    {
+      "id": "bsi-gs-con-3",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "CON.3",
+      "title": "Data Backup Policy",
+      "description": "The CON.3 building block requires that a documented data backup policy is established and maintained. It covers backup frequency, retention periods, backup storage locations, testing of restoration procedures, and protection of backup media against loss, destruction and unauthorised access.",
+      "category": "Concepts and Requirements",
+      "theme": "Business Continuity"
+    },
+    {
+      "id": "bsi-gs-ops-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "OPS.1.1.3",
+      "title": "Patch and Change Management",
+      "description": "The OPS.1.1.3 building block requires a structured process for managing software patches and configuration changes. It covers vulnerability scanning, patch prioritisation, testing changes in non-production environments, and maintaining a record of applied patches and configuration changes.",
+      "category": "Operations",
+      "theme": "Vulnerability Management"
+    },
+    {
+      "id": "bsi-gs-der-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "DER.1",
+      "title": "Detection of Relevant Security Events",
+      "description": "The DER.1 building block requires the establishment of monitoring and detection capabilities to identify security-relevant events in a timely manner. It covers logging requirements, log analysis, use of security information and event management (SIEM) tools, and detection of anomalies and attack patterns.",
+      "category": "Detection and Response",
+      "theme": "Threat Detection"
+    },
+    {
+      "id": "bsi-gs-der-2",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "DER.2.1",
+      "title": "Handling IT Security Incidents",
+      "description": "The DER.2.1 building block defines the requirements for detecting, reporting, classifying, responding to and documenting IT security incidents. It requires defined roles, documented response procedures, post-incident analysis to prevent recurrence, and communication with relevant internal and external stakeholders.",
+      "category": "Detection and Response",
+      "theme": "Incident Management"
+    },
+    {
+      "id": "bsi-gs-der-4",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "DER.4",
+      "title": "IT Emergency Management (BCM)",
+      "description": "The DER.4 building block requires the development and maintenance of IT emergency management plans as part of the overall business continuity management (BCM) process. It covers business impact analysis, recovery time objectives, emergency procedures, testing of continuity plans, and crisis communication.",
+      "category": "Detection and Response",
+      "theme": "Business Continuity"
+    },
+    {
+      "id": "bsi-gs-net-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "NET.1.1",
+      "title": "Network Architecture and Design",
+      "description": "The NET.1.1 building block requires that network architecture is designed with security as a foundational principle. It covers network segmentation, the use of demilitarised zones, secure remote access, protection of management interfaces, and documentation of the network topology.",
+      "category": "Networks",
+      "theme": "Network Security"
+    },
+    {
+      "id": "bsi-gs-sys-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "SYS.1.1",
+      "title": "General Server",
+      "description": "The SYS.1.1 building block defines baseline security requirements for all server systems, including hardening of the operating system, removal of unnecessary services and accounts, protection of administrative interfaces, regular patching, and monitoring of server health and security events.",
+      "category": "Systems",
+      "theme": "System Hardening"
+    },
+    {
+      "id": "bsi-gs-orp-5",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "ORP.5",
+      "title": "Requirements Management (Compliance)",
+      "description": "The ORP.5 building block requires identification and ongoing management of all legal, regulatory and contractual requirements relevant to information security. It covers establishing a compliance management process, assigning responsibilities for regulatory monitoring, maintaining a register of applicable obligations, and ensuring that the organisation's security measures satisfy those obligations.",
+      "category": "Organisation and Personnel",
+      "theme": "Governance"
+    },
+    {
+      "id": "bsi-gs-con-2",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "CON.2",
+      "title": "Privacy (Datenschutz)",
+      "description": "The CON.2 building block addresses data protection requirements integrated within the ISMS. It requires that personal data is processed only to the extent necessary, that data protection impact assessments are conducted for high-risk processing activities, that a Data Protection Officer is designated where required by GDPR, and that appropriate technical and organisational measures protect the rights of data subjects.",
+      "category": "Concepts and Requirements",
+      "theme": "Data Protection"
+    },
+    {
+      "id": "bsi-gs-con-6",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "CON.6",
+      "title": "Delete and Destroy",
+      "description": "The CON.6 building block requires that information and data are securely deleted or destroyed when they are no longer required. It covers the development of a data retention and deletion policy, selection of appropriate deletion methods proportionate to data classification, secure disposal and destruction of storage media, verification of deletion effectiveness, and documentation of destruction for sensitive data.",
+      "category": "Concepts and Requirements",
+      "theme": "Data Protection"
+    },
+    {
+      "id": "bsi-gs-ops-1-1-2",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "OPS.1.1.2",
+      "title": "Proper IT Operations",
+      "description": "The OPS.1.1.2 building block defines requirements for the day-to-day operation of IT systems, covering documented and approved operating procedures, separation of production and test environments, capacity planning to prevent performance degradation, regular review of system configurations against approved baselines, and structured management of scheduled and emergency maintenance to ensure availability and integrity.",
+      "category": "Operations",
+      "theme": "System Hardening"
+    },
+    {
+      "id": "bsi-gs-ops-1-1-4",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "OPS.1.1.4",
+      "title": "Protection Against Malware",
+      "description": "The OPS.1.1.4 building block defines requirements for protecting IT systems against malware. It covers deployment of up-to-date anti-malware solutions on all relevant endpoints and servers, automatic and regular signature and behavioural-detection updates, real-time scanning, scanning of incoming files and email attachments, centrally managed malware policies, and user awareness training to prevent malware infections.",
+      "category": "Operations",
+      "theme": "Threat Detection"
+    },
+    {
+      "id": "bsi-gs-ops-1-1-5",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "OPS.1.1.5",
+      "title": "Logging",
+      "description": "The OPS.1.1.5 building block defines requirements for generating, securely storing, protecting, and analysing log data. It covers defining a logging concept specifying which systems and events must be logged, protecting log files against tampering and unauthorised access, defining and enforcing retention periods, archiving log data, and regularly reviewing logs for security-relevant events and anomalies.",
+      "category": "Operations",
+      "theme": "Threat Detection"
+    },
+    {
+      "id": "bsi-gs-ops-2-2",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "OPS.2.2",
+      "title": "Cloud Usage",
+      "description": "The OPS.2.2 building block governs the secure use of cloud services. It covers classification of data before migration to cloud environments, contractual security obligations binding the cloud service provider, encryption of data in transit and at rest, identity and access management for cloud resources, continuous monitoring of cloud service security posture, and documented exit strategies for transitioning away from a cloud service.",
+      "category": "Operations",
+      "theme": "Supply Chain Security"
+    },
+    {
+      "id": "bsi-gs-ops-2-3",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "OPS.2.3",
+      "title": "Outsourcing to Third Parties",
+      "description": "The OPS.2.3 building block addresses security requirements when IT services or processes are outsourced. It requires risk assessment prior to outsourcing decisions, security requirements embedded in contracts including rights of audit, security obligations extended to subcontractors, continuous monitoring and review of outsourced service security levels, and documented exit strategies to ensure business continuity when transitioning services.",
+      "category": "Operations",
+      "theme": "Supply Chain Security"
+    },
+    {
+      "id": "bsi-gs-der-3-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "DER.3.1",
+      "title": "Audits and Revisions",
+      "description": "The DER.3.1 building block defines requirements for conducting regular information security audits and revisions to verify that security measures are implemented correctly and remain effective. It covers establishing an audit programme, defining scope and criteria, conducting internal and external audits, documenting findings, tracking remediation of deficiencies, and reporting audit results to management to support continuous improvement.",
+      "category": "Detection and Response",
+      "theme": "Audit and Accountability"
+    },
+    {
+      "id": "bsi-gs-net-3-2",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "NET.3.2",
+      "title": "Firewall",
+      "description": "The NET.3.2 building block defines requirements for firewall systems that control and filter network traffic between security zones. It covers defining a firewall policy with a deny-all-by-default rule set, secure configuration and hardening of firewall systems, documented change management for rule modifications, regular review and optimisation of rule sets, logging of connection attempts and denied traffic, and periodic testing of firewall effectiveness.",
+      "category": "Networks",
+      "theme": "Network Security"
+    },
+    {
+      "id": "bsi-gs-inf-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "INF.1",
+      "title": "General Buildings",
+      "description": "The INF.1 building block addresses physical security requirements for buildings that house IT systems or process sensitive information. It covers physical security perimeters, access control for building zones, protection against environmental threats such as fire, flood, extreme temperatures and power failure, visitor management, physical security of cable infrastructure, and security requirements for building construction and renovation.",
+      "category": "Infrastructure",
+      "theme": "Physical Security"
+    },
+    {
+      "id": "bsi-gs-inf-2",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "INF.2",
+      "title": "Data Centre and Server Room",
+      "description": "The INF.2 building block defines specific physical security requirements for data centres and server rooms. It covers access controls restricted to authorised personnel only, environmental monitoring including temperature, humidity, smoke and water ingress detection, redundant and conditioned power supply and cooling, fire detection and suppression systems, physical layout minimising risk of collateral damage, and regular testing of all protective systems.",
+      "category": "Infrastructure",
+      "theme": "Physical Security"
+    },
+    {
+      "id": "bsi-gs-sys-2-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "SYS.2.1",
+      "title": "General Client",
+      "description": "The SYS.2.1 building block defines baseline security requirements for all client systems including workstations and laptops. It covers operating system hardening and removal of unnecessary services and software, local firewall configuration, automatic screen lock and session timeouts, encrypted storage for sensitive data, endpoint protection including anti-malware and host-based controls, and restrictions on local administrator rights.",
+      "category": "Systems",
+      "theme": "System Hardening"
+    },
+    {
+      "id": "bsi-gs-app-3-1",
+      "frameworkId": "bsi-grundschutz",
+      "ref": "APP.3.1",
+      "title": "Web Applications and Web Services",
+      "description": "The APP.3.1 building block defines security requirements for web applications and web services. It covers secure design and architecture principles, input validation and output encoding to prevent injection attacks, robust authentication and session management, protection against common web vulnerabilities (OWASP Top 10), secure error handling that avoids information leakage, and regular security testing including vulnerability scanning and penetration testing.",
+      "category": "Applications",
+      "theme": "Secure Development"
+    }
   ]
 }

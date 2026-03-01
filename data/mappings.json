@@ -803,5 +803,1237 @@
     "targetControlId": "iso27001-8.15",
     "relationship": "related",
     "notes": "Protection of log information from ISO 27001:2013 A.12.4.2 is incorporated into the broader logging control 8.15 in ISO 27001:2022."
+  },
+  {
+    "id": "map-116",
+    "sourceControlId": "bsi-gs-isms-1",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz ISMS.1 and ISO 27001:2022 5.1 both require a documented information security policy approved by management and subject to regular review within an established ISMS."
+  },
+  {
+    "id": "map-117",
+    "sourceControlId": "bsi-gs-orp-1",
+    "targetControlId": "iso27001-5.2",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz ORP.1 and ISO 27001:2022 5.2 both require that information security responsibilities are clearly defined, allocated and communicated throughout the organisation."
+  },
+  {
+    "id": "map-118",
+    "sourceControlId": "bsi-gs-orp-3",
+    "targetControlId": "iso27001-6.3",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz ORP.3 and ISO 27001:2022 6.3 both mandate regular security awareness, education and training tailored to the roles and responsibilities of personnel."
+  },
+  {
+    "id": "map-119",
+    "sourceControlId": "bsi-gs-orp-4",
+    "targetControlId": "iso27001-5.15",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz ORP.4 and ISO 27001:2022 5.15 both require a defined access control policy and process for granting, reviewing, and revoking user access rights based on the principle of least privilege."
+  },
+  {
+    "id": "map-120",
+    "sourceControlId": "bsi-gs-con-1",
+    "targetControlId": "iso27001-8.24",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz CON.1 and ISO 27001:2022 8.24 both require an organisation-wide cryptography policy that defines approved algorithms, key lengths and key management procedures."
+  },
+  {
+    "id": "map-121",
+    "sourceControlId": "bsi-gs-con-3",
+    "targetControlId": "iso27001-8.13",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz CON.3 and ISO 27001:2022 8.13 both require a documented backup policy covering schedule, retention, storage locations, protection of media, and regular testing of restoration procedures."
+  },
+  {
+    "id": "map-122",
+    "sourceControlId": "bsi-gs-der-1",
+    "targetControlId": "iso27001-8.16",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz DER.1 and ISO 27001:2022 8.16 both require continuous monitoring of systems and networks to detect anomalies, potential security events, and attack patterns in a timely manner."
+  },
+  {
+    "id": "map-123",
+    "sourceControlId": "bsi-gs-der-2",
+    "targetControlId": "iso27001-5.26",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz DER.2.1 and ISO 27001:2022 5.26 both require defined procedures for responding to information security incidents, including classification, escalation, containment, eradication, recovery, and post-incident review."
+  },
+  {
+    "id": "map-124",
+    "sourceControlId": "bsi-gs-der-4",
+    "targetControlId": "iso27001-5.29",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz DER.4 and ISO 27001:2022 5.29 both require documented and tested information security continuity plans that ensure critical functions can be maintained or rapidly restored during a disruption."
+  },
+  {
+    "id": "map-125",
+    "sourceControlId": "bsi-gs-net-1",
+    "targetControlId": "iso27001-8.20",
+    "relationship": "equivalent",
+    "notes": "BSI IT-Grundschutz NET.1.1 and ISO 27001:2022 8.20 both require that network security is addressed through defined architecture principles, segmentation, and documented controls to protect information in transit."
+  },
+  {
+    "id": "map-126",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "related",
+    "notes": "KRITIS §8a(1) BSIG and ISO 27001:2022 5.1 both require documented security policies; KRITIS is sector-specific and focuses on availability and resilience of critical infrastructure, whereas ISO 27001 provides a broader ISMS policy framework."
+  },
+  {
+    "id": "map-127",
+    "sourceControlId": "kritis-8a-1a",
+    "targetControlId": "iso27001-8.16",
+    "relationship": "related",
+    "notes": "KRITIS §8a(1a) BSIG and ISO 27001:2022 8.16 both address continuous monitoring and detection. KRITIS requires specific attack detection systems (Angriffserkennung), while ISO 27001 addresses broader monitoring activities."
+  },
+  {
+    "id": "map-128",
+    "sourceControlId": "kritis-8a-3",
+    "targetControlId": "iso27001-5.35",
+    "relationship": "related",
+    "notes": "KRITIS §8a(3) BSIG and ISO 27001:2022 5.35 both require periodic independent review of security measures. KRITIS mandates proof of compliance to BSI every two years; ISO 27001 requires independent review of the ISMS."
+  },
+  {
+    "id": "map-129",
+    "sourceControlId": "kritis-8b-4a",
+    "targetControlId": "iso27001-5.26",
+    "relationship": "related",
+    "notes": "KRITIS §8b(4a) BSIG and ISO 27001:2022 5.26 both address incident response; KRITIS additionally mandates external reporting of significant disruptions to BSI, whereas ISO 27001 focuses primarily on internal incident response procedures."
+  },
+  {
+    "id": "map-130",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "equivalent",
+    "notes": "KRITIS §8a(1) BSIG and NIS2 Art. 21(2)(a) both require risk analysis and state-of-the-art technical and organisational security measures to protect network and information systems."
+  },
+  {
+    "id": "map-131",
+    "sourceControlId": "kritis-8b-4a",
+    "targetControlId": "nis2-art23-1",
+    "relationship": "equivalent",
+    "notes": "KRITIS §8b(4a) BSIG and NIS2 Art. 23(1) both impose mandatory incident reporting obligations to the competent national authority without undue delay when significant disruptions occur."
+  },
+  {
+    "id": "map-132",
+    "sourceControlId": "kritis-8a-3",
+    "targetControlId": "nis2-art21-f",
+    "relationship": "related",
+    "notes": "KRITIS §8a(3) BSIG requires periodic proof of compliance provided to BSI; NIS2 Art. 21(2)(f) requires policies and procedures to assess the effectiveness of cybersecurity risk management measures."
+  },
+  {
+    "id": "map-133",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §30 transposes NIS2 Art. 21(2)(a) into German law, requiring essential entities to implement risk analysis policies and information system security measures as part of their risk management obligations."
+  },
+  {
+    "id": "map-134",
+    "sourceControlId": "nis2umsg-35",
+    "targetControlId": "nis2-art23-1",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §35 transposes NIS2 Art. 23(1) into German law, requiring significant incident notifications to BSI within identical timelines: early warning within 24 hours, detailed notification within 72 hours, and a final report within one month."
+  },
+  {
+    "id": "map-135",
+    "sourceControlId": "nis2umsg-38",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §38 transposes NIS2 Art. 20(1) into German law, requiring management bodies to approve cybersecurity measures, oversee their implementation, and take personal liability for failures in cybersecurity governance."
+  },
+  {
+    "id": "map-136",
+    "sourceControlId": "nis2umsg-39",
+    "targetControlId": "nis2-art21-d",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §39 transposes NIS2 Art. 21(2)(d) into German law, requiring essential and important entities to address supply chain cybersecurity risks including evaluation of supplier and service provider security practices."
+  },
+  {
+    "id": "map-137",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §30 and KRITIS §8a(1) BSIG both require state-of-the-art technical and organisational security measures. The NIS2UmsuCG broadens the scope beyond critical infrastructure sectors to include important entities, while KRITIS remains focused on critical infrastructure operators."
+  },
+  {
+    "id": "map-138",
+    "sourceControlId": "nis2umsg-35",
+    "targetControlId": "kritis-8b-4a",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §35 and KRITIS §8b(4a) BSIG both impose mandatory incident reporting obligations to BSI. The NIS2UmsuCG introduces structured timelines (24h/72h/1 month) that supplement and supersede the existing KRITIS reporting obligations."
+  },
+  {
+    "id": "map-139",
+    "sourceControlId": "nis2umsg-38",
+    "targetControlId": "kritis-8a-3",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG §38 establishes personal management liability for cybersecurity governance, while KRITIS §8a(3) requires periodic proof of compliance submitted to BSI. Both controls reinforce accountability for security measures at senior management level."
+  },
+  {
+    "id": "map-140",
+    "sourceControlId": "bsi-gs-isms-1",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "related",
+    "notes": "BSI IT-Grundschutz ISMS.1 and NIS2 Art. 21(2)(a) both address information security risk management governance. ISMS.1 provides a comprehensive ISMS process while NIS2 Art. 21(2)(a) focuses specifically on policies for risk analysis and information system security."
+  },
+  {
+    "id": "map-141",
+    "sourceControlId": "bsi-gs-der-2",
+    "targetControlId": "nis2-art21-b",
+    "relationship": "related",
+    "notes": "BSI IT-Grundschutz DER.2.1 and NIS2 Art. 21(2)(b) both cover incident handling, including detection, reporting, response and recovery. DER.2.1 provides detailed procedural guidance, while NIS2 Art. 21(2)(b) sets the minimum regulatory requirement."
+  },
+  {
+    "id": "map-142",
+    "sourceControlId": "bsi-gs-der-4",
+    "targetControlId": "nis2-art21-c",
+    "relationship": "related",
+    "notes": "BSI IT-Grundschutz DER.4 and NIS2 Art. 21(2)(c) both address business continuity and crisis management for IT systems. DER.4 provides detailed BCM guidance aligned with BSI standards, while NIS2 Art. 21(2)(c) establishes the regulatory requirement for backup management, disaster recovery, and crisis management."
+  },
+  {
+    "id": "map-143",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.5.1.1 (information security policies) and NIS2 Art. 21(2)(a) both require documented risk analysis and information system security policies approved by management."
+  },
+  {
+    "id": "map-144",
+    "sourceControlId": "iso27001-2013-A.6.1.1",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.6.1.1 (information security roles and responsibilities) and NIS2 Art. 20(1) both require clearly defined security responsibilities allocated within the organisation and overseen by the management body."
+  },
+  {
+    "id": "map-145",
+    "sourceControlId": "iso27001-2013-A.16.1.2",
+    "targetControlId": "nis2-art23-1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.16.1.2 (reporting of information security events) and NIS2 Art. 23(1) both require timely reporting of significant incidents, though NIS2 specifies formal timelines to the national authority."
+  },
+  {
+    "id": "map-146",
+    "sourceControlId": "iso27001-2013-A.17.1.1",
+    "targetControlId": "nis2-art21-c",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.17.1.1 (planning information security continuity) and NIS2 Art. 21(2)(c) both address business continuity and crisis management as core security requirements."
+  },
+  {
+    "id": "map-147",
+    "sourceControlId": "iso27001-2013-A.15.1.1",
+    "targetControlId": "nis2-art21-d",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.15.1.1 (information security policy for supplier relationships) and NIS2 Art. 21(2)(d) both address supply chain security including security requirements in supplier agreements."
+  },
+  {
+    "id": "map-148",
+    "sourceControlId": "iso27001-2013-A.12.6.1",
+    "targetControlId": "nis2-art21-e",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.12.6.1 (technical vulnerability management) and NIS2 Art. 21(2)(e) both address security in the maintenance and acquisition of network and information systems."
+  },
+  {
+    "id": "map-149",
+    "sourceControlId": "iso27001-2013-A.7.2.2",
+    "targetControlId": "nis2-art21-g",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.7.2.2 (information security awareness, education and training) and NIS2 Art. 21(2)(g) both require basic cyber hygiene practices and regular cybersecurity training for personnel."
+  },
+  {
+    "id": "map-150",
+    "sourceControlId": "iso27001-2013-A.10.1.1",
+    "targetControlId": "nis2-art21-h",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.10.1.1 (policy on cryptographic controls) and NIS2 Art. 21(2)(h) both require policies and procedures governing the use of cryptography and encryption."
+  },
+  {
+    "id": "map-151",
+    "sourceControlId": "iso27001-2013-A.18.1.4",
+    "targetControlId": "gdpr-art5-1f",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.18.1.4 (privacy and protection of personally identifiable information) and GDPR Art. 5(1)(f) both require appropriate security measures to ensure integrity and confidentiality of personal data."
+  },
+  {
+    "id": "map-152",
+    "sourceControlId": "iso27001-2013-A.18.1.4",
+    "targetControlId": "gdpr-art32",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.18.1.4 (privacy and PII protection) directly addresses the same security-of-processing obligations as GDPR Art. 32, requiring appropriate technical and organisational measures to protect personal data."
+  },
+  {
+    "id": "map-153",
+    "sourceControlId": "iso27001-2013-A.18.1.1",
+    "targetControlId": "gdpr-art30",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.18.1.1 (identification of applicable legislation and contractual requirements) and GDPR Art. 30 (records of processing activities) are related in that A.18.1.1 requires identification of data protection obligations which includes maintaining Art. 30 records."
+  },
+  {
+    "id": "map-154",
+    "sourceControlId": "iso27001-2013-A.16.1.2",
+    "targetControlId": "gdpr-art33",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.16.1.2 (reporting information security events) and GDPR Art. 33 (notification of personal data breach) both address incident reporting obligations, with GDPR specifying a 72-hour deadline to the supervisory authority for personal data breaches."
+  },
+  {
+    "id": "map-155",
+    "sourceControlId": "iso27001-2013-A.18.1.4",
+    "targetControlId": "gdpr-art35",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.18.1.4 (privacy and PII protection) and GDPR Art. 35 (data protection impact assessment) are related: A.18.1.4 provides the overarching security framework within which DPIAs required by Art. 35 are conducted."
+  },
+  {
+    "id": "map-156",
+    "sourceControlId": "iso27001-2013-A.9.1.1",
+    "targetControlId": "gdpr-art25",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.9.1.1 (access control policy) and GDPR Art. 25 (data protection by design and by default) are related: access controls implementing least privilege directly support the Art. 25 requirement to process only necessary personal data by default."
+  },
+  {
+    "id": "map-157",
+    "sourceControlId": "iso27001-2013-A.17.1.1",
+    "targetControlId": "dora-art11",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.17.1.1 (planning information security continuity) and DORA Art. 11 (response and recovery) both require planning and implementing measures to ensure continuity and timely recovery of information systems following a disruption."
+  },
+  {
+    "id": "map-158",
+    "sourceControlId": "iso27001-2013-A.12.3.1",
+    "targetControlId": "dora-art12",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.12.3.1 (information backup) and DORA Art. 12 (backup policies and restoration) both require documented backup policies covering backup frequency, retention, storage, and regular testing of restoration procedures."
+  },
+  {
+    "id": "map-159",
+    "sourceControlId": "iso27001-2013-A.12.6.1",
+    "targetControlId": "dora-art8",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.12.6.1 (management of technical vulnerabilities) and DORA Art. 8 (ICT risk identification) both address the systematic identification and management of vulnerabilities in IT/ICT systems."
+  },
+  {
+    "id": "map-160",
+    "sourceControlId": "iso27001-2013-A.16.1.2",
+    "targetControlId": "dora-art17",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.16.1.2 (reporting information security events) and DORA Art. 17 (ICT-related incident management process) both require a formal process for reporting and managing information security and ICT incidents."
+  },
+  {
+    "id": "map-161",
+    "sourceControlId": "iso27001-2013-A.15.1.1",
+    "targetControlId": "dora-art28",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.15.1.1 (information security policy for supplier relationships) and DORA Art. 28 (general requirements for ICT third-party risk management) both require that security risks from third-party service providers are identified and managed."
+  },
+  {
+    "id": "map-162",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "dora-art5",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.5.1.1 (policies for information security) and DORA Art. 5 (ICT risk management framework) both require a documented governance framework for managing information/ICT security risks with senior management accountability."
+  },
+  {
+    "id": "map-163",
+    "sourceControlId": "iso27001-2013-A.8.1.1",
+    "targetControlId": "cis-1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.8.1.1 (inventory of assets) and CIS Control 1 (inventory and control of enterprise assets) both require a comprehensive, actively managed inventory of all hardware assets."
+  },
+  {
+    "id": "map-164",
+    "sourceControlId": "iso27001-2013-A.12.2.1",
+    "targetControlId": "cis-10",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.12.2.1 (controls against malware) and CIS Control 10 (malware defences) both require the deployment and management of technical controls to detect, prevent and respond to malware."
+  },
+  {
+    "id": "map-165",
+    "sourceControlId": "iso27001-2013-A.12.4.1",
+    "targetControlId": "cis-8",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.12.4.1 (event logging) and CIS Control 8 (audit log management) both require the generation, collection, retention and review of security-relevant event logs."
+  },
+  {
+    "id": "map-166",
+    "sourceControlId": "iso27001-2013-A.12.6.1",
+    "targetControlId": "cis-7",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.12.6.1 (management of technical vulnerabilities) and CIS Control 7 (continuous vulnerability management) both require a systematic process for identifying, prioritising and remediating technical vulnerabilities."
+  },
+  {
+    "id": "map-167",
+    "sourceControlId": "iso27001-2013-A.9.2.3",
+    "targetControlId": "cis-5",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.9.2.3 (management of privileged access rights) and CIS Control 5 (account management) both address the management and control of user and privileged accounts across systems."
+  },
+  {
+    "id": "map-168",
+    "sourceControlId": "iso27001-2013-A.7.2.2",
+    "targetControlId": "cis-14",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.7.2.2 (information security awareness, education and training) and CIS Control 14 (security awareness and skills training) both require role-appropriate security awareness and training programmes for all personnel."
+  },
+  {
+    "id": "map-169",
+    "sourceControlId": "iso27001-2013-A.16.1.1",
+    "targetControlId": "cis-17",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.16.1.1 (responsibilities and procedures for incident management) and CIS Control 17 (incident response management) both require defined incident response procedures, roles and responsibilities."
+  },
+  {
+    "id": "map-170",
+    "sourceControlId": "iso27001-2013-A.13.1.1",
+    "targetControlId": "cis-12",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.13.1.1 (network controls) and CIS Control 12 (network infrastructure management) both require that networks are managed and secured with documented controls."
+  },
+  {
+    "id": "map-171",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.5.1.1 (policies for information security) and NIST CSF GV.PO (Policy) both require that cybersecurity policy is established, documented, communicated and enforced across the organisation."
+  },
+  {
+    "id": "map-172",
+    "sourceControlId": "iso27001-2013-A.8.1.1",
+    "targetControlId": "nistcsf-ID.AM",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.8.1.1 (inventory of assets) and NIST CSF ID.AM (Asset Management) both require that assets are inventoried and managed to support risk management decisions."
+  },
+  {
+    "id": "map-173",
+    "sourceControlId": "iso27001-2013-A.12.6.1",
+    "targetControlId": "nistcsf-ID.RA",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.12.6.1 (technical vulnerability management) and NIST CSF ID.RA (Risk Assessment) are related: systematic vulnerability management provides essential input to the risk assessment process."
+  },
+  {
+    "id": "map-174",
+    "sourceControlId": "iso27001-2013-A.16.1.5",
+    "targetControlId": "nistcsf-RS.MA",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.16.1.5 (response to information security incidents) and NIST CSF RS.MA (Incident Management) both require defined procedures for responding to and managing confirmed security incidents."
+  },
+  {
+    "id": "map-175",
+    "sourceControlId": "iso27001-2013-A.17.1.1",
+    "targetControlId": "nistcsf-RC.RP",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.17.1.1 (planning information security continuity) and NIST CSF RC.RP (Incident Recovery Plan Execution) both address the planning and execution of recovery activities following a security disruption."
+  },
+  {
+    "id": "map-176",
+    "sourceControlId": "iso27001-2013-A.6.1.1",
+    "targetControlId": "nistcsf-GV.RR",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.6.1.1 (information security roles and responsibilities) and NIST CSF GV.RR (Roles, Responsibilities, and Authorities) both require cybersecurity roles and authorities to be clearly defined and allocated."
+  },
+  {
+    "id": "map-177",
+    "sourceControlId": "iso27001-2013-A.15.1.1",
+    "targetControlId": "nistcsf-GV.SC",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.15.1.1 (information security policy for supplier relationships) and NIST CSF GV.SC (Cybersecurity Supply Chain Risk Management) both address managing cybersecurity risks from the supply chain and third parties."
+  },
+  {
+    "id": "map-178",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.5.1.1 (policies for information security) and KRITIS §8a(1) BSIG both require documented security policies; KRITIS is sector-specific and focuses on availability and resilience of critical infrastructure."
+  },
+  {
+    "id": "map-179",
+    "sourceControlId": "iso27001-2013-A.12.6.1",
+    "targetControlId": "kritis-8a-1a",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.12.6.1 (technical vulnerability management) and KRITIS §8a(1a) BSIG (attack detection systems) both address detecting and responding to technical threats; KRITIS specifically mandates continuous Angriffserkennung systems."
+  },
+  {
+    "id": "map-180",
+    "sourceControlId": "iso27001-2013-A.18.2.1",
+    "targetControlId": "kritis-8a-3",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.18.2.1 (independent review of information security) and KRITIS §8a(3) BSIG (proof of compliance every two years) both require independent assessment of security measures, with KRITIS specifically requiring submission of results to BSI."
+  },
+  {
+    "id": "map-181",
+    "sourceControlId": "iso27001-2013-A.16.1.2",
+    "targetControlId": "kritis-8b-4a",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.16.1.2 (reporting information security events) and KRITIS §8b(4a) BSIG (incident reporting to BSI) both address incident reporting obligations; KRITIS additionally mandates external reporting to BSI for significant disruptions."
+  },
+  {
+    "id": "map-182",
+    "sourceControlId": "iso27001-2013-A.15.1.3",
+    "targetControlId": "kritis-8d",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.15.1.3 (information and communication technology supply chain) and KRITIS §8d BSIG (critical components) both address supply chain security; KRITIS specifically requires trustworthiness declarations for critical components from manufacturers."
+  },
+  {
+    "id": "map-183",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "nis2umsg-30",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.5.1.1 (policies for information security) and NIS2UmsuCG §30 both require documented risk management measures including security policies; §30 transposes NIS2 Art. 21 into German law for essential entities."
+  },
+  {
+    "id": "map-184",
+    "sourceControlId": "iso27001-2013-A.6.1.1",
+    "targetControlId": "nis2umsg-38",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.6.1.1 (information security roles and responsibilities) and NIS2UmsuCG §38 (management body responsibility) both require allocation of security responsibilities at senior level; §38 adds personal liability for management failures."
+  },
+  {
+    "id": "map-185",
+    "sourceControlId": "iso27001-2013-A.16.1.2",
+    "targetControlId": "nis2umsg-35",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.16.1.2 (reporting information security events) and NIS2UmsuCG §35 (incident notification) both require reporting significant incidents; §35 specifies structured timelines (24h early warning, 72h detailed report, 1 month final report) to BSI."
+  },
+  {
+    "id": "map-186",
+    "sourceControlId": "iso27001-2013-A.15.1.1",
+    "targetControlId": "nis2umsg-39",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.15.1.1 (information security policy for supplier relationships) and NIS2UmsuCG §39 (supply chain security) both require addressing cybersecurity risks from suppliers and service providers."
+  },
+  {
+    "id": "map-187",
+    "sourceControlId": "iso27001-2013-A.18.2.1",
+    "targetControlId": "nis2umsg-34",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 A.18.2.1 (independent review of information security) and NIS2UmsuCG §34 (supervisory measures for essential entities) both address independent assessment of security measures, with §34 providing the regulatory enforcement mechanism."
+  },
+  {
+    "id": "map-188",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.5.1.1 (policies for information security) and BSI IT-Grundschutz ISMS.1 (Security Management) both form the foundational governance requirements of an ISMS, requiring documented security policies approved by management."
+  },
+  {
+    "id": "map-189",
+    "sourceControlId": "iso27001-2013-A.6.1.1",
+    "targetControlId": "bsi-gs-orp-1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.6.1.1 (information security roles and responsibilities) and BSI IT-Grundschutz ORP.1 (Organisation) both require clearly defined and allocated security responsibilities within the organisational structure."
+  },
+  {
+    "id": "map-190",
+    "sourceControlId": "iso27001-2013-A.7.2.2",
+    "targetControlId": "bsi-gs-orp-3",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.7.2.2 (information security awareness, education and training) and BSI IT-Grundschutz ORP.3 (Awareness and Training) both mandate regular and role-appropriate security training and awareness for all personnel."
+  },
+  {
+    "id": "map-191",
+    "sourceControlId": "iso27001-2013-A.9.1.1",
+    "targetControlId": "bsi-gs-orp-4",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.9.1.1 (access control policy) and BSI IT-Grundschutz ORP.4 (Identity and Access Management) both require a defined access control policy and process governing the granting and revoking of access rights."
+  },
+  {
+    "id": "map-192",
+    "sourceControlId": "iso27001-2013-A.10.1.1",
+    "targetControlId": "bsi-gs-con-1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.10.1.1 (policy on the use of cryptographic controls) and BSI IT-Grundschutz CON.1 (Cryptography Concept) both require an organisation-wide policy on the use of cryptography including algorithm selection and key management."
+  },
+  {
+    "id": "map-193",
+    "sourceControlId": "iso27001-2013-A.12.3.1",
+    "targetControlId": "bsi-gs-con-3",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.12.3.1 (information backup) and BSI IT-Grundschutz CON.3 (Data Backup Policy) both require a documented backup policy specifying frequency, retention, storage locations, and regular restoration tests."
+  },
+  {
+    "id": "map-194",
+    "sourceControlId": "iso27001-2013-A.18.2.1",
+    "targetControlId": "bsi-gs-der-3-1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.18.2.1 (independent review of information security) and BSI IT-Grundschutz DER.3.1 (Audits and Revisions) both require periodic independent audits to verify that security measures are correctly implemented and effective."
+  },
+  {
+    "id": "map-195",
+    "sourceControlId": "iso27001-2013-A.13.1.1",
+    "targetControlId": "bsi-gs-net-1",
+    "relationship": "equivalent",
+    "notes": "ISO 27001:2013 A.13.1.1 (network controls) and BSI IT-Grundschutz NET.1.1 (Network Architecture and Design) both require that network security is designed and implemented with documented controls including network segmentation."
+  },
+  {
+    "id": "map-196",
+    "sourceControlId": "iso27001-5.1",
+    "targetControlId": "nis2umsg-30",
+    "relationship": "related",
+    "notes": "ISO 27001:2022 5.1 (policies for information security) and NIS2UmsuCG §30 both require documented security policies as part of a risk management framework; §30 transposes NIS2 Art. 21(2) into German law for essential entities."
+  },
+  {
+    "id": "map-197",
+    "sourceControlId": "iso27001-5.2",
+    "targetControlId": "nis2umsg-38",
+    "relationship": "related",
+    "notes": "ISO 27001:2022 5.2 (information security roles and responsibilities) and NIS2UmsuCG §38 (management body responsibility) both require that security roles are defined and held accountable; §38 additionally creates personal liability for management."
+  },
+  {
+    "id": "map-198",
+    "sourceControlId": "iso27001-5.26",
+    "targetControlId": "nis2umsg-35",
+    "relationship": "related",
+    "notes": "ISO 27001:2022 5.26 (response to information security incidents) and NIS2UmsuCG §35 both require structured incident response; §35 additionally mandates formal external reporting to BSI within defined timelines."
+  },
+  {
+    "id": "map-199",
+    "sourceControlId": "iso27001-5.21",
+    "targetControlId": "nis2umsg-39",
+    "relationship": "related",
+    "notes": "ISO 27001:2022 5.21 (managing information security in the ICT supply chain) and NIS2UmsuCG §39 (supply chain security) both require that cybersecurity risks from the ICT supply chain are systematically assessed and managed."
+  },
+  {
+    "id": "map-200",
+    "sourceControlId": "iso27001-5.35",
+    "targetControlId": "nis2umsg-34",
+    "relationship": "related",
+    "notes": "ISO 27001:2022 5.35 (independent review of information security) and NIS2UmsuCG §34 (supervisory and enforcement measures) both involve independent assessment of security measures; §34 provides the regulatory enforcement dimension."
+  },
+  {
+    "id": "map-201",
+    "sourceControlId": "iso27001-5.31",
+    "targetControlId": "nis2umsg-28",
+    "relationship": "related",
+    "notes": "ISO 27001:2022 5.31 (legal, statutory, regulatory and contractual requirements) and NIS2UmsuCG §28 (classification of essential and important entities) are related: §28 determines which NIS2UmsuCG obligations apply, which must be identified under the ISO 27001:2022 requirements management control."
+  },
+  {
+    "id": "map-202",
+    "sourceControlId": "gdpr-art32",
+    "targetControlId": "cis-3",
+    "relationship": "equivalent",
+    "notes": "GDPR Art. 32 (security of processing) and CIS Control 3 (data protection) both require appropriate technical and organisational measures to protect data, with GDPR specifically focused on personal data and CIS on all organisational data."
+  },
+  {
+    "id": "map-203",
+    "sourceControlId": "gdpr-art5-1f",
+    "targetControlId": "cis-3",
+    "relationship": "related",
+    "notes": "GDPR Art. 5(1)(f) (integrity and confidentiality principle) and CIS Control 3 (data protection) both require that data is protected from unauthorised access, disclosure, alteration or destruction through appropriate security controls."
+  },
+  {
+    "id": "map-204",
+    "sourceControlId": "gdpr-art33",
+    "targetControlId": "cis-17",
+    "relationship": "related",
+    "notes": "GDPR Art. 33 (notification of personal data breach) and CIS Control 17 (incident response management) both address incident handling; GDPR specifies a 72-hour notification deadline to the supervisory authority for personal data breaches."
+  },
+  {
+    "id": "map-205",
+    "sourceControlId": "gdpr-art35",
+    "targetControlId": "cis-18",
+    "relationship": "related",
+    "notes": "GDPR Art. 35 (data protection impact assessment) and CIS Control 18 (penetration testing) are related: security testing performed under CIS 18 can inform the risk assessment required as part of a DPIA under GDPR Art. 35."
+  },
+  {
+    "id": "map-206",
+    "sourceControlId": "gdpr-art25",
+    "targetControlId": "cis-16",
+    "relationship": "related",
+    "notes": "GDPR Art. 25 (data protection by design and by default) and CIS Control 16 (application software security) both require that security is embedded in systems and applications at the design stage to minimise data exposure."
+  },
+  {
+    "id": "map-207",
+    "sourceControlId": "gdpr-art32",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "related",
+    "notes": "GDPR Art. 32 (security of processing) and KRITIS §8a(1) BSIG both require state-of-the-art technical and organisational security measures; GDPR focuses on protection of personal data while KRITIS focuses on availability and resilience of critical infrastructure."
+  },
+  {
+    "id": "map-208",
+    "sourceControlId": "gdpr-art33",
+    "targetControlId": "kritis-8b-4a",
+    "relationship": "related",
+    "notes": "GDPR Art. 33 (notification of personal data breach to supervisory authority) and KRITIS §8b(4a) BSIG (incident reporting to BSI) both impose mandatory breach/incident reporting obligations; they apply to different types of incidents and different reporting authorities."
+  },
+  {
+    "id": "map-209",
+    "sourceControlId": "gdpr-art5-1f",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "related",
+    "notes": "GDPR Art. 5(1)(f) (integrity and confidentiality principle) and KRITIS §8a(1) BSIG both require that appropriate security measures protect data and systems; KRITIS extends this to the availability and resilience of critical infrastructure services."
+  },
+  {
+    "id": "map-210",
+    "sourceControlId": "gdpr-art32",
+    "targetControlId": "nis2umsg-30",
+    "relationship": "related",
+    "notes": "GDPR Art. 32 (security of processing) and NIS2UmsuCG §30 (risk management for essential entities) both require appropriate technical and organisational security measures; GDPR focuses on protection of personal data and NIS2UmsuCG on network and information system security."
+  },
+  {
+    "id": "map-211",
+    "sourceControlId": "gdpr-art33",
+    "targetControlId": "nis2umsg-35",
+    "relationship": "related",
+    "notes": "GDPR Art. 33 (notification of personal data breach) and NIS2UmsuCG §35 (incident notification) both impose reporting obligations with defined timelines; they operate in parallel for incidents involving personal data breaches at NIS2-covered entities."
+  },
+  {
+    "id": "map-212",
+    "sourceControlId": "gdpr-art25",
+    "targetControlId": "nis2umsg-31",
+    "relationship": "related",
+    "notes": "GDPR Art. 25 (data protection by design and by default) and NIS2UmsuCG §31 (12 minimum security categories) are complementary: the security measures required under §31 support the technical implementation of data protection by design."
+  },
+  {
+    "id": "map-213",
+    "sourceControlId": "gdpr-art37",
+    "targetControlId": "nis2umsg-38",
+    "relationship": "related",
+    "notes": "GDPR Art. 37 (designation of the data protection officer) and NIS2UmsuCG §38 (management body responsibility) both establish mandatory governance roles; a DPO under GDPR and management accountability under §38 often reside within the same governance structure."
+  },
+  {
+    "id": "map-214",
+    "sourceControlId": "gdpr-art5-1f",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "GDPR Art. 5(1)(f) (integrity and confidentiality principle) and BSI IT-Grundschutz ISMS.1 (Security Management) are related: the ISMS established under ISMS.1 provides the overarching security framework within which the GDPR integrity and confidentiality principle is operationalised."
+  },
+  {
+    "id": "map-215",
+    "sourceControlId": "gdpr-art32",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "GDPR Art. 32 (security of processing) and BSI IT-Grundschutz ISMS.1 are related: compliance with ISMS.1 and the BSI IT-Grundschutz methodology is widely accepted as evidence of appropriate technical and organisational measures under GDPR Art. 32."
+  },
+  {
+    "id": "map-216",
+    "sourceControlId": "gdpr-art33",
+    "targetControlId": "bsi-gs-der-2",
+    "relationship": "related",
+    "notes": "GDPR Art. 33 (notification of personal data breach) and BSI IT-Grundschutz DER.2.1 (Handling IT Security Incidents) are related: the incident response procedures established under DER.2.1 include the detection and escalation processes needed to identify and report personal data breaches under GDPR Art. 33."
+  },
+  {
+    "id": "map-217",
+    "sourceControlId": "gdpr-art35",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "GDPR Art. 35 (data protection impact assessment) and BSI IT-Grundschutz ISMS.1 are related: the risk assessment processes embedded in ISMS.1 provide a methodological basis for conducting DPIAs required under GDPR Art. 35."
+  },
+  {
+    "id": "map-218",
+    "sourceControlId": "gdpr-art28",
+    "targetControlId": "bsi-gs-ops-2-3",
+    "relationship": "related",
+    "notes": "GDPR Art. 28 (processor obligations and data processing agreements) and BSI IT-Grundschutz OPS.2.3 (Outsourcing to Third Parties) both require contractual security obligations when services involving personal or sensitive data are outsourced to third parties."
+  },
+  {
+    "id": "map-219",
+    "sourceControlId": "dora-art5",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "related",
+    "notes": "DORA Art. 5 (ICT risk management framework) and KRITIS §8a(1) BSIG both require a documented framework for managing ICT/IT security risks using state-of-the-art measures; they apply to different but often overlapping entity populations (financial sector vs. critical infrastructure operators)."
+  },
+  {
+    "id": "map-220",
+    "sourceControlId": "dora-art10",
+    "targetControlId": "kritis-8a-1a",
+    "relationship": "related",
+    "notes": "DORA Art. 10 (detection) and KRITIS §8a(1a) BSIG (attack detection systems) both require continuous monitoring and detection capabilities; KRITIS specifically mandates Angriffserkennung systems and DORA requires continuous ICT monitoring tools."
+  },
+  {
+    "id": "map-221",
+    "sourceControlId": "dora-art17",
+    "targetControlId": "kritis-8b-4a",
+    "relationship": "related",
+    "notes": "DORA Art. 17 (ICT-related incident management process) and KRITIS §8b(4a) BSIG (incident reporting to BSI) both address incident management and reporting; both require external reporting to the relevant competent authority when significant incidents occur."
+  },
+  {
+    "id": "map-222",
+    "sourceControlId": "dora-art28",
+    "targetControlId": "kritis-8d",
+    "relationship": "related",
+    "notes": "DORA Art. 28 (ICT third-party risk management) and KRITIS §8d BSIG (critical components) both address supply chain security; DORA requires comprehensive third-party risk management programmes and KRITIS requires trustworthiness assessments for critical infrastructure components."
+  },
+  {
+    "id": "map-223",
+    "sourceControlId": "dora-art19",
+    "targetControlId": "kritis-8b-4a",
+    "relationship": "equivalent",
+    "notes": "DORA Art. 19 (reporting of major ICT-related incidents) and KRITIS §8b(4a) BSIG (incident reporting to BSI) are equivalent in purpose — both require mandatory reporting of significant incidents to the relevant competent authority without undue delay."
+  },
+  {
+    "id": "map-224",
+    "sourceControlId": "dora-art5",
+    "targetControlId": "nis2umsg-30",
+    "relationship": "related",
+    "notes": "DORA Art. 5 (ICT risk management framework) and NIS2UmsuCG §30 (risk management for essential entities) both require a comprehensive ICT/network and information system risk management framework; financial sector entities may be subject to both simultaneously."
+  },
+  {
+    "id": "map-225",
+    "sourceControlId": "dora-art17",
+    "targetControlId": "nis2umsg-35",
+    "relationship": "related",
+    "notes": "DORA Art. 17 (ICT-related incident management process) and NIS2UmsuCG §35 (incident notification) both require structured incident management and reporting to competent authorities with defined timelines."
+  },
+  {
+    "id": "map-226",
+    "sourceControlId": "dora-art28",
+    "targetControlId": "nis2umsg-39",
+    "relationship": "related",
+    "notes": "DORA Art. 28 (ICT third-party risk management) and NIS2UmsuCG §39 (supply chain security) both require systematic assessment and management of cybersecurity risks from ICT third-party service providers and supply chains."
+  },
+  {
+    "id": "map-227",
+    "sourceControlId": "dora-art19",
+    "targetControlId": "nis2umsg-35",
+    "relationship": "equivalent",
+    "notes": "DORA Art. 19 (reporting of major ICT-related incidents) and NIS2UmsuCG §35 (incident notification obligations) are equivalent in purpose and timeline (early warning within 24h, detailed report within 72h, final report within one month), applying DORA to the financial sector and NIS2UmsuCG to the broader essential/important entity scope."
+  },
+  {
+    "id": "map-228",
+    "sourceControlId": "dora-art13",
+    "targetControlId": "nis2umsg-31",
+    "relationship": "related",
+    "notes": "DORA Art. 13 (learning and evolving) and NIS2UmsuCG §31 (minimum security measures — 12 categories) both include requirements for assessing the effectiveness of security measures and continuously improving based on lessons learned from incidents."
+  },
+  {
+    "id": "map-229",
+    "sourceControlId": "dora-art5",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "DORA Art. 5 (ICT risk management framework) and BSI IT-Grundschutz ISMS.1 (Security Management) are related: the ISMS.1 building block provides an ISMS methodology that can serve as the governance framework for ICT risk management required by DORA."
+  },
+  {
+    "id": "map-230",
+    "sourceControlId": "dora-art12",
+    "targetControlId": "bsi-gs-con-3",
+    "relationship": "equivalent",
+    "notes": "DORA Art. 12 (backup policies and restoration) and BSI IT-Grundschutz CON.3 (Data Backup Policy) are equivalent: both require a documented backup policy covering schedule, retention, storage locations, and regular testing of restoration procedures."
+  },
+  {
+    "id": "map-231",
+    "sourceControlId": "dora-art11",
+    "targetControlId": "bsi-gs-der-4",
+    "relationship": "related",
+    "notes": "DORA Art. 11 (response and recovery) and BSI IT-Grundschutz DER.4 (IT Emergency Management) are related: DER.4 provides the BCM methodology for implementing the recovery capabilities required by DORA Art. 11."
+  },
+  {
+    "id": "map-232",
+    "sourceControlId": "dora-art10",
+    "targetControlId": "bsi-gs-der-1",
+    "relationship": "equivalent",
+    "notes": "DORA Art. 10 (detection) and BSI IT-Grundschutz DER.1 (Detection of Relevant Security Events) are equivalent: both require continuous monitoring and detection capabilities to identify security-relevant events and anomalies in a timely manner."
+  },
+  {
+    "id": "map-233",
+    "sourceControlId": "dora-art17",
+    "targetControlId": "bsi-gs-der-2",
+    "relationship": "equivalent",
+    "notes": "DORA Art. 17 (ICT-related incident management process) and BSI IT-Grundschutz DER.2.1 (Handling IT Security Incidents) are equivalent: both require a documented process for detecting, reporting, classifying, responding to and reviewing ICT/information security incidents."
+  },
+  {
+    "id": "map-234",
+    "sourceControlId": "dora-art28",
+    "targetControlId": "bsi-gs-ops-2-3",
+    "relationship": "related",
+    "notes": "DORA Art. 28 (ICT third-party risk management) and BSI IT-Grundschutz OPS.2.3 (Outsourcing to Third Parties) both require that security obligations are contractually embedded in outsourcing arrangements, including rights of audit and continuous monitoring of third-party security posture."
+  },
+  {
+    "id": "map-235",
+    "sourceControlId": "cis-1",
+    "targetControlId": "nistcsf-ID.AM",
+    "relationship": "equivalent",
+    "notes": "CIS Control 1 (inventory and control of enterprise assets) and NIST CSF ID.AM (Asset Management) are equivalent: both require a comprehensive, actively maintained inventory of all physical and virtual assets to support security risk management."
+  },
+  {
+    "id": "map-236",
+    "sourceControlId": "cis-7",
+    "targetControlId": "nistcsf-ID.RA",
+    "relationship": "related",
+    "notes": "CIS Control 7 (continuous vulnerability management) and NIST CSF ID.RA (Risk Assessment) are related: continuous vulnerability scanning and assessment under CIS 7 directly feeds into the risk assessment process required by ID.RA."
+  },
+  {
+    "id": "map-237",
+    "sourceControlId": "cis-8",
+    "targetControlId": "nistcsf-DE.CM",
+    "relationship": "equivalent",
+    "notes": "CIS Control 8 (audit log management) and NIST CSF DE.CM (Continuous Monitoring) are equivalent: both require that system and network activity is continuously logged and monitored to detect anomalies and security events."
+  },
+  {
+    "id": "map-238",
+    "sourceControlId": "cis-17",
+    "targetControlId": "nistcsf-RS.MA",
+    "relationship": "equivalent",
+    "notes": "CIS Control 17 (incident response management) and NIST CSF RS.MA (Incident Management) are equivalent: both require defined and tested incident response capabilities including preparation, detection, containment, and post-incident analysis."
+  },
+  {
+    "id": "map-239",
+    "sourceControlId": "cis-11",
+    "targetControlId": "nistcsf-RC.RP",
+    "relationship": "equivalent",
+    "notes": "CIS Control 11 (data recovery) and NIST CSF RC.RP (Incident Recovery Plan Execution) are equivalent: both require that data backup and recovery capabilities are in place and tested to restore operations following a cybersecurity incident."
+  },
+  {
+    "id": "map-240",
+    "sourceControlId": "cis-5",
+    "targetControlId": "nistcsf-PR.AA",
+    "relationship": "equivalent",
+    "notes": "CIS Control 5 (account management) and NIST CSF PR.AA (Identity Management, Authentication and Access Control) are equivalent: both require that identities and access rights are managed on a least-privilege basis with strong authentication."
+  },
+  {
+    "id": "map-241",
+    "sourceControlId": "cis-14",
+    "targetControlId": "nistcsf-PR.AT",
+    "relationship": "equivalent",
+    "notes": "CIS Control 14 (security awareness and skills training) and NIST CSF PR.AT (Awareness and Training) are equivalent: both require that all personnel receive role-appropriate security awareness training to support the organisation's security posture."
+  },
+  {
+    "id": "map-242",
+    "sourceControlId": "cis-15",
+    "targetControlId": "nistcsf-GV.SC",
+    "relationship": "related",
+    "notes": "CIS Control 15 (service provider management) and NIST CSF GV.SC (Cybersecurity Supply Chain Risk Management) are related: both require that cybersecurity risks from service providers and suppliers are assessed and managed through formal processes."
+  },
+  {
+    "id": "map-243",
+    "sourceControlId": "cis-7",
+    "targetControlId": "kritis-8a-1a",
+    "relationship": "related",
+    "notes": "CIS Control 7 (continuous vulnerability management) and KRITIS §8a(1a) BSIG (attack detection systems) are related: vulnerability management is a key input to the attack detection systems required under KRITIS, helping identify unpatched systems that could be exploited."
+  },
+  {
+    "id": "map-244",
+    "sourceControlId": "cis-17",
+    "targetControlId": "kritis-8b-4a",
+    "relationship": "related",
+    "notes": "CIS Control 17 (incident response management) and KRITIS §8b(4a) BSIG (incident reporting to BSI) are related: the incident response process under CIS 17 includes the detection and escalation procedures needed to meet the KRITIS mandatory reporting obligations."
+  },
+  {
+    "id": "map-245",
+    "sourceControlId": "cis-15",
+    "targetControlId": "kritis-8d",
+    "relationship": "related",
+    "notes": "CIS Control 15 (service provider management) and KRITIS §8d BSIG (critical components) are related: both require that supply chain risks are assessed; KRITIS specifically requires trustworthiness declarations for critical infrastructure components from their manufacturers."
+  },
+  {
+    "id": "map-246",
+    "sourceControlId": "cis-1",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "related",
+    "notes": "CIS Control 1 (inventory and control of enterprise assets) and KRITIS §8a(1) BSIG are related: an accurate and complete asset inventory is a prerequisite for implementing the state-of-the-art security measures required for critical infrastructure under KRITIS."
+  },
+  {
+    "id": "map-247",
+    "sourceControlId": "cis-8",
+    "targetControlId": "kritis-8a-1a",
+    "relationship": "related",
+    "notes": "CIS Control 8 (audit log management) and KRITIS §8a(1a) BSIG (attack detection systems) are related: comprehensive logging under CIS 8 is a foundational component of the Angriffserkennung systems required by KRITIS to detect attacks on critical infrastructure."
+  },
+  {
+    "id": "map-248",
+    "sourceControlId": "cis-17",
+    "targetControlId": "nis2umsg-35",
+    "relationship": "related",
+    "notes": "CIS Control 17 (incident response management) and NIS2UmsuCG §35 (incident notification) are related: the incident response capability under CIS 17 provides the process infrastructure needed to detect, assess and report significant incidents within the timelines mandated by §35."
+  },
+  {
+    "id": "map-249",
+    "sourceControlId": "cis-15",
+    "targetControlId": "nis2umsg-39",
+    "relationship": "related",
+    "notes": "CIS Control 15 (service provider management) and NIS2UmsuCG §39 (supply chain security) are related: both require that cybersecurity risks from third-party service providers are assessed and managed, with §39 specifically requiring evaluation of direct suppliers' and service providers' security practices."
+  },
+  {
+    "id": "map-250",
+    "sourceControlId": "cis-1",
+    "targetControlId": "nis2umsg-31",
+    "relationship": "related",
+    "notes": "CIS Control 1 (inventory and control of enterprise assets) and NIS2UmsuCG §31 category (9) (asset management) are related: the asset inventory required by CIS 1 is a foundational input to the asset management obligations under the minimum security measures in §31."
+  },
+  {
+    "id": "map-251",
+    "sourceControlId": "cis-14",
+    "targetControlId": "nis2umsg-31",
+    "relationship": "related",
+    "notes": "CIS Control 14 (security awareness and skills training) and NIS2UmsuCG §31 category (7) (basic cyber hygiene and cybersecurity training) are equivalent in purpose: both require regular security awareness and training programmes for personnel."
+  },
+  {
+    "id": "map-252",
+    "sourceControlId": "cis-5",
+    "targetControlId": "nis2umsg-31",
+    "relationship": "related",
+    "notes": "CIS Control 5 (account management) and NIS2UmsuCG §31 category (9) (access control policies) are related: both require that user account and access right management follows a least-privilege approach with formal provisioning and deprovisioning processes."
+  },
+  {
+    "id": "map-253",
+    "sourceControlId": "cis-5",
+    "targetControlId": "bsi-gs-orp-4",
+    "relationship": "equivalent",
+    "notes": "CIS Control 5 (account management) and BSI IT-Grundschutz ORP.4 (Identity and Access Management) are equivalent: both require a formal process for creating, managing and revoking user accounts and access rights based on the principle of least privilege."
+  },
+  {
+    "id": "map-254",
+    "sourceControlId": "cis-7",
+    "targetControlId": "bsi-gs-ops-1",
+    "relationship": "equivalent",
+    "notes": "CIS Control 7 (continuous vulnerability management) and BSI IT-Grundschutz OPS.1.1.3 (Patch and Change Management) are equivalent: both require a systematic and continuous process for identifying, prioritising and applying patches to address technical vulnerabilities."
+  },
+  {
+    "id": "map-255",
+    "sourceControlId": "cis-8",
+    "targetControlId": "bsi-gs-der-1",
+    "relationship": "equivalent",
+    "notes": "CIS Control 8 (audit log management) and BSI IT-Grundschutz DER.1 (Detection of Relevant Security Events) are equivalent: both require that security-relevant events are logged, stored and analysed to support detection of potential incidents."
+  },
+  {
+    "id": "map-256",
+    "sourceControlId": "cis-10",
+    "targetControlId": "bsi-gs-ops-1-1-4",
+    "relationship": "equivalent",
+    "notes": "CIS Control 10 (malware defences) and BSI IT-Grundschutz OPS.1.1.4 (Protection Against Malware) are equivalent: both require deployment of up-to-date anti-malware solutions across all relevant systems with centrally managed policies."
+  },
+  {
+    "id": "map-257",
+    "sourceControlId": "cis-14",
+    "targetControlId": "bsi-gs-orp-3",
+    "relationship": "equivalent",
+    "notes": "CIS Control 14 (security awareness and skills training) and BSI IT-Grundschutz ORP.3 (Awareness and Training) are equivalent: both require regular, role-appropriate security awareness and training programmes for all staff."
+  },
+  {
+    "id": "map-258",
+    "sourceControlId": "cis-17",
+    "targetControlId": "bsi-gs-der-2",
+    "relationship": "equivalent",
+    "notes": "CIS Control 17 (incident response management) and BSI IT-Grundschutz DER.2.1 (Handling IT Security Incidents) are equivalent: both require defined and documented procedures for detecting, classifying, responding to and learning from security incidents."
+  },
+  {
+    "id": "map-259",
+    "sourceControlId": "cis-15",
+    "targetControlId": "bsi-gs-ops-2-3",
+    "relationship": "equivalent",
+    "notes": "CIS Control 15 (service provider management) and BSI IT-Grundschutz OPS.2.3 (Outsourcing to Third Parties) are equivalent: both require that security risks from service providers are assessed, contractually addressed, and continuously monitored."
+  },
+  {
+    "id": "map-260",
+    "sourceControlId": "cis-12",
+    "targetControlId": "bsi-gs-net-1",
+    "relationship": "related",
+    "notes": "CIS Control 12 (network infrastructure management) and BSI IT-Grundschutz NET.1.1 (Network Architecture and Design) are related: both require that network infrastructure is documented, securely configured, and that network segmentation is implemented to limit the impact of a breach."
+  },
+  {
+    "id": "map-261",
+    "sourceControlId": "nistcsf-GV.RM",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "related",
+    "notes": "NIST CSF GV.RM (Risk Management Strategy) and KRITIS §8a(1) BSIG are related: KRITIS requires state-of-the-art security measures based on risk, while NIST CSF GV.RM provides the strategic framework for establishing and communicating the organisation's approach to managing cybersecurity risk."
+  },
+  {
+    "id": "map-262",
+    "sourceControlId": "nistcsf-DE.CM",
+    "targetControlId": "kritis-8a-1a",
+    "relationship": "equivalent",
+    "notes": "NIST CSF DE.CM (Continuous Monitoring) and KRITIS §8a(1a) BSIG (attack detection systems) are equivalent: both require continuous monitoring and detection capabilities to identify attacks, anomalies, and security events across network and information systems."
+  },
+  {
+    "id": "map-263",
+    "sourceControlId": "nistcsf-RS.MA",
+    "targetControlId": "kritis-8b-4a",
+    "relationship": "related",
+    "notes": "NIST CSF RS.MA (Incident Management) and KRITIS §8b(4a) BSIG (incident reporting to BSI) are related: the incident management process in RS.MA includes the detection, escalation and communication activities needed to fulfil KRITIS mandatory reporting obligations."
+  },
+  {
+    "id": "map-264",
+    "sourceControlId": "nistcsf-GV.SC",
+    "targetControlId": "kritis-8d",
+    "relationship": "related",
+    "notes": "NIST CSF GV.SC (Cybersecurity Supply Chain Risk Management) and KRITIS §8d BSIG (critical components) are related: both address management of supply chain risks; KRITIS specifically requires trustworthiness declarations for critical infrastructure components."
+  },
+  {
+    "id": "map-265",
+    "sourceControlId": "nistcsf-ID.RA",
+    "targetControlId": "kritis-8a-3",
+    "relationship": "related",
+    "notes": "NIST CSF ID.RA (Risk Assessment) and KRITIS §8a(3) BSIG (proof of compliance every two years) are related: risk assessments performed under ID.RA provide the evidence base for demonstrating compliance with KRITIS security requirements to BSI."
+  },
+  {
+    "id": "map-266",
+    "sourceControlId": "nistcsf-GV.RM",
+    "targetControlId": "nis2umsg-30",
+    "relationship": "related",
+    "notes": "NIST CSF GV.RM (Risk Management Strategy) and NIS2UmsuCG §30 (risk management for essential entities) are related: §30 defines the regulatory obligations that NIST CSF GV.RM's risk management strategy must be designed to address."
+  },
+  {
+    "id": "map-267",
+    "sourceControlId": "nistcsf-RS.MA",
+    "targetControlId": "nis2umsg-35",
+    "relationship": "related",
+    "notes": "NIST CSF RS.MA (Incident Management) and NIS2UmsuCG §35 (incident notification) are related: §35 adds a mandatory external reporting dimension to the incident management process described in RS.MA, requiring notifications to BSI within defined timelines."
+  },
+  {
+    "id": "map-268",
+    "sourceControlId": "nistcsf-GV.RR",
+    "targetControlId": "nis2umsg-38",
+    "relationship": "related",
+    "notes": "NIST CSF GV.RR (Roles, Responsibilities, and Authorities) and NIS2UmsuCG §38 (management body responsibility and liability) both address governance accountability for cybersecurity; §38 creates legally binding personal liability for management failures."
+  },
+  {
+    "id": "map-269",
+    "sourceControlId": "nistcsf-GV.SC",
+    "targetControlId": "nis2umsg-39",
+    "relationship": "equivalent",
+    "notes": "NIST CSF GV.SC (Cybersecurity Supply Chain Risk Management) and NIS2UmsuCG §39 (supply chain security) are equivalent: both require a formal programme for assessing and managing cybersecurity risks from suppliers and service providers in the supply chain."
+  },
+  {
+    "id": "map-270",
+    "sourceControlId": "nistcsf-GV.OV",
+    "targetControlId": "nis2umsg-34",
+    "relationship": "related",
+    "notes": "NIST CSF GV.OV (Oversight) and NIS2UmsuCG §34 (supervisory measures for essential entities) are related: §34 provides the external regulatory oversight mechanism that complements the internal oversight required by GV.OV."
+  },
+  {
+    "id": "map-271",
+    "sourceControlId": "nistcsf-GV.PO",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "equivalent",
+    "notes": "NIST CSF GV.PO (Policy) and BSI IT-Grundschutz ISMS.1 (Security Management) are equivalent: both require that cybersecurity policy is established within a formal management system, communicated to relevant parties, and subject to regular review."
+  },
+  {
+    "id": "map-272",
+    "sourceControlId": "nistcsf-ID.AM",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "NIST CSF ID.AM (Asset Management) and BSI IT-Grundschutz ISMS.1 (Security Management) are related: asset identification and classification is a prerequisite for the risk-based approach to security management required by ISMS.1."
+  },
+  {
+    "id": "map-273",
+    "sourceControlId": "nistcsf-PR.AA",
+    "targetControlId": "bsi-gs-orp-4",
+    "relationship": "equivalent",
+    "notes": "NIST CSF PR.AA (Identity Management, Authentication and Access Control) and BSI IT-Grundschutz ORP.4 (Identity and Access Management) are equivalent: both require that identities and access rights are managed throughout their lifecycle based on least privilege and with strong authentication."
+  },
+  {
+    "id": "map-274",
+    "sourceControlId": "nistcsf-PR.AT",
+    "targetControlId": "bsi-gs-orp-3",
+    "relationship": "equivalent",
+    "notes": "NIST CSF PR.AT (Awareness and Training) and BSI IT-Grundschutz ORP.3 (Awareness and Training) are equivalent: both require that all personnel receive appropriate security awareness training and that specialised training is provided for security-relevant roles."
+  },
+  {
+    "id": "map-275",
+    "sourceControlId": "nistcsf-DE.CM",
+    "targetControlId": "bsi-gs-der-1",
+    "relationship": "equivalent",
+    "notes": "NIST CSF DE.CM (Continuous Monitoring) and BSI IT-Grundschutz DER.1 (Detection of Relevant Security Events) are equivalent: both require continuous monitoring of network and information systems to detect anomalies, threats and security-relevant events."
+  },
+  {
+    "id": "map-276",
+    "sourceControlId": "nistcsf-RS.MA",
+    "targetControlId": "bsi-gs-der-2",
+    "relationship": "equivalent",
+    "notes": "NIST CSF RS.MA (Incident Management) and BSI IT-Grundschutz DER.2.1 (Handling IT Security Incidents) are equivalent: both require a documented and tested process for managing security incidents from detection through containment, eradication and post-incident review."
+  },
+  {
+    "id": "map-277",
+    "sourceControlId": "nistcsf-RC.RP",
+    "targetControlId": "bsi-gs-der-4",
+    "relationship": "equivalent",
+    "notes": "NIST CSF RC.RP (Incident Recovery Plan Execution) and BSI IT-Grundschutz DER.4 (IT Emergency Management) are equivalent: both require documented and tested recovery plans to restore operational availability of systems following a cybersecurity incident."
+  },
+  {
+    "id": "map-278",
+    "sourceControlId": "nistcsf-GV.SC",
+    "targetControlId": "bsi-gs-ops-2-3",
+    "relationship": "related",
+    "notes": "NIST CSF GV.SC (Cybersecurity Supply Chain Risk Management) and BSI IT-Grundschutz OPS.2.3 (Outsourcing to Third Parties) are related: OPS.2.3 provides detailed operational requirements for managing the supply chain risks addressed at the governance level by GV.SC."
+  },
+  {
+    "id": "map-279",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "KRITIS §8a(1) BSIG (state-of-the-art security measures) and BSI IT-Grundschutz ISMS.1 (Security Management) are related: implementing BSI IT-Grundschutz is a widely accepted method for demonstrating compliance with the state-of-the-art requirement under KRITIS."
+  },
+  {
+    "id": "map-280",
+    "sourceControlId": "kritis-8a-1a",
+    "targetControlId": "bsi-gs-der-1",
+    "relationship": "equivalent",
+    "notes": "KRITIS §8a(1a) BSIG (attack detection systems) and BSI IT-Grundschutz DER.1 (Detection of Relevant Security Events) are equivalent: both require continuous monitoring and detection of security-relevant events and attack patterns across network and information systems."
+  },
+  {
+    "id": "map-281",
+    "sourceControlId": "kritis-8a-3",
+    "targetControlId": "bsi-gs-der-3-1",
+    "relationship": "equivalent",
+    "notes": "KRITIS §8a(3) BSIG (proof of compliance every two years) and BSI IT-Grundschutz DER.3.1 (Audits and Revisions) are equivalent in purpose: DER.3.1 audits performed by an accredited BSI-licensed auditor against the Grundschutz compendium are the primary method for demonstrating KRITIS compliance to BSI."
+  },
+  {
+    "id": "map-282",
+    "sourceControlId": "kritis-8b-4a",
+    "targetControlId": "bsi-gs-der-2",
+    "relationship": "related",
+    "notes": "KRITIS §8b(4a) BSIG (incident reporting to BSI) and BSI IT-Grundschutz DER.2.1 (Handling IT Security Incidents) are related: DER.2.1 provides the incident handling process infrastructure within which the KRITIS mandatory reporting obligations are fulfilled."
+  },
+  {
+    "id": "map-283",
+    "sourceControlId": "kritis-8d",
+    "targetControlId": "bsi-gs-ops-2-3",
+    "relationship": "related",
+    "notes": "KRITIS §8d BSIG (critical components) and BSI IT-Grundschutz OPS.2.3 (Outsourcing to Third Parties) are related: both address supply chain risks; KRITIS specifically requires trustworthiness declarations for critical components and OPS.2.3 provides the broader outsourcing security governance framework."
+  },
+  {
+    "id": "map-284",
+    "sourceControlId": "kritis-8a-2",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "KRITIS §8a(2) BSIG (industry-specific security standards as compliance reference) and BSI IT-Grundschutz ISMS.1 (Security Management) are related: the BSI IT-Grundschutz methodology is itself recognised by BSI as a sector-overarching reference standard that can serve as the B3S compliance basis under §8a(2)."
+  },
+  {
+    "id": "map-285",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG §30 (risk management for essential entities) and BSI IT-Grundschutz ISMS.1 (Security Management) are related: BSI explicitly recognises that implementing BSI IT-Grundschutz satisfies the risk management obligations under §30 of NIS2UmsuCG for essential entities."
+  },
+  {
+    "id": "map-286",
+    "sourceControlId": "nis2umsg-35",
+    "targetControlId": "bsi-gs-der-2",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG §35 (incident notification obligations) and BSI IT-Grundschutz DER.2.1 (Handling IT Security Incidents) are related: DER.2.1 provides the incident handling and detection process that enables organisations to identify significant incidents and report them within the timelines required by §35."
+  },
+  {
+    "id": "map-287",
+    "sourceControlId": "nis2umsg-38",
+    "targetControlId": "bsi-gs-orp-1",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG §38 (management body responsibility and liability) and BSI IT-Grundschutz ORP.1 (Organisation) are related: ORP.1 defines the organisational security structure and governance responsibilities that satisfy the management accountability obligations established by §38."
+  },
+  {
+    "id": "map-288",
+    "sourceControlId": "nis2umsg-39",
+    "targetControlId": "bsi-gs-ops-2-3",
+    "relationship": "equivalent",
+    "notes": "NIS2UmsuCG §39 (supply chain security) and BSI IT-Grundschutz OPS.2.3 (Outsourcing to Third Parties) are equivalent: OPS.2.3 provides the detailed operational requirements for managing the supply chain security risks that §39 mandates organisations to address."
+  },
+  {
+    "id": "map-289",
+    "sourceControlId": "nis2umsg-31",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG §31 (minimum security measures — 12 categories) and BSI IT-Grundschutz ISMS.1 (Security Management) are related: the 12 security categories mandated by §31 are fully addressed within the BSI IT-Grundschutz Compendium building blocks, making Grundschutz compliance a comprehensive implementation path for §31."
+  },
+  {
+    "id": "map-290",
+    "sourceControlId": "nis2umsg-34",
+    "targetControlId": "bsi-gs-der-3-1",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG §34 (supervisory and enforcement measures for essential entities) and BSI IT-Grundschutz DER.3.1 (Audits and Revisions) are related: DER.3.1 audits provide the evidence of compliance that essential entities can present during supervisory reviews under §34."
+  },
+  {
+    "id": "map-291",
+    "sourceControlId": "nis2umsg-40",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG §40 (use of European cybersecurity certification) and BSI IT-Grundschutz ISMS.1 are related: BSI IT-Grundschutz certification (ISO 27001 on the basis of IT-Grundschutz) is a recognised form of cybersecurity certification in Germany that can satisfy certification obligations under §40."
   }
 ]
