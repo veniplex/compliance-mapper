@@ -8,6 +8,9 @@ const state = {
   controlIndex: {},
   selectedFramework: null,
   currentView: 'frameworks',
+  user: null,
+  token: null,
+  progress: {}, // controlId → 'not_started' | 'in_progress' | 'completed'
 };
 
 /* ── API helpers ────────────────────────────────────────────────────── */
@@ -15,6 +18,23 @@ async function apiFetch(path) {
   const res = await fetch(`/api${path}`);
   if (!res.ok) throw new Error(`API error ${res.status}`);
   const json = await res.json();
+  return json.data;
+}
+
+async function authFetch(method, path, body) {
+  const headers = { 'Content-Type': 'application/json' };
+  if (state.token) headers['Authorization'] = `Bearer ${state.token}`;
+  const res = await fetch(`/api${path}`, {
+    method,
+    headers,
+    body: body !== undefined ? JSON.stringify(body) : undefined,
+  });
+  const json = await res.json();
+  if (!res.ok) {
+    const err = new Error(json.error || 'Request failed');
+    err.status = res.status;
+    throw err;
+  }
   return json.data;
 }
 
@@ -33,6 +53,198 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   document.getElementById('theme-icon').textContent = isDark ? '☀️' : '🌙';
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
+
+/* ── Auth ───────────────────────────────────────────────────────────── */
+
+function getStoredAuth() {
+  try {
+    return {
+      token: localStorage.getItem('auth_token') || null,
+      user: JSON.parse(localStorage.getItem('auth_user') || 'null'),
+    };
+  } catch { return { token: null, user: null }; }
+}
+
+function setStoredAuth(token, user) {
+  if (token && user) {
+    localStorage.setItem('auth_token', token);
+    localStorage.setItem('auth_user', JSON.stringify(user));
+  } else {
+    localStorage.removeItem('auth_token');
+    localStorage.removeItem('auth_user');
+  }
+}
+
+function renderAuthArea() {
+  const area = document.getElementById('auth-area');
+  if (!area) return;
+  if (state.user) {
+    area.innerHTML = `
+      <span class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 truncate max-w-[9rem]">${escHtml(state.user.email)}</span>
+      <button id="signout-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign Out</button>
+    `;
+    document.getElementById('signout-btn').addEventListener('click', () => handleLogout(true));
+  } else {
+    area.innerHTML = `
+      <button id="signin-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign In</button>
+      <button id="signup-btn" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium transition-colors">Sign Up</button>
+    `;
+    document.getElementById('signin-btn').addEventListener('click', () => openAuthModal('signin'));
+    document.getElementById('signup-btn').addEventListener('click', () => openAuthModal('signup'));
+  }
+}
+
+let _authMode = 'signin';
+
+function setAuthModalMode(mode) {
+  _authMode = mode;
+  const isSignup = mode === 'signup';
+  document.getElementById('auth-modal-title').textContent = isSignup ? 'Create Account' : 'Sign In';
+  document.getElementById('auth-submit').textContent = isSignup ? 'Create Account' : 'Sign In';
+  document.getElementById('auth-password-hint').classList.toggle('hidden', !isSignup);
+  document.getElementById('auth-password').setAttribute('autocomplete', isSignup ? 'new-password' : 'current-password');
+  const tabSignin = document.getElementById('auth-tab-signin');
+  const tabSignup = document.getElementById('auth-tab-signup');
+  const activeClasses = ['bg-white', 'dark:bg-gray-950', 'shadow-sm', 'text-gray-900', 'dark:text-gray-100'];
+  const inactiveClasses = ['text-gray-500', 'dark:text-gray-400'];
+  activeClasses.forEach(c => tabSignin.classList.toggle(c, !isSignup));
+  inactiveClasses.forEach(c => tabSignin.classList.toggle(c, isSignup));
+  activeClasses.forEach(c => tabSignup.classList.toggle(c, isSignup));
+  inactiveClasses.forEach(c => tabSignup.classList.toggle(c, !isSignup));
+}
+
+function openAuthModal(mode) {
+  document.getElementById('auth-error').classList.add('hidden');
+  document.getElementById('auth-email').value = '';
+  document.getElementById('auth-password').value = '';
+  setAuthModalMode(mode);
+  document.getElementById('auth-modal-overlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('auth-email').focus();
+}
+
+function closeAuthModal() {
+  document.getElementById('auth-modal-overlay').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+async function handleAuthSubmit(e) {
+  e.preventDefault();
+  const email = document.getElementById('auth-email').value.trim();
+  const password = document.getElementById('auth-password').value;
+  const errorEl = document.getElementById('auth-error');
+  const submitBtn = document.getElementById('auth-submit');
+  errorEl.classList.add('hidden');
+  submitBtn.disabled = true;
+  try {
+    const endpoint = _authMode === 'signup' ? '/auth/register' : '/auth/login';
+    const result = await authFetch('POST', endpoint, { email, password });
+    state.token = result.token;
+    state.user = result.user;
+    setStoredAuth(result.token, result.user);
+    closeAuthModal();
+    renderAuthArea();
+    await loadProgress();
+    if (state.currentView === 'framework-controls' && state.selectedFramework) {
+      renderFrameworkControls();
+    }
+  } catch (err) {
+    errorEl.textContent = err.message || 'An error occurred. Please try again.';
+    errorEl.classList.remove('hidden');
+  } finally {
+    submitBtn.disabled = false;
+  }
+}
+
+function handleLogout(rerenderView) {
+  state.user = null;
+  state.token = null;
+  state.progress = {};
+  setStoredAuth(null, null);
+  renderAuthArea();
+  updateAllProgressBadges();
+  if (rerenderView && state.currentView === 'framework-controls' && state.selectedFramework) {
+    renderFrameworkControls();
+  }
+}
+
+function initAuth() {
+  const { token, user } = getStoredAuth();
+  if (token && user) {
+    state.token = token;
+    state.user = user;
+  }
+  renderAuthArea();
+  document.getElementById('auth-modal-close').addEventListener('click', closeAuthModal);
+  document.getElementById('auth-modal-overlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('auth-modal-overlay')) closeAuthModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !document.getElementById('auth-modal-overlay').classList.contains('hidden')) {
+      closeAuthModal();
+    }
+  });
+  document.getElementById('auth-form').addEventListener('submit', handleAuthSubmit);
+  document.getElementById('auth-tab-signin').addEventListener('click', () => setAuthModalMode('signin'));
+  document.getElementById('auth-tab-signup').addEventListener('click', () => setAuthModalMode('signup'));
+}
+
+/* ── Progress tracking ──────────────────────────────────────────────── */
+
+const PROGRESS_CYCLE = ['not_started', 'in_progress', 'completed'];
+const PROGRESS_LABELS = { not_started: 'Not started', in_progress: 'In progress', completed: 'Completed' };
+const PROGRESS_ICONS = { not_started: '○', in_progress: '◐', completed: '●' };
+const PROGRESS_CLASSES = {
+  not_started: 'progress-not-started',
+  in_progress: 'progress-in-progress',
+  completed: 'progress-completed',
+};
+
+async function loadProgress() {
+  if (!state.token) return;
+  try {
+    const entries = await authFetch('GET', '/progress');
+    state.progress = {};
+    entries.forEach(e => { state.progress[e.controlId] = e.status; });
+    updateAllProgressBadges();
+  } catch (err) {
+    if (err.status === 401) handleLogout(false);
+  }
+}
+
+function progressBadgeHtml(controlId) {
+  if (!state.user) return '';
+  const status = state.progress[controlId] || 'not_started';
+  const label = PROGRESS_LABELS[status];
+  const icon = PROGRESS_ICONS[status];
+  const cls = PROGRESS_CLASSES[status];
+  return `<button class="progress-btn ${cls}" data-progress-id="${escHtml(controlId)}" aria-label="Progress: ${escHtml(label)}. Click to change." title="${escHtml(label)}">${icon}</button>`;
+}
+
+function updateAllProgressBadges() {
+  document.querySelectorAll('[data-progress-id]').forEach(btn => {
+    const cid = btn.dataset.progressId;
+    const status = state.progress[cid] || 'not_started';
+    btn.textContent = PROGRESS_ICONS[status];
+    btn.className = `progress-btn ${PROGRESS_CLASSES[status]}`;
+    btn.title = PROGRESS_LABELS[status];
+    btn.setAttribute('aria-label', `Progress: ${PROGRESS_LABELS[status]}. Click to change.`);
+  });
+}
+
+async function handleProgressClick(controlId) {
+  const current = state.progress[controlId] || 'not_started';
+  const next = PROGRESS_CYCLE[(PROGRESS_CYCLE.indexOf(current) + 1) % PROGRESS_CYCLE.length];
+  state.progress[controlId] = next; // optimistic update
+  updateAllProgressBadges();
+  try {
+    await authFetch('PUT', `/progress/${encodeURIComponent(controlId)}`, { status: next });
+  } catch (err) {
+    state.progress[controlId] = current; // revert
+    updateAllProgressBadges();
+    console.error('Failed to update progress:', err);
+  }
+}
 
 /* ── Navigation ─────────────────────────────────────────────────────── */
 function showView(viewId) {
@@ -427,6 +639,7 @@ function renderFrameworkControls() {
               <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 leading-relaxed">${escHtml(c.description)}</div>
               <span class="text-xs px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 mt-1.5 inline-block">${escHtml(c.theme)}</span>
             </div>
+            ${progressBadgeHtml(c.id)}
             <div class="shrink-0 self-center text-gray-400">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
@@ -437,7 +650,17 @@ function renderFrameworkControls() {
   `).join('');
 
   list.querySelectorAll('.control-row').forEach(row => {
-    row.addEventListener('click', () => openControlMappingModal(row.dataset.controlId));
+    row.addEventListener('click', e => {
+      if (e.target.closest('.progress-btn')) return;
+      openControlMappingModal(row.dataset.controlId);
+    });
+    const progressBtn = row.querySelector('.progress-btn');
+    if (progressBtn) {
+      progressBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        handleProgressClick(progressBtn.dataset.progressId);
+      });
+    }
   });
 }
 
@@ -762,6 +985,7 @@ function renderApiDocs() {
 /* ── Bootstrap ───────────────────────────────────────────────────────── */
 async function init() {
   initTheme();
+  initAuth();
 
   try {
     const [frameworks, mappings, stats] = await Promise.all([
@@ -820,6 +1044,9 @@ async function init() {
     document.getElementById('ctable-fw-select').addEventListener('change', e => {
       renderControlsTable(e.target.value);
     });
+
+    // Load progress if user is already authenticated
+    if (state.token) await loadProgress();
 
   } catch (err) {
     console.error('Failed to load data:', err);

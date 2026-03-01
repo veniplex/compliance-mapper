@@ -212,3 +212,49 @@ tbody tr .ctable-control-col {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
 .dark ::-webkit-scrollbar-thumb { background: #374151; }
+
+/* ── Progress button ── */
+.progress-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  flex-shrink: 0;
+}
+.progress-btn:hover {
+  transform: scale(1.2);
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+.progress-not-started {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+}
+.dark .progress-not-started {
+  background-color: #1f2937;
+  color: #6b7280;
+}
+.progress-in-progress {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+.dark .progress-in-progress {
+  background-color: #422006;
+  color: #fde047;
+}
+.progress-completed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+.dark .progress-completed {
+  background-color: #14532d;
+  color: #86efac;
+}

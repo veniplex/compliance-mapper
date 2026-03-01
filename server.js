@@ -6,6 +6,9 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const rateLimit = require('express-rate-limit');
+const { initDb } = require('./db');
+const authRoutes = require('./routes/auth');
+const progressRoutes = require('./routes/progress');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -73,10 +76,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 // CORS headers (allow embedding / external API usage)
 app.use((_req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, x-api-key');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, x-api-key, Authorization');
   next();
 });
+
+// ── Auth routes (no API key required) ────────────────────────────────────────
+
+const authLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 20,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests, please try again later.' },
+});
+
+app.use('/api/auth', authLimiter, authRoutes);
+
+// ── Progress routes (JWT-protected, no API key required) ─────────────────────
+
+app.use('/api/progress', apiLimiter, progressRoutes);
 
 // ── API routes ────────────────────────────────────────────────────────────────
 
@@ -275,9 +294,18 @@ app.get('*', staticLimiter, (_req, res) => {
 // ── Start server ──────────────────────────────────────────────────────────────
 
 if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Compliance Mapper running at http://localhost:${PORT}`);
-  });
+  initDb()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`Compliance Mapper running at http://localhost:${PORT}`);
+      });
+    })
+    .catch(err => {
+      console.warn('Database unavailable, auth and progress features will be disabled:', err.message);
+      app.listen(PORT, () => {
+        console.log(`Compliance Mapper running at http://localhost:${PORT} (no database)`);
+      });
+    });
 }
 
 module.exports = app;
