@@ -1,8 +1,5 @@
 'use strict';
 
-// Set a test API key before the app is loaded so the middleware uses it
-process.env.API_KEYS = 'test-api-key-123';
-
 const { test, describe, before, after } = require('node:test');
 const assert = require('node:assert/strict');
 const http = require('node:http');
@@ -29,7 +26,7 @@ after(() => new Promise(resolve => {
 function get(path, headers = {}) {
   return new Promise((resolve, reject) => {
     const url = new URL(`${baseUrl}${path}`);
-    const merged = { 'x-api-key': 'test-api-key-123', ...headers };
+    const merged = { ...headers };
     // Remove undefined values so callers can opt out of default headers
     const filteredHeaders = Object.fromEntries(
       Object.entries(merged).filter(([, v]) => v !== undefined)
@@ -420,20 +417,22 @@ describe('Unknown API route', () => {
 });
 
 describe('API key authentication', () => {
-  test('returns 401 when x-api-key header is missing', async () => {
-    const { status, body } = await get('/api/frameworks', { 'x-api-key': undefined });
-    assert.equal(status, 401);
-    assert.ok(body.error);
-  });
-
-  test('returns 403 when x-api-key is invalid', async () => {
-    const { status, body } = await get('/api/frameworks', { 'x-api-key': 'wrong-key' });
-    assert.equal(status, 403);
-    assert.ok(body.error);
-  });
-
-  test('returns 200 when x-api-key is valid', async () => {
-    const { status } = await get('/api/frameworks', { 'x-api-key': 'test-api-key-123' });
+  test('API is accessible without API key', async () => {
+    const { status } = await get('/api/frameworks');
     assert.equal(status, 200);
+  });
+});
+
+describe('GET /api/config', () => {
+  test('returns dbEnabled flag', async () => {
+    const { status, body } = await get('/api/config');
+    assert.equal(status, 200);
+    assert.ok(typeof body.data.dbEnabled === 'boolean');
+  });
+
+  test('does not require an API key', async () => {
+    const { status, body } = await get('/api/config');
+    assert.equal(status, 200);
+    assert.ok(typeof body.data.dbEnabled === 'boolean');
   });
 });

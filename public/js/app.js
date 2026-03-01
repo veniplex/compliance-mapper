@@ -11,6 +11,7 @@ const state = {
   user: null,
   token: null,
   progress: {}, // controlId → 'not_started' | 'in_progress' | 'completed'
+  dbEnabled: true, // set from /api/config; false hides sign in / sign up
 };
 
 /* ── API helpers ────────────────────────────────────────────────────── */
@@ -29,7 +30,8 @@ async function authFetch(method, path, body) {
     headers,
     body: body !== undefined ? JSON.stringify(body) : undefined,
   });
-  const json = await res.json();
+  const text = await res.text();
+  const json = text ? JSON.parse(text) : {};
   if (!res.ok) {
     const err = new Error(json.error || 'Request failed');
     err.status = res.status;
@@ -78,12 +80,22 @@ function setStoredAuth(token, user) {
 function renderAuthArea() {
   const area = document.getElementById('auth-area');
   if (!area) return;
+  if (!state.dbEnabled) {
+    area.innerHTML = '';
+    return;
+  }
   if (state.user) {
     area.innerHTML = `
       <span class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 truncate max-w-[9rem]">${escHtml(state.user.email)}</span>
+      <button id="settings-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Settings</button>
       <button id="signout-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign Out</button>
     `;
+    document.getElementById('settings-btn').addEventListener('click', () => openSettings());
     document.getElementById('signout-btn').addEventListener('click', () => handleLogout(true));
+    const navBtn = document.getElementById('settings-nav-btn');
+    if (navBtn) navBtn.style.display = '';
+    const navBtnMobile = document.getElementById('settings-nav-btn-mobile');
+    if (navBtnMobile) navBtnMobile.style.display = '';
   } else {
     area.innerHTML = `
       <button id="signin-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign In</button>
@@ -91,6 +103,10 @@ function renderAuthArea() {
     `;
     document.getElementById('signin-btn').addEventListener('click', () => openAuthModal('signin'));
     document.getElementById('signup-btn').addEventListener('click', () => openAuthModal('signup'));
+    const navBtn = document.getElementById('settings-nav-btn');
+    if (navBtn) navBtn.style.display = 'none';
+    const navBtnMobile = document.getElementById('settings-nav-btn-mobile');
+    if (navBtnMobile) navBtnMobile.style.display = 'none';
   }
 }
 
@@ -163,7 +179,8 @@ function handleLogout(rerenderView) {
   setStoredAuth(null, null);
   renderAuthArea();
   updateAllProgressBadges();
-  if (rerenderView && state.currentView === 'framework-controls' && state.selectedFramework) {
+  if (state.currentView === 'settings') showView('frameworks');
+  else if (rerenderView && state.currentView === 'framework-controls' && state.selectedFramework) {
     renderFrameworkControls();
   }
 }
@@ -175,6 +192,7 @@ function initAuth() {
     state.user = user;
   }
   renderAuthArea();
+  if (!state.dbEnabled) return;
   document.getElementById('auth-modal-close').addEventListener('click', closeAuthModal);
   document.getElementById('auth-modal-overlay').addEventListener('click', e => {
     if (e.target === document.getElementById('auth-modal-overlay')) closeAuthModal();
@@ -187,6 +205,183 @@ function initAuth() {
   document.getElementById('auth-form').addEventListener('submit', handleAuthSubmit);
   document.getElementById('auth-tab-signin').addEventListener('click', () => setAuthModalMode('signin'));
   document.getElementById('auth-tab-signup').addEventListener('click', () => setAuthModalMode('signup'));
+  initSettings();
+}
+
+function openSettings() {
+  showView('settings');
+  loadSettingsProfile();
+  loadApiKeys();
+}
+
+/* ── Settings ───────────────────────────────────────────────────────── */
+
+function initSettings() {
+  document.querySelectorAll('.settings-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchSettingsTab(btn.dataset.settingsTab));
+  });
+  switchSettingsTab('profile');
+
+  document.getElementById('settings-profile-form').addEventListener('submit', handleProfileSave);
+  document.getElementById('settings-password-form').addEventListener('submit', handlePasswordChange);
+
+  document.getElementById('settings-create-apikey-btn').addEventListener('click', () => {
+    document.getElementById('settings-new-apikey-form').classList.remove('hidden');
+    document.getElementById('settings-apikey-reveal').classList.add('hidden');
+    document.getElementById('settings-apikey-name').value = '';
+    document.getElementById('settings-apikey-name').focus();
+  });
+  document.getElementById('settings-apikey-create-cancel').addEventListener('click', () => {
+    document.getElementById('settings-new-apikey-form').classList.add('hidden');
+  });
+  document.getElementById('settings-apikey-create-confirm').addEventListener('click', handleCreateApiKey);
+  document.getElementById('settings-apikey-copy').addEventListener('click', () => {
+    const val = document.getElementById('settings-apikey-value').textContent;
+    navigator.clipboard.writeText(val).catch(() => {});
+  });
+}
+
+function switchSettingsTab(tab) {
+  document.querySelectorAll('.settings-tab-btn').forEach(btn => {
+    const active = btn.dataset.settingsTab === tab;
+    btn.classList.toggle('border-blue-600', active);
+    btn.classList.toggle('text-blue-600', active);
+    btn.classList.toggle('dark:border-blue-400', active);
+    btn.classList.toggle('dark:text-blue-400', active);
+    btn.classList.toggle('border-transparent', !active);
+    btn.classList.toggle('text-gray-500', !active);
+    btn.classList.toggle('dark:text-gray-400', !active);
+  });
+  document.querySelectorAll('.settings-tab-content').forEach(el => {
+    el.classList.toggle('hidden', !el.id.endsWith(tab));
+  });
+}
+
+async function loadSettingsProfile() {
+  try {
+    const data = await authFetch('GET', '/settings/profile');
+    document.getElementById('settings-username').value = data.username || '';
+    document.getElementById('settings-email').value = data.email || '';
+  } catch (err) {
+    console.error('Failed to load profile:', err);
+  }
+}
+
+async function handleProfileSave(e) {
+  e.preventDefault();
+  const username = document.getElementById('settings-username').value.trim();
+  const email = document.getElementById('settings-email').value.trim();
+  const errEl = document.getElementById('settings-profile-error');
+  const okEl = document.getElementById('settings-profile-success');
+  const btn = document.getElementById('settings-profile-submit');
+  errEl.classList.add('hidden');
+  okEl.classList.add('hidden');
+  btn.disabled = true;
+  try {
+    const payload = {};
+    if (username) payload.username = username;
+    if (email) payload.email = email;
+    const data = await authFetch('PATCH', '/settings/profile', payload);
+    state.user = { ...state.user, email: data.email, username: data.username };
+    setStoredAuth(state.token, state.user);
+    renderAuthArea();
+    okEl.textContent = 'Profile updated successfully.';
+    okEl.classList.remove('hidden');
+  } catch (err) {
+    errEl.textContent = err.message || 'Failed to update profile.';
+    errEl.classList.remove('hidden');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+async function handlePasswordChange(e) {
+  e.preventDefault();
+  const currentPassword = document.getElementById('settings-current-password').value;
+  const newPassword = document.getElementById('settings-new-password').value;
+  const errEl = document.getElementById('settings-password-error');
+  const okEl = document.getElementById('settings-password-success');
+  const btn = document.getElementById('settings-password-submit');
+  errEl.classList.add('hidden');
+  okEl.classList.add('hidden');
+  if (newPassword.length < 8) {
+    errEl.textContent = 'New password must be at least 8 characters.';
+    errEl.classList.remove('hidden');
+    return;
+  }
+  btn.disabled = true;
+  try {
+    await authFetch('PATCH', '/settings/password', { currentPassword, newPassword });
+    document.getElementById('settings-current-password').value = '';
+    document.getElementById('settings-new-password').value = '';
+    okEl.textContent = 'Password changed successfully.';
+    okEl.classList.remove('hidden');
+  } catch (err) {
+    errEl.textContent = err.message || 'Failed to change password.';
+    errEl.classList.remove('hidden');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+async function loadApiKeys() {
+  const listEl = document.getElementById('settings-apikeys-list');
+  if (!listEl) return;
+  try {
+    const keys = await authFetch('GET', '/settings/apikeys');
+    if (keys.length === 0) {
+      listEl.innerHTML = '<p class="text-sm text-gray-400 py-4 text-center">No API keys yet. Create one to access the API programmatically.</p>';
+      return;
+    }
+    listEl.innerHTML = keys.map(k => `
+      <div class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+        <div class="flex-1 min-w-0">
+          <p class="font-medium text-sm truncate">${escHtml(k.name || 'Unnamed key')}</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 font-mono mt-0.5">${escHtml(k.keyPrefix)}••••••••••••••</p>
+          <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Created ${escHtml(new Date(k.createdAt).toLocaleDateString())}${k.lastUsedAt ? ' · Last used ' + escHtml(new Date(k.lastUsedAt).toLocaleDateString()) : ''}</p>
+        </div>
+        <button class="delete-apikey-btn shrink-0 px-2 py-1 rounded border border-red-200 dark:border-red-800 text-xs font-medium text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950 transition" data-key-id="${escHtml(String(k.id))}">Revoke</button>
+      </div>
+    `).join('');
+    listEl.querySelectorAll('.delete-apikey-btn').forEach(btn => {
+      btn.addEventListener('click', () => handleDeleteApiKey(btn.dataset.keyId));
+    });
+  } catch (err) {
+    console.error('Failed to load API keys:', err);
+    listEl.innerHTML = '<p class="text-sm text-red-500 py-4 text-center">Failed to load API keys.</p>';
+  }
+}
+
+async function handleCreateApiKey() {
+  const name = document.getElementById('settings-apikey-name').value.trim();
+  const errEl = document.getElementById('settings-apikeys-error');
+  const btn = document.getElementById('settings-apikey-create-confirm');
+  errEl.classList.add('hidden');
+  btn.disabled = true;
+  try {
+    const data = await authFetch('POST', '/settings/apikeys', { name });
+    document.getElementById('settings-new-apikey-form').classList.add('hidden');
+    document.getElementById('settings-apikey-value').textContent = data.key;
+    document.getElementById('settings-apikey-reveal').classList.remove('hidden');
+    await loadApiKeys();
+  } catch (err) {
+    errEl.textContent = err.message || 'Failed to create API key.';
+    errEl.classList.remove('hidden');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+async function handleDeleteApiKey(keyId) {
+  const errEl = document.getElementById('settings-apikeys-error');
+  errEl.classList.add('hidden');
+  try {
+    await authFetch('DELETE', `/settings/apikeys/${encodeURIComponent(keyId)}`);
+    await loadApiKeys();
+  } catch (err) {
+    errEl.textContent = err.message || 'Failed to revoke API key.';
+    errEl.classList.remove('hidden');
+  }
 }
 
 /* ── Progress tracking ──────────────────────────────────────────────── */
@@ -985,6 +1180,14 @@ function renderApiDocs() {
 /* ── Bootstrap ───────────────────────────────────────────────────────── */
 async function init() {
   initTheme();
+
+  try {
+    const config = await apiFetch('/config');
+    state.dbEnabled = config.dbEnabled === true;
+  } catch {
+    state.dbEnabled = true;
+  }
+
   initAuth();
 
   try {

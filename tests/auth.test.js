@@ -1,6 +1,5 @@
 'use strict';
 
-process.env.API_KEYS = 'test-api-key-123';
 process.env.JWT_SECRET = 'test-jwt-secret-for-tests';
 
 const { test, describe, before, after } = require('node:test');
@@ -58,7 +57,6 @@ function request(method, urlPath, body, headers = {}) {
     const bodyStr = body ? JSON.stringify(body) : null;
     const rawHeaders = {
       'Content-Type': 'application/json',
-      'x-api-key': 'test-api-key-123',
       ...headers,
       ...(bodyStr ? { 'Content-Length': Buffer.byteLength(bodyStr) } : {}),
     };
@@ -190,7 +188,7 @@ describe('GET /api/progress', () => {
         port: url.port,
         path: url.pathname,
         method: 'GET',
-        headers: { 'x-api-key': 'test-api-key-123' },
+        headers: {},
       };
       const req = http.request(options, res => {
         let data = '';
@@ -246,7 +244,6 @@ describe('PUT /api/progress/:controlId', () => {
         headers: {
           'Content-Type': 'application/json',
           'Content-Length': Buffer.byteLength(bodyStr),
-          'x-api-key': 'test-api-key-123',
         },
       };
       const req = http.request(options, res => {
@@ -305,7 +302,7 @@ describe('DELETE /api/progress/:controlId', () => {
         port: url.port,
         path: url.pathname,
         method: 'DELETE',
-        headers: { 'x-api-key': 'test-api-key-123' },
+        headers: {},
       };
       const req = http.request(options, res => {
         let data = '';
@@ -329,7 +326,6 @@ describe('DELETE /api/progress/:controlId', () => {
         path: url.pathname,
         method: 'DELETE',
         headers: {
-          'x-api-key': 'test-api-key-123',
           Authorization: `Bearer ${makeToken()}`,
         },
       };
@@ -341,6 +337,175 @@ describe('DELETE /api/progress/:controlId', () => {
       });
       req.on('error', reject);
       req.end();
+    });
+    assert.equal(res.status, 204);
+  });
+});
+
+// ── GET /api/settings/profile ─────────────────────────────────────────────────
+
+describe('GET /api/settings/profile', () => {
+  function makeToken(userId = 1) {
+    return jwt.sign({ sub: userId, email: 'user@example.com' }, process.env.JWT_SECRET);
+  }
+
+  test('returns 401 without token', async () => {
+    const res = await new Promise((resolve, reject) => {
+      const url = new URL(`${baseUrl}/api/settings/profile`);
+      const options = { hostname: url.hostname, port: url.port, path: url.pathname, method: 'GET', headers: {} };
+      const req = http.request(options, res => {
+        let data = ''; res.setEncoding('utf8');
+        res.on('data', c => { data += c; });
+        res.on('end', () => resolve({ status: res.statusCode, body: JSON.parse(data) }));
+      });
+      req.on('error', reject); req.end();
+    });
+    assert.equal(res.status, 401);
+  });
+
+  test('returns profile for authenticated user', async () => {
+    mockPool._nextResult = { rows: [{ id: 1, email: 'user@example.com', username: 'testuser' }] };
+    const { status, body } = await request('GET', '/api/settings/profile', null, { Authorization: `Bearer ${makeToken()}` });
+    assert.equal(status, 200);
+    assert.equal(body.data.email, 'user@example.com');
+  });
+});
+
+// ── PATCH /api/settings/password ─────────────────────────────────────────────
+
+describe('PATCH /api/settings/password', () => {
+  function makeToken(userId = 1) {
+    return jwt.sign({ sub: userId, email: 'user@example.com' }, process.env.JWT_SECRET);
+  }
+
+  test('returns 401 without token', async () => {
+    const res = await new Promise((resolve, reject) => {
+      const bodyStr = JSON.stringify({ currentPassword: 'old', newPassword: 'newpassword' });
+      const url = new URL(`${baseUrl}/api/settings/password`);
+      const options = {
+        hostname: url.hostname, port: url.port, path: url.pathname, method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(bodyStr) },
+      };
+      const req = http.request(options, res => {
+        let data = ''; res.setEncoding('utf8');
+        res.on('data', c => { data += c; });
+        res.on('end', () => resolve({ status: res.statusCode, body: JSON.parse(data) }));
+      });
+      req.on('error', reject); req.write(bodyStr); req.end();
+    });
+    assert.equal(res.status, 401);
+  });
+
+  test('returns 400 when new password is too short', async () => {
+    const { status, body } = await request('PATCH', '/api/settings/password', { currentPassword: 'old', newPassword: 'short' }, { Authorization: `Bearer ${makeToken()}` });
+    assert.equal(status, 400);
+    assert.ok(body.error);
+  });
+});
+
+// ── GET /api/settings/apikeys ─────────────────────────────────────────────────
+
+describe('GET /api/settings/apikeys', () => {
+  function makeToken(userId = 1) {
+    return jwt.sign({ sub: userId, email: 'user@example.com' }, process.env.JWT_SECRET);
+  }
+
+  test('returns 401 without token', async () => {
+    const res = await new Promise((resolve, reject) => {
+      const url = new URL(`${baseUrl}/api/settings/apikeys`);
+      const options = { hostname: url.hostname, port: url.port, path: url.pathname, method: 'GET', headers: {} };
+      const req = http.request(options, res => {
+        let data = ''; res.setEncoding('utf8');
+        res.on('data', c => { data += c; });
+        res.on('end', () => resolve({ status: res.statusCode, body: JSON.parse(data) }));
+      });
+      req.on('error', reject); req.end();
+    });
+    assert.equal(res.status, 401);
+  });
+
+  test('returns api keys list', async () => {
+    const now = new Date().toISOString();
+    mockPool._nextResult = { rows: [{ id: 1, name: 'My key', key_prefix: 'cm_abc123', created_at: now, last_used_at: null }] };
+    const { status, body } = await request('GET', '/api/settings/apikeys', null, { Authorization: `Bearer ${makeToken()}` });
+    assert.equal(status, 200);
+    assert.ok(Array.isArray(body.data));
+    assert.equal(body.data[0].name, 'My key');
+    assert.equal(body.data[0].keyPrefix, 'cm_abc123');
+  });
+});
+
+// ── POST /api/settings/apikeys ────────────────────────────────────────────────
+
+describe('POST /api/settings/apikeys', () => {
+  function makeToken(userId = 1) {
+    return jwt.sign({ sub: userId, email: 'user@example.com' }, process.env.JWT_SECRET);
+  }
+
+  test('returns 401 without token', async () => {
+    const res = await new Promise((resolve, reject) => {
+      const bodyStr = JSON.stringify({ name: 'test' });
+      const url = new URL(`${baseUrl}/api/settings/apikeys`);
+      const options = {
+        hostname: url.hostname, port: url.port, path: url.pathname, method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(bodyStr) },
+      };
+      const req = http.request(options, res => {
+        let data = ''; res.setEncoding('utf8');
+        res.on('data', c => { data += c; });
+        res.on('end', () => resolve({ status: res.statusCode, body: JSON.parse(data) }));
+      });
+      req.on('error', reject); req.write(bodyStr); req.end();
+    });
+    assert.equal(res.status, 401);
+  });
+
+  test('creates new api key and returns it once', async () => {
+    const now = new Date().toISOString();
+    mockPool._nextResult = { rows: [{ id: 2, name: 'test key', key_prefix: 'cm_', created_at: now }] };
+    const { status, body } = await request('POST', '/api/settings/apikeys', { name: 'test key' }, { Authorization: `Bearer ${makeToken()}` });
+    assert.equal(status, 201);
+    assert.ok(body.data.key, 'Expected key in response');
+    assert.ok(body.data.key.startsWith('cm_'), 'Key should start with cm_');
+    assert.equal(body.data.name, 'test key');
+  });
+});
+
+// ── DELETE /api/settings/apikeys/:id ─────────────────────────────────────────
+
+describe('DELETE /api/settings/apikeys/:id', () => {
+  function makeToken(userId = 1) {
+    return jwt.sign({ sub: userId, email: 'user@example.com' }, process.env.JWT_SECRET);
+  }
+
+  test('returns 401 without token', async () => {
+    const res = await new Promise((resolve, reject) => {
+      const url = new URL(`${baseUrl}/api/settings/apikeys/1`);
+      const options = { hostname: url.hostname, port: url.port, path: url.pathname, method: 'DELETE', headers: {} };
+      const req = http.request(options, res => {
+        let data = ''; res.setEncoding('utf8');
+        res.on('data', c => { data += c; });
+        res.on('end', () => resolve({ status: res.statusCode, body: data ? JSON.parse(data) : {} }));
+      });
+      req.on('error', reject); req.end();
+    });
+    assert.equal(res.status, 401);
+  });
+
+  test('returns 204 on successful delete', async () => {
+    mockPool._nextResult = { rows: [] };
+    const res = await new Promise((resolve, reject) => {
+      const url = new URL(`${baseUrl}/api/settings/apikeys/1`);
+      const options = {
+        hostname: url.hostname, port: url.port, path: url.pathname, method: 'DELETE',
+        headers: { Authorization: `Bearer ${makeToken()}` },
+      };
+      const req = http.request(options, res => {
+        let data = ''; res.setEncoding('utf8');
+        res.on('data', c => { data += c; });
+        res.on('end', () => resolve({ status: res.statusCode }));
+      });
+      req.on('error', reject); req.end();
     });
     assert.equal(res.status, 204);
   });
