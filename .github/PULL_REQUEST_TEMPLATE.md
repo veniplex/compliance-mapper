@@ -19,8 +19,17 @@ Closes #<!-- issue number, if applicable -->
 - [ ] `npm test` passes locally
 - [ ] I have added or updated tests for any changed server-side behaviour
 - [ ] I have not committed a populated `.env` file
-- [ ] Data changes reference valid framework / control IDs and cite the source
 - [ ] The PR is focused on a single concern
+
+### Data changes (complete if "Data update" is checked above)
+
+- [ ] Framework `id` values are short, lowercase, and unique — and will not need to change after merging
+- [ ] Every new control's `frameworkId` matches an entry in `data/frameworks.json`
+- [ ] Every new mapping references valid `sourceControlId` and `targetControlId` values from `data/controls.json`
+- [ ] `relationship` values are one of: `equivalent`, `subset`, `superset`, `related`
+- [ ] New mapping `id` values follow the `map-NNN` sequential format
+- [ ] Source is cited (official name, version, publication date, URL) in the PR description or framework `description` field
+- [ ] JSON files are valid (no syntax errors)
 
 ## How to test
 

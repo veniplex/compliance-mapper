@@ -82,22 +82,136 @@ Open an issue with the label **enhancement** and describe:
 
 ### Adding or Updating Data
 
+Data-only contributions (new frameworks, controls, or mappings) **do not require you to run the server or write any code**. You only need a text editor and Git. The workflow below is all you need.
+
+#### Quick-start workflow
+
+1. Fork and clone the repository (see [Getting Started](#getting-started)).
+2. Create a branch with the `data/` prefix:
+   ```bash
+   git checkout -b data/add-nist-csf-2
+   ```
+3. Edit the JSON files described below.
+4. Validate your JSON (any JSON linter or `node -e "JSON.parse(require('fs').readFileSync('data/frameworks.json','utf8'))"` for each file).
+5. Open a pull request against `main`. Use the **Data contribution** issue / PR template and cite your source.
+
+> **No Node.js setup required for pure data changes.** You can even edit the files directly in the GitHub web UI and open a PR from there.
+
+---
+
+#### File reference
+
 Compliance framework data lives in the `data/` directory:
 
 | File | Contents |
 |------|----------|
-| `data/frameworks.json` | Framework metadata (id, name, description, version) |
-| `data/controls.json` | Individual controls with themes and descriptions |
-| `data/mappings.json` | Relationships between controls across frameworks |
+| `data/frameworks.json` | Framework metadata (array of framework objects) |
+| `data/controls.json` | Individual controls, grouped by `frameworkId` (object keyed by framework id) |
+| `data/mappings.json` | Relationships between controls across frameworks (array of mapping objects) |
 
-**Guidelines for data changes:**
+---
 
-- Use the existing JSON structure and field naming conventions.
-- Every `control` entry must reference a valid `frameworkId` that exists in `frameworks.json`.
-- Every `mapping` entry must reference valid control IDs from `controls.json`.
-- Valid `relationship` values are: `equivalent`, `subset`, `superset`, and `related`.
-- Cite the source of any new framework data (version, publication date, official URL) in the framework's `description` field or in the pull request description.
-- Keep control IDs short, stable, and unique (e.g. `iso27001-a.5.1`).
+#### Schema: `data/frameworks.json`
+
+Each entry in the top-level array describes one framework:
+
+```json
+{
+  "id": "nistcsf2",
+  "name": "NIST Cybersecurity Framework 2.0",
+  "shortName": "NIST CSF 2.0",
+  "description": "...",
+  "version": "2.0",
+  "lastUpdated": "2024-02-26",
+  "region": "United States",
+  "type": "Framework",
+  "url": "https://www.nist.gov/cyberframework",
+  "color": "#16a34a",
+  "businessImpact": ["...", "..."],
+  "structure": ["...", "..."]
+}
+```
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| `id` | ✅ | Short, lowercase, unique across all frameworks (e.g. `nistcsf2`). Used as the key in `controls.json` and referenced by mappings — **never change it after merging**. |
+| `name` | ✅ | Full official name. |
+| `shortName` | ✅ | Abbreviated name shown in the UI. |
+| `description` | ✅ | One or two sentences. Include the official publication date and URL. |
+| `version` | ✅ | Official version string (e.g. `"2.0"`, `"2022/2555"`). |
+| `lastUpdated` | ✅ | ISO 8601 date of the official publication (`YYYY-MM-DD`). |
+| `region` | ✅ | Jurisdiction (e.g. `"International"`, `"European Union"`, `"United States"`). |
+| `type` | ✅ | One of: `Standard`, `Regulation`, `Framework`, `Guideline`. |
+| `url` | ✅ | Canonical URL to the official publication. |
+| `color` | ✅ | Tailwind-compatible hex colour used in the UI badge (e.g. `"#16a34a"`). |
+| `businessImpact` | ✅ | Array of strings — each string is one bullet point shown in the framework detail view. |
+| `structure` | ✅ | Array of strings — brief structural description bullets. |
+
+---
+
+#### Schema: `data/controls.json`
+
+The file is a **JSON object** keyed by `frameworkId`. Each value is an array of control objects:
+
+```json
+{
+  "nistcsf2": [
+    {
+      "id": "nistcsf2-GV.OC-01",
+      "ref": "GV.OC-01",
+      "title": "Organizational mission is understood...",
+      "description": "The organizational mission is understood and informs cybersecurity risk management.",
+      "category": "Organizational Context",
+      "theme": "Governance",
+      "frameworkId": "nistcsf2"
+    }
+  ]
+}
+```
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| `id` | ✅ | Globally unique. Convention: `<frameworkId>-<ref>` with spaces replaced by `-` (e.g. `nistcsf2-GV.OC-01`). Preserve the original casing of the `ref` portion. **Never change after merging.** |
+| `ref` | ✅ | Official control reference as it appears in the source document. |
+| `title` | ✅ | Short title of the control. |
+| `description` | ✅ | One or two sentence description from the source. |
+| `category` | ✅ | The section or category within the framework (e.g. `"Organizational Context"`). |
+| `theme` | ✅ | High-level theme used for cross-framework filtering. Reuse an existing theme where possible: `Governance`, `Risk Management`, `Access Control`, `Incident Management`, `Business Continuity`, `Supply Chain`, `Data Protection`, `Compliance`. |
+| `frameworkId` | ✅ | Must exactly match the `id` of a framework in `frameworks.json` and the key under which this array appears. |
+
+---
+
+#### Schema: `data/mappings.json`
+
+Each entry in the top-level array links two controls:
+
+```json
+{
+  "id": "map-999",
+  "sourceControlId": "nistcsf2-GV.OC-01",
+  "targetControlId": "iso27001-5.1",
+  "relationship": "related",
+  "notes": "Both address the alignment of security objectives with organisational strategy."
+}
+```
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| `id` | ✅ | Unique string. Use sequential `map-NNN` format (find the highest existing id and increment). |
+| `sourceControlId` | ✅ | Must exactly match a control `id` in `controls.json`. |
+| `targetControlId` | ✅ | Must exactly match a control `id` in `controls.json`. |
+| `relationship` | ✅ | One of: `equivalent` (controls cover the same requirement), `subset` (source is narrower than target), `superset` (source is broader than target), `related` (related but not directly equivalent). |
+| `notes` | ✅ | One or two sentences explaining the mapping rationale. |
+
+---
+
+#### General guidelines
+
+- **Cite your source.** Include the official version, publication date, and URL in the PR description or the framework's `description` field.
+- **Stable IDs.** Control and framework `id` values are referenced by mappings and stored in user progress records. Once merged, treat them as immutable.
+- **Reuse themes.** Check existing controls for the theme vocabulary before introducing a new theme value.
+- **One framework per PR** keeps reviews manageable.
+- **Validate JSON** before opening a PR — an invalid file will break the entire API.
 
 ### Code Contributions
 
