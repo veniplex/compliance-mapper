@@ -32,6 +32,7 @@
       </div>
       <nav class="hidden sm:flex items-center gap-1 ml-4 text-sm font-medium" id="main-nav">
         <button data-view="frameworks" class="nav-btn active px-3 py-1.5 rounded-lg">Frameworks</button>
+        <button data-view="dashboard" class="nav-btn px-3 py-1.5 rounded-lg" id="dashboard-nav-btn" style="display:none">Dashboard</button>
         <button data-view="controls-table" class="nav-btn px-3 py-1.5 rounded-lg">Controls Table</button>
         <button data-view="apidocs" class="nav-btn px-3 py-1.5 rounded-lg">API</button>
       </nav>
@@ -51,6 +52,7 @@
     <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
       <div class="px-4 py-2 flex flex-col gap-1 text-sm font-medium">
         <button data-view="frameworks" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Frameworks</button>
+        <button data-view="dashboard" class="nav-btn mobile text-left px-3 py-2 rounded-lg" id="dashboard-nav-btn-mobile" style="display:none">Dashboard</button>
         <button data-view="controls-table" class="nav-btn mobile text-left px-3 py-2 rounded-lg">Controls Table</button>
         <button data-view="apidocs" class="nav-btn mobile text-left px-3 py-2 rounded-lg">API Docs</button>
       </div>
@@ -62,11 +64,13 @@
 
     <!-- ════ Frameworks View ════ -->
     <section id="view-frameworks" class="view-section">
-      <div class="mb-8">
-        <h1 class="text-3xl font-bold">Compliance Mapper</h1>
-        <p class="mt-2 text-base text-gray-600 dark:text-gray-400 max-w-3xl">Explore and compare cybersecurity &amp; privacy compliance frameworks. See how controls map across ISO 27001, NIS2, GDPR, DORA, CIS Controls and NIST CSF — so you can close gaps and reduce duplication.</p>
-        <div id="fw-stats-banner" class="hidden mt-4 flex flex-wrap gap-5 text-sm"></div>
-        <div id="overall-score-banner" class="hidden mt-3"></div>
+      <div class="mb-8" style="display:flex;align-items:flex-start;gap:2rem">
+        <div style="flex:1;min-width:0">
+          <h1 class="text-3xl font-bold">Compliance Mapper</h1>
+          <p class="mt-2 text-base text-gray-600 dark:text-gray-400 max-w-3xl">Explore and compare cybersecurity &amp; privacy compliance frameworks. See how controls map across ISO 27001, NIS2, GDPR, DORA, CIS Controls and NIST CSF — so you can close gaps and reduce duplication.</p>
+          <div id="fw-stats-banner" class="hidden mt-4 flex flex-wrap gap-5 text-sm"></div>
+        </div>
+        <div id="overall-score-banner" class="hidden" style="flex-shrink:0"></div>
       </div>
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Supported Frameworks</h2>
       <div id="frameworks-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -127,6 +131,17 @@
 
         <!-- Endpoint cards -->
         <div id="api-endpoints" class="space-y-4"></div>
+      </div>
+    </section>
+
+    <!-- ════ Dashboard View ════ -->
+    <section id="view-dashboard" class="view-section hidden">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold">Dashboard</h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Overview of your compliance implementation progress across all frameworks.</p>
+      </div>
+      <div id="dashboard-content">
+        <p class="text-center text-gray-400 py-10">Loading…</p>
       </div>
     </section>
 

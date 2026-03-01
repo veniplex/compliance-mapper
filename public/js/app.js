@@ -93,6 +93,10 @@ function renderAuthArea() {
     `;
     document.getElementById('settings-btn').addEventListener('click', () => openSettings());
     document.getElementById('signout-btn').addEventListener('click', () => handleLogout(true));
+    const dashBtn = document.getElementById('dashboard-nav-btn');
+    if (dashBtn) dashBtn.style.display = '';
+    const dashBtnMobile = document.getElementById('dashboard-nav-btn-mobile');
+    if (dashBtnMobile) dashBtnMobile.style.display = '';
   } else {
     area.innerHTML = `
       <button id="signin-btn" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Sign In</button>
@@ -100,6 +104,10 @@ function renderAuthArea() {
     `;
     document.getElementById('signin-btn').addEventListener('click', () => openAuthModal('signin'));
     document.getElementById('signup-btn').addEventListener('click', () => openAuthModal('signup'));
+    const dashBtn = document.getElementById('dashboard-nav-btn');
+    if (dashBtn) dashBtn.style.display = 'none';
+    const dashBtnMobile = document.getElementById('dashboard-nav-btn-mobile');
+    if (dashBtnMobile) dashBtnMobile.style.display = 'none';
   }
 }
 
@@ -176,7 +184,7 @@ function handleLogout(rerenderView) {
   renderAuthArea();
   updateAllProgressBadges();
   updateAllFrameworkProgressBars();
-  if (state.currentView === 'settings') showView('frameworks');
+  if (state.currentView === 'settings' || state.currentView === 'dashboard') showView('frameworks');
   else if (rerenderView && state.currentView === 'framework-controls' && state.selectedFramework) {
     renderFrameworkControls();
   } else if (rerenderView && state.currentView === 'controls-table') {
@@ -410,6 +418,41 @@ function setPreference(key, value) {
 const PROGRESS_CYCLE = ['not_started', 'in_progress', 'completed'];
 const PROGRESS_LABELS = { not_started: 'Not started', in_progress: 'In progress', completed: 'Completed' };
 const PROGRESS_ICONS = { not_started: '○', in_progress: '◐', completed: '●' };
+
+/* ── Score / donut constants ─────────────────────────────────────────── */
+const DONUT_R = 38;
+const DONUT_CIRC = 2 * Math.PI * DONUT_R;
+const SCORE_HIGH = 70;
+const SCORE_MED = 40;
+const RING_COLOR_HIGH = '#22c55e';
+const RING_COLOR_MED = '#f59e0b';
+const RING_COLOR_LOW = '#ef4444';
+
+function scoreRingColor(score) {
+  return score >= SCORE_HIGH ? RING_COLOR_HIGH : score >= SCORE_MED ? RING_COLOR_MED : RING_COLOR_LOW;
+}
+
+function donutSvg(score, size = 'md') {
+  const px = size === 'sm' ? 96 : 112;
+  const textPx = size === 'sm' ? 20 : 24;
+  const ringColor = scoreRingColor(score);
+  const dashOffset = DONUT_CIRC * (1 - score / 100);
+  return `
+    <div style="position:relative;width:${px}px;height:${px}px;flex-shrink:0">
+      <svg viewBox="0 0 100 100" style="width:100%;height:100%;display:block;transform:rotate(-90deg)"
+        role="img" aria-label="Overall compliance score: ${score} out of 100">
+        <circle cx="50" cy="50" r="${DONUT_R}" fill="none" stroke="#e5e7eb" stroke-width="10"/>
+        <circle cx="50" cy="50" r="${DONUT_R}" fill="none" stroke="${ringColor}" stroke-width="10"
+          stroke-dasharray="${DONUT_CIRC.toFixed(2)}" stroke-dashoffset="${dashOffset.toFixed(2)}"
+          stroke-linecap="round" style="transition:stroke-dashoffset 0.5s ease"/>
+      </svg>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <span style="font-size:${textPx}px;font-weight:700;line-height:1">${score}</span>
+        <span style="font-size:11px;color:#9ca3af;line-height:1;margin-top:2px">/ 100</span>
+      </div>
+    </div>
+  `;
+}
 const PROGRESS_CLASSES = {
   not_started: 'progress-not-started',
   in_progress: 'progress-in-progress',
@@ -498,11 +541,15 @@ function renderFrameworkProgressBar(fwId) {
   if (total === 0) { el.innerHTML = ''; return; }
   const completed = controls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
   const inProgress = controls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
+  const open = total - completed - inProgress;
   const pct = Math.round((completed / total) * 100);
+  const parts = [`${completed} done`];
+  if (inProgress > 0) parts.push(`${inProgress} in progress`);
+  if (open > 0) parts.push(`${open} open`);
   el.innerHTML = `
     <div class="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
       <div class="flex items-center justify-between text-xs mb-1">
-        <span class="text-gray-500 dark:text-gray-400">${completed} done${inProgress > 0 ? ` · ${inProgress} in progress` : ''}</span>
+        <span class="text-gray-500 dark:text-gray-400">${parts.join(' · ')}</span>
         <span class="font-semibold text-gray-700 dark:text-gray-300">${pct}%</span>
       </div>
       <div class="h-1.5 rounded-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
@@ -515,6 +562,7 @@ function renderFrameworkProgressBar(fwId) {
 function updateAllFrameworkProgressBars() {
   state.frameworks.forEach(fw => renderFrameworkProgressBar(fw.id));
   renderOverallScore();
+  if (state.currentView === 'dashboard') renderDashboard();
 }
 
 function renderOverallScore() {
@@ -522,30 +570,150 @@ function renderOverallScore() {
   if (!el) return;
   if (!state.user) { el.classList.add('hidden'); return; }
 
-  // Collect all controls across all frameworks
   const allControls = Object.values(state.controlsData).flat();
   const total = allControls.length;
   if (total === 0) { el.classList.add('hidden'); return; }
 
   const completed = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
   const inProgress = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
-  // Score: completed controls count fully, in-progress count half
+  const open = total - completed - inProgress;
   const score = Math.round(((completed + inProgress * 0.5) / total) * 100);
 
   el.innerHTML = `
-    <div class="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950">
-      <div class="flex items-center gap-2">
-        <span class="text-xl font-bold text-blue-700 dark:text-blue-300">${score}</span>
-        <span class="text-xs text-blue-600 dark:text-blue-400 font-medium">/ 100</span>
-      </div>
-      <div class="w-px h-6 bg-blue-200 dark:bg-blue-800"></div>
-      <div class="text-xs text-blue-600 dark:text-blue-400">
-        <span class="font-semibold">Overall compliance score</span>
-        <span class="ml-2 text-blue-500 dark:text-blue-500">${completed} completed · ${inProgress} in progress · ${total - completed - inProgress} not started</span>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+      ${donutSvg(score)}
+      <div class="text-xs font-semibold text-gray-600 dark:text-gray-400">Overall Score</div>
+      <div class="text-xs text-gray-400 dark:text-gray-500 text-center" style="line-height:1.4">
+        <span class="text-green-600 dark:text-green-400 font-medium">${completed} done</span>
+        ${inProgress > 0 ? ` · <span class="text-amber-600 dark:text-amber-400 font-medium">${inProgress} in progress</span>` : ''}
+        ${open > 0 ? ` · ${open} open` : ''}
       </div>
     </div>
   `;
   el.classList.remove('hidden');
+}
+
+/* ── Dashboard ───────────────────────────────────────────────────────── */
+function renderDashboard() {
+  const container = document.getElementById('dashboard-content');
+  if (!container) return;
+  if (!state.user) {
+    container.innerHTML = '<p class="text-center text-gray-400 py-10">Sign in to view the dashboard.</p>';
+    return;
+  }
+
+  const allControls = Object.values(state.controlsData).flat();
+  const total = allControls.length;
+
+  const completed = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+  const inProgress = allControls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
+  const open = total - completed - inProgress;
+  const score = total > 0 ? Math.round(((completed + inProgress * 0.5) / total) * 100) : 0;
+  const completedPct = total > 0 ? Math.round((completed / total) * 100) : 0;
+  const inProgressPct = total > 0 ? Math.round((inProgress / total) * 100) : 0;
+  const openPct = 100 - completedPct - inProgressPct;
+
+  // Per-framework stats
+  const fwRows = state.frameworks.map(fw => {
+    const controls = state.controlsData[fw.id] || [];
+    const tot = controls.length;
+    if (tot === 0) return null;
+    const done = controls.filter(c => (state.progress[c.id] || 'not_started') === 'completed').length;
+    const ip = controls.filter(c => (state.progress[c.id] || 'not_started') === 'in_progress').length;
+    const op = tot - done - ip;
+    const pct = Math.round((done / tot) * 100);
+    const ipPct = Math.round((ip / tot) * 100);
+    return { fw, tot, done, ip, op, pct, ipPct };
+  }).filter(Boolean);
+
+  container.innerHTML = `
+    <!-- KPI summary row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem">
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" style="padding:1.25rem;display:flex;flex-direction:column;align-items:center;gap:4px">
+        ${donutSvg(score, 'sm')}
+        <div class="text-xs font-semibold text-gray-600 dark:text-gray-400">Overall Score</div>
+      </div>
+      <div class="rounded-2xl" style="padding:1.25rem;border:1px solid #bbf7d0;background:#f0fdf4;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:1.875rem;font-weight:700;color:#15803d">${completed}</div>
+        <div style="font-size:0.875rem;font-weight:500;color:#16a34a;margin-top:4px">Completed</div>
+        <div style="font-size:0.75rem;color:#22c55e;margin-top:2px">${completedPct}% of ${total} controls</div>
+      </div>
+      <div class="rounded-2xl" style="padding:1.25rem;border:1px solid #fde68a;background:#fffbeb;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:1.875rem;font-weight:700;color:#b45309">${inProgress}</div>
+        <div style="font-size:0.875rem;font-weight:500;color:#d97706;margin-top:4px">In Progress</div>
+        <div style="font-size:0.75rem;color:#f59e0b;margin-top:2px">${inProgressPct}% of ${total} controls</div>
+      </div>
+      <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" style="padding:1.25rem;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:1.875rem;font-weight:700" class="text-gray-700 dark:text-gray-300">${open}</div>
+        <div style="font-size:0.875rem;font-weight:500;margin-top:4px" class="text-gray-600 dark:text-gray-400">Open</div>
+        <div style="font-size:0.75rem;margin-top:2px" class="text-gray-500">${openPct}% of ${total} controls</div>
+      </div>
+    </div>
+
+    <!-- Overall progress bar -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" style="padding:1.25rem;margin-bottom:1.5rem">
+      <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300" style="margin-bottom:0.75rem">Overall Implementation Progress</h2>
+      <div style="height:1rem;border-radius:9999px;background:#f3f4f6;overflow:hidden;display:flex">
+        <div style="height:100%;background:#22c55e;width:${completedPct}%;transition:width 0.5s ease" title="${completed} completed"></div>
+        <div style="height:100%;background:#fbbf24;width:${inProgressPct}%;transition:width 0.5s ease" title="${inProgress} in progress"></div>
+      </div>
+      <div style="display:flex;gap:1rem;margin-top:0.5rem;font-size:0.75rem" class="text-gray-500 dark:text-gray-400">
+        <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;border-radius:9999px;background:#22c55e"></span> Completed</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;border-radius:9999px;background:#fbbf24"></span> In Progress</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;border-radius:9999px;background:#e5e7eb"></span> Open</span>
+      </div>
+    </div>
+
+    <!-- Per-framework table -->
+    <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" style="overflow:hidden">
+      <div style="padding:1rem 1.25rem;border-bottom:1px solid #e5e7eb">
+        <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300">Progress by Framework</h2>
+      </div>
+      <div style="overflow-x:auto">
+        <table style="min-width:100%;font-size:0.875rem">
+          <thead class="bg-gray-50 dark:bg-gray-900" style="border-bottom:1px solid #e5e7eb">
+            <tr>
+              <th style="padding:0.75rem 1.25rem;text-align:left;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">Framework</th>
+              <th style="padding:0.75rem 1.25rem;text-align:right;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">Controls</th>
+              <th style="padding:0.75rem 1.25rem;text-align:right;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">Done</th>
+              <th style="padding:0.75rem 1.25rem;text-align:right;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">In Progress</th>
+              <th style="padding:0.75rem 1.25rem;text-align:right;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em" class="text-gray-500 dark:text-gray-400">Open</th>
+              <th style="padding:0.75rem 1.25rem;text-align:left;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;min-width:140px" class="text-gray-500 dark:text-gray-400">Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${fwRows.map(({ fw, tot, done, ip, op, pct, ipPct }) => `
+              <tr style="border-top:1px solid #f3f4f6;cursor:pointer" tabindex="0"
+                data-fw-id="${escHtml(fw.id)}"
+                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showFrameworkControls(this.dataset.fwId)}">
+                <td style="padding:0.75rem 1.25rem">
+                  <span class="fw-badge" style="background:${fw.color}20;color:${fw.color};border:1px solid ${fw.color}40">${escHtml(fw.shortName)}</span>
+                </td>
+                <td style="padding:0.75rem 1.25rem;text-align:right" class="text-gray-600 dark:text-gray-400">${tot}</td>
+                <td style="padding:0.75rem 1.25rem;text-align:right;font-weight:500;color:#16a34a">${done}</td>
+                <td style="padding:0.75rem 1.25rem;text-align:right;font-weight:500;color:#d97706">${ip}</td>
+                <td style="padding:0.75rem 1.25rem;text-align:right" class="text-gray-500">${op}</td>
+                <td style="padding:0.75rem 1.25rem">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div style="flex:1;height:8px;border-radius:9999px;background:#f3f4f6;overflow:hidden;display:flex">
+                      <div style="height:100%;background:#22c55e;width:${pct}%"></div>
+                      <div style="height:100%;background:#fbbf24;width:${ipPct}%"></div>
+                    </div>
+                    <span style="font-size:0.75rem;font-weight:600;width:2rem;text-align:right" class="text-gray-600 dark:text-gray-400">${pct}%</span>
+                  </div>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+
+  // Click row → navigate to framework controls
+  container.querySelectorAll('tr[data-fw-id]').forEach(row => {
+    row.addEventListener('click', () => showFrameworkControls(row.dataset.fwId));
+  });
 }
 
 /* ── Navigation ─────────────────────────────────────────────────────── */
@@ -559,6 +727,8 @@ function showView(viewId) {
 
   state.currentView = viewId;
   document.getElementById('mobile-menu').classList.add('hidden');
+
+  if (viewId === 'dashboard') renderDashboard();
 }
 
 document.querySelectorAll('.nav-btn').forEach(btn => {
