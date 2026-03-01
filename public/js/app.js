@@ -162,12 +162,7 @@ async function handleAuthSubmit(e) {
     closeAuthModal();
     renderAuthArea();
     await loadProgress();
-    if (state.currentView === 'framework-controls' && state.selectedFramework) {
-      renderFrameworkControls();
-    } else if (state.currentView === 'controls-table') {
-      const sel = document.getElementById('ctable-fw-select');
-      if (sel && sel.value) renderControlsTable(sel.value);
-    }
+    showView('dashboard');
   } catch (err) {
     errorEl.textContent = err.message || 'An error occurred. Please try again.';
     errorEl.classList.remove('hidden');
@@ -629,38 +624,33 @@ function renderDashboard() {
   container.innerHTML = `
     <!-- KPI summary row -->
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem">
-      <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" style="padding:1.25rem;display:flex;flex-direction:column;align-items:center;gap:4px">
+      <div style="border-radius:1rem;border:1px solid #e5e7eb;background:white;padding:1.25rem;display:flex;flex-direction:column;align-items:center;gap:4px">
         ${donutSvg(score, 'sm')}
-        <div class="text-xs font-semibold text-gray-600 dark:text-gray-400">Overall Score</div>
+        <div style="font-size:0.75rem;font-weight:600;color:#374151">Overall Score</div>
       </div>
-      <div class="rounded-2xl" style="padding:1.25rem;border:1px solid #bbf7d0;background:#f0fdf4;display:flex;flex-direction:column;justify-content:center">
-        <div style="font-size:1.875rem;font-weight:700;color:#15803d">${completed}</div>
-        <div style="font-size:0.875rem;font-weight:500;color:#16a34a;margin-top:4px">Completed</div>
-        <div style="font-size:0.75rem;color:#22c55e;margin-top:2px">${completedPct}% of ${total} controls</div>
+      <div style="border-radius:1rem;border:1px solid #e5e7eb;background:white;overflow:hidden">
+        <div style="height:4px;background:#22c55e"></div>
+        <div style="padding:1.25rem">
+          <div style="font-size:2rem;font-weight:700;color:#16a34a">${completed}</div>
+          <div style="font-size:0.875rem;font-weight:600;color:#374151;margin-top:4px">Completed</div>
+          <div style="font-size:0.75rem;color:#9ca3af;margin-top:2px">${completedPct}% of ${total} controls</div>
+        </div>
       </div>
-      <div class="rounded-2xl" style="padding:1.25rem;border:1px solid #fde68a;background:#fffbeb;display:flex;flex-direction:column;justify-content:center">
-        <div style="font-size:1.875rem;font-weight:700;color:#b45309">${inProgress}</div>
-        <div style="font-size:0.875rem;font-weight:500;color:#d97706;margin-top:4px">In Progress</div>
-        <div style="font-size:0.75rem;color:#f59e0b;margin-top:2px">${inProgressPct}% of ${total} controls</div>
+      <div style="border-radius:1rem;border:1px solid #e5e7eb;background:white;overflow:hidden">
+        <div style="height:4px;background:#f59e0b"></div>
+        <div style="padding:1.25rem">
+          <div style="font-size:2rem;font-weight:700;color:#d97706">${inProgress}</div>
+          <div style="font-size:0.875rem;font-weight:600;color:#374151;margin-top:4px">In Progress</div>
+          <div style="font-size:0.75rem;color:#9ca3af;margin-top:2px">${inProgressPct}% of ${total} controls</div>
+        </div>
       </div>
-      <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" style="padding:1.25rem;display:flex;flex-direction:column;justify-content:center">
-        <div style="font-size:1.875rem;font-weight:700" class="text-gray-700 dark:text-gray-300">${open}</div>
-        <div style="font-size:0.875rem;font-weight:500;margin-top:4px" class="text-gray-600 dark:text-gray-400">Open</div>
-        <div style="font-size:0.75rem;margin-top:2px" class="text-gray-500">${openPct}% of ${total} controls</div>
-      </div>
-    </div>
-
-    <!-- Overall progress bar -->
-    <div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900" style="padding:1.25rem;margin-bottom:1.5rem">
-      <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300" style="margin-bottom:0.75rem">Overall Implementation Progress</h2>
-      <div style="height:1rem;border-radius:9999px;background:#f3f4f6;overflow:hidden;display:flex">
-        <div style="height:100%;background:#22c55e;width:${completedPct}%;transition:width 0.5s ease" title="${completed} completed"></div>
-        <div style="height:100%;background:#fbbf24;width:${inProgressPct}%;transition:width 0.5s ease" title="${inProgress} in progress"></div>
-      </div>
-      <div style="display:flex;gap:1rem;margin-top:0.5rem;font-size:0.75rem" class="text-gray-500 dark:text-gray-400">
-        <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;border-radius:9999px;background:#22c55e"></span> Completed</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;border-radius:9999px;background:#fbbf24"></span> In Progress</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;border-radius:9999px;background:#e5e7eb"></span> Open</span>
+      <div style="border-radius:1rem;border:1px solid #e5e7eb;background:white;overflow:hidden">
+        <div style="height:4px;background:#94a3b8"></div>
+        <div style="padding:1.25rem">
+          <div style="font-size:2rem;font-weight:700;color:#475569">${open}</div>
+          <div style="font-size:0.875rem;font-weight:600;color:#374151;margin-top:4px">Open</div>
+          <div style="font-size:0.75rem;color:#9ca3af;margin-top:2px">${openPct}% of ${total} controls</div>
+        </div>
       </div>
     </div>
 
