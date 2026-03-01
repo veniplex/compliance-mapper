@@ -6,13 +6,15 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const rateLimit = require('express-rate-limit');
-const { initDb } = require('./db');
+const { createHash } = require('crypto');
+const { pool, initDb } = require('./db');
 const authRoutes = require('./routes/auth');
 const progressRoutes = require('./routes/progress');
+const settingsRoutes = require('./routes/settings');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DB_DISABLED = process.env.DISABLE_DB === 'true';
+const STANDALONE_MODE = process.env.STANDALONE_MODE === 'true';
 
 // ── Data loading ──────────────────────────────────────────────────────────────
 
@@ -36,21 +38,25 @@ for (const controls of Object.values(controlsData)) {
 
 // ── API key authentication ─────────────────────────────────────────────────────
 
-function apiKeyMiddleware(req, res, next) {
-  const envKeys = process.env.API_KEYS;
-  if (!envKeys) return next(); // No keys configured – open access
-
-  const allowed = envKeys.split(',').map(k => k.trim()).filter(Boolean);
-  if (allowed.length === 0) return next();
-
+async function apiKeyMiddleware(req, res, next) {
+  if (STANDALONE_MODE) return next(); // API is open in standalone mode
   const provided = req.headers['x-api-key'];
-  if (!provided) {
-    return res.status(401).json({ error: 'Missing API key. Provide a valid key in the x-api-key header.' });
+  if (!provided) return next(); // API keys are optional
+  // Validate key against DB
+  const keyHash = createHash('sha256').update(provided).digest('hex');
+  try {
+    const result = await pool.query(
+      'UPDATE api_keys SET last_used_at = NOW() WHERE key_hash = $1 RETURNING user_id',
+      [keyHash]
+    );
+    if (result.rows.length === 0) {
+      return res.status(401).json({ error: 'Invalid API key.' });
+    }
+    next();
+  } catch (err) {
+    console.error('API key check error:', err);
+    return res.status(503).json({ error: 'Service temporarily unavailable.' });
   }
-  if (!allowed.includes(provided)) {
-    return res.status(403).json({ error: 'Invalid API key.' });
-  }
-  next();
 }
 
 // Rate limiters
@@ -93,7 +99,7 @@ const authLimiter = rateLimit({
 });
 
 function dbRequired(_req, res, next) {
-  if (DB_DISABLED) {
+  if (STANDALONE_MODE) {
     return res.status(503).json({ error: 'Database is disabled. Sign in and progress tracking are unavailable.' });
   }
   next();
@@ -105,10 +111,14 @@ app.use('/api/auth', authLimiter, dbRequired, authRoutes);
 
 app.use('/api/progress', apiLimiter, dbRequired, progressRoutes);
 
+// ── Settings routes (JWT-protected) ──────────────────────────────────────────
+
+app.use('/api/settings', apiLimiter, dbRequired, settingsRoutes);
+
 // ── Config endpoint (no API key required) ────────────────────────────────────
 
 app.get('/api/config', (_req, res) => {
-  res.json({ data: { dbEnabled: !DB_DISABLED } });
+  res.json({ data: { dbEnabled: !STANDALONE_MODE } });
 });
 
 // ── API routes ────────────────────────────────────────────────────────────────
@@ -313,8 +323,8 @@ if (require.main === module) {
       console.log(`Compliance Mapper running at http://localhost:${PORT}`);
     });
   };
-  if (DB_DISABLED) {
-    console.log('Database disabled (DISABLE_DB=true). Auth and progress features are unavailable.');
+  if (STANDALONE_MODE) {
+    console.log('Standalone mode (STANDALONE_MODE=true). Auth, progress and API key features are unavailable.');
     startServer();
   } else {
     initDb()

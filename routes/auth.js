@@ -22,7 +22,7 @@ function isValidEmail(email) {
  * Creates a new user account.
  */
 router.post('/register', async (req, res) => {
-  const { email, password } = req.body || {};
+  const { email, password, username } = req.body || {};
 
   if (!isValidEmail(email)) {
     return res.status(400).json({ error: 'A valid email address is required.' });
@@ -34,12 +34,12 @@ router.post('/register', async (req, res) => {
   try {
     const hash = await bcrypt.hash(password, BCRYPT_ROUNDS);
     const result = await pool.query(
-      'INSERT INTO users (email, password_hash) VALUES ($1, $2) RETURNING id, email, created_at',
-      [email.toLowerCase(), hash]
+      'INSERT INTO users (email, username, password_hash) VALUES ($1, $2, $3) RETURNING id, email, username, created_at',
+      [email.toLowerCase(), username || null, hash]
     );
     const user = result.rows[0];
     const token = jwt.sign({ sub: user.id, email: user.email }, JWT_SECRET, { expiresIn: TOKEN_EXPIRY });
-    res.status(201).json({ data: { token, user: { id: user.id, email: user.email, createdAt: user.created_at } } });
+    res.status(201).json({ data: { token, user: { id: user.id, email: user.email, username: user.username, createdAt: user.created_at } } });
   } catch (err) {
     if (err.code === '23505') {
       return res.status(409).json({ error: 'An account with this email already exists.' });
@@ -63,7 +63,7 @@ router.post('/login', async (req, res) => {
 
   try {
     const result = await pool.query(
-      'SELECT id, email, password_hash FROM users WHERE email = $1',
+      'SELECT id, email, username, password_hash FROM users WHERE email = $1',
       [email.toLowerCase()]
     );
     const user = result.rows[0];
@@ -77,7 +77,7 @@ router.post('/login', async (req, res) => {
     }
 
     const token = jwt.sign({ sub: user.id, email: user.email }, JWT_SECRET, { expiresIn: TOKEN_EXPIRY });
-    res.json({ data: { token, user: { id: user.id, email: user.email } } });
+    res.json({ data: { token, user: { id: user.id, email: user.email, username: user.username } } });
   } catch (err) {
     console.error('Login error:', err);
     res.status(500).json({ error: 'Login failed. Please try again.' });

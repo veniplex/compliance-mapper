@@ -17,10 +17,11 @@ const pool = new Pool({
 async function initDb() {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS users (
-      id         SERIAL PRIMARY KEY,
-      email      TEXT NOT NULL UNIQUE,
+      id            SERIAL PRIMARY KEY,
+      email         TEXT NOT NULL UNIQUE,
+      username      TEXT UNIQUE,
       password_hash TEXT NOT NULL,
-      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
     );
 
     CREATE TABLE IF NOT EXISTS progress (
@@ -32,7 +33,19 @@ async function initDb() {
       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       UNIQUE (user_id, control_id)
     );
+
+    CREATE TABLE IF NOT EXISTS api_keys (
+      id           SERIAL PRIMARY KEY,
+      user_id      INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      name         TEXT NOT NULL DEFAULT '',
+      key_hash     TEXT NOT NULL UNIQUE,
+      key_prefix   TEXT NOT NULL,
+      created_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+      last_used_at TIMESTAMPTZ
+    );
   `);
+  // Handle existing deployments that lack the username column
+  await pool.query(`ALTER TABLE users ADD COLUMN IF NOT EXISTS username TEXT UNIQUE;`);
 }
 
 module.exports = { pool, initDb };
