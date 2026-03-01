@@ -69,6 +69,10 @@ describe('GET /api/frameworks', () => {
       assert.ok(fw.description, 'Missing description');
       assert.ok(fw.businessImpact, `Missing businessImpact on ${fw.id}`);
       assert.ok(fw.structure, `Missing structure on ${fw.id}`);
+      assert.ok(Array.isArray(fw.businessImpact), `businessImpact should be an array on ${fw.id}`);
+      assert.ok(Array.isArray(fw.structure), `structure should be an array on ${fw.id}`);
+      assert.ok(fw.businessImpact.length > 0, `businessImpact should not be empty on ${fw.id}`);
+      assert.ok(fw.structure.length > 0, `structure should not be empty on ${fw.id}`);
       assert.ok(fw.lastUpdated, `Missing lastUpdated on ${fw.id}`);
       assert.ok(fw.url, `Missing url on ${fw.id}`);
       assert.ok(fw.version, `Missing version on ${fw.id}`);

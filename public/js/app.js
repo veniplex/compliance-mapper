@@ -387,11 +387,15 @@ function renderFrameworkControls() {
     <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">${escHtml(fw.description)}</p>
     ${fw.businessImpact ? `<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 mb-3">
       <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Business Impact</h2>
-      <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">${escHtml(fw.businessImpact)}</p>
+      ${Array.isArray(fw.businessImpact)
+        ? `<ul class="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300">${fw.businessImpact.map(pt => `<li>${escHtml(pt)}</li>`).join('')}</ul>`
+        : `<p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">${escHtml(fw.businessImpact)}</p>`}
     </div>` : ''}
     ${fw.structure ? `<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 mb-4">
       <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Framework Structure</h2>
-      <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">${escHtml(fw.structure)}</p>
+      ${Array.isArray(fw.structure)
+        ? `<ul class="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300">${fw.structure.map(pt => `<li>${escHtml(pt)}</li>`).join('')}</ul>`
+        : `<p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">${escHtml(fw.structure)}</p>`}
     </div>` : ''}
     <p class="text-xs text-gray-400 dark:text-gray-500">${controls.length} controls — click a control to see its cross-framework mappings</p>
   `;
