@@ -2,6 +2,9 @@
 
 A web app and REST API that helps cybersecurity experts map overlapping controls across compliance frameworks such as ISO 27001, NIS2, GDPR, DORA, CIS Controls, and NIST CSF.
 
+> [!NOTE]
+> This tool is currently in pre-alpha and may have inconcistencies, missing and / or wrong data.
+
 ## Features
 
 - Browse supported compliance frameworks and their controls
