@@ -82,6 +82,7 @@ function renderAuthArea() {
   if (!area) return;
   if (!state.dbEnabled) {
     area.innerHTML = '';
+    document.querySelectorAll('[data-view="apidocs"]').forEach(btn => { btn.style.display = 'none'; });
     return;
   }
   if (state.user) {
@@ -722,6 +723,7 @@ function renderDashboard() {
 
 /* ── Navigation ─────────────────────────────────────────────────────── */
 function showView(viewId) {
+  if (!state.dbEnabled && viewId === 'apidocs') return;
   document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
   document.getElementById(`view-${viewId}`).classList.remove('hidden');
 
