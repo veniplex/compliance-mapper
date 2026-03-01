@@ -67,6 +67,11 @@ describe('GET /api/frameworks', () => {
       assert.ok(fw.name, 'Missing name');
       assert.ok(fw.shortName, 'Missing shortName');
       assert.ok(fw.description, 'Missing description');
+      assert.ok(fw.businessImpact, `Missing businessImpact on ${fw.id}`);
+      assert.ok(fw.structure, `Missing structure on ${fw.id}`);
+      assert.ok(fw.lastUpdated, `Missing lastUpdated on ${fw.id}`);
+      assert.ok(fw.url, `Missing url on ${fw.id}`);
+      assert.ok(fw.version, `Missing version on ${fw.id}`);
     }
   });
 

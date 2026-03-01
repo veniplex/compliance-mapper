@@ -338,7 +338,7 @@ function renderFrameworksPage(frameworks, controlsData, mappings) {
           <a href="${escHtml(fw.url)}" target="_blank" rel="noopener noreferrer"
             class="text-xs font-medium hover:underline"
             style="color:${fw.color}" onclick="event.stopPropagation()">Official source ↗</a>
-          <span class="text-xs text-gray-400 dark:text-gray-500">View controls →</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">${fw.lastUpdated ? 'Updated ' + escHtml(fw.lastUpdated) : 'View controls →'}</span>
         </div>
       </div>
     </div>`;
@@ -368,8 +368,32 @@ function renderFrameworkControls() {
       <span class="fw-badge" style="background:${fw.color}20;color:${fw.color};border:1px solid ${fw.color}40">${escHtml(fw.shortName)}</span>
       <h1 class="text-2xl font-bold">${escHtml(fw.name)}</h1>
     </div>
-    <p class="text-sm text-gray-500 dark:text-gray-400">${escHtml(fw.description)}</p>
-    <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">${controls.length} controls — click a control to see its cross-framework mappings</p>
+    <div class="flex flex-wrap gap-3 text-xs mb-3">
+      <span class="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400">
+        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+        Version: <strong class="ml-0.5 text-gray-700 dark:text-gray-300">${escHtml(fw.version)}</strong>
+      </span>
+      ${fw.lastUpdated ? `<span class="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400">
+        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Last updated: <strong class="ml-0.5 text-gray-700 dark:text-gray-300">${escHtml(fw.lastUpdated)}</strong>
+      </span>` : ''}
+      <a href="${escHtml(fw.url)}" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-1 font-medium hover:underline"
+        style="color:${fw.color}">
+        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        Official source ↗
+      </a>
+    </div>
+    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">${escHtml(fw.description)}</p>
+    ${fw.businessImpact ? `<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 mb-3">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Business Impact</h2>
+      <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">${escHtml(fw.businessImpact)}</p>
+    </div>` : ''}
+    ${fw.structure ? `<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 mb-4">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Framework Structure</h2>
+      <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">${escHtml(fw.structure)}</p>
+    </div>` : ''}
+    <p class="text-xs text-gray-400 dark:text-gray-500">${controls.length} controls — click a control to see its cross-framework mappings</p>
   `;
 
   const list = document.getElementById('fw-controls-list');
