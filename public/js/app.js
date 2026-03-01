@@ -11,6 +11,7 @@ const state = {
   user: null,
   token: null,
   progress: {}, // controlId → 'not_started' | 'in_progress' | 'completed'
+  dbEnabled: true, // set from /api/config; false hides sign in / sign up
 };
 
 /* ── API helpers ────────────────────────────────────────────────────── */
@@ -78,6 +79,10 @@ function setStoredAuth(token, user) {
 function renderAuthArea() {
   const area = document.getElementById('auth-area');
   if (!area) return;
+  if (!state.dbEnabled) {
+    area.innerHTML = '';
+    return;
+  }
   if (state.user) {
     area.innerHTML = `
       <span class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 truncate max-w-[9rem]">${escHtml(state.user.email)}</span>
@@ -175,6 +180,7 @@ function initAuth() {
     state.user = user;
   }
   renderAuthArea();
+  if (!state.dbEnabled) return;
   document.getElementById('auth-modal-close').addEventListener('click', closeAuthModal);
   document.getElementById('auth-modal-overlay').addEventListener('click', e => {
     if (e.target === document.getElementById('auth-modal-overlay')) closeAuthModal();
@@ -985,6 +991,14 @@ function renderApiDocs() {
 /* ── Bootstrap ───────────────────────────────────────────────────────── */
 async function init() {
   initTheme();
+
+  try {
+    const config = await apiFetch('/config');
+    state.dbEnabled = config.dbEnabled === true;
+  } catch {
+    state.dbEnabled = true;
+  }
+
   initAuth();
 
   try {

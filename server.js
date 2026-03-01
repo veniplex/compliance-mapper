@@ -12,6 +12,7 @@ const progressRoutes = require('./routes/progress');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const DB_DISABLED = process.env.DISABLE_DB === 'true';
 
 // ── Data loading ──────────────────────────────────────────────────────────────
 
@@ -91,11 +92,24 @@ const authLimiter = rateLimit({
   message: { error: 'Too many requests, please try again later.' },
 });
 
-app.use('/api/auth', authLimiter, authRoutes);
+function dbRequired(_req, res, next) {
+  if (DB_DISABLED) {
+    return res.status(503).json({ error: 'Database is disabled. Sign in and progress tracking are unavailable.' });
+  }
+  next();
+}
+
+app.use('/api/auth', authLimiter, dbRequired, authRoutes);
 
 // ── Progress routes (JWT-protected, no API key required) ─────────────────────
 
-app.use('/api/progress', apiLimiter, progressRoutes);
+app.use('/api/progress', apiLimiter, dbRequired, progressRoutes);
+
+// ── Config endpoint (no API key required) ────────────────────────────────────
+
+app.get('/api/config', (_req, res) => {
+  res.json({ data: { dbEnabled: !DB_DISABLED } });
+});
 
 // ── API routes ────────────────────────────────────────────────────────────────
 
@@ -294,18 +308,22 @@ app.get('*', staticLimiter, (_req, res) => {
 // ── Start server ──────────────────────────────────────────────────────────────
 
 if (require.main === module) {
-  initDb()
-    .then(() => {
-      app.listen(PORT, () => {
-        console.log(`Compliance Mapper running at http://localhost:${PORT}`);
-      });
-    })
-    .catch(err => {
-      console.warn('Database unavailable, auth and progress features will be disabled:', err.message);
-      app.listen(PORT, () => {
-        console.log(`Compliance Mapper running at http://localhost:${PORT} (no database)`);
-      });
+  const startServer = () => {
+    app.listen(PORT, () => {
+      console.log(`Compliance Mapper running at http://localhost:${PORT}`);
     });
+  };
+  if (DB_DISABLED) {
+    console.log('Database disabled (DISABLE_DB=true). Auth and progress features are unavailable.');
+    startServer();
+  } else {
+    initDb()
+      .then(startServer)
+      .catch(err => {
+        console.warn('Database unavailable, auth and progress features will be disabled:', err.message);
+        startServer();
+      });
+  }
 }
 
 module.exports = app;

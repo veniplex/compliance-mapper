@@ -437,3 +437,17 @@ describe('API key authentication', () => {
     assert.equal(status, 200);
   });
 });
+
+describe('GET /api/config', () => {
+  test('returns dbEnabled flag', async () => {
+    const { status, body } = await get('/api/config');
+    assert.equal(status, 200);
+    assert.ok(typeof body.data.dbEnabled === 'boolean');
+  });
+
+  test('does not require an API key', async () => {
+    const { status, body } = await get('/api/config', { 'x-api-key': undefined });
+    assert.equal(status, 200);
+    assert.ok(typeof body.data.dbEnabled === 'boolean');
+  });
+});
