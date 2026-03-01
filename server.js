@@ -330,7 +330,7 @@ if (require.main === module) {
     initDb()
       .then(startServer)
       .catch(err => {
-        console.warn('Database unavailable, auth and progress features will be disabled:', err.message);
+        console.warn('Database unavailable, auth, progress and settings features will be disabled:', err.message);
         startServer();
       });
   }
