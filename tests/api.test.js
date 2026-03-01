@@ -317,6 +317,21 @@ describe('GET /api/mappings', () => {
     const { body } = await get('/api/mappings?from=cis&to=nistcsf');
     assert.ok(body.data.length > 0, 'Expected mappings from cis to nistcsf');
   });
+
+  test('all framework pairs have at least one mapping in each direction', async () => {
+    const { body: fwBody } = await get('/api/frameworks');
+    const frameworkIds = fwBody.data.map(f => f.id);
+    for (const src of frameworkIds) {
+      for (const tgt of frameworkIds) {
+        if (src === tgt) continue;
+        const { body } = await get(`/api/mappings?from=${src}&to=${tgt}`);
+        assert.ok(
+          body.data.length > 0,
+          `Expected at least one mapping from '${src}' to '${tgt}' but found none`
+        );
+      }
+    }
+  });
 });
 
 describe('GET /api/mappings/:id', () => {
