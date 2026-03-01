@@ -95,6 +95,9 @@ router.patch('/password', requireAuth, async (req, res) => {
   if (typeof newPassword !== 'string' || newPassword.length < 8) {
     return res.status(400).json({ error: 'New password must be at least 8 characters.' });
   }
+  if (newPassword.length > 128) {
+    return res.status(400).json({ error: 'New password must be at most 128 characters.' });
+  }
 
   try {
     const result = await pool.query(

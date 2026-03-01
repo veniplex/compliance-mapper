@@ -188,11 +188,25 @@ function handleLogout(rerenderView) {
   }
 }
 
-function initAuth() {
+async function initAuth() {
   const { token, user } = getStoredAuth();
   if (token && user) {
     state.token = token;
     state.user = user;
+    // Validate the stored session against the server to detect stale tokens
+    // (e.g. after the database is wiped and a new installation is set up).
+    if (state.dbEnabled) {
+      try {
+        await authFetch('GET', '/auth/me');
+      } catch (err) {
+        // Clear the local session if the server no longer recognises it
+        if (err.status === 401) {
+          state.token = null;
+          state.user = null;
+          setStoredAuth(null, null);
+        }
+      }
+    }
   }
   renderAuthArea();
   if (!state.dbEnabled) return;
@@ -1472,7 +1486,7 @@ async function init() {
     state.dbEnabled = true;
   }
 
-  initAuth();
+  await initAuth();
 
   try {
     const [frameworks, mappings, stats] = await Promise.all([

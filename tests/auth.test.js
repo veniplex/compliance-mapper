@@ -111,6 +111,12 @@ describe('POST /api/auth/register', () => {
     assert.ok(body.error);
   });
 
+  test('returns 400 when password is too long', async () => {
+    const { status, body } = await request('POST', '/api/auth/register', { email: 'user@example.com', password: 'a'.repeat(129) });
+    assert.equal(status, 400);
+    assert.ok(body.error);
+  });
+
   test('returns 201 with token and user on success', async () => {
     mockPool._nextResult = {
       rows: [{ id: 1, email: 'user@example.com', created_at: new Date().toISOString() }],
@@ -170,6 +176,50 @@ describe('POST /api/auth/login', () => {
     assert.ok(body.data.user, 'Expected user object');
     const decoded = jwt.verify(body.data.token, process.env.JWT_SECRET);
     assert.equal(decoded.sub, 2);
+  });
+});
+
+// ── GET /api/auth/me ─────────────────────────────────────────────────────────
+
+describe('GET /api/auth/me', () => {
+  function makeToken(userId = 1) {
+    return jwt.sign({ sub: userId, email: 'user@example.com' }, process.env.JWT_SECRET);
+  }
+
+  test('returns 401 without Authorization header', async () => {
+    const res = await new Promise((resolve, reject) => {
+      const url = new URL(`${baseUrl}/api/auth/me`);
+      const options = { hostname: url.hostname, port: url.port, path: url.pathname, method: 'GET', headers: {} };
+      const req = http.request(options, res => {
+        let data = ''; res.setEncoding('utf8');
+        res.on('data', c => { data += c; });
+        res.on('end', () => resolve({ status: res.statusCode, body: JSON.parse(data) }));
+      });
+      req.on('error', reject); req.end();
+    });
+    assert.equal(res.status, 401);
+    assert.ok(res.body.error);
+  });
+
+  test('returns 401 with invalid token', async () => {
+    const { status, body } = await request('GET', '/api/auth/me', null, { Authorization: 'Bearer invalid.token.here' });
+    assert.equal(status, 401);
+    assert.ok(body.error);
+  });
+
+  test('returns 401 when user no longer exists in DB', async () => {
+    mockPool._nextResult = { rows: [] }; // user deleted from DB
+    const { status, body } = await request('GET', '/api/auth/me', null, { Authorization: `Bearer ${makeToken()}` });
+    assert.equal(status, 401);
+    assert.ok(body.error);
+  });
+
+  test('returns user data for valid token and existing user', async () => {
+    mockPool._nextResult = { rows: [{ id: 1, email: 'user@example.com', username: 'testuser' }] };
+    const { status, body } = await request('GET', '/api/auth/me', null, { Authorization: `Bearer ${makeToken()}` });
+    assert.equal(status, 200);
+    assert.equal(body.data.email, 'user@example.com');
+    assert.equal(body.data.username, 'testuser');
   });
 });
 
@@ -398,6 +448,12 @@ describe('PATCH /api/settings/password', () => {
 
   test('returns 400 when new password is too short', async () => {
     const { status, body } = await request('PATCH', '/api/settings/password', { currentPassword: 'old', newPassword: 'short' }, { Authorization: `Bearer ${makeToken()}` });
+    assert.equal(status, 400);
+    assert.ok(body.error);
+  });
+
+  test('returns 400 when new password is too long', async () => {
+    const { status, body } = await request('PATCH', '/api/settings/password', { currentPassword: 'old', newPassword: 'a'.repeat(129) }, { Authorization: `Bearer ${makeToken()}` });
     assert.equal(status, 400);
     assert.ok(body.error);
   });
