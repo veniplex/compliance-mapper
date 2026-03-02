@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import jwt from 'jsonwebtoken';
-import { createHash } from 'crypto';
+import { createHash, pbkdf2Sync } from 'crypto';
 import { error } from '@sveltejs/kit';
 import { pool } from './db.js';
 
@@ -44,7 +44,7 @@ export function verifyToken(request) {
 export async function validateApiKey(request) {
 	const provided = request.headers.get('x-api-key');
 	if (!provided) return true; // API keys are optional
-	const keyHash = createHash('sha256').update(provided).digest('hex');
+	const keyHash = pbkdf2Sync(provided, 'api-key-static-salt', 100000, 32, 'sha256').toString('hex');
 	try {
 		const result = await pool.query(
 			'UPDATE api_keys SET last_used_at = NOW() WHERE key_hash = $1 RETURNING user_id',
