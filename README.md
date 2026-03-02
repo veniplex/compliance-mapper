@@ -11,13 +11,14 @@ A web app and REST API that helps cybersecurity experts map overlapping controls
 - Query mappings between controls across different frameworks
 - Filter by relationship type (equivalent, subset, related, etc.)
 - User accounts with sign-up / sign-in and per-control progress tracking
-- Dark mode UI built with Tailwind CSS
-- Built-in API documentation page
+- Dark mode UI built with Tailwind CSS v4
+- Built-in API documentation page with live "try it" runner
+- Dashboard with per-framework progress bars and overall compliance score
 
 ## Tech Stack
 
-- **Backend**: Node.js (>= 18) + Express
-- **Frontend**: Vanilla JavaScript, Tailwind CSS
+- **Frontend**: [SvelteKit](https://kit.svelte.dev/) v2 (Svelte 5 with runes), [Tailwind CSS](https://tailwindcss.com/) v4
+- **Backend**: SvelteKit server routes (Node.js ≥ 18, [`@sveltejs/adapter-node`](https://github.com/sveltejs/kit/tree/main/packages/adapter-node))
 - **Data**: JSON files for frameworks, controls, and mappings
 - **Database**: PostgreSQL (user accounts & progress tracking)
 
@@ -49,7 +50,7 @@ The easiest way to run the full stack (app + database) is with Docker Compose.
    ```
 
    On the first run Docker will:
-   - Build the app image
+   - Build the app image (runs `npm run build` for the SvelteKit app)
    - Pull the `postgres:16-alpine` image
    - Wait for PostgreSQL to be healthy, then start the app
 
@@ -81,8 +82,8 @@ The easiest way to run the full stack (app + database) is with Docker Compose.
 | `DB_USER` | `postgres` | PostgreSQL user |
 | `DB_PASSWORD` | _(required)_ | PostgreSQL password |
 | `JWT_SECRET` | _(required)_ | Secret for signing JWTs — use a long random string |
-| `API_KEYS` | _(empty)_ | Comma-separated API keys; leave empty to disable key enforcement |
 | `BCRYPT_ROUNDS` | `12` | bcrypt work factor for password hashing |
+| `STANDALONE_MODE` | `false` | Set to `true` to disable database features (serves data-only) |
 
 ---
 
@@ -103,16 +104,64 @@ You need Node.js ≥ 18 and a running PostgreSQL instance.
    # Edit .env — set DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, JWT_SECRET
    ```
 
-3. **Start the server:**
+3. **Run in development mode (with HMR):**
 
    ```bash
-   npm start        # production
-   npm run dev      # development (auto-reload with nodemon)
+   npm run dev
    ```
 
-The app is available at `http://localhost:3000` (override with the `PORT` environment variable).
+4. **Build and run for production:**
 
-> **Note:** The app starts even without a database — framework and mapping data are served from JSON files. Auth and progress endpoints return errors until a database is reachable.
+   ```bash
+   npm run build
+   npm start
+   ```
+
+The app is available at `http://localhost:3000` in production or `http://localhost:5173` in dev mode.
+
+> **Note:** The app starts even without a database — framework and mapping data are served from JSON files. Auth and progress endpoints return `503` until a database is reachable. Set `STANDALONE_MODE=true` to explicitly disable database features.
+
+## Project Structure
+
+```
+src/
+├── lib/
+│   ├── components/       # Reusable Svelte components
+│   │   ├── NavBar.svelte       # Top navigation bar
+│   │   ├── FrameworkCard.svelte  # Framework grid card
+│   │   ├── FwBadge.svelte      # Coloured framework badge
+│   │   ├── RelPill.svelte      # Mapping relationship pill
+│   │   ├── ProgressBadge.svelte  # Per-control progress indicator
+│   │   ├── Modal.svelte        # Reusable modal dialog
+│   │   ├── AuthModal.svelte    # Sign in / Sign up modal
+│   │   └── DonutChart.svelte   # SVG donut chart for score
+│   ├── server/           # Server-only modules
+│   │   ├── auth.js       # JWT helpers
+│   │   ├── data.js       # Loads JSON data files
+│   │   └── db.js         # PostgreSQL pool
+│   ├── api.js            # Client-side API fetch helpers
+│   ├── stores.js         # Svelte stores (auth, frameworks, progress)
+│   └── utils.js          # Shared utilities (progress cycle, preferences)
+├── routes/
+│   ├── +layout.svelte    # Root layout (NavBar, data init)
+│   ├── +page.svelte      # Frameworks grid (home page)
+│   ├── frameworks/[id]/  # Framework detail + controls list
+│   ├── controls/         # Cross-framework mapping table
+│   ├── api-docs/         # Interactive REST API docs
+│   ├── dashboard/        # Progress dashboard
+│   ├── settings/         # Account settings (profile, password, API keys)
+│   └── api/              # SvelteKit server routes (REST API)
+│       ├── frameworks/
+│       ├── controls/
+│       ├── mappings/
+│       ├── auth/         # register, login, me
+│       ├── progress/
+│       ├── settings/
+│       ├── stats/
+│       ├── themes/
+│       └── config/
+└── hooks.server.js       # CORS headers + JSON error format for API routes
+```
 
 ## API Endpoints
 
@@ -126,8 +175,10 @@ The app is available at `http://localhost:3000` (override with the `PORT` enviro
 | GET | `/api/controls` | List controls (optional `?framework=` filter) |
 | GET | `/api/controls/:id` | Get a single control |
 | GET | `/api/mappings` | Query mappings (`?from=`, `?to=`, `?control=`, `?relationship=`) |
+| GET | `/api/mappings/:id` | Get a single mapping |
 | GET | `/api/themes` | List unique themes across all controls |
 | GET | `/api/stats` | Get summary statistics |
+| GET | `/api/config` | Returns `{ dbEnabled: boolean }` |
 
 ### Authentication
 
@@ -135,6 +186,7 @@ The app is available at `http://localhost:3000` (override with the `PORT` enviro
 |--------|------|-------------|
 | POST | `/api/auth/register` | Create a new account (`{ email, password }`) |
 | POST | `/api/auth/login` | Sign in (`{ email, password }`) → returns JWT |
+| GET | `/api/auth/me` | Validate token and return current user |
 
 ### Progress tracking (requires `Authorization: Bearer <token>`)
 
@@ -146,11 +198,24 @@ The app is available at `http://localhost:3000` (override with the `PORT` enviro
 
 Progress `status` values: `not_started` · `in_progress` · `completed`
 
+### Settings (requires `Authorization: Bearer <token>`)
+
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/settings/profile` | Get profile |
+| PATCH | `/api/settings/profile` | Update profile (`{ username?, email? }`) |
+| PATCH | `/api/settings/password` | Change password (`{ currentPassword, newPassword }`) |
+| GET | `/api/settings/apikeys` | List API keys |
+| POST | `/api/settings/apikeys` | Create API key (`{ name? }`) |
+| DELETE | `/api/settings/apikeys/:id` | Revoke API key |
+
 ## Running Tests
 
 ```bash
 npm test
 ```
+
+Tests cover all public API endpoints using the built SvelteKit server (runs `npm run build` first). The test runner is Node.js built-in `node:test`.
 
 ## License
 
