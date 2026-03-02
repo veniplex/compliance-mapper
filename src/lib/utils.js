@@ -51,3 +51,75 @@ export function setPreference(key, value) {
 	prefs[key] = value;
 	localStorage.setItem('preferences', JSON.stringify(prefs));
 }
+
+/**
+ * Given a deduplicated mapping entry (from getDeduplicatedMappings), return
+ * the "from" control — the one that is NOT the otherControl.
+ */
+export function getFromControl(entry) {
+	return entry.mapping.sourceControl?.id === entry.otherControl?.id
+		? entry.mapping.targetControl
+		: entry.mapping.sourceControl;
+}
+
+/**
+ * Deduplicate bidirectional mappings for a given control.
+ *
+ * The raw data contains separate mapping records for each direction (A→B and B→A).
+ * This function collapses them into one canonical entry per unique "other control",
+ * always orienting from the perspective of `currentControlId`:
+ *
+ *  - `fromRelationship`  what this control implies about the other (current → other)
+ *  - `toRelationship`    what the other implies about this control (other → current)
+ *                         null when it is the same as `fromRelationship` (symmetric)
+ *  - `isAsymmetric`      true when `fromRelationship !== toRelationship`
+ *  - `mapping`           the canonical mapping object (current as source where possible)
+ *  - `otherControl`      the control on the other side
+ *
+ * @param {Array} allMappings - All enriched mappings from the store
+ * @param {string} currentControlId - The control whose perspective we adopt
+ * @param {string} [filterFwId] - Optional: only return entries targeting this framework
+ */
+export function getDeduplicatedMappings(allMappings, currentControlId, filterFwId) {
+	/** @type {Map<string, {fwd: any, rev: any}>} keyed by otherControlId */
+	const byOtherControl = new Map();
+
+	for (const m of allMappings) {
+		const isSource = m.sourceControl?.id === currentControlId;
+		const isTarget = m.targetControl?.id === currentControlId;
+		if (!isSource && !isTarget) continue;
+
+		const other = isSource ? m.targetControl : m.sourceControl;
+		if (!other) continue;
+		if (filterFwId && other.frameworkId !== filterFwId) continue;
+
+		const entry = byOtherControl.get(other.id) ?? {};
+		if (isSource) entry.fwd = m;   // current → other
+		else entry.rev = m;            // other → current
+		byOtherControl.set(other.id, entry);
+	}
+
+	const results = [];
+	for (const [, entry] of byOtherControl) {
+		// Pick canonical mapping (prefer the one where current control is source)
+		const canonical = entry.fwd ?? entry.rev;
+		const other = canonical.sourceControl?.id === currentControlId
+			? canonical.targetControl
+			: canonical.sourceControl;
+
+		const fromRel = entry.fwd?.relationship ?? entry.rev?.relationship;
+		// toRel: the reverse direction's relationship (falls back to fromRel when only one direction exists,
+		// meaning the mapping is treated as symmetric for single-direction-only records)
+		const toRel   = entry.rev?.relationship ?? entry.fwd?.relationship;
+		const isAsymmetric = fromRel !== toRel;
+
+		results.push({
+			mapping: canonical,
+			otherControl: other,
+			fromRelationship: fromRel,   // current → other
+			toRelationship: toRel,       // other → current
+			isAsymmetric,
+		});
+	}
+	return results;
+}

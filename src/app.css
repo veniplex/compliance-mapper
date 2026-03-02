@@ -148,6 +148,23 @@ tbody tr:hover {
 	background-color: #422006;
 	color: #fde047;
 }
+.mapping-sym.asymmetric {
+	position: relative;
+}
+.mapping-sym.asymmetric::after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #f59e0b;
+	border: 1px solid white;
+}
+.dark .mapping-sym.asymmetric::after {
+	border-color: #030712;
+}
 .mapping-sym.none {
 	background-color: #f3f4f6;
 	color: #9ca3af;

@@ -5,7 +5,7 @@
 	import RelPill from '$lib/components/RelPill.svelte';
 	import ProgressBadge from '$lib/components/ProgressBadge.svelte';
 	import Modal from '$lib/components/Modal.svelte';
-	import { PROGRESS_CYCLE, getPreferences } from '$lib/utils.js';
+	import { PROGRESS_CYCLE, getPreferences, getDeduplicatedMappings, getFromControl } from '$lib/utils.js';
 
 	const DEFAULT_FW = 'iso27001';
 
@@ -20,22 +20,19 @@
 
 	// Mapping-detail modal (specific mapping: source ↔ target)
 	let mappingModalOpen = $state(false);
-	let selectedMapping = $state(null);
+	/** @type {{ mapping: any, otherControl: any, fromRelationship: string, toRelationship: string, isAsymmetric: boolean } | null} */
+	let selectedEntry = $state(null);
 
 	const selectedControls = $derived(selectedFwId ? ($controlsData[selectedFwId] || []) : []);
 	const otherFrameworks = $derived($frameworks.filter((f) => f.id !== selectedFwId));
 
-	function openMappingDetail(m) {
-		selectedMapping = m;
+	function openMappingDetail(entry) {
+		selectedEntry = entry;
 		mappingModalOpen = true;
 	}
 
 	function getMappingToFw(controlId, fwId) {
-		return $mappings.filter(
-			(m) =>
-				(m.sourceControl?.id === controlId && m.targetControl?.frameworkId === fwId) ||
-				(m.targetControl?.id === controlId && m.sourceControl?.frameworkId === fwId)
-		);
+		return getDeduplicatedMappings($mappings, controlId, fwId);
 	}
 
 	async function handleProgressClick(e, controlId) {
@@ -141,21 +138,21 @@
 							</div>
 						</td>
 						{#each otherFrameworks as fw}
-							{@const fwMappings = getMappingToFw(control.id, fw.id)}
+							{@const entries = getMappingToFw(control.id, fw.id)}
 							<td class="px-2 py-3 text-center">
-								{#if fwMappings.length === 0}
+								{#if entries.length === 0}
 									<span class="mapping-sym none" title="No mapping to {fw.shortName}">—</span>
 								{:else}
 									<div class="flex flex-wrap gap-0.5 justify-center">
-										{#each fwMappings as m}
-											{@const other = m.sourceControl?.id === control.id ? m.targetControl : m.sourceControl}
-											{@const label = `${m.relationship === 'equivalent' ? 'Equivalent' : 'Related'}: ${other?.ref ?? ''} — ${other?.title ?? ''}`}
+										{#each entries as entry}
+											{@const rel = entry.fromRelationship}
+											{@const label = `${rel === 'equivalent' ? 'Equivalent' : 'Related'}: ${entry.otherControl?.ref ?? ''} — ${entry.otherControl?.title ?? ''}${entry.isAsymmetric ? ` (reverse: ${entry.toRelationship})` : ''}`}
 											<button
-												class="mapping-sym {m.relationship} ctable-icon"
+												class="mapping-sym {rel} ctable-icon {entry.isAsymmetric ? 'asymmetric' : ''}"
 												aria-label={label}
 												title={label}
-												onclick={(e) => { e.stopPropagation(); openMappingDetail(m); }}
-											>{m.relationship === 'equivalent' ? '≡' : '~'}</button>
+												onclick={(e) => { e.stopPropagation(); openMappingDetail(entry); }}
+											>{rel === 'equivalent' ? '≡' : '~'}</button>
 										{/each}
 									</div>
 								{/if}
@@ -173,25 +170,36 @@
 	</p>
 {/if}
 
-{#if selectedMapping}
-	{@const src = selectedMapping.sourceControl}
-	{@const tgt = selectedMapping.targetControl}
-	{@const srcFw = getFwForControl(src)}
-	{@const tgtFw = getFwForControl(tgt)}
+{#if selectedEntry}
+	{@const fromCtrl = getFromControl(selectedEntry)}
+	{@const toCtrl = selectedEntry.otherControl}
+	{@const fromFw = getFwForControl(fromCtrl)}
+	{@const toFw = getFwForControl(toCtrl)}
 	<Modal open={mappingModalOpen} title="Control Mapping Detail" onclose={() => (mappingModalOpen = false)}>
-		<div class="flex items-center gap-2 mb-2 flex-wrap">
-			<RelPill relationship={selectedMapping.relationship} />
-			<span class="text-xs text-gray-500 dark:text-gray-400">ID: {selectedMapping.id}</span>
+		<div class="flex items-center gap-2 mb-3 flex-wrap">
+			<RelPill relationship={selectedEntry.fromRelationship} />
+			{#if selectedEntry.isAsymmetric}
+				<span class="text-xs px-2 py-0.5 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+					Asymmetric — reverse: {selectedEntry.toRelationship}
+				</span>
+			{/if}
+			<span class="text-xs text-gray-500 dark:text-gray-400">ID: {selectedEntry.mapping.id}</span>
 		</div>
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-			{#each [[src, srcFw, 'Source'], [tgt, tgtFw, 'Target']] as [ctrl, fw, label]}
+			{#each [[fromCtrl, fromFw, selectedEntry.fromRelationship, true], [toCtrl, toFw, selectedEntry.toRelationship, false]] as [ctrl, fw, rel, isFrom]}
 				{#if ctrl}
 					<div class="rounded-xl border p-4" style="border-color:{fw?.color ?? '#6b7280'}40;background:{fw?.color ?? '#6b7280'}08">
-						<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{fw?.color ?? '#6b7280'}">{label}</p>
+						<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{fw?.color ?? '#6b7280'}">{isFrom ? 'From (selected framework)' : 'To'}</p>
 						{#if fw}<span class="fw-badge" style="background:{fw.color}20;color:{fw.color};border:1px solid {fw.color}40">{fw.shortName}</span>{/if}
 						<p class="font-mono font-bold mt-2 text-sm">{ctrl.ref}</p>
 						<p class="font-semibold mt-0.5 text-sm">{ctrl.title}</p>
 						{#if ctrl.description}<p class="text-gray-600 dark:text-gray-400 mt-2 text-xs leading-relaxed">{ctrl.description}</p>{/if}
+						{#if selectedEntry.isAsymmetric}
+							<div class="mt-2 flex items-center gap-1.5 text-xs">
+								<span class="text-gray-500 dark:text-gray-400">{isFrom ? 'Implies →' : '← Implied by'}</span>
+								<RelPill relationship={rel} />
+							</div>
+						{/if}
 						<div class="flex flex-wrap gap-1 mt-3">
 							{#if ctrl.theme}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{ctrl.theme}</span>{/if}
 							{#if ctrl.category}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{ctrl.category}</span>{/if}
@@ -200,10 +208,10 @@
 				{/if}
 			{/each}
 		</div>
-		{#if selectedMapping.notes}
+		{#if selectedEntry.mapping.notes}
 			<div class="rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
 				<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Rationale</p>
-				<p class="text-gray-700 dark:text-gray-300">{selectedMapping.notes}</p>
+				<p class="text-gray-700 dark:text-gray-300">{selectedEntry.mapping.notes}</p>
 			</div>
 		{/if}
 	</Modal>
