@@ -176,39 +176,75 @@
 	{@const fromFw = getFwForControl(fromCtrl)}
 	{@const toFw = getFwForControl(toCtrl)}
 	<Modal open={mappingModalOpen} title="Control Mapping Detail" onclose={() => (mappingModalOpen = false)}>
-		<div class="flex items-center gap-2 mb-3 flex-wrap">
-			<RelPill relationship={selectedEntry.fromRelationship} />
-			{#if selectedEntry.isAsymmetric}
-				<span class="text-xs px-2 py-0.5 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
-					Asymmetric — reverse: {selectedEntry.toRelationship}
-				</span>
+		<!-- Visual: FROM box — connector — TO box -->
+		<div class="flex flex-col sm:flex-row items-stretch gap-0">
+			<!-- FROM control box -->
+			{#if fromCtrl}
+				<div class="flex-1 rounded-xl border p-4" style="border-color:{fromFw?.color ?? '#6b7280'}40;background:{fromFw?.color ?? '#6b7280'}08">
+					<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{fromFw?.color ?? '#6b7280'}">From</p>
+					{#if fromFw}<span class="fw-badge" style="background:{fromFw.color}20;color:{fromFw.color};border:1px solid {fromFw.color}40">{fromFw.shortName}</span>{/if}
+					<p class="font-mono font-bold mt-2 text-sm">{fromCtrl.ref}</p>
+					<p class="font-semibold mt-0.5 text-sm">{fromCtrl.title}</p>
+					{#if fromCtrl.description}<p class="text-gray-600 dark:text-gray-400 mt-2 text-xs leading-relaxed">{fromCtrl.description}</p>{/if}
+					<div class="flex flex-wrap gap-1 mt-3">
+						{#if fromCtrl.theme}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{fromCtrl.theme}</span>{/if}
+						{#if fromCtrl.category}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{fromCtrl.category}</span>{/if}
+					</div>
+				</div>
 			{/if}
-			<span class="text-xs text-gray-500 dark:text-gray-400">ID: {selectedEntry.mapping.id}</span>
-		</div>
-		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-			{#each [[fromCtrl, fromFw, selectedEntry.fromRelationship, true], [toCtrl, toFw, selectedEntry.toRelationship, false]] as [ctrl, fw, rel, isFrom]}
-				{#if ctrl}
-					<div class="rounded-xl border p-4" style="border-color:{fw?.color ?? '#6b7280'}40;background:{fw?.color ?? '#6b7280'}08">
-						<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{fw?.color ?? '#6b7280'}">{isFrom ? 'From (selected framework)' : 'To'}</p>
-						{#if fw}<span class="fw-badge" style="background:{fw.color}20;color:{fw.color};border:1px solid {fw.color}40">{fw.shortName}</span>{/if}
-						<p class="font-mono font-bold mt-2 text-sm">{ctrl.ref}</p>
-						<p class="font-semibold mt-0.5 text-sm">{ctrl.title}</p>
-						{#if ctrl.description}<p class="text-gray-600 dark:text-gray-400 mt-2 text-xs leading-relaxed">{ctrl.description}</p>{/if}
-						{#if selectedEntry.isAsymmetric}
-							<div class="mt-2 flex items-center gap-1.5 text-xs">
-								<span class="text-gray-500 dark:text-gray-400">{isFrom ? 'Implies →' : '← Implied by'}</span>
-								<RelPill relationship={rel} />
-							</div>
-						{/if}
-						<div class="flex flex-wrap gap-1 mt-3">
-							{#if ctrl.theme}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{ctrl.theme}</span>{/if}
-							{#if ctrl.category}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{ctrl.category}</span>{/if}
-						</div>
+
+			<!-- Connector -->
+			<div class="flex sm:flex-col items-center justify-center px-2 py-2 sm:py-0 sm:w-28 shrink-0 gap-1">
+				<div class="flex items-center gap-1">
+					<span class="text-gray-400 text-xs">→</span>
+					<RelPill relationship={selectedEntry.fromRelationship} />
+					<span class="text-gray-400 text-xs">→</span>
+				</div>
+				{#if selectedEntry.isAsymmetric}
+					<span class="text-amber-500 text-xs font-medium">⚠ asymmetric</span>
+					<div class="flex items-center gap-1">
+						<span class="text-gray-400 text-xs">←</span>
+						<RelPill relationship={selectedEntry.toRelationship} />
+						<span class="text-gray-400 text-xs">←</span>
 					</div>
 				{/if}
-			{/each}
+			</div>
+
+			<!-- TO control box -->
+			{#if toCtrl}
+				<div class="flex-1 rounded-xl border p-4" style="border-color:{toFw?.color ?? '#6b7280'}40;background:{toFw?.color ?? '#6b7280'}08">
+					<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{toFw?.color ?? '#6b7280'}">To</p>
+					{#if toFw}<span class="fw-badge" style="background:{toFw.color}20;color:{toFw.color};border:1px solid {toFw.color}40">{toFw.shortName}</span>{/if}
+					<p class="font-mono font-bold mt-2 text-sm">{toCtrl.ref}</p>
+					<p class="font-semibold mt-0.5 text-sm">{toCtrl.title}</p>
+					{#if toCtrl.description}<p class="text-gray-600 dark:text-gray-400 mt-2 text-xs leading-relaxed">{toCtrl.description}</p>{/if}
+					<div class="flex flex-wrap gap-1 mt-3">
+						{#if toCtrl.theme}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{toCtrl.theme}</span>{/if}
+						{#if toCtrl.category}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{toCtrl.category}</span>{/if}
+					</div>
+				</div>
+			{/if}
 		</div>
-		{#if selectedEntry.mapping.notes}
+
+		<!-- Rationale(s) -->
+		{#if selectedEntry.isAsymmetric}
+			{#if selectedEntry.fromNotes}
+				<div class="rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
+					<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">
+						Rationale (From → To, {selectedEntry.fromRelationship})
+					</p>
+					<p class="text-gray-700 dark:text-gray-300">{selectedEntry.fromNotes}</p>
+				</div>
+			{/if}
+			{#if selectedEntry.toNotes}
+				<div class="rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
+					<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">
+						Rationale (To → From, {selectedEntry.toRelationship})
+					</p>
+					<p class="text-gray-700 dark:text-gray-300">{selectedEntry.toNotes}</p>
+				</div>
+			{/if}
+		{:else if selectedEntry.mapping.notes}
 			<div class="rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
 				<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Rationale</p>
 				<p class="text-gray-700 dark:text-gray-300">{selectedEntry.mapping.notes}</p>

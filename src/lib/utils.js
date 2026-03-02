@@ -119,6 +119,8 @@ export function getDeduplicatedMappings(allMappings, currentControlId, filterFwI
 			fromRelationship: fromRel,   // current → other
 			toRelationship: toRel,       // other → current
 			isAsymmetric,
+			fromNotes: entry.fwd?.notes,  // notes for current → other direction
+			toNotes: entry.rev?.notes,    // notes for other → current direction
 		});
 	}
 	return results;

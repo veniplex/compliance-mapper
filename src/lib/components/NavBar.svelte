@@ -44,7 +44,7 @@
 		{ view: 'dashboard', label: 'Dashboard', authRequired: true },
 		{ view: 'frameworks', label: 'Frameworks', authRequired: false },
 		{ view: 'controls-table', label: 'Controls Table', authRequired: false },
-		{ view: 'apidocs', label: 'API', authRequired: false },
+		{ view: 'apidocs', label: 'API', authRequired: true },
 	]);
 
 	const visibleNavItems = $derived(

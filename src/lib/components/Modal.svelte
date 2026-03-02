@@ -1,10 +1,48 @@
 <script>
+	import { onDestroy } from 'svelte';
+
 	/**
 	 * Generic modal dialog component.
 	 * Accepts either a plain `title` string OR a `{#snippet title()}` for rich content.
 	 * @type {{ open: boolean; title?: string | import('svelte').Snippet; onclose: () => void; children: import('svelte').Snippet }}
 	 */
 	let { open = false, title, onclose, children } = $props();
+
+	// Track whether we pushed a history entry for this modal.
+	let pushed = false;
+
+	function handlePopstate() {
+		// Browser back was pressed — close modal without going back again.
+		pushed = false;
+		onclose?.();
+	}
+
+	// Push/pop history state to make browser-back close the modal.
+	$effect(() => {
+		if (typeof window === 'undefined') return;
+		if (open) {
+			if (!pushed) {
+				history.pushState({ modal: true }, '');
+				pushed = true;
+				window.addEventListener('popstate', handlePopstate);
+			}
+		} else {
+			if (pushed) {
+				pushed = false;
+				window.removeEventListener('popstate', handlePopstate);
+				history.back();
+			}
+		}
+	});
+
+	onDestroy(() => {
+		if (pushed) {
+			pushed = false;
+			window.removeEventListener('popstate', handlePopstate);
+			// Do NOT call history.back() here — component may be destroyed by navigation,
+			// and going back would take the user to the wrong page.
+		}
+	});
 
 	function handleOverlayClick(e) {
 		if (e.target === e.currentTarget) onclose?.();
