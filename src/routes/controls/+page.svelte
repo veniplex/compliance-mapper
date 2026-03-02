@@ -2,7 +2,6 @@
 	import { frameworks, controlsData, mappings, progress, user } from '$lib/stores.js';
 	import { authFetch } from '$lib/api.js';
 	import FwBadge from '$lib/components/FwBadge.svelte';
-	import RelPill from '$lib/components/RelPill.svelte';
 	import ProgressBadge from '$lib/components/ProgressBadge.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import { PROGRESS_CYCLE, getPreferences, getDeduplicatedMappings, getFromControl } from '$lib/utils.js';
@@ -177,12 +176,11 @@
 	{@const toFw = getFwForControl(toCtrl)}
 	<Modal open={mappingModalOpen} title="Control Mapping Detail" onclose={() => (mappingModalOpen = false)}>
 		<!-- Visual: FROM box — connector — TO box -->
-		<div class="flex flex-col sm:flex-row items-stretch gap-0">
+		<div class="flex flex-col sm:flex-row items-stretch gap-3">
 			<!-- FROM control box -->
 			{#if fromCtrl}
 				<div class="flex-1 rounded-xl border p-4" style="border-color:{fromFw?.color ?? '#6b7280'}40;background:{fromFw?.color ?? '#6b7280'}08">
-					<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{fromFw?.color ?? '#6b7280'}">From</p>
-					{#if fromFw}<span class="fw-badge" style="background:{fromFw.color}20;color:{fromFw.color};border:1px solid {fromFw.color}40">{fromFw.shortName}</span>{/if}
+					<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{fromFw?.color ?? '#6b7280'}">From {fromFw?.shortName ?? ''}</p>
 					<p class="font-mono font-bold mt-2 text-sm">{fromCtrl.ref}</p>
 					<p class="font-semibold mt-0.5 text-sm">{fromCtrl.title}</p>
 					{#if fromCtrl.description}<p class="text-gray-600 dark:text-gray-400 mt-2 text-xs leading-relaxed">{fromCtrl.description}</p>{/if}
@@ -190,22 +188,27 @@
 						{#if fromCtrl.theme}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{fromCtrl.theme}</span>{/if}
 						{#if fromCtrl.category}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{fromCtrl.category}</span>{/if}
 					</div>
+					{#if selectedEntry.isAsymmetric && selectedEntry.fromNotes}
+						<div class="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
+							<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Rationale</p>
+							<p class="text-gray-700 dark:text-gray-300 text-sm">{selectedEntry.fromNotes}</p>
+						</div>
+					{/if}
 				</div>
 			{/if}
 
 			<!-- Connector -->
-			<div class="flex sm:flex-col items-center justify-center px-2 py-2 sm:py-0 sm:w-28 shrink-0 gap-1">
-				<div class="flex items-center gap-1">
-					<span class="text-gray-400 text-xs">→</span>
-					<RelPill relationship={selectedEntry.fromRelationship} />
-					<span class="text-gray-400 text-xs">→</span>
+			<div class="flex sm:flex-col items-center justify-center px-3 py-3 sm:py-0 sm:w-20 shrink-0 gap-4">
+				<div class="flex items-center gap-2">
+					<svg class="w-5 h-5 conn-arrow-{selectedEntry.fromRelationship}" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+					<span title="{selectedEntry.fromRelationship}" class="text-xl font-bold leading-none cursor-help conn-arrow-{selectedEntry.fromRelationship}">{selectedEntry.fromRelationship === 'equivalent' ? '≡' : '~'}</span>
+					<svg class="w-5 h-5 conn-arrow-{selectedEntry.fromRelationship}" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
 				</div>
 				{#if selectedEntry.isAsymmetric}
-					<span class="text-amber-500 text-xs font-medium">⚠ asymmetric</span>
-					<div class="flex items-center gap-1">
-						<span class="text-gray-400 text-xs">←</span>
-						<RelPill relationship={selectedEntry.toRelationship} />
-						<span class="text-gray-400 text-xs">←</span>
+					<div class="flex items-center gap-2">
+						<svg class="w-5 h-5 conn-arrow-{selectedEntry.toRelationship}" style="transform:rotate(180deg)" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+						<span title="{selectedEntry.toRelationship}" class="text-xl font-bold leading-none cursor-help conn-arrow-{selectedEntry.toRelationship}">{selectedEntry.toRelationship === 'equivalent' ? '≡' : '~'}</span>
+						<svg class="w-5 h-5 conn-arrow-{selectedEntry.toRelationship}" style="transform:rotate(180deg)" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
 					</div>
 				{/if}
 			</div>
@@ -213,8 +216,7 @@
 			<!-- TO control box -->
 			{#if toCtrl}
 				<div class="flex-1 rounded-xl border p-4" style="border-color:{toFw?.color ?? '#6b7280'}40;background:{toFw?.color ?? '#6b7280'}08">
-					<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{toFw?.color ?? '#6b7280'}">To</p>
-					{#if toFw}<span class="fw-badge" style="background:{toFw.color}20;color:{toFw.color};border:1px solid {toFw.color}40">{toFw.shortName}</span>{/if}
+					<p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color:{toFw?.color ?? '#6b7280'}">To {toFw?.shortName ?? ''}</p>
 					<p class="font-mono font-bold mt-2 text-sm">{toCtrl.ref}</p>
 					<p class="font-semibold mt-0.5 text-sm">{toCtrl.title}</p>
 					{#if toCtrl.description}<p class="text-gray-600 dark:text-gray-400 mt-2 text-xs leading-relaxed">{toCtrl.description}</p>{/if}
@@ -222,29 +224,18 @@
 						{#if toCtrl.theme}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{toCtrl.theme}</span>{/if}
 						{#if toCtrl.category}<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{toCtrl.category}</span>{/if}
 					</div>
+					{#if selectedEntry.isAsymmetric && selectedEntry.toNotes}
+						<div class="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
+							<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Rationale</p>
+							<p class="text-gray-700 dark:text-gray-300 text-sm">{selectedEntry.toNotes}</p>
+						</div>
+					{/if}
 				</div>
 			{/if}
 		</div>
 
-		<!-- Rationale(s) -->
-		{#if selectedEntry.isAsymmetric}
-			{#if selectedEntry.fromNotes}
-				<div class="rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
-					<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">
-						Rationale (From → To, {selectedEntry.fromRelationship})
-					</p>
-					<p class="text-gray-700 dark:text-gray-300">{selectedEntry.fromNotes}</p>
-				</div>
-			{/if}
-			{#if selectedEntry.toNotes}
-				<div class="rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
-					<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">
-						Rationale (To → From, {selectedEntry.toRelationship})
-					</p>
-					<p class="text-gray-700 dark:text-gray-300">{selectedEntry.toNotes}</p>
-				</div>
-			{/if}
-		{:else if selectedEntry.mapping.notes}
+		<!-- Rationale (symmetric) -->
+		{#if !selectedEntry.isAsymmetric && selectedEntry.mapping.notes}
 			<div class="rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
 				<p class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Rationale</p>
 				<p class="text-gray-700 dark:text-gray-300">{selectedEntry.mapping.notes}</p>

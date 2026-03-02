@@ -80,6 +80,20 @@ button, [role="button"], select, a {
 	color: #fde047;
 }
 
+/* ── Connector arrows in mapping detail modal ── */
+.conn-arrow-equivalent {
+	color: #15803d;
+}
+.dark .conn-arrow-equivalent {
+	color: #86efac;
+}
+.conn-arrow-related {
+	color: #a16207;
+}
+.dark .conn-arrow-related {
+	color: #fde047;
+}
+
 /* ── Table rows ── */
 tbody tr {
 	transition: background-color 0.1s;
