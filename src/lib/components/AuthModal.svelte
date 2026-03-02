@@ -52,6 +52,7 @@
 	<div
 		class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
 		role="dialog"
+		tabindex="-1"
 		aria-modal="true"
 		aria-labelledby="auth-modal-title"
 		onclick={handleOverlayClick}

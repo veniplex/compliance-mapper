@@ -21,6 +21,16 @@
 	const inProgress = $derived(allControls.filter((c) => ($progress[c.id] || 'not_started') === 'in_progress').length);
 	const open = $derived(total - completed - inProgress);
 	const score = $derived(total > 0 ? Math.round(((completed + inProgress * 0.5) / total) * 100) : 0);
+
+	/** Count how many mappings involve each framework (as source or target) */
+	const mappingCountByFw = $derived(() => {
+		const counts = {};
+		$mappings.forEach((m) => {
+			if (m.sourceControl?.frameworkId) counts[m.sourceControl.frameworkId] = (counts[m.sourceControl.frameworkId] || 0) + 1;
+			if (m.targetControl?.frameworkId) counts[m.targetControl.frameworkId] = (counts[m.targetControl.frameworkId] || 0) + 1;
+		});
+		return counts;
+	});
 </script>
 
 <svelte:head>
@@ -86,6 +96,7 @@
 			<FrameworkCard
 				{fw}
 				controls={$controlsData[fw.id] || []}
+				mappingCount={mappingCountByFw()[fw.id] || 0}
 				progress={$progress}
 				user={$user}
 				onclick={(f) => goto(`/frameworks/${f.id}`)}
