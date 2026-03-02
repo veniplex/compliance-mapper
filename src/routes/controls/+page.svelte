@@ -7,7 +7,16 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import { PROGRESS_CYCLE, getPreferences } from '$lib/utils.js';
 
-	let selectedFwId = $state('');
+	const DEFAULT_FW = 'iso27001';
+
+	let selectedFwId = $state(DEFAULT_FW);
+
+	// When frameworks load, ensure a valid selection
+	$effect(() => {
+		if ($frameworks.length > 0 && !$frameworks.find((f) => f.id === selectedFwId)) {
+			selectedFwId = $frameworks[0].id;
+		}
+	});
 
 	// Mapping-detail modal (specific mapping: source ↔ target)
 	let mappingModalOpen = $state(false);
@@ -83,15 +92,14 @@
 		bind:value={selectedFwId}
 		class="rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition"
 	>
-		<option value="">Select a framework…</option>
 		{#each $frameworks as fw}
 			<option value={fw.id}>{fw.shortName} — {fw.name}</option>
 		{/each}
 	</select>
 </div>
 
-{#if !selectedFwId}
-	<p class="text-center text-gray-400 py-10">Select a framework above to view its controls and mappings.</p>
+{#if !selectedFwId || $frameworks.length === 0}
+	<p class="text-center text-gray-400 py-10">Loading frameworks…</p>
 {:else if selectedControls.length === 0}
 	<p class="text-center text-gray-400 py-10">Loading…</p>
 {:else}

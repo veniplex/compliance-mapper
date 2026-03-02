@@ -84,10 +84,13 @@
 					href={fw.url}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-xs font-medium hover:underline"
+					class="inline-flex items-center gap-1 text-xs font-medium hover:underline"
 					style="color:{fw.color}"
 					onclick={(e) => e.stopPropagation()}
-				>Official source ↗</a>
+				>
+					<svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+					Official source
+				</a>
 			{:else}
 				<span></span>
 			{/if}

@@ -1,7 +1,15 @@
 @import 'tailwindcss';
 
+/* Use class-based dark mode (.dark on <html>) instead of the default media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
 	--font-family-sans: system-ui, sans-serif;
+}
+
+/* ── Cursor pointer for interactive elements ── */
+button, [role="button"], select, a {
+	cursor: pointer;
 }
 
 /* ── Navigation active state ── */
@@ -189,6 +197,12 @@ tbody tr:hover {
 	z-index: 1;
 	min-width: 180px;
 	background-color: inherit;
+}
+thead th.ctable-control-col {
+	background-color: #f9fafb;
+}
+.dark thead th.ctable-control-col {
+	background-color: #111827;
 }
 .bg-white .ctable-control-col,
 tbody tr .ctable-control-col {

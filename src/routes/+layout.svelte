@@ -20,7 +20,7 @@
 
 	// Map page pathname to nav view IDs for active state highlighting
 	const PATH_TO_VIEW = {
-		'/': 'frameworks',
+		'/frameworks': 'frameworks',
 		'/controls': 'controls-table',
 		'/api-docs': 'apidocs',
 		'/dashboard': 'dashboard',
@@ -28,7 +28,7 @@
 	};
 
 	const VIEW_TO_PATH = {
-		frameworks: '/',
+		frameworks: '/frameworks',
 		'controls-table': '/controls',
 		apidocs: '/api-docs',
 		dashboard: '/dashboard',
@@ -38,7 +38,7 @@
 	const currentView = $derived(PATH_TO_VIEW[$page.url.pathname] ?? 'frameworks');
 
 	function navigate(view) {
-		const path = VIEW_TO_PATH[view] ?? '/';
+		const path = VIEW_TO_PATH[view] ?? '/frameworks';
 		goto(path);
 	}
 

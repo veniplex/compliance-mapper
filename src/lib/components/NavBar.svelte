@@ -60,14 +60,14 @@
 	class="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-800"
 >
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center h-16 gap-4">
-		<div class="flex items-center gap-2 min-w-0">
+		<a href="/" class="flex items-center gap-2 min-w-0 no-underline text-inherit" style="text-decoration:none;color:inherit">
 			<span class="text-2xl" aria-hidden="true">🛡️</span>
 			<span class="font-bold text-lg tracking-tight truncate">Compliance Mapper</span>
 			<span
 				class="hidden sm:inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 ml-1"
 				>EU Cybersecurity</span
 			>
-		</div>
+		</a>
 
 		<nav class="hidden sm:flex items-center gap-1 ml-4 text-sm font-medium">
 			{#each visibleNavItems as item}
