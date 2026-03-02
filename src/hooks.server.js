@@ -1,3 +1,16 @@
+import { initDb, STANDALONE_MODE } from '$lib/server/db.js';
+
+/** @type {import('@sveltejs/kit').ServerInit} */
+export async function init() {
+	if (!STANDALONE_MODE) {
+		try {
+			await initDb();
+		} catch (err) {
+			console.warn('Database unavailable — auth, progress and settings features will be disabled:', err.message);
+		}
+	}
+}
+
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
 	// Handle OPTIONS preflight
