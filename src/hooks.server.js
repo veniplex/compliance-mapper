@@ -1,4 +1,5 @@
 import { initDb, STANDALONE_MODE } from '$lib/server/db.js';
+import { validateApiKey } from '$lib/server/auth.js';
 
 /** @type {import('@sveltejs/kit').ServerInit} */
 export async function init() {
@@ -35,6 +36,20 @@ export async function handle({ event, resolve }) {
 			}),
 		});
 		event = { ...event, request: modifiedRequest };
+	}
+
+	// Validate x-api-key when provided on API routes (DB-enabled mode only)
+	if (isApiRoute && !STANDALONE_MODE && event.request.headers.has('x-api-key')) {
+		const valid = await validateApiKey(event.request);
+		if (!valid) {
+			return new Response(JSON.stringify({ error: 'Invalid API key.' }), {
+				status: 401,
+				headers: {
+					'Content-Type': 'application/json',
+					'Access-Control-Allow-Origin': '*',
+				},
+			});
+		}
 	}
 
 	const response = await resolve(event);

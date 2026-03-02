@@ -143,7 +143,7 @@
 								{#if entries.length === 0}
 									<span class="mapping-sym none" title="No mapping to {fw.shortName}">—</span>
 								{:else}
-									<div class="flex flex-wrap gap-0.5 justify-center">
+									<div class="flex flex-nowrap gap-0.5 justify-center">
 										{#each entries as entry}
 											{@const rel = entry.fromRelationship}
 											{@const label = `${rel === 'equivalent' ? 'Equivalent' : 'Related'}: ${entry.otherControl?.ref ?? ''} — ${entry.otherControl?.title ?? ''}${entry.isAsymmetric ? ` (reverse: ${entry.toRelationship})` : ''}`}
