@@ -1,5 +1,6 @@
 <script>
 	import { onDestroy } from 'svelte';
+	import { modalOpen, modalExplicitClose, modalDestroy } from '$lib/modalStack.js';
 
 	/**
 	 * Generic modal dialog component.
@@ -8,39 +9,36 @@
 	 */
 	let { open = false, title, onclose, children } = $props();
 
-	// Track whether we pushed a history entry for this modal.
-	let pushed = false;
+	// Whether this modal has registered itself with the global history stack.
+	let registered = false;
 
-	function handlePopstate() {
-		// Browser back was pressed — close modal without going back again.
-		pushed = false;
+	// Stable reference used to identify this instance in the stack.
+	function closeFromPopstate() {
+		registered = false;
+		// Stack already removed us; just notify the parent.
 		onclose?.();
 	}
 
-	// Push/pop history state to make browser-back close the modal.
 	$effect(() => {
 		if (typeof window === 'undefined') return;
 		if (open) {
-			if (!pushed) {
-				history.pushState({ modal: true }, '');
-				pushed = true;
-				window.addEventListener('popstate', handlePopstate);
+			if (!registered) {
+				registered = true;
+				modalOpen(closeFromPopstate);
 			}
 		} else {
-			if (pushed) {
-				pushed = false;
-				window.removeEventListener('popstate', handlePopstate);
-				history.back();
+			if (registered) {
+				registered = false;
+				modalExplicitClose(closeFromPopstate);
 			}
 		}
 	});
 
 	onDestroy(() => {
-		if (pushed) {
-			pushed = false;
-			window.removeEventListener('popstate', handlePopstate);
-			// Do NOT call history.back() here — component may be destroyed by navigation,
-			// and going back would take the user to the wrong page.
+		if (registered) {
+			registered = false;
+			// Component destroyed by navigation — clean up stack without history.back().
+			modalDestroy(closeFromPopstate);
 		}
 	});
 
