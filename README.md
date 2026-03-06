@@ -291,4 +291,4 @@ For commercial licensing enquiries, open an issue or contact the maintainer via 
 
 ---
 
-<p align="center">Made with <a href="https://wikipedia.org/wiki/Love">❤️</a> by <a href="https://github.com/veniplex">@veniplex</a></p>
+<p align="center">Made with ❤️ by <a href="https://github.com/veniplex">@veniplex</a></p>
