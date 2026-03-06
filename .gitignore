@@ -9,3 +9,6 @@ Thumbs.db
 dist/
 coverage/
 .nyc_output/
+.svelte-kit/
+build/
+.vercel/

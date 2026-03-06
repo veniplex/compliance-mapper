@@ -1,17 +1,13 @@
-'use strict';
-
-const { test, describe, before, after } = require('node:test');
-const assert = require('node:assert/strict');
-const http = require('node:http');
-
-// Import the app (without starting the server)
-const app = require('../server');
+import { test, describe, before, after } from 'node:test';
+import assert from 'node:assert/strict';
+import http from 'node:http';
+import { handler } from '../build/handler.js';
 
 let server;
 let baseUrl;
 
 before(() => new Promise(resolve => {
-  server = http.createServer(app);
+  server = http.createServer(handler);
   server.listen(0, '127.0.0.1', () => {
     const { port } = server.address();
     baseUrl = `http://127.0.0.1:${port}`;
@@ -27,7 +23,6 @@ function get(path, headers = {}) {
   return new Promise((resolve, reject) => {
     const url = new URL(`${baseUrl}${path}`);
     const merged = { ...headers };
-    // Remove undefined values so callers can opt out of default headers
     const filteredHeaders = Object.fromEntries(
       Object.entries(merged).filter(([, v]) => v !== undefined)
     );
