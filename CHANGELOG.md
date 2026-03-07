@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-## [2.0.0-beta] - 2026-03-02
+## [0.2.0-beta] - 2026-03-02
 
 ### Changed
 
@@ -33,7 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `tailwind.config.js` (Tailwind v3 configuration)
 - `build:css` npm script
 
-## [1.0.0-beta] - 2026-03-01
+## [0.1.0-beta] - 2026-03-01
 
 ### Added
 
@@ -53,5 +53,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `.env.example` with fully documented environment variables
 
 [Unreleased]: https://github.com/veniplex/compliance-mapper/compare/v2.0.0-beta...HEAD
-[2.0.0-beta]: https://github.com/veniplex/compliance-mapper/compare/v1.0.0-beta...v2.0.0-beta
-[1.0.0-beta]: https://github.com/veniplex/compliance-mapper/releases/tag/v1.0.0-beta
+[0.2.0-beta]: https://github.com/veniplex/compliance-mapper/compare/v1.0.0-beta...v2.0.0-beta
+[0.1.0-beta]: https://github.com/veniplex/compliance-mapper/releases/tag/v1.0.0-beta

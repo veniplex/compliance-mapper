@@ -1,6 +1,6 @@
 {
   "name": "compliance-mapper",
-  "version": "2.0.0-beta",
+  "version": "0.2.0-beta",
   "description": "Web app and API for mapping overlapping controls across cybersecurity compliance frameworks (ISO 27001, NIS2, GDPR, DORA, CIS Controls, NIST CSF)",
   "type": "module",
   "scripts": {
@@ -20,7 +20,7 @@
     "nist-csf",
     "cis-controls"
   ],
-  "author": "",
+  "author": "veniplex",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
