@@ -51,6 +51,9 @@
 					<span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">{fw.region}</span>
 				{/if}
 			</div>
+			{#if fw.shortName}
+				<span class="shrink-0 text-xs font-bold px-2 py-0.5 rounded-md" style="background:{fw.color}20;color:{fw.color}">{fw.shortName}</span>
+			{/if}
 		</div>
 		<h3 class="font-bold text-base leading-tight">{fw.name}</h3>
 		{#if fw.version}
