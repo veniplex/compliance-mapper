@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import { createHash } from 'crypto';
 import { error } from '@sveltejs/kit';
 import { pool } from './db.js';
+import argon2 from 'argon2';
 
 export const JWT_SECRET =
 	process.env.JWT_SECRET ||
@@ -45,8 +46,13 @@ export function verifyToken(request) {
 export async function validateApiKey(request) {
 	const provided = request.headers.get('x-api-key');
 	if (!provided) return true; // no key provided — allow through
-	// Keys are stored as sha256(rawKey) -- matches createHash('sha256') in apikeys/+server.js
-	const keyHash = createHash('sha256').update(provided).digest('hex');
+	// Keys are stored as argon2id hashes of the raw key -- must match hashing used in apikeys/+server.js
+	const keyHash = await argon2.hash(provided, {
+		type: argon2.argon2id,
+		timeCost: 3,
+		memoryCost: 2 ** 16,
+		parallelism: 1
+	});
 	try {
 		const result = await pool.query(
 			'UPDATE api_keys SET last_used_at = NOW() WHERE key_hash = $1 RETURNING user_id',
