@@ -27,7 +27,8 @@
     "bcryptjs": "^3.0.3",
     "dotenv": "^17.3.1",
     "jsonwebtoken": "^9.0.3",
-    "pg": "^8.19.0"
+    "pg": "^8.19.0",
+    "argon2": "^0.44.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "^5.5.4",
