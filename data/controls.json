@@ -3033,5 +3033,2713 @@
       "category": "Applications",
       "theme": "Secure Development"
     }
+  ],
+  "iso27002": [
+    {
+      "id": "iso27002-5.1",
+      "ref": "5.1",
+      "title": "Policies for information security",
+      "description": "Information security policy and topic-specific policies shall be defined, approved by management, published, communicated to and acknowledged by relevant personnel and relevant interested parties, and reviewed at planned intervals.",
+      "category": "Organisational Controls",
+      "theme": "Governance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.2",
+      "ref": "5.2",
+      "title": "Information security roles and responsibilities",
+      "description": "Information security roles and responsibilities shall be defined and allocated according to the organisation needs.",
+      "category": "Organisational Controls",
+      "theme": "Governance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.3",
+      "ref": "5.3",
+      "title": "Segregation of duties",
+      "description": "Conflicting duties and conflicting areas of responsibility shall be segregated.",
+      "category": "Organisational Controls",
+      "theme": "Governance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.4",
+      "ref": "5.4",
+      "title": "Management responsibilities",
+      "description": "Management shall require all personnel to apply information security in accordance with the established information security policy, topic-specific policies and procedures of the organisation.",
+      "category": "Organisational Controls",
+      "theme": "Governance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.5",
+      "ref": "5.5",
+      "title": "Contact with authorities",
+      "description": "The organisation shall establish and maintain contact with relevant authorities.",
+      "category": "Organisational Controls",
+      "theme": "Governance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.6",
+      "ref": "5.6",
+      "title": "Contact with special interest groups",
+      "description": "The organisation shall establish and maintain contact with special interest groups or other specialist security forums and professional associations.",
+      "category": "Organisational Controls",
+      "theme": "Governance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.7",
+      "ref": "5.7",
+      "title": "Threat intelligence",
+      "description": "Information relating to information security threats shall be collected and analysed to produce threat intelligence.",
+      "category": "Organisational Controls",
+      "theme": "Threat Intelligence",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.8",
+      "ref": "5.8",
+      "title": "Information security in project management",
+      "description": "Information security shall be integrated into project management.",
+      "category": "Organisational Controls",
+      "theme": "Governance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.9",
+      "ref": "5.9",
+      "title": "Inventory of information and other associated assets",
+      "description": "An inventory of information and other associated assets, including owners, shall be developed and maintained.",
+      "category": "Organisational Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.10",
+      "ref": "5.10",
+      "title": "Acceptable use of information and other associated assets",
+      "description": "Rules for the acceptable use and procedures for handling information and other associated assets shall be identified, documented and implemented.",
+      "category": "Organisational Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.11",
+      "ref": "5.11",
+      "title": "Return of assets",
+      "description": "Personnel and other interested parties shall return all the organisation's assets in their possession upon change or termination of their employment, contract or agreement.",
+      "category": "Organisational Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.12",
+      "ref": "5.12",
+      "title": "Classification of information",
+      "description": "Information shall be classified according to the information security needs of the organisation based on confidentiality, integrity, availability and relevant interested party requirements.",
+      "category": "Organisational Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.13",
+      "ref": "5.13",
+      "title": "Labelling of information",
+      "description": "An appropriate set of procedures for information labelling shall be developed and implemented in accordance with the information classification scheme adopted by the organisation.",
+      "category": "Organisational Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.14",
+      "ref": "5.14",
+      "title": "Information transfer",
+      "description": "Information transfer rules, procedures, or agreements shall be in place for all types of transfer facilities within the organisation and between the organisation and other parties.",
+      "category": "Organisational Controls",
+      "theme": "Data Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.15",
+      "ref": "5.15",
+      "title": "Access control",
+      "description": "Rules to control physical and logical access to information and other associated assets shall be established and implemented based on business and information security requirements.",
+      "category": "Organisational Controls",
+      "theme": "Access Control",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.16",
+      "ref": "5.16",
+      "title": "Identity management",
+      "description": "The full life cycle of identities shall be managed.",
+      "category": "Organisational Controls",
+      "theme": "Access Control",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.17",
+      "ref": "5.17",
+      "title": "Authentication information",
+      "description": "Allocation and management of authentication information shall be controlled by a management process, including advising personnel on appropriate handling of authentication information.",
+      "category": "Organisational Controls",
+      "theme": "Access Control",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.18",
+      "ref": "5.18",
+      "title": "Access rights",
+      "description": "Access rights to information and other associated assets shall be provisioned, reviewed, modified and removed in accordance with the organisation's topic-specific policy on and rules for access control.",
+      "category": "Organisational Controls",
+      "theme": "Access Control",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.19",
+      "ref": "5.19",
+      "title": "Information security in supplier relationships",
+      "description": "Processes and procedures shall be defined and implemented to manage the information security risks associated with the use of supplier's products or services.",
+      "category": "Organisational Controls",
+      "theme": "Supply Chain Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.20",
+      "ref": "5.20",
+      "title": "Addressing information security within supplier agreements",
+      "description": "Relevant information security requirements shall be established and agreed with each supplier based on the type of supplier relationship.",
+      "category": "Organisational Controls",
+      "theme": "Supply Chain Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.21",
+      "ref": "5.21",
+      "title": "Managing information security in the ICT supply chain",
+      "description": "Processes and procedures shall be defined and implemented to manage the information security risks associated with the ICT products and services supply chain.",
+      "category": "Organisational Controls",
+      "theme": "Supply Chain Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.22",
+      "ref": "5.22",
+      "title": "Monitoring, review and change management of supplier services",
+      "description": "The organisation shall regularly monitor, review, evaluate and manage change in supplier information security practices and service delivery.",
+      "category": "Organisational Controls",
+      "theme": "Supply Chain Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.23",
+      "ref": "5.23",
+      "title": "Information security for use of cloud services",
+      "description": "Processes for acquisition, use, management and exit from cloud services shall be established in accordance with the organisation's information security requirements.",
+      "category": "Organisational Controls",
+      "theme": "Cloud Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.24",
+      "ref": "5.24",
+      "title": "Information security incident management planning and preparation",
+      "description": "The organisation shall plan and prepare for managing information security incidents by defining, establishing and communicating information security incident management processes, roles and responsibilities.",
+      "category": "Organisational Controls",
+      "theme": "Incident Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.25",
+      "ref": "5.25",
+      "title": "Assessment and decision on information security events",
+      "description": "The organisation shall assess information security events and decide if they are to be categorised as information security incidents.",
+      "category": "Organisational Controls",
+      "theme": "Incident Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.26",
+      "ref": "5.26",
+      "title": "Response to information security incidents",
+      "description": "Information security incidents shall be responded to in accordance with the documented procedures.",
+      "category": "Organisational Controls",
+      "theme": "Incident Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.27",
+      "ref": "5.27",
+      "title": "Learning from information security incidents",
+      "description": "Knowledge gained from information security incidents shall be used to strengthen and improve the information security controls.",
+      "category": "Organisational Controls",
+      "theme": "Incident Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.28",
+      "ref": "5.28",
+      "title": "Collection of evidence",
+      "description": "The organisation shall establish and implement procedures for the identification, collection, acquisition and preservation of evidence related to information security events.",
+      "category": "Organisational Controls",
+      "theme": "Incident Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.29",
+      "ref": "5.29",
+      "title": "Information security during disruption",
+      "description": "The organisation shall plan how to maintain information security at an appropriate level during disruption.",
+      "category": "Organisational Controls",
+      "theme": "Business Continuity",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.30",
+      "ref": "5.30",
+      "title": "ICT readiness for business continuity",
+      "description": "ICT readiness shall be planned, implemented, maintained and tested based on business continuity objectives and ICT continuity requirements.",
+      "category": "Organisational Controls",
+      "theme": "Business Continuity",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.31",
+      "ref": "5.31",
+      "title": "Legal, statutory, regulatory and contractual requirements",
+      "description": "Legal, statutory, regulatory and contractual requirements relevant to information security and the organisation's approach to meet these requirements shall be identified, documented and kept up to date.",
+      "category": "Organisational Controls",
+      "theme": "Compliance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.32",
+      "ref": "5.32",
+      "title": "Intellectual property rights",
+      "description": "The organisation shall implement appropriate procedures to protect intellectual property rights.",
+      "category": "Organisational Controls",
+      "theme": "Compliance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.33",
+      "ref": "5.33",
+      "title": "Protection of records",
+      "description": "Records shall be protected from loss, destruction, falsification, unauthorised access and unauthorised release.",
+      "category": "Organisational Controls",
+      "theme": "Data Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.34",
+      "ref": "5.34",
+      "title": "Privacy and protection of personal identifiable information",
+      "description": "The organisation shall identify and meet the requirements regarding the preservation of privacy and protection of personal identifiable information according to applicable laws and regulations.",
+      "category": "Organisational Controls",
+      "theme": "Data Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.35",
+      "ref": "5.35",
+      "title": "Independent review of information security",
+      "description": "The organisation's approach to managing information security and its implementation including people, processes and technologies shall be reviewed independently at planned intervals or when significant changes occur.",
+      "category": "Organisational Controls",
+      "theme": "Audit",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.36",
+      "ref": "5.36",
+      "title": "Compliance with policies, rules and standards for information security",
+      "description": "Compliance with the organisation's information security policy, topic-specific policies, rules and standards shall be regularly reviewed.",
+      "category": "Organisational Controls",
+      "theme": "Compliance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-5.37",
+      "ref": "5.37",
+      "title": "Documented operating procedures",
+      "description": "Operating procedures for information processing facilities shall be documented and made available to personnel who need them.",
+      "category": "Organisational Controls",
+      "theme": "Governance",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-6.1",
+      "ref": "6.1",
+      "title": "Screening",
+      "description": "Background verification checks on all candidates to become personnel shall be carried out prior to joining the organisation and on an ongoing basis taking into consideration applicable laws, regulations and ethics.",
+      "category": "People Controls",
+      "theme": "HR Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-6.2",
+      "ref": "6.2",
+      "title": "Terms and conditions of employment",
+      "description": "The employment contractual agreements shall state the personnel's and the organisation's responsibilities for information security.",
+      "category": "People Controls",
+      "theme": "HR Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-6.3",
+      "ref": "6.3",
+      "title": "Information security awareness, education and training",
+      "description": "Personnel of the organisation and relevant interested parties shall receive appropriate information security awareness, education and training and regular updates of the organisation's information security policy, topic-specific policies and procedures, as relevant for their job function.",
+      "category": "People Controls",
+      "theme": "Awareness & Training",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-6.4",
+      "ref": "6.4",
+      "title": "Disciplinary process",
+      "description": "A disciplinary process shall be formalised and communicated to take actions against personnel and other relevant interested parties who have committed an information security policy violation.",
+      "category": "People Controls",
+      "theme": "HR Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-6.5",
+      "ref": "6.5",
+      "title": "Responsibilities after termination or change of employment",
+      "description": "Information security responsibilities and duties that remain valid after termination or change of employment shall be defined, enforced and communicated to relevant personnel and other interested parties.",
+      "category": "People Controls",
+      "theme": "HR Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-6.6",
+      "ref": "6.6",
+      "title": "Confidentiality or non-disclosure agreements",
+      "description": "Confidentiality or non-disclosure agreements reflecting the organisation's needs for the protection of information shall be identified, documented, regularly reviewed and signed by personnel and other relevant interested parties.",
+      "category": "People Controls",
+      "theme": "HR Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-6.7",
+      "ref": "6.7",
+      "title": "Remote working",
+      "description": "Security measures shall be implemented when personnel are working remotely to protect information accessed, processed or stored outside the organisation's premises.",
+      "category": "People Controls",
+      "theme": "HR Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-6.8",
+      "ref": "6.8",
+      "title": "Information security event reporting",
+      "description": "The organisation shall provide a mechanism for personnel to report observed or suspected information security events through appropriate channels in a timely manner.",
+      "category": "People Controls",
+      "theme": "Incident Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.1",
+      "ref": "7.1",
+      "title": "Physical security perimeters",
+      "description": "Security perimeters shall be defined and used to protect areas that contain information and other associated assets.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.2",
+      "ref": "7.2",
+      "title": "Physical entry",
+      "description": "Secure areas shall be protected by appropriate entry controls and access points.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.3",
+      "ref": "7.3",
+      "title": "Securing offices, rooms and facilities",
+      "description": "Physical security for offices, rooms and facilities shall be designed and implemented.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.4",
+      "ref": "7.4",
+      "title": "Physical security monitoring",
+      "description": "Premises shall be continuously monitored for unauthorised physical access.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.5",
+      "ref": "7.5",
+      "title": "Protecting against physical and environmental threats",
+      "description": "Protection against physical and environmental threats, such as natural disasters and other intentional or unintentional physical threats to infrastructure shall be designed and implemented.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.6",
+      "ref": "7.6",
+      "title": "Working in secure areas",
+      "description": "Security measures for working in secure areas shall be designed and implemented.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.7",
+      "ref": "7.7",
+      "title": "Clear desk and clear screen",
+      "description": "Clear desk rules for papers and removable storage media and clear screen rules for information processing facilities shall be defined and appropriately enforced.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.8",
+      "ref": "7.8",
+      "title": "Equipment siting and protection",
+      "description": "Equipment shall be sited securely and protected.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.9",
+      "ref": "7.9",
+      "title": "Security of assets off-premises",
+      "description": "Off-site assets shall be protected.",
+      "category": "Physical Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.10",
+      "ref": "7.10",
+      "title": "Storage media",
+      "description": "Storage media shall be managed through their life cycle of acquisition, use, transportation and disposal in accordance with the organisation's classification scheme and handling requirements.",
+      "category": "Physical Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.11",
+      "ref": "7.11",
+      "title": "Supporting utilities",
+      "description": "Information processing facilities shall be protected from power failures and other disruptions caused by failures in supporting utilities.",
+      "category": "Physical Controls",
+      "theme": "Business Continuity",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.12",
+      "ref": "7.12",
+      "title": "Cabling security",
+      "description": "Cables carrying power, data or supporting information services shall be protected from interception, interference or damage.",
+      "category": "Physical Controls",
+      "theme": "Physical Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.13",
+      "ref": "7.13",
+      "title": "Equipment maintenance",
+      "description": "Equipment shall be maintained correctly to ensure availability, integrity and confidentiality of information.",
+      "category": "Physical Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-7.14",
+      "ref": "7.14",
+      "title": "Secure disposal or re-use of equipment",
+      "description": "Items of equipment containing storage media shall be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or re-use.",
+      "category": "Physical Controls",
+      "theme": "Data Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.1",
+      "ref": "8.1",
+      "title": "User endpoint devices",
+      "description": "Information stored on, processed by or accessible via user endpoint devices shall be protected.",
+      "category": "Technological Controls",
+      "theme": "Asset Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.2",
+      "ref": "8.2",
+      "title": "Privileged access rights",
+      "description": "The allocation and use of privileged access rights shall be restricted and managed.",
+      "category": "Technological Controls",
+      "theme": "Access Control",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.3",
+      "ref": "8.3",
+      "title": "Information access restriction",
+      "description": "Access to information and other associated assets shall be restricted in accordance with the established topic-specific policy on access control.",
+      "category": "Technological Controls",
+      "theme": "Access Control",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.4",
+      "ref": "8.4",
+      "title": "Access to source code",
+      "description": "Read and write access to source code, development tools and software libraries shall be appropriately managed.",
+      "category": "Technological Controls",
+      "theme": "Secure Development",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.5",
+      "ref": "8.5",
+      "title": "Secure authentication",
+      "description": "Secure authentication technologies and procedures shall be implemented based on information access restrictions and the topic-specific policy on access control.",
+      "category": "Technological Controls",
+      "theme": "Access Control",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.6",
+      "ref": "8.6",
+      "title": "Capacity management",
+      "description": "The use of resources shall be monitored and adjusted in line with current and expected capacity requirements.",
+      "category": "Technological Controls",
+      "theme": "Business Continuity",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.7",
+      "ref": "8.7",
+      "title": "Protection against malware",
+      "description": "Protection against malware shall be implemented and supported by appropriate user awareness.",
+      "category": "Technological Controls",
+      "theme": "Malware Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.8",
+      "ref": "8.8",
+      "title": "Management of technical vulnerabilities",
+      "description": "Information about technical vulnerabilities of information systems in use shall be obtained in a timely fashion, the organisation's exposure to such vulnerabilities evaluated and appropriate measures taken.",
+      "category": "Technological Controls",
+      "theme": "Vulnerability Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.9",
+      "ref": "8.9",
+      "title": "Configuration management",
+      "description": "Configurations, including security configurations, of hardware, software, services and networks shall be established, documented, implemented, monitored and reviewed.",
+      "category": "Technological Controls",
+      "theme": "Configuration Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.10",
+      "ref": "8.10",
+      "title": "Information deletion",
+      "description": "Information stored in information systems, devices or in any other storage media shall be deleted when no longer required.",
+      "category": "Technological Controls",
+      "theme": "Data Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.11",
+      "ref": "8.11",
+      "title": "Data masking",
+      "description": "Data masking shall be used in accordance with the organisation's topic-specific policy on access control and other related topic-specific policies, and business requirements, taking applicable legislation into consideration.",
+      "category": "Technological Controls",
+      "theme": "Data Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.12",
+      "ref": "8.12",
+      "title": "Data leakage prevention",
+      "description": "Data leakage prevention measures shall be applied to systems, networks and any other devices that process, store or transmit sensitive information.",
+      "category": "Technological Controls",
+      "theme": "Data Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.13",
+      "ref": "8.13",
+      "title": "Information backup",
+      "description": "Backup copies of information, software and systems shall be maintained and regularly tested in accordance with the agreed topic-specific policy on backup.",
+      "category": "Technological Controls",
+      "theme": "Business Continuity",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.14",
+      "ref": "8.14",
+      "title": "Redundancy of information processing facilities",
+      "description": "Information processing facilities shall be implemented with redundancy sufficient to meet availability requirements.",
+      "category": "Technological Controls",
+      "theme": "Business Continuity",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.15",
+      "ref": "8.15",
+      "title": "Logging",
+      "description": "Logs that record activities, exceptions, faults and other relevant events shall be produced, stored, protected and analysed.",
+      "category": "Technological Controls",
+      "theme": "Logging & Monitoring",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.16",
+      "ref": "8.16",
+      "title": "Monitoring activities",
+      "description": "Networks, systems and applications shall be monitored for anomalous behaviour and appropriate actions taken to evaluate potential information security incidents.",
+      "category": "Technological Controls",
+      "theme": "Logging & Monitoring",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.17",
+      "ref": "8.17",
+      "title": "Clock synchronisation",
+      "description": "The clocks of information processing systems used by the organisation shall be synchronised to approved time sources.",
+      "category": "Technological Controls",
+      "theme": "Logging & Monitoring",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.18",
+      "ref": "8.18",
+      "title": "Use of privileged utility programs",
+      "description": "The use of utility programs that can be capable of overriding system and application controls shall be restricted and tightly controlled.",
+      "category": "Technological Controls",
+      "theme": "Access Control",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.19",
+      "ref": "8.19",
+      "title": "Installation of software on operational systems",
+      "description": "Procedures and measures shall be implemented to securely manage software installation on operational systems.",
+      "category": "Technological Controls",
+      "theme": "Configuration Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.20",
+      "ref": "8.20",
+      "title": "Networks security",
+      "description": "Networks and network devices shall be secured, managed and controlled to protect information in systems and applications.",
+      "category": "Technological Controls",
+      "theme": "Network Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.21",
+      "ref": "8.21",
+      "title": "Security of network services",
+      "description": "Security mechanisms, service levels and service requirements of network services shall be identified, implemented and monitored.",
+      "category": "Technological Controls",
+      "theme": "Network Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.22",
+      "ref": "8.22",
+      "title": "Segregation of networks",
+      "description": "Groups of information services, users and information systems shall be segregated in the organisation's networks.",
+      "category": "Technological Controls",
+      "theme": "Network Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.23",
+      "ref": "8.23",
+      "title": "Web filtering",
+      "description": "Access to external websites shall be managed to reduce exposure to malicious content.",
+      "category": "Technological Controls",
+      "theme": "Network Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.24",
+      "ref": "8.24",
+      "title": "Use of cryptography",
+      "description": "Rules for the effective use of cryptography, including cryptographic key management, shall be defined and implemented.",
+      "category": "Technological Controls",
+      "theme": "Cryptography",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.25",
+      "ref": "8.25",
+      "title": "Secure development life cycle",
+      "description": "Rules for the secure development of software and systems shall be established and applied.",
+      "category": "Technological Controls",
+      "theme": "Secure Development",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.26",
+      "ref": "8.26",
+      "title": "Application security requirements",
+      "description": "Information security requirements shall be identified, specified and approved when developing or acquiring applications.",
+      "category": "Technological Controls",
+      "theme": "Secure Development",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.27",
+      "ref": "8.27",
+      "title": "Secure system architecture and engineering principles",
+      "description": "Principles for engineering secure systems shall be established, documented, maintained and applied to any information system development or integration activities.",
+      "category": "Technological Controls",
+      "theme": "Secure Development",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.28",
+      "ref": "8.28",
+      "title": "Secure coding",
+      "description": "Secure coding principles shall be applied to software development.",
+      "category": "Technological Controls",
+      "theme": "Secure Development",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.29",
+      "ref": "8.29",
+      "title": "Security testing in development and acceptance",
+      "description": "Security testing processes shall be defined and implemented in the development life cycle.",
+      "category": "Technological Controls",
+      "theme": "Secure Development",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.30",
+      "ref": "8.30",
+      "title": "Outsourced development",
+      "description": "The organisation shall direct, monitor and review the activities related to outsourced system development.",
+      "category": "Technological Controls",
+      "theme": "Supply Chain Security",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.31",
+      "ref": "8.31",
+      "title": "Separation of development, test and production environments",
+      "description": "Development, testing and production environments shall be separated and secured.",
+      "category": "Technological Controls",
+      "theme": "Secure Development",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.32",
+      "ref": "8.32",
+      "title": "Change management",
+      "description": "Changes to information processing facilities and information systems shall be subject to change management procedures.",
+      "category": "Technological Controls",
+      "theme": "Configuration Management",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.33",
+      "ref": "8.33",
+      "title": "Test information",
+      "description": "Test information shall be appropriately selected, protected and managed.",
+      "category": "Technological Controls",
+      "theme": "Data Protection",
+      "frameworkId": "iso27002"
+    },
+    {
+      "id": "iso27002-8.34",
+      "ref": "8.34",
+      "title": "Protection of information systems during audit testing",
+      "description": "Audit tests and other assurance activities involving assessment of operational systems shall be planned and agreed between the tester and appropriate management.",
+      "category": "Technological Controls",
+      "theme": "Audit",
+      "frameworkId": "iso27002"
+    }
+  ],
+  "iso27005": [
+    {
+      "id": "iso27005-5",
+      "frameworkId": "iso27005",
+      "ref": "5",
+      "title": "Information security risk management",
+      "description": "Establish and maintain a structured information security risk management process integrated with the ISMS and aligned with ISO 31000.",
+      "category": "Risk Management Process",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso27005-5.1",
+      "frameworkId": "iso27005",
+      "ref": "5.1",
+      "title": "Context establishment",
+      "description": "Define the internal and external context for risk management, including organisational objectives, stakeholders, risk criteria and scope.",
+      "category": "Risk Management Process",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso27005-5.2",
+      "frameworkId": "iso27005",
+      "ref": "5.2",
+      "title": "Information security risk assessment",
+      "description": "Systematically identify, analyse and evaluate information security risks using either the event-based or asset-based approach.",
+      "category": "Risk Assessment",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso27005-5.2.1",
+      "frameworkId": "iso27005",
+      "ref": "5.2.1",
+      "title": "Risk identification",
+      "description": "Identify information security risks by determining risk sources, events, causes and potential consequences in relation to business objectives.",
+      "category": "Risk Assessment",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso27005-5.2.2",
+      "frameworkId": "iso27005",
+      "ref": "5.2.2",
+      "title": "Risk analysis",
+      "description": "Analyse identified risks to determine the likelihood and consequences of each risk scenario, considering existing controls.",
+      "category": "Risk Assessment",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso27005-5.2.3",
+      "frameworkId": "iso27005",
+      "ref": "5.2.3",
+      "title": "Risk evaluation",
+      "description": "Compare risk analysis results with risk criteria to prioritise risks and determine which require treatment.",
+      "category": "Risk Assessment",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso27005-5.3",
+      "frameworkId": "iso27005",
+      "ref": "5.3",
+      "title": "Information security risk treatment",
+      "description": "Select and implement appropriate risk treatment options: risk modification, risk retention, risk avoidance or risk sharing.",
+      "category": "Risk Treatment",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso27005-5.3.1",
+      "frameworkId": "iso27005",
+      "ref": "5.3.1",
+      "title": "Risk treatment option selection",
+      "description": "Select risk treatment options considering risk evaluation results, treatment costs and benefits, and available controls from ISO/IEC 27002.",
+      "category": "Risk Treatment",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso27005-5.3.2",
+      "frameworkId": "iso27005",
+      "ref": "5.3.2",
+      "title": "Risk treatment plan",
+      "description": "Develop a risk treatment plan specifying selected controls, responsible parties, required resources, timelines and residual risk acceptance.",
+      "category": "Risk Treatment",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso27005-5.4",
+      "frameworkId": "iso27005",
+      "ref": "5.4",
+      "title": "Monitoring and review",
+      "description": "Monitor and review the risk management process, its results and the environment to ensure risks are managed effectively and improvements are identified.",
+      "category": "Monitoring",
+      "theme": "Operations"
+    },
+    {
+      "id": "iso27005-5.5",
+      "frameworkId": "iso27005",
+      "ref": "5.5",
+      "title": "Communication and consultation",
+      "description": "Communicate risk information to stakeholders throughout the risk management process and consult with them on decisions affecting risk.",
+      "category": "Communication",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso27005-5.6",
+      "frameworkId": "iso27005",
+      "ref": "5.6",
+      "title": "Recording and reporting",
+      "description": "Document and report risk management activities, results and decisions to support accountability, continual improvement and audit trails.",
+      "category": "Documentation",
+      "theme": "Governance"
+    }
+  ],
+  "iso27017": [
+    {
+      "id": "iso27017-CLD.6.3.1",
+      "frameworkId": "iso27017",
+      "ref": "CLD.6.3.1",
+      "title": "Shared roles and responsibilities within a cloud computing environment",
+      "description": "Roles and responsibilities of cloud service providers and customers for information security shall be documented and communicated.",
+      "category": "Cloud Organisation",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso27017-CLD.8.1.5",
+      "frameworkId": "iso27017",
+      "ref": "CLD.8.1.5",
+      "title": "Removal of cloud service customer assets",
+      "description": "Procedures for the return, removal or destruction of CSC assets upon contract termination shall be established and agreed.",
+      "category": "Cloud Asset Management",
+      "theme": "Operations"
+    },
+    {
+      "id": "iso27017-CLD.9.5.1",
+      "frameworkId": "iso27017",
+      "ref": "CLD.9.5.1",
+      "title": "Segregation in virtual computing environments",
+      "description": "Virtual computing environments shall be segregated to prevent unauthorised access between CSC environments and between CSP management and CSC environments.",
+      "category": "Virtual Environment Security",
+      "theme": "Technology"
+    },
+    {
+      "id": "iso27017-CLD.9.5.2",
+      "frameworkId": "iso27017",
+      "ref": "CLD.9.5.2",
+      "title": "Virtual machine hardening",
+      "description": "Virtual machine images shall be hardened to meet security requirements and maintained in a secure state throughout their lifecycle.",
+      "category": "Virtual Environment Security",
+      "theme": "Technology"
+    },
+    {
+      "id": "iso27017-CLD.12.1.5",
+      "frameworkId": "iso27017",
+      "ref": "CLD.12.1.5",
+      "title": "Administrator's operational security",
+      "description": "Cloud service administrator activities shall be monitored and logged with procedures defining acceptable use of privileged accounts.",
+      "category": "Operations Security",
+      "theme": "Operations"
+    },
+    {
+      "id": "iso27017-CLD.12.4.5",
+      "frameworkId": "iso27017",
+      "ref": "CLD.12.4.5",
+      "title": "Monitoring of cloud services",
+      "description": "Cloud service providers shall make monitoring information available to customers and enable CSCs to monitor the cloud services they use.",
+      "category": "Operations Security",
+      "theme": "Operations"
+    },
+    {
+      "id": "iso27017-CLD.13.1.4",
+      "frameworkId": "iso27017",
+      "ref": "CLD.13.1.4",
+      "title": "Alignment of security management for virtual and physical networks",
+      "description": "The network security management controls applicable to physical networks shall be applied equally to virtual network environments in cloud services.",
+      "category": "Network Security",
+      "theme": "Technology"
+    },
+    {
+      "id": "iso27017-CLD.13.2.6",
+      "frameworkId": "iso27017",
+      "ref": "CLD.13.2.6",
+      "title": "Data portability and protection of PII upon contract termination",
+      "description": "CSPs shall provide mechanisms for CSCs to retrieve and securely delete their data upon termination, and certify deletion.",
+      "category": "Data Transfer",
+      "theme": "Technology"
+    },
+    {
+      "id": "iso27017-6.1",
+      "frameworkId": "iso27017",
+      "ref": "6.1",
+      "title": "Information security roles and responsibilities (cloud-specific)",
+      "description": "Cloud-specific information security roles and responsibilities shall be defined, allocated and documented for both provider and customer.",
+      "category": "Organisation of Information Security",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso27017-12.1",
+      "frameworkId": "iso27017",
+      "ref": "12.1",
+      "title": "Operational procedures and responsibilities (cloud)",
+      "description": "Documented operational procedures for cloud services shall define change management, capacity management and separation of development and operational environments.",
+      "category": "Operations",
+      "theme": "Operations"
+    }
+  ],
+  "iso27018": [
+    {
+      "id": "iso27018-A.1",
+      "frameworkId": "iso27018",
+      "ref": "A.1",
+      "title": "Consent and choice",
+      "description": "CSPs shall obtain and document consent before processing PII for any purpose other than the original stated purpose, and provide mechanisms for PII principals to withdraw consent.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.2",
+      "frameworkId": "iso27018",
+      "ref": "A.2",
+      "title": "Purpose legitimacy and specification",
+      "description": "PII shall only be processed for specified, explicit and legitimate purposes and not further processed in a manner incompatible with those purposes.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.3",
+      "frameworkId": "iso27018",
+      "ref": "A.3",
+      "title": "Collection limitation",
+      "description": "PII collected shall be adequate, relevant and limited to what is necessary for the purposes for which it is processed.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.4",
+      "frameworkId": "iso27018",
+      "ref": "A.4",
+      "title": "Data minimisation",
+      "description": "CSPs shall not use PII processed on behalf of cloud service customers for their own business purposes, including marketing and advertising.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.5",
+      "frameworkId": "iso27018",
+      "ref": "A.5",
+      "title": "Use, retention and disclosure limitation",
+      "description": "PII shall not be retained longer than necessary and shall not be disclosed to third parties except as instructed by the CSC or required by law.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.6",
+      "frameworkId": "iso27018",
+      "ref": "A.6",
+      "title": "Accuracy and quality",
+      "description": "CSPs shall implement controls to ensure PII is accurate and kept up to date; mechanisms for PII principals to correct inaccuracies shall be provided.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.7",
+      "frameworkId": "iso27018",
+      "ref": "A.7",
+      "title": "Openness, transparency and notice",
+      "description": "CSPs shall provide clear information to PII principals about the processing of their PII, including purposes, types of PII processed and retention periods.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.8",
+      "frameworkId": "iso27018",
+      "ref": "A.8",
+      "title": "Individual participation and access",
+      "description": "Processes shall be in place to address requests from PII principals for access to, correction or deletion of their PII within a defined timeframe.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.9",
+      "frameworkId": "iso27018",
+      "ref": "A.9",
+      "title": "Accountability",
+      "description": "CSPs shall document their privacy responsibilities and be able to demonstrate compliance with applicable privacy principles and requirements.",
+      "category": "Privacy Principles",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27018-A.10",
+      "frameworkId": "iso27018",
+      "ref": "A.10",
+      "title": "Information security",
+      "description": "CSPs shall implement technical and organisational measures to protect PII against loss, unauthorised access, disclosure, alteration and destruction.",
+      "category": "Security Controls",
+      "theme": "Technology"
+    },
+    {
+      "id": "iso27018-A.11",
+      "frameworkId": "iso27018",
+      "ref": "A.11",
+      "title": "Privacy compliance",
+      "description": "CSPs shall identify and comply with applicable privacy laws, regulations and contractual requirements in all jurisdictions where PII is processed.",
+      "category": "Compliance",
+      "theme": "Governance"
+    }
+  ],
+  "iso27701": [
+    {
+      "id": "iso27701-5.2",
+      "frameworkId": "iso27701",
+      "ref": "5.2",
+      "title": "Understanding the organisation and its context (PIMS)",
+      "description": "Extend the ISMS context analysis to include privacy legislation, regulatory requirements, and stakeholder privacy expectations relevant to PII processing.",
+      "category": "PIMS Context",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso27701-5.4",
+      "frameworkId": "iso27701",
+      "ref": "5.4",
+      "title": "Leadership and commitment (PIMS)",
+      "description": "Top management shall demonstrate leadership and commitment to the PIMS by integrating privacy requirements into organisational strategy and ensuring resources are available.",
+      "category": "PIMS Context",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso27701-6.1",
+      "frameworkId": "iso27701",
+      "ref": "6.1",
+      "title": "Actions to address risks and opportunities (PIMS)",
+      "description": "Consider PII-related risks and opportunities when planning the ISMS, including risks from PII processing activities and privacy-related legal obligations.",
+      "category": "PIMS Planning",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso27701-7.2.1",
+      "frameworkId": "iso27701",
+      "ref": "7.2.1",
+      "title": "Competence (privacy)",
+      "description": "Ensure persons involved in PII processing have the necessary competence in privacy requirements, data subject rights and applicable regulations.",
+      "category": "PIMS Support",
+      "theme": "People"
+    },
+    {
+      "id": "iso27701-7.3.1",
+      "frameworkId": "iso27701",
+      "ref": "7.3.1",
+      "title": "Awareness (privacy)",
+      "description": "Persons working under the organisation's authority shall be aware of the PIMS privacy policy, their contribution to PII protection and the implications of non-conformance.",
+      "category": "PIMS Support",
+      "theme": "People"
+    },
+    {
+      "id": "iso27701-A.7.2.1",
+      "frameworkId": "iso27701",
+      "ref": "A.7.2.1",
+      "title": "Identify and document purpose (controller)",
+      "description": "PII controllers shall identify and document the specific purpose(s) for which PII is collected and processed, prior to collection.",
+      "category": "PII Controller Requirements",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27701-A.7.2.2",
+      "frameworkId": "iso27701",
+      "ref": "A.7.2.2",
+      "title": "Identify lawful basis (controller)",
+      "description": "Identify, document and maintain the lawful basis for processing PII for each identified purpose, including consent, contract, legal obligation, vital interests, public task or legitimate interests.",
+      "category": "PII Controller Requirements",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27701-A.7.3.1",
+      "frameworkId": "iso27701",
+      "ref": "A.7.3.1",
+      "title": "Privacy notices to PII principals",
+      "description": "Provide PII principals with clear, transparent notices about the processing of their PII at or before the time of collection.",
+      "category": "PII Controller Requirements",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27701-A.7.4.1",
+      "frameworkId": "iso27701",
+      "ref": "A.7.4.1",
+      "title": "Obligations to PII principals (access and correction)",
+      "description": "Implement processes to respond to PII principals' rights including access, rectification, erasure, restriction of processing, portability and objection.",
+      "category": "PII Controller Requirements",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27701-A.8.2.1",
+      "frameworkId": "iso27701",
+      "ref": "A.8.2.1",
+      "title": "Customer agreement (processor)",
+      "description": "PII processors shall only process PII according to documented instructions from the PII controller, established in a legally binding contract.",
+      "category": "PII Processor Requirements",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27701-A.8.4.1",
+      "frameworkId": "iso27701",
+      "ref": "A.8.4.1",
+      "title": "Temporary files (processor)",
+      "description": "PII processors shall ensure temporary files and working documents created during PII processing are identified, secured and deleted when no longer required.",
+      "category": "PII Processor Requirements",
+      "theme": "Privacy"
+    },
+    {
+      "id": "iso27701-A.8.5.1",
+      "frameworkId": "iso27701",
+      "ref": "A.8.5.1",
+      "title": "Privacy by design and default (processor)",
+      "description": "PII processors shall implement privacy by design and default principles, ensuring only PII necessary for the specific purpose is processed by default.",
+      "category": "PII Processor Requirements",
+      "theme": "Privacy"
+    }
+  ],
+  "bait": [
+    {
+      "id": "bait-1",
+      "frameworkId": "bait",
+      "ref": "1",
+      "title": "IT Strategy",
+      "description": "Institutions must develop and maintain a documented IT strategy that is consistent with the overall business strategy and approved by senior management. The IT strategy must cover objectives, priorities and risk appetite for IT.",
+      "category": "IT Strategy",
+      "theme": "Governance"
+    },
+    {
+      "id": "bait-2",
+      "frameworkId": "bait",
+      "ref": "2",
+      "title": "IT Governance",
+      "description": "Appropriate IT governance structures must be established including defined roles and responsibilities, committees, an independent Information Security Officer (ISB) and IT risk manager reporting to senior management.",
+      "category": "IT Governance",
+      "theme": "Governance"
+    },
+    {
+      "id": "bait-3",
+      "frameworkId": "bait",
+      "ref": "3",
+      "title": "Information Risk Management",
+      "description": "A systematic process for identifying, assessing, treating and monitoring information risks must be implemented, with regular reporting to senior management and integration with the ISMS.",
+      "category": "Information Risk Management",
+      "theme": "Risk"
+    },
+    {
+      "id": "bait-4",
+      "frameworkId": "bait",
+      "ref": "4",
+      "title": "Information Security Management",
+      "description": "An information security management system (ISMS) must be established and maintained, including security policies, standards and guidelines covering all IT systems and data.",
+      "category": "Information Security Management",
+      "theme": "Governance"
+    },
+    {
+      "id": "bait-5",
+      "frameworkId": "bait",
+      "ref": "5",
+      "title": "IT Operations and Availability",
+      "description": "IT operations must ensure service availability through capacity management, monitoring, incident management, change management and configuration management aligned with business requirements.",
+      "category": "IT Operations",
+      "theme": "Operations"
+    },
+    {
+      "id": "bait-6",
+      "frameworkId": "bait",
+      "ref": "6",
+      "title": "IT Projects and Applications",
+      "description": "IT projects must follow a defined project methodology with security requirements integrated from inception. Applications must undergo security assessments before deployment.",
+      "category": "IT Projects",
+      "theme": "Operations"
+    },
+    {
+      "id": "bait-7",
+      "frameworkId": "bait",
+      "ref": "7",
+      "title": "IT Outsourcing and Third-Party Management",
+      "description": "IT outsourcing arrangements must be governed by written contracts covering security requirements, audit rights, incident notification and exit management, aligned with EBA Outsourcing Guidelines.",
+      "category": "IT Outsourcing",
+      "theme": "Governance"
+    },
+    {
+      "id": "bait-8",
+      "frameworkId": "bait",
+      "ref": "8",
+      "title": "Critical Infrastructure Protection (KRITIS)",
+      "description": "Institutions operating critical infrastructure under KRITIS must implement additional security measures including attack detection systems and biennial proof-of-compliance submissions to BaFin/BSI.",
+      "category": "Critical Infrastructure",
+      "theme": "Operations"
+    },
+    {
+      "id": "bait-9",
+      "frameworkId": "bait",
+      "ref": "9",
+      "title": "Payment Transactions Security",
+      "description": "Specific security controls must be implemented for payment transaction systems, including fraud detection, strong customer authentication and compliance with PSD2 security requirements.",
+      "category": "Payment Security",
+      "theme": "Technology"
+    },
+    {
+      "id": "bait-10",
+      "frameworkId": "bait",
+      "ref": "10",
+      "title": "Network and System Security",
+      "description": "Network security architecture must provide appropriate segmentation, access controls, and perimeter protection. Systems must be hardened and patch management must be systematic.",
+      "category": "Network Security",
+      "theme": "Technology"
+    },
+    {
+      "id": "bait-11",
+      "frameworkId": "bait",
+      "ref": "11",
+      "title": "Emergency Management and Business Continuity",
+      "description": "IT emergency management and business continuity plans must be documented, tested and maintained to ensure recovery of critical IT systems within defined recovery time objectives.",
+      "category": "Business Continuity",
+      "theme": "Operations"
+    },
+    {
+      "id": "bait-12",
+      "frameworkId": "bait",
+      "ref": "12",
+      "title": "IT Audit",
+      "description": "IT-related audit activities must be conducted by qualified internal auditors or external experts, covering all BAIT requirement areas on a risk-based audit schedule.",
+      "category": "IT Audit",
+      "theme": "Governance"
+    }
+  ],
+  "pci-dss": [
+    {
+      "id": "pci-dss-1",
+      "frameworkId": "pci-dss",
+      "ref": "1",
+      "title": "Install and Maintain Network Security Controls",
+      "description": "Network security controls (NSCs) such as firewalls must be installed and maintained to protect the cardholder data environment (CDE) from untrusted networks. Configuration standards must be documented and reviewed at least every six months.",
+      "category": "Build and Maintain a Secure Network",
+      "theme": "Technology"
+    },
+    {
+      "id": "pci-dss-2",
+      "frameworkId": "pci-dss",
+      "ref": "2",
+      "title": "Apply Secure Configurations to All System Components",
+      "description": "All system components must be protected from known weaknesses by following secure configuration standards. Default passwords must be changed, unnecessary services disabled and configuration documentation maintained.",
+      "category": "Build and Maintain a Secure Network",
+      "theme": "Technology"
+    },
+    {
+      "id": "pci-dss-3",
+      "frameworkId": "pci-dss",
+      "ref": "3",
+      "title": "Protect Stored Account Data",
+      "description": "Protection methods such as encryption, truncation, masking and hashing must be applied to stored account data (PAN, SAD). Primary account numbers must not be stored unless absolutely necessary.",
+      "category": "Protect Account Data",
+      "theme": "Technology"
+    },
+    {
+      "id": "pci-dss-4",
+      "frameworkId": "pci-dss",
+      "ref": "4",
+      "title": "Protect Cardholder Data with Strong Cryptography During Transmission",
+      "description": "Strong cryptography (e.g. TLS 1.2+) must be used to protect cardholder data during transmission over open public networks. Trusted certificates and protocols must be implemented.",
+      "category": "Protect Account Data",
+      "theme": "Technology"
+    },
+    {
+      "id": "pci-dss-5",
+      "frameworkId": "pci-dss",
+      "ref": "5",
+      "title": "Protect All Systems and Networks from Malicious Software",
+      "description": "Anti-malware software must be deployed on all system components susceptible to malware. Solutions must be kept current, perform periodic scans and generate audit logs.",
+      "category": "Maintain a Vulnerability Management Program",
+      "theme": "Technology"
+    },
+    {
+      "id": "pci-dss-6",
+      "frameworkId": "pci-dss",
+      "ref": "6",
+      "title": "Develop and Maintain Secure Systems and Software",
+      "description": "Security vulnerabilities must be identified and addressed through patch management. Bespoke and custom software must follow a secure software development lifecycle (SSDLC) including code review and security testing.",
+      "category": "Maintain a Vulnerability Management Program",
+      "theme": "Technology"
+    },
+    {
+      "id": "pci-dss-7",
+      "frameworkId": "pci-dss",
+      "ref": "7",
+      "title": "Restrict Access to System Components and Cardholder Data by Business Need to Know",
+      "description": "Access to system components and cardholder data must be restricted to only those individuals whose job requires such access, enforced through access control systems with deny-all default.",
+      "category": "Implement Strong Access Control Measures",
+      "theme": "Operations"
+    },
+    {
+      "id": "pci-dss-8",
+      "frameworkId": "pci-dss",
+      "ref": "8",
+      "title": "Identify Users and Authenticate Access to System Components",
+      "description": "All user accounts must be uniquely identified. Multi-factor authentication (MFA) must be used for all access to the CDE. Password/passphrase requirements must meet defined complexity and rotation standards.",
+      "category": "Implement Strong Access Control Measures",
+      "theme": "Operations"
+    },
+    {
+      "id": "pci-dss-9",
+      "frameworkId": "pci-dss",
+      "ref": "9",
+      "title": "Restrict Physical Access to Cardholder Data",
+      "description": "Physical access to cardholder data and systems that store, process or transmit cardholder data must be restricted and monitored. Visitor access must be controlled and media containing cardholder data secured.",
+      "category": "Implement Strong Access Control Measures",
+      "theme": "Physical"
+    },
+    {
+      "id": "pci-dss-10",
+      "frameworkId": "pci-dss",
+      "ref": "10",
+      "title": "Log and Monitor All Access to System Components and Cardholder Data",
+      "description": "Audit logs must capture all access to network resources and cardholder data. Logs must be protected from modification, retained for at least 12 months with 3 months immediately available, and reviewed daily.",
+      "category": "Regularly Monitor and Test Networks",
+      "theme": "Operations"
+    },
+    {
+      "id": "pci-dss-11",
+      "frameworkId": "pci-dss",
+      "ref": "11",
+      "title": "Test Security of Systems and Networks Regularly",
+      "description": "Security vulnerabilities must be discovered and addressed through regular internal and external vulnerability scans (at least quarterly), penetration testing (at least annually) and intrusion detection/prevention systems.",
+      "category": "Regularly Monitor and Test Networks",
+      "theme": "Operations"
+    },
+    {
+      "id": "pci-dss-12",
+      "frameworkId": "pci-dss",
+      "ref": "12",
+      "title": "Support Information Security with Organisational Policies and Programs",
+      "description": "An information security policy covering all PCI DSS requirements must be established, published and maintained. Security awareness training, incident response planning and service provider management must be implemented.",
+      "category": "Maintain an Information Security Policy",
+      "theme": "Governance"
+    }
+  ],
+  "tisax": [
+    {
+      "id": "tisax-IS-1",
+      "frameworkId": "tisax",
+      "ref": "IS-1",
+      "title": "Information Security Policy and Organisation",
+      "description": "An information security policy approved by management must be in place. Roles, responsibilities and governance structures for information security must be defined, including an appointed Information Security Officer.",
+      "category": "Information Security",
+      "theme": "Governance"
+    },
+    {
+      "id": "tisax-IS-2",
+      "frameworkId": "tisax",
+      "ref": "IS-2",
+      "title": "Risk Management",
+      "description": "A systematic risk management process must identify, assess and treat information security risks. Risk assessments must be reviewed regularly and results documented.",
+      "category": "Information Security",
+      "theme": "Risk"
+    },
+    {
+      "id": "tisax-IS-3",
+      "frameworkId": "tisax",
+      "ref": "IS-3",
+      "title": "Asset Management",
+      "description": "All information assets must be inventoried, classified and assigned to responsible owners. Classification must consider confidentiality, integrity and availability requirements.",
+      "category": "Information Security",
+      "theme": "Operations"
+    },
+    {
+      "id": "tisax-IS-4",
+      "frameworkId": "tisax",
+      "ref": "IS-4",
+      "title": "Human Resources Security",
+      "description": "Security screening, awareness training and clear security responsibilities must be in place for all employees. Exit procedures must ensure removal of access rights upon departure.",
+      "category": "HR Security",
+      "theme": "People"
+    },
+    {
+      "id": "tisax-IS-5",
+      "frameworkId": "tisax",
+      "ref": "IS-5",
+      "title": "Physical and Environmental Security",
+      "description": "Physical security perimeters and controls must protect information processing facilities. Access to secure areas must be restricted, logged and monitored. Prototype and development areas require heightened physical protection.",
+      "category": "Physical Security",
+      "theme": "Physical"
+    },
+    {
+      "id": "tisax-IS-6",
+      "frameworkId": "tisax",
+      "ref": "IS-6",
+      "title": "Identity and Access Management",
+      "description": "User access must be managed based on least-privilege principles. Strong authentication must be enforced for systems containing sensitive automotive data. Privileged access must be strictly controlled and logged.",
+      "category": "Identity & Access Management",
+      "theme": "Technology"
+    },
+    {
+      "id": "tisax-IS-7",
+      "frameworkId": "tisax",
+      "ref": "IS-7",
+      "title": "Cryptography and Key Management",
+      "description": "Cryptographic controls must be applied to protect sensitive information in storage and transmission. A cryptography policy covering algorithm standards and key management must be maintained.",
+      "category": "IT Security",
+      "theme": "Technology"
+    },
+    {
+      "id": "tisax-IS-8",
+      "frameworkId": "tisax",
+      "ref": "IS-8",
+      "title": "Operations Security",
+      "description": "IT operations must ensure change management, vulnerability management, malware protection and secure backup of sensitive automotive information including design data and prototype information.",
+      "category": "IT Security",
+      "theme": "Operations"
+    },
+    {
+      "id": "tisax-IS-9",
+      "frameworkId": "tisax",
+      "ref": "IS-9",
+      "title": "Incident Management",
+      "description": "An incident management process must detect, report, assess and respond to information security incidents involving sensitive automotive data, with documented lessons-learned and root-cause analysis.",
+      "category": "Information Security",
+      "theme": "Operations"
+    },
+    {
+      "id": "tisax-IS-10",
+      "frameworkId": "tisax",
+      "ref": "IS-10",
+      "title": "Supplier and Third-Party Management",
+      "description": "Information security requirements must be contractually imposed on suppliers and third parties that access, process or store sensitive automotive data. Compliance must be regularly assessed.",
+      "category": "Supplier Relationships",
+      "theme": "Governance"
+    },
+    {
+      "id": "tisax-PP-1",
+      "frameworkId": "tisax",
+      "ref": "PP-1",
+      "title": "Prototype Protection — Physical Security",
+      "description": "Prototypes, pre-production vehicles and components must be physically protected against unauthorised access, photography and disclosure. Physical access controls must be heightened during development phases.",
+      "category": "Prototype Protection",
+      "theme": "Physical"
+    },
+    {
+      "id": "tisax-PP-2",
+      "frameworkId": "tisax",
+      "ref": "PP-2",
+      "title": "Prototype Protection — Data Security",
+      "description": "Digital data related to prototypes and pre-production development must be classified at the highest protection level and subject to strict access controls, encryption and secure transfer procedures.",
+      "category": "Prototype Protection",
+      "theme": "Technology"
+    }
+  ],
+  "cobit": [
+    {
+      "id": "cobit-EDM01",
+      "frameworkId": "cobit",
+      "ref": "EDM01",
+      "title": "Ensure Governance Framework Setting and Maintenance",
+      "description": "Analyse and articulate the requirements for the governance of enterprise IT. Put in place and maintain effective enabling structures, principles, processes and practices, with clarity of responsibilities and authority.",
+      "category": "Governance (EDM)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-EDM02",
+      "frameworkId": "cobit",
+      "ref": "EDM02",
+      "title": "Ensure Benefits Delivery",
+      "description": "Secure optimal value from IT-enabled initiatives, services and assets; cost-efficient delivery of solutions and services; and a reliable, accurate picture of costs and likely benefits.",
+      "category": "Governance (EDM)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-EDM03",
+      "frameworkId": "cobit",
+      "ref": "EDM03",
+      "title": "Ensure Risk Optimisation",
+      "description": "Ensure that IT-related enterprise risk does not exceed the risk appetite and risk tolerance, and that the impact of IT risk to enterprise value is identified and managed.",
+      "category": "Governance (EDM)",
+      "theme": "Risk"
+    },
+    {
+      "id": "cobit-EDM04",
+      "frameworkId": "cobit",
+      "ref": "EDM04",
+      "title": "Ensure Resource Optimisation",
+      "description": "Ensure that adequate and sufficient IT-related capabilities (people, process and technology) are available to support enterprise objectives effectively and at optimal cost.",
+      "category": "Governance (EDM)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-EDM05",
+      "frameworkId": "cobit",
+      "ref": "EDM05",
+      "title": "Ensure Stakeholder Engagement",
+      "description": "Ensure that enterprise IT stakeholder engagement and communication is effective, and that stakeholders are identified and their requirements, expectations and options understood.",
+      "category": "Governance (EDM)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO01",
+      "frameworkId": "cobit",
+      "ref": "APO01",
+      "title": "Manage the IT Management Framework",
+      "description": "Clarify and maintain the mission and vision of enterprise IT, and implement and maintain mechanisms and authorities for managing IT in a structured way.",
+      "category": "Management (APO)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO02",
+      "frameworkId": "cobit",
+      "ref": "APO02",
+      "title": "Manage Strategy",
+      "description": "Provide a holistic view of the current IT environment, the future direction, and the initiatives required to migrate to the desired future environment. Leverage enterprise architecture building blocks.",
+      "category": "Management (APO)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO03",
+      "frameworkId": "cobit",
+      "ref": "APO03",
+      "title": "Manage Enterprise Architecture",
+      "description": "Establish a common architecture comprising the business process, information, data, application and technology architecture layers to realise enterprise and IT strategies.",
+      "category": "Management (APO)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO04",
+      "frameworkId": "cobit",
+      "ref": "APO04",
+      "title": "Manage Innovation",
+      "description": "Maintain awareness of IT and related service trends, identify innovation opportunities, and plan how to benefit from innovation in relation to business needs.",
+      "category": "Management (APO)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO05",
+      "frameworkId": "cobit",
+      "ref": "APO05",
+      "title": "Manage Portfolio",
+      "description": "Execute the strategic direction set for investments, and deliver services and assets as required by the IT strategy. Manage all investments from initiation to value realisation.",
+      "category": "Management (APO)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO06",
+      "frameworkId": "cobit",
+      "ref": "APO06",
+      "title": "Manage Budget and Costs",
+      "description": "Manage IT-related financial activities in both business and IT functions, covering budget, cost and benefit management, prioritisation of spending through cost analysis.",
+      "category": "Management (APO)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO07",
+      "frameworkId": "cobit",
+      "ref": "APO07",
+      "title": "Manage Human Resources",
+      "description": "Provide a structured approach to ensure optimal structuring, placement, decision rights and skills of human resources. This includes communicating defined roles and responsibilities.",
+      "category": "Management (APO)",
+      "theme": "People"
+    },
+    {
+      "id": "cobit-APO08",
+      "frameworkId": "cobit",
+      "ref": "APO08",
+      "title": "Manage Relationships",
+      "description": "Manage the relationship between IT and business in a formal and transparent way that ensures a focus on achieving a common and shared goal.",
+      "category": "Management (APO)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO09",
+      "frameworkId": "cobit",
+      "ref": "APO09",
+      "title": "Manage Service Agreements",
+      "description": "Align IT-enabled services and service levels with enterprise needs and expectations, including identification, specification, design, publishing, agreement, and monitoring of IT services.",
+      "category": "Management (APO)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-APO10",
+      "frameworkId": "cobit",
+      "ref": "APO10",
+      "title": "Manage Vendors",
+      "description": "Manage IT-related services provided by all types of vendors to meet enterprise requirements, including selection, management, control and risk assessment of vendors.",
+      "category": "Management (APO)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-APO11",
+      "frameworkId": "cobit",
+      "ref": "APO11",
+      "title": "Manage Quality",
+      "description": "Define and communicate quality requirements in all processes, procedures and related enterprise outcomes. Enable controls, ongoing monitoring, and the use of proven practices for improvement.",
+      "category": "Management (APO)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-APO12",
+      "frameworkId": "cobit",
+      "ref": "APO12",
+      "title": "Manage Risk",
+      "description": "Identify, assess and reduce IT-related risk continually, within tolerance levels set by enterprise executive management and the board.",
+      "category": "Management (APO)",
+      "theme": "Risk"
+    },
+    {
+      "id": "cobit-APO13",
+      "frameworkId": "cobit",
+      "ref": "APO13",
+      "title": "Manage Security",
+      "description": "Define, operate and monitor a system for information security management aligned with ISO/IEC 27001. Ensure security policies, controls, processes and awareness are in place.",
+      "category": "Management (APO)",
+      "theme": "Risk"
+    },
+    {
+      "id": "cobit-APO14",
+      "frameworkId": "cobit",
+      "ref": "APO14",
+      "title": "Manage Data",
+      "description": "Ensure that structured and unstructured data supporting enterprise decisions and services are managed according to data governance requirements for quality, confidentiality, availability and retention.",
+      "category": "Management (APO)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-BAI01",
+      "frameworkId": "cobit",
+      "ref": "BAI01",
+      "title": "Manage Programs",
+      "description": "Manage all programs in the IT investment portfolio in alignment with the enterprise strategy. Initiate, plan, control and execute programs, and monitor expected benefits.",
+      "category": "Management (BAI)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-BAI02",
+      "frameworkId": "cobit",
+      "ref": "BAI02",
+      "title": "Manage Requirements Definition",
+      "description": "Identify solutions and analyse requirements before acquisition or creation to ensure that they are in line with enterprise strategic requirements. Partner with interested parties to define requirements.",
+      "category": "Management (BAI)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-BAI03",
+      "frameworkId": "cobit",
+      "ref": "BAI03",
+      "title": "Manage Solutions Identification and Build",
+      "description": "Establish and maintain identified solutions in line with enterprise requirements covering design, development, procurement/sourcing and partnering with suppliers/vendors.",
+      "category": "Management (BAI)",
+      "theme": "Technology"
+    },
+    {
+      "id": "cobit-BAI04",
+      "frameworkId": "cobit",
+      "ref": "BAI04",
+      "title": "Manage Availability and Capacity",
+      "description": "Balance current and future needs for availability, performance and capacity with cost-effective service provision. Include assessment of current capabilities, forecasting and risk mitigation.",
+      "category": "Management (BAI)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-BAI05",
+      "frameworkId": "cobit",
+      "ref": "BAI05",
+      "title": "Manage Organisational Change Enablement",
+      "description": "Maximise the likelihood of successfully implementing enterprise-wide change by preparing and committing stakeholders for business and operational change. Address human factors in change management.",
+      "category": "Management (BAI)",
+      "theme": "People"
+    },
+    {
+      "id": "cobit-BAI06",
+      "frameworkId": "cobit",
+      "ref": "BAI06",
+      "title": "Manage IT Changes",
+      "description": "Manage all changes to IT infrastructure and applications in a controlled manner, including standard changes and maintenance, to minimise risk to production systems.",
+      "category": "Management (BAI)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-BAI07",
+      "frameworkId": "cobit",
+      "ref": "BAI07",
+      "title": "Manage IT Change Acceptance and Transitioning",
+      "description": "Accept and make operational new solutions, including implementation planning, system and data migration, UAT, communication, training and post-implementation review.",
+      "category": "Management (BAI)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-BAI08",
+      "frameworkId": "cobit",
+      "ref": "BAI08",
+      "title": "Manage Knowledge",
+      "description": "Maintain the availability of relevant, current, validated and reliable knowledge to support all process activities and to facilitate decision making.",
+      "category": "Management (BAI)",
+      "theme": "People"
+    },
+    {
+      "id": "cobit-BAI09",
+      "frameworkId": "cobit",
+      "ref": "BAI09",
+      "title": "Manage Assets",
+      "description": "Manage IT assets through their lifecycle to make sure their use delivers value at optimal cost, and that they are accounted for and physically protected.",
+      "category": "Management (BAI)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-BAI10",
+      "frameworkId": "cobit",
+      "ref": "BAI10",
+      "title": "Manage Configuration",
+      "description": "Define and maintain descriptions and relationships between key resources and capabilities required to deliver IT-enabled services. Include collecting CI information, establishing baselines and verifying configuration.",
+      "category": "Management (BAI)",
+      "theme": "Technology"
+    },
+    {
+      "id": "cobit-BAI11",
+      "frameworkId": "cobit",
+      "ref": "BAI11",
+      "title": "Manage Projects",
+      "description": "Manage all IT-enabled investment projects from initiation to closure, with clearly defined project scope, objectives, risks and authority to control project resources.",
+      "category": "Management (BAI)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-DSS01",
+      "frameworkId": "cobit",
+      "ref": "DSS01",
+      "title": "Manage Operations",
+      "description": "Coordinate and execute the activities and operational procedures required to deliver internal and outsourced IT services, including execution of predefined standard procedures and required monitoring activities.",
+      "category": "Management (DSS)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-DSS02",
+      "frameworkId": "cobit",
+      "ref": "DSS02",
+      "title": "Manage Service Requests and Incidents",
+      "description": "Provide timely and effective response to user requests and resolution of all types of incidents. Restore normal service; record and fulfil user requests; record, investigate, diagnose and resolve incidents.",
+      "category": "Management (DSS)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-DSS03",
+      "frameworkId": "cobit",
+      "ref": "DSS03",
+      "title": "Manage Problems",
+      "description": "Identify and classify problems and their root causes, and provide timely resolution to prevent recurring incidents. Provide recommendations for improvements to prevent future occurrences.",
+      "category": "Management (DSS)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-DSS04",
+      "frameworkId": "cobit",
+      "ref": "DSS04",
+      "title": "Manage Continuity",
+      "description": "Establish and maintain a plan to enable business and IT to respond to incidents and disruptions in order to continue operation of critical business processes and required IT services.",
+      "category": "Management (DSS)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-DSS05",
+      "frameworkId": "cobit",
+      "ref": "DSS05",
+      "title": "Manage Security Services",
+      "description": "Protect enterprise information to maintain the level of information security risk acceptable to the enterprise in accordance with the security policy. Establish and maintain information security roles and access privileges.",
+      "category": "Management (DSS)",
+      "theme": "Risk"
+    },
+    {
+      "id": "cobit-DSS06",
+      "frameworkId": "cobit",
+      "ref": "DSS06",
+      "title": "Manage Business Process Controls",
+      "description": "Define and maintain appropriate business process controls to ensure that information related to and processed by in-house or outsourced business processes satisfies all relevant information control requirements.",
+      "category": "Management (DSS)",
+      "theme": "Operations"
+    },
+    {
+      "id": "cobit-MEA01",
+      "frameworkId": "cobit",
+      "ref": "MEA01",
+      "title": "Manage Performance and Conformance Monitoring",
+      "description": "Collect, validate and evaluate business, IT and process goals and metrics. Monitor that processes are performing against agreed performance and conformance goals and metrics.",
+      "category": "Management (MEA)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-MEA02",
+      "frameworkId": "cobit",
+      "ref": "MEA02",
+      "title": "Manage System of Internal Control",
+      "description": "Continuously monitor and evaluate the control environment, including self-assessments and independent assurance reviews. Enable management to identify control deficiencies and initiate improvement actions.",
+      "category": "Management (MEA)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-MEA03",
+      "frameworkId": "cobit",
+      "ref": "MEA03",
+      "title": "Manage Compliance with External Requirements",
+      "description": "Evaluate that IT and business processes are compliant with laws, regulations and contractual requirements. Obtain assurance that requirements have been identified and compliance achieved.",
+      "category": "Management (MEA)",
+      "theme": "Governance"
+    },
+    {
+      "id": "cobit-MEA04",
+      "frameworkId": "cobit",
+      "ref": "MEA04",
+      "title": "Manage Assurance",
+      "description": "Obtain assurance over the completeness and effectiveness of controls supporting enterprise objectives and risk management, by providing independent assurance services to the board and executive management.",
+      "category": "Management (MEA)",
+      "theme": "Governance"
+    }
+  ],
+  "iso38500": [
+    {
+      "id": "iso38500-P1",
+      "frameworkId": "iso38500",
+      "ref": "P1",
+      "title": "Responsibility",
+      "description": "Individuals and groups within the organisation understand and accept their responsibilities in respect of both supply of, and demand for, IT. Those with responsibility for actions also have the authority to perform those actions.",
+      "category": "Principles",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso38500-P2",
+      "frameworkId": "iso38500",
+      "ref": "P2",
+      "title": "Strategy",
+      "description": "The organisation's business strategy takes into account the current and future capabilities of IT; the strategic plans for IT satisfy the current and ongoing needs of the organisation's business strategy.",
+      "category": "Principles",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso38500-P3",
+      "frameworkId": "iso38500",
+      "ref": "P3",
+      "title": "Acquisition",
+      "description": "IT acquisitions are made for valid reasons, on the basis of appropriate and ongoing analysis, with clear and transparent decision making. There is an appropriate balance between benefits, opportunities, costs and risks.",
+      "category": "Principles",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso38500-P4",
+      "frameworkId": "iso38500",
+      "ref": "P4",
+      "title": "Performance",
+      "description": "IT is fit for purpose in supporting the organisation, providing the services, levels of service and service quality required to meet current and future business requirements.",
+      "category": "Principles",
+      "theme": "Operations"
+    },
+    {
+      "id": "iso38500-P5",
+      "frameworkId": "iso38500",
+      "ref": "P5",
+      "title": "Conformance",
+      "description": "IT complies with all mandatory legislation and regulations. Policies and practices are clearly defined, implemented and enforced.",
+      "category": "Principles",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso38500-P6",
+      "frameworkId": "iso38500",
+      "ref": "P6",
+      "title": "Human Behaviour",
+      "description": "IT policies, practices and decisions demonstrate respect for human behaviour, including the current and evolving needs of all the people in the process.",
+      "category": "Principles",
+      "theme": "People"
+    },
+    {
+      "id": "iso38500-T1",
+      "frameworkId": "iso38500",
+      "ref": "T1",
+      "title": "Evaluate (Governing Body Task)",
+      "description": "The governing body shall evaluate current and future use of IT by examining and judging the strategy, proposals and supply arrangements for IT, to ensure that IT meets business needs.",
+      "category": "Governing Body Tasks",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso38500-T2",
+      "frameworkId": "iso38500",
+      "ref": "T2",
+      "title": "Direct (Governing Body Task)",
+      "description": "The governing body shall direct preparation and implementation of plans and policies, allocate responsibilities and direct management to implement the plans and policies.",
+      "category": "Governing Body Tasks",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso38500-T3",
+      "frameworkId": "iso38500",
+      "ref": "T3",
+      "title": "Monitor (Governing Body Task)",
+      "description": "The governing body shall monitor conformance to policies, performance against plans, and ensure that IT performs in accordance with the agreed requirements.",
+      "category": "Governing Body Tasks",
+      "theme": "Governance"
+    }
+  ],
+  "iso31000": [
+    {
+      "id": "iso31000-4",
+      "frameworkId": "iso31000",
+      "ref": "4",
+      "title": "Principles",
+      "description": "Risk management shall be integrated, structured, comprehensive, customised, inclusive, dynamic, based on best available information, and account for human and cultural factors, with a commitment to continual improvement.",
+      "category": "Principles",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso31000-5",
+      "frameworkId": "iso31000",
+      "ref": "5",
+      "title": "Framework",
+      "description": "Design, implement, evaluate and improve a risk management framework through which the organisation integrates risk management into all significant activities and functions.",
+      "category": "Framework",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso31000-5.2",
+      "frameworkId": "iso31000",
+      "ref": "5.2",
+      "title": "Leadership and commitment",
+      "description": "Top management and oversight bodies shall ensure risk management is integrated into organisational activities through policy, mandate, authority, resources and accountability arrangements.",
+      "category": "Framework",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso31000-5.3",
+      "frameworkId": "iso31000",
+      "ref": "5.3",
+      "title": "Integration",
+      "description": "Integration of risk management throughout the organisation requires understanding of structures, contexts and objectives at each level; risk management is not a stand-alone activity.",
+      "category": "Framework",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso31000-5.4",
+      "frameworkId": "iso31000",
+      "ref": "5.4",
+      "title": "Design",
+      "description": "Design the risk management framework by understanding the organisation's context, articulating risk management commitment and assigning organisational roles, authorities and responsibilities.",
+      "category": "Framework",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso31000-5.5",
+      "frameworkId": "iso31000",
+      "ref": "5.5",
+      "title": "Implementation",
+      "description": "Implement the risk management framework and process by developing an appropriate plan, identifying decision-making points and incorporating risk management into all organisational practices.",
+      "category": "Framework",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso31000-5.6",
+      "frameworkId": "iso31000",
+      "ref": "5.6",
+      "title": "Evaluation",
+      "description": "Periodically measure risk management framework performance against its purpose, implementation plans and behaviour, and determine whether it remains suitable to support achieving the organisation's objectives.",
+      "category": "Framework",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso31000-5.7",
+      "frameworkId": "iso31000",
+      "ref": "5.7",
+      "title": "Improvement",
+      "description": "Continually monitor and adapt the risk management framework to address changes in external and internal context, identify improvements and report these to oversight bodies.",
+      "category": "Framework",
+      "theme": "Governance"
+    },
+    {
+      "id": "iso31000-6.1",
+      "frameworkId": "iso31000",
+      "ref": "6.1",
+      "title": "Risk management process — general",
+      "description": "The risk management process involves the systematic application of policies, procedures and practices to communication, consultation, establishing context, and assessing, treating, monitoring, reviewing, recording and reporting risk.",
+      "category": "Process",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso31000-6.2",
+      "frameworkId": "iso31000",
+      "ref": "6.2",
+      "title": "Communication and consultation",
+      "description": "The purpose of communication and consultation is to assist relevant stakeholders in understanding risk, the basis on which decisions are made and the reasons why particular actions are required.",
+      "category": "Process",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso31000-6.3",
+      "frameworkId": "iso31000",
+      "ref": "6.3",
+      "title": "Scope, context and criteria",
+      "description": "Customise the risk management process by defining the scope, internal and external context, risk criteria (including risk appetite, risk tolerance and risk acceptance levels) and performance criteria.",
+      "category": "Process",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso31000-6.4",
+      "frameworkId": "iso31000",
+      "ref": "6.4",
+      "title": "Risk assessment",
+      "description": "Risk assessment is the overall process of risk identification, risk analysis and risk evaluation. It provides an understanding of risks and forms the basis for risk treatment decisions.",
+      "category": "Process",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso31000-6.4.2",
+      "frameworkId": "iso31000",
+      "ref": "6.4.2",
+      "title": "Risk identification",
+      "description": "Identify sources of risk, areas of impact, events and their causes and potential consequences. The goal is to generate a comprehensive list of risks based on events that might create, enhance, prevent, degrade, accelerate or delay objectives.",
+      "category": "Process",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso31000-6.4.3",
+      "frameworkId": "iso31000",
+      "ref": "6.4.3",
+      "title": "Risk analysis",
+      "description": "Analyse risks by understanding their nature, sources, consequences and likelihood. Consider the effectiveness of existing controls, confidence in data, relationships between risks and their dependencies.",
+      "category": "Process",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso31000-6.4.4",
+      "frameworkId": "iso31000",
+      "ref": "6.4.4",
+      "title": "Risk evaluation",
+      "description": "Compare the results of risk analysis with risk criteria to determine where additional action is required. Decisions should take into account the wider context, including the tolerance of the risk.",
+      "category": "Process",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso31000-6.5",
+      "frameworkId": "iso31000",
+      "ref": "6.5",
+      "title": "Risk treatment",
+      "description": "Select and implement options for addressing risk: avoid, take or increase risk to pursue an opportunity; remove the risk source; change likelihood or consequences; share the risk; or retain the risk.",
+      "category": "Process",
+      "theme": "Risk"
+    },
+    {
+      "id": "iso31000-6.6",
+      "frameworkId": "iso31000",
+      "ref": "6.6",
+      "title": "Monitoring and review",
+      "description": "The purpose of monitoring and review is to assure and improve the quality and effectiveness of process design, implementation and outcomes. Continual monitoring and periodic reviews are essential.",
+      "category": "Process",
+      "theme": "Operations"
+    },
+    {
+      "id": "iso31000-6.7",
+      "frameworkId": "iso31000",
+      "ref": "6.7",
+      "title": "Recording and reporting",
+      "description": "The risk management process and its outcomes should be documented and reported through appropriate mechanisms, satisfying accountability needs and decision-making at all organisational levels.",
+      "category": "Process",
+      "theme": "Governance"
+    }
+  ],
+  "itil-v3": [
+    {
+      "id": "itil-v3-SS-SM",
+      "frameworkId": "itil-v3",
+      "ref": "SS-SM",
+      "title": "Strategy Management for IT Services",
+      "description": "Define and maintain the IT service provider's perspective, position, plans and patterns with respect to its services and the management of those services.",
+      "category": "Service Strategy",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v3-SS-SPM",
+      "frameworkId": "itil-v3",
+      "ref": "SS-SPM",
+      "title": "Service Portfolio Management",
+      "description": "Ensure the service provider has the right mix of services to meet required business outcomes at an appropriate level of investment. Manage the pipeline, catalogue and retired services.",
+      "category": "Service Strategy",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v3-SS-FM",
+      "frameworkId": "itil-v3",
+      "ref": "SS-FM",
+      "title": "Financial Management for IT Services",
+      "description": "Secure appropriate level of funding to design, develop and deliver services that meet the strategy of the organisation, while balancing costs and ensuring value.",
+      "category": "Service Strategy",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v3-SS-DM",
+      "frameworkId": "itil-v3",
+      "ref": "SS-DM",
+      "title": "Demand Management",
+      "description": "Understand, anticipate and influence customer demand for services and the provision of capacity to meet these demands.",
+      "category": "Service Strategy",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SS-BRM",
+      "frameworkId": "itil-v3",
+      "ref": "SS-BRM",
+      "title": "Business Relationship Management",
+      "description": "Establish and maintain a business relationship between the service provider and the customer, based on understanding the customer's business and needs.",
+      "category": "Service Strategy",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v3-SD-SLM",
+      "frameworkId": "itil-v3",
+      "ref": "SD-SLM",
+      "title": "Service Level Management",
+      "description": "Negotiate, agree and document appropriate IT service targets with the business, and then monitor and produce reports on actual delivery against agreed service levels.",
+      "category": "Service Design",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SD-AM",
+      "frameworkId": "itil-v3",
+      "ref": "SD-AM",
+      "title": "Availability Management",
+      "description": "Define, analyse, plan, measure and improve all aspects of the availability of IT services to ensure that the level of availability delivered matches the agreed service levels.",
+      "category": "Service Design",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SD-CapM",
+      "frameworkId": "itil-v3",
+      "ref": "SD-CapM",
+      "title": "Capacity Management",
+      "description": "Ensure that the capacity of IT services and IT infrastructure is able to deliver agreed service level targets in a cost effective and timely manner.",
+      "category": "Service Design",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SD-ITSCM",
+      "frameworkId": "itil-v3",
+      "ref": "SD-ITSCM",
+      "title": "IT Service Continuity Management",
+      "description": "Manage risks that could seriously affect IT services. Ensure the IT service provider can always provide minimum agreed service levels, reducing risk to acceptable levels.",
+      "category": "Service Design",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SD-ISM",
+      "frameworkId": "itil-v3",
+      "ref": "SD-ISM",
+      "title": "Information Security Management",
+      "description": "Align IT security with business security and ensure confidentiality, integrity and availability of assets, information, data and IT services.",
+      "category": "Service Design",
+      "theme": "Risk"
+    },
+    {
+      "id": "itil-v3-SD-SM",
+      "frameworkId": "itil-v3",
+      "ref": "SD-SM",
+      "title": "Supplier Management",
+      "description": "Obtain value for money from suppliers and ensure underpinning contracts and agreements are aligned with business needs. Manage relationships with suppliers.",
+      "category": "Service Design",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v3-SD-DC",
+      "frameworkId": "itil-v3",
+      "ref": "SD-DC",
+      "title": "Design Coordination",
+      "description": "Coordinate all service design activities, processes and resources. Produce quality, consistent service design packages to be handed over to service transition.",
+      "category": "Service Design",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v3-ST-ChM",
+      "frameworkId": "itil-v3",
+      "ref": "ST-ChM",
+      "title": "Change Management",
+      "description": "Control the lifecycle of all changes, enabling beneficial changes to be made with minimum disruption to IT services.",
+      "category": "Service Transition",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-ST-SACM",
+      "frameworkId": "itil-v3",
+      "ref": "ST-SACM",
+      "title": "Service Asset and Configuration Management",
+      "description": "Ensure assets required to deliver services are properly controlled and accurate, reliable information about assets is available when and where needed.",
+      "category": "Service Transition",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-ST-RDM",
+      "frameworkId": "itil-v3",
+      "ref": "ST-RDM",
+      "title": "Release and Deployment Management",
+      "description": "Plan, schedule and control build, test and deployment of releases. Deliver new functionality required by the business while protecting the integrity of existing services.",
+      "category": "Service Transition",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-ST-KM",
+      "frameworkId": "itil-v3",
+      "ref": "ST-KM",
+      "title": "Knowledge Management",
+      "description": "Improve the quality of management decision making by ensuring that reliable, secure information is available throughout the service lifecycle.",
+      "category": "Service Transition",
+      "theme": "People"
+    },
+    {
+      "id": "itil-v3-ST-SEV",
+      "frameworkId": "itil-v3",
+      "ref": "ST-SEV",
+      "title": "Service Evaluation and Validation Testing",
+      "description": "Provide objective evidence that the new or changed service supports the business and its requirements, including agreed utility and warranty.",
+      "category": "Service Transition",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SO-IM",
+      "frameworkId": "itil-v3",
+      "ref": "SO-IM",
+      "title": "Incident Management",
+      "description": "Manage the lifecycle of all incidents to restore normal service operation as quickly as possible and minimise the adverse impact on business operations.",
+      "category": "Service Operation",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SO-PM",
+      "frameworkId": "itil-v3",
+      "ref": "SO-PM",
+      "title": "Problem Management",
+      "description": "Manage the lifecycle of all problems from first identification through further investigation and documentation to ultimate closure. Identify root causes and prevent recurrence.",
+      "category": "Service Operation",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SO-EvM",
+      "frameworkId": "itil-v3",
+      "ref": "SO-EvM",
+      "title": "Event Management",
+      "description": "Manage events throughout their lifecycle. Events include any detectable or discernible occurrence that has significance for the management of IT infrastructure.",
+      "category": "Service Operation",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SO-RF",
+      "frameworkId": "itil-v3",
+      "ref": "SO-RF",
+      "title": "Request Fulfilment",
+      "description": "Manage the lifecycle of service requests from users. Provide a channel for users to request and receive standard services, and provide information to users about services available.",
+      "category": "Service Operation",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-SO-AcM",
+      "frameworkId": "itil-v3",
+      "ref": "SO-AcM",
+      "title": "Access Management",
+      "description": "Grant authorised users the right to use a service while preventing access to non-authorised users. Execute policies and actions defined in information security management.",
+      "category": "Service Operation",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v3-CSI-7SI",
+      "frameworkId": "itil-v3",
+      "ref": "CSI-7SI",
+      "title": "Seven-Step Improvement Process",
+      "description": "Identify and implement improvements to IT services and service management. Define what should be measured, gather and process data, analyse and present information, and implement improvement actions.",
+      "category": "Continual Service Improvement",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v3-CSI-SMR",
+      "frameworkId": "itil-v3",
+      "ref": "CSI-SMR",
+      "title": "Service Measurement and Reporting",
+      "description": "Define, collect and report on service performance metrics to provide the business with an accurate picture of service performance and to support continual service improvement.",
+      "category": "Continual Service Improvement",
+      "theme": "Governance"
+    }
+  ],
+  "itil-v4": [
+    {
+      "id": "itil-v4-GMP-ARC",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-ARC",
+      "title": "Architecture Management",
+      "description": "Provide an understanding of all the different elements that make up an organisation and how those elements interrelate, enabling the organisation to effectively achieve its current and future objectives.",
+      "category": "General Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-GMP-CI",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-CI",
+      "title": "Continual Improvement",
+      "description": "Align the organisation's practices and services with changing business needs through the ongoing identification and improvement of services, service components, practices, or any element involved in the efficient and effective management of products and services.",
+      "category": "General Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-GMP-ISM",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-ISM",
+      "title": "Information Security Management",
+      "description": "Protect the information needed by the organisation to conduct its business. This includes understanding and managing risks to confidentiality, integrity and availability of information.",
+      "category": "General Management Practices",
+      "theme": "Risk"
+    },
+    {
+      "id": "itil-v4-GMP-KM",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-KM",
+      "title": "Knowledge Management",
+      "description": "Maintain and improve the effective, efficient, and convenient use of information and knowledge across the organisation.",
+      "category": "General Management Practices",
+      "theme": "People"
+    },
+    {
+      "id": "itil-v4-GMP-MEA",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-MEA",
+      "title": "Measurement and Reporting",
+      "description": "Support good decision-making and continual improvement by decreasing the levels of uncertainty. Ensure relevant measurements are defined and data is collected to provide meaningful insights.",
+      "category": "General Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-GMP-ORM",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-ORM",
+      "title": "Organisational Change Management",
+      "description": "Ensure that changes in an organisation are smoothly and successfully implemented and that lasting benefits are achieved by managing the human aspects of the changes.",
+      "category": "General Management Practices",
+      "theme": "People"
+    },
+    {
+      "id": "itil-v4-GMP-PFM",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-PFM",
+      "title": "Portfolio Management",
+      "description": "Ensure the organisation has the right mix of programmes, projects, products and services to execute its strategy within its funding and resource constraints.",
+      "category": "General Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-GMP-PROJ",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-PROJ",
+      "title": "Project Management",
+      "description": "Ensure all projects in the organisation are successfully delivered. Achieve agreed outcomes and manage risks in a structured way.",
+      "category": "General Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-GMP-REL",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-REL",
+      "title": "Relationship Management",
+      "description": "Establish and nurture the links between the organisation and its stakeholders at strategic and tactical levels. Identify, analyse and monitor relationships.",
+      "category": "General Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-GMP-RISK",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-RISK",
+      "title": "Risk Management",
+      "description": "Ensure that the organisation understands and effectively handles risks. Risk management preserves and increases value through managing uncertainty.",
+      "category": "General Management Practices",
+      "theme": "Risk"
+    },
+    {
+      "id": "itil-v4-GMP-SFM",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-SFM",
+      "title": "Service Financial Management",
+      "description": "Support the organisation's strategies and plans for service management by ensuring that the organisation's financial resources and investments are being used effectively.",
+      "category": "General Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-GMP-STR",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-STR",
+      "title": "Strategy Management",
+      "description": "Formulate the goals of the organisation and adopt the courses of action and allocation of resources necessary for achieving those goals.",
+      "category": "General Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-GMP-SPC",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-SPC",
+      "title": "Supplier Management",
+      "description": "Ensure that the organisation's suppliers and their performances are managed appropriately to support the seamless provision of quality products and services.",
+      "category": "General Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-GMP-WFM",
+      "frameworkId": "itil-v4",
+      "ref": "GMP-WFM",
+      "title": "Workforce and Talent Management",
+      "description": "Ensure the organisation has the right people with the appropriate skills and knowledge and in the correct roles to support its business objectives.",
+      "category": "General Management Practices",
+      "theme": "People"
+    },
+    {
+      "id": "itil-v4-SMP-AVL",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-AVL",
+      "title": "Availability Management",
+      "description": "Ensure services deliver agreed levels of availability to meet the needs of customers and users. Includes planning, monitoring and reviewing availability against requirements.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-BCA",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-BCA",
+      "title": "Business Analysis",
+      "description": "Analyse a business or some element of it, define its associated needs, and recommend solutions to address these needs and/or solve a business problem.",
+      "category": "Service Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-SMP-CAP",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-CAP",
+      "title": "Capacity and Performance Management",
+      "description": "Ensure that services achieve agreed and expected performance levels, satisfying current and future demand in a cost-effective way.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-CHG",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-CHG",
+      "title": "Change Enablement",
+      "description": "Maximise the number of successful IT and product changes by ensuring that risks have been properly assessed, authorising changes to proceed and managing a change schedule.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-INC",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-INC",
+      "title": "Incident Management",
+      "description": "Minimise the negative impact of incidents by restoring normal service operation as quickly as possible. Includes logging, classifying, prioritising and resolving incidents.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-ITM",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-ITM",
+      "title": "IT Asset Management",
+      "description": "Plan and manage the full lifecycle of all IT assets, to help the organisation: maximise value, control costs, manage risks, support decision-making about purchase, re-use, retirement and disposal.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-MON",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-MON",
+      "title": "Monitoring and Event Management",
+      "description": "Systematically observe services and service components, and record and report selected changes of state identified as events. Identify and prioritise infrastructure, services, business processes and information security events.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-PROB",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-PROB",
+      "title": "Problem Management",
+      "description": "Reduce the likelihood and impact of incidents by identifying actual and potential causes of incidents, and managing workarounds and known errors.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-REL",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-REL",
+      "title": "Release Management",
+      "description": "Make new and changed services and features available for use. Includes managing the release package, scheduling and deploying releases.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-SACM",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-SACM",
+      "title": "Service Configuration Management",
+      "description": "Ensure that accurate and reliable information about the configuration of services, and the CIs that support them, is available when and where needed.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-SCM",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-SCM",
+      "title": "Service Continuity Management",
+      "description": "Ensure availability and performance of a service are maintained at sufficient levels in case of a disaster. Provide a framework for building organisational resilience.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-SD",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-SD",
+      "title": "Service Design",
+      "description": "Design products and services that are fit for purpose and fit for use, and that can be delivered by the organisation and its ecosystem of partners and suppliers.",
+      "category": "Service Management Practices",
+      "theme": "Governance"
+    },
+    {
+      "id": "itil-v4-SMP-SDM",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-SDM",
+      "title": "Service Desk",
+      "description": "Capture demand for incident resolution and service requests. Provide a clear path for users to report issues, queries and requests, and have them acknowledged, classified, owned and actioned.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-SLM",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-SLM",
+      "title": "Service Level Management",
+      "description": "Set clear business-based targets for service levels, and ensure that delivery of services can be properly assessed, monitored and managed against these targets.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-SRQ",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-SRQ",
+      "title": "Service Request Management",
+      "description": "Support the agreed quality of a service by handling all pre-defined, user-initiated service requests in an effective and user-friendly manner.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-SMP-SVC",
+      "frameworkId": "itil-v4",
+      "ref": "SMP-SVC",
+      "title": "Service Validation and Testing",
+      "description": "Ensure that new or changed products and services meet defined requirements. Establish and maintain defined and agreed service quality.",
+      "category": "Service Management Practices",
+      "theme": "Operations"
+    },
+    {
+      "id": "itil-v4-TMP-DEP",
+      "frameworkId": "itil-v4",
+      "ref": "TMP-DEP",
+      "title": "Deployment Management",
+      "description": "Move new or changed hardware, software, documentation, processes or any other component to live environments. Manage deployments across environments from development to production.",
+      "category": "Technical Management Practices",
+      "theme": "Technology"
+    },
+    {
+      "id": "itil-v4-TMP-IIM",
+      "frameworkId": "itil-v4",
+      "ref": "TMP-IIM",
+      "title": "Infrastructure and Platform Management",
+      "description": "Oversee the infrastructure and platforms used by an organisation. This enables the monitoring of technology solutions available, including solutions offered by third parties.",
+      "category": "Technical Management Practices",
+      "theme": "Technology"
+    },
+    {
+      "id": "itil-v4-TMP-SWD",
+      "frameworkId": "itil-v4",
+      "ref": "TMP-SWD",
+      "title": "Software Development and Management",
+      "description": "Ensure that applications meet internal and external stakeholder needs in terms of functionality, reliability, maintainability, compliance and auditability.",
+      "category": "Technical Management Practices",
+      "theme": "Technology"
+    }
   ]
 }

@@ -8,6 +8,7 @@
     "lastUpdated": "2013-10-01",
     "region": "International",
     "type": "Standard",
+    "category": "Information Security",
     "url": "https://www.iso.org/standard/54534.html",
     "color": "#1d4ed8",
     "businessImpact": [
@@ -33,6 +34,7 @@
     "lastUpdated": "2022-10-25",
     "region": "International",
     "type": "Standard",
+    "category": "Information Security",
     "url": "https://www.iso.org/standard/82875.html",
     "color": "#2563eb",
     "businessImpact": [
@@ -50,6 +52,142 @@
     ]
   },
   {
+    "id": "iso27002",
+    "name": "ISO/IEC 27002:2022",
+    "shortName": "ISO 27002",
+    "description": "Code of practice for information security controls providing implementation guidance for the 93 controls referenced in ISO/IEC 27001:2022 Annex A. Serves as the companion guidance standard to ISO 27001.",
+    "version": "2022",
+    "lastUpdated": "2022-02-15",
+    "region": "International",
+    "type": "Standard",
+    "category": "Information Security",
+    "url": "https://www.iso.org/standard/75652.html",
+    "color": "#3b82f6",
+    "businessImpact": [
+      "Provides the detailed 'how-to' guidance for implementing all 93 controls listed in ISO/IEC 27001:2022 Annex A.",
+      "Restructured from 114 controls across 14 domains to 93 controls in 4 themes: Organisational, People, Physical, Technological.",
+      "11 new controls introduced in 2022 cover threat intelligence, ICT readiness, web filtering, secure coding and data masking.",
+      "Attribute tagging system (5 attributes per control) enables targeted gap analysis and cross-framework mapping.",
+      "Adoption supports ISO 27001 certification readiness; auditors use it as the primary reference for control implementation adequacy."
+    ],
+    "structure": [
+      "4 control themes: Organisational (37 controls), People (8 controls), Physical (14 controls), Technological (34 controls).",
+      "93 controls in total, each with: Control, Purpose, Guidance, and Other Information sections.",
+      "Each control tagged with 5 attributes: Control type, Information security property, Cybersecurity concept, Operational capability, Security domain.",
+      "Annex A: Attribute cross-reference tables for filtering controls by security property, concept or capability.",
+      "Cross-references to other ISO/IEC standards including 27001, 27005, 27017, 27018 and 27035."
+    ]
+  },
+  {
+    "id": "iso27005",
+    "name": "ISO/IEC 27005:2022",
+    "shortName": "ISO 27005",
+    "description": "International guidance standard for information security risk management. Supports implementation of the risk assessment and treatment requirements of ISO/IEC 27001 and aligns with ISO 31000.",
+    "version": "2022",
+    "lastUpdated": "2022-10-25",
+    "region": "International",
+    "type": "Standard",
+    "category": "Information Security",
+    "url": "https://www.iso.org/standard/80585.html",
+    "color": "#6366f1",
+    "businessImpact": [
+      "Provides structured methodology for conducting the risk assessments mandated by ISO/IEC 27001 clauses 6.1.2 and 8.2.",
+      "Third edition (2022) aligns with ISO 31000:2018 and introduces event-based and asset-based risk assessment approaches.",
+      "Supports organisations in selecting risk treatment options and producing the Statement of Applicability (SoA).",
+      "Widely referenced in ISO 27001 certification audits to assess the rigour of the risk management process.",
+      "Applicable to all organisations regardless of size, sector or nature — guidance is adaptable to context."
+    ],
+    "structure": [
+      "Core risk management process: risk identification, risk analysis, risk evaluation and risk treatment.",
+      "Two risk assessment approaches: event-based (threat-scenario driven) and asset-based (asset-threat-vulnerability driven).",
+      "Clauses aligned with ISO 31000 framework: establishing context, risk assessment, risk treatment, monitoring and review.",
+      "Annex A: Examples of risk identification techniques including threat catalogues and vulnerability sources.",
+      "Annex B: Risk treatment and residual risk acceptance guidance aligned with ISO/IEC 27001 Annex A controls."
+    ]
+  },
+  {
+    "id": "iso27017",
+    "name": "ISO/IEC 27017:2015",
+    "shortName": "ISO 27017",
+    "description": "Code of practice for information security controls based on ISO/IEC 27002 for cloud services. Provides cloud-specific implementation guidance and seven additional controls for cloud service providers and customers.",
+    "version": "2015",
+    "lastUpdated": "2015-12-15",
+    "region": "International",
+    "type": "Standard",
+    "category": "Information Security",
+    "url": "https://www.iso.org/standard/43757.html",
+    "color": "#0ea5e9",
+    "businessImpact": [
+      "Applicable to both cloud service providers (CSPs) and cloud service customers (CSCs), clarifying shared-responsibility obligations.",
+      "7 cloud-specific controls address virtual machine hardening, cloud administrator monitoring, segregation in virtual environments and more.",
+      "Referenced in cloud procurement contracts and CSP compliance programmes (AWS, Azure, GCP all reference ISO 27017 in their compliance portfolios).",
+      "Supports alignment with GDPR Art. 28 (processor obligations) and ENISA cloud security guidelines.",
+      "Certification against ISO 27017 (in conjunction with ISO 27001) is increasingly demanded by enterprise cloud buyers."
+    ],
+    "structure": [
+      "Extends ISO/IEC 27002:2013 with cloud-specific implementation guidance for each applicable control.",
+      "7 additional cloud controls: CLD.6.3.1 (shared roles), CLD.9.5.1 (virtual machine hardening), CLD.9.5.2 (VM lifecycle), CLD.12.1.5 (admin operations), CLD.12.4.5 (monitoring), CLD.13.1.4 (network alignment), CLD.13.2.6 (data return/deletion).",
+      "Guidance split by role: cloud service provider (CSP) and cloud service customer (CSC) perspectives for each control.",
+      "Annex A: Relationship between ISO/IEC 27017 and ISO/IEC 27002 control sets.",
+      "Cross-referenced with ISO/IEC 27018 for PII-specific cloud controls."
+    ]
+  },
+  {
+    "id": "iso27018",
+    "name": "ISO/IEC 27018:2019",
+    "shortName": "ISO 27018",
+    "description": "Code of practice for protection of personally identifiable information (PII) in public clouds acting as PII processors. Extends ISO/IEC 27002 with privacy-specific controls for cloud service providers.",
+    "version": "2019",
+    "lastUpdated": "2019-01-15",
+    "region": "International",
+    "type": "Standard",
+    "category": "Information Security",
+    "url": "https://www.iso.org/standard/76559.html",
+    "color": "#0284c7",
+    "businessImpact": [
+      "Directly relevant to cloud service providers processing personal data on behalf of customers, particularly under GDPR Art. 28.",
+      "Provides a recognised compliance framework for demonstrating accountability as a data processor in public cloud environments.",
+      "Certification (as an extension to ISO 27001) demonstrates to cloud customers that their data is handled in accordance with privacy principles.",
+      "11 additional privacy-specific controls cover purposes, consent, transparency, data subject rights and PII deletion.",
+      "Microsoft Azure, AWS and Google Cloud reference ISO 27018 certification in their GDPR processor commitments."
+    ],
+    "structure": [
+      "Extends ISO/IEC 27002 with privacy-specific implementation guidance and 11 additional PII-protection controls.",
+      "Covers 5 privacy principles: Consent and choice, Purpose legitimacy, Collection limitation, Data minimisation, Transparency.",
+      "PII-specific controls address: processing purpose limitation, prohibition on use for advertising/marketing without consent, deletion and return of PII.",
+      "Annex A: 25 public-cloud-specific PII controls mapped to ISO 29100 privacy principles.",
+      "Cross-referenced with ISO/IEC 27017 and ISO/IEC 27701 for cloud and privacy management integration."
+    ]
+  },
+  {
+    "id": "iso27701",
+    "name": "ISO/IEC 27701:2019",
+    "shortName": "ISO 27701",
+    "description": "Privacy Information Management System (PIMS) standard extending ISO/IEC 27001 and ISO/IEC 27002 to include privacy requirements. Provides a framework for managing personally identifiable information (PII) aligned with GDPR and other privacy regulations.",
+    "version": "2019",
+    "lastUpdated": "2019-08-06",
+    "region": "International",
+    "type": "Standard",
+    "category": "Information Security",
+    "url": "https://www.iso.org/standard/71670.html",
+    "color": "#8b5cf6",
+    "businessImpact": [
+      "Extends existing ISO 27001 ISMS certification to cover privacy, reducing duplication of audit effort.",
+      "Provides a certifiable framework for demonstrating GDPR accountability, referenced by EU regulators and DPAs.",
+      "Separate guidance for PII controllers and PII processors — enables precise mapping to GDPR Art. 24/28 obligations.",
+      "Annex D maps 27701 requirements to GDPR articles, making gap analysis straightforward for EU-regulated organisations.",
+      "Increasingly requested by enterprise procurement teams and regulators as evidence of privacy maturity."
+    ],
+    "structure": [
+      "Extends ISO/IEC 27001 clauses 4–10 with PIMS-specific requirements for context, planning and operations.",
+      "Extends ISO/IEC 27002 controls with additional privacy implementation guidance.",
+      "Part A: PIMS-specific requirements for PII controllers (additional to ISO 27001/27002 requirements).",
+      "Part B: PIMS-specific requirements for PII processors (additional to ISO 27001/27002 requirements).",
+      "Annex D: Mapping to GDPR articles for direct compliance gap analysis.",
+      "Annex F: Mapping to ISO 29151 (code of practice for PII protection)."
+    ]
+  },
+  {
     "id": "nis2",
     "name": "NIS2 Directive",
     "shortName": "NIS2",
@@ -58,6 +196,7 @@
     "lastUpdated": "2022-12-27",
     "region": "European Union",
     "type": "Regulation",
+    "category": "EU Regulation",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022L2555",
     "color": "#0891b2",
     "businessImpact": [
@@ -85,6 +224,7 @@
     "lastUpdated": "2016-05-04",
     "region": "European Union",
     "type": "Regulation",
+    "category": "EU Regulation",
     "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
     "color": "#7c3aed",
     "businessImpact": [
@@ -112,6 +252,7 @@
     "lastUpdated": "2022-12-27",
     "region": "European Union",
     "type": "Regulation",
+    "category": "EU Regulation",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554",
     "color": "#d97706",
     "businessImpact": [
@@ -140,6 +281,7 @@
     "lastUpdated": "2021-05-18",
     "region": "International",
     "type": "Framework",
+    "category": "Information Security",
     "url": "https://www.cisecurity.org/controls",
     "color": "#059669",
     "businessImpact": [
@@ -167,6 +309,7 @@
     "lastUpdated": "2024-02-26",
     "region": "International",
     "type": "Framework",
+    "category": "Information Security",
     "url": "https://www.nist.gov/cyberframework",
     "color": "#dc2626",
     "businessImpact": [
@@ -186,13 +329,14 @@
   },
   {
     "id": "kritis",
-    "name": "KRITIS / IT-Sicherheitsgesetz 2.0",
+    "name": "KRITIS / IT Security Act 2.0",
     "shortName": "KRITIS",
-    "description": "German regulation for operators of critical infrastructure (Kritische Infrastrukturen) under the BSI Act (BSIG) and IT Security Act 2.0 (IT-Sicherheitsgesetz 2.0, 2021). Mandates state-of-the-art technical and organisational security measures, attack detection systems, proof of compliance every two years, and incident reporting obligations for critical infrastructure operators.",
-    "version": "IT-SiG 2.0 (2021)",
+    "description": "German regulation for operators of critical infrastructure (KRITIS — Kritische Infrastrukturen) under the BSI Act (BSIG) and IT Security Act 2.0 (2021). Mandates state-of-the-art technical and organisational security measures, attack detection systems, proof of compliance every two years, and incident reporting obligations for critical infrastructure operators.",
+    "version": "IT Security Act 2.0 (2021)",
     "lastUpdated": "2021-05-28",
     "region": "Germany",
     "type": "Regulation",
+    "category": "German Regulation",
     "url": "https://www.bsi.bund.de/EN/Themen/KRITIS-und-regulierte-Unternehmen/Kritische-Infrastrukturen/kritis_node.html",
     "color": "#b91c1c",
     "businessImpact": [
@@ -215,13 +359,14 @@
   },
   {
     "id": "nis2-umsg",
-    "name": "NIS2-Umsetzungsgesetz (NIS2UmsuCG)",
+    "name": "NIS2 Implementation Act (NIS2UmsuCG)",
     "shortName": "NIS2UmsuCG",
-    "description": "German national implementation of the EU NIS2 Directive (2022/2555). The NIS-2-Umsetzungs- und Cybersicherheitsstärkungsgesetz transposes the NIS2 requirements into German law, extends and replaces the existing IT Security Act framework, and introduces strengthened obligations for essential and important entities including management accountability and supply chain security.",
+    "description": "German national implementation of the EU NIS2 Directive (2022/2555). The NIS2 Implementation and Cybersecurity Strengthening Act (NIS2UmsuCG) transposes the NIS2 requirements into German law, extends and replaces the existing IT Security Act framework, and introduces strengthened obligations for essential and important entities including management accountability and supply chain security.",
     "version": "2024 (draft/enactment)",
     "lastUpdated": "2024-07-24",
     "region": "Germany",
     "type": "Regulation",
+    "category": "German Regulation",
     "url": "https://www.bmi.bund.de/SharedDocs/gesetzgebungsverfahren/DE/nis-2-umsetzungsgesetz.html",
     "color": "#1e40af",
     "businessImpact": [
@@ -245,13 +390,14 @@
   },
   {
     "id": "bsi-grundschutz",
-    "name": "BSI IT-Grundschutz",
+    "name": "BSI IT-Baseline Protection (IT-Grundschutz)",
     "shortName": "BSI Grundschutz",
-    "description": "Comprehensive information security methodology published by Germany's Federal Office for Information Security (BSI). Consists of BSI Standards (200-1 through 200-4) and the IT-Grundschutz Compendium, providing building blocks for establishing and operating an ISMS. Widely used by German public authorities and recognised as equivalent to ISO/IEC 27001.",
+    "description": "Comprehensive information security methodology published by Germany's Federal Office for Information Security (BSI). Consists of BSI Standards (200-1 through 200-4) and the IT-Baseline Protection Compendium (IT-Grundschutz-Kompendium), providing building blocks for establishing and operating an ISMS. Widely used by German public authorities and recognised as equivalent to ISO/IEC 27001.",
     "version": "Compendium 2023",
     "lastUpdated": "2023-02-01",
     "region": "Germany",
     "type": "Framework",
+    "category": "German Regulation",
     "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/it-grundschutz_node.html",
     "color": "#065f46",
     "businessImpact": [
@@ -264,11 +410,246 @@
     ],
     "structure": [
       "Four BSI Standards: 200-1 (ISMS, aligned with ISO 27001), 200-2 (Methodology), 200-3 (Risk Analysis), 200-4 (BCM, aligned with ISO 22301).",
-      "Standard 200-2 defines three protection approaches: Basic (Basis-Absicherung), Standard (Standard-Absicherung), Core (Kern-Absicherung).",
-      "IT-Grundschutz Compendium (updated annually): building blocks (Bausteine) across 10 process layers — ISMS, ORP, CON, OPS, DER, APP, SYS, IND, NET, INF.",
+      "Standard 200-2 defines three protection approaches: Basic, Standard, and Core protection.",
+      "IT-Baseline Protection Compendium (updated annually): building blocks (Bausteine) across 10 process layers — ISMS, ORP, CON, OPS, DER, APP, SYS, IND, NET, INF.",
       "Each building block specifies elementary threats and requirements at three levels: Basic, Standard and High Protection.",
       "Cross-references to ISO/IEC 27001 controls and other standards included in each building block.",
       "Standard Protection approach is equivalent to ISO/IEC 27001 certification."
+    ]
+  },
+  {
+    "id": "bait",
+    "name": "Supervisory IT Requirements for Banks (BAIT)",
+    "shortName": "BAIT",
+    "description": "Supervisory requirements for IT in banks issued by the German Federal Financial Supervisory Authority (BaFin). BAIT (Bankaufsichtliche Anforderungen an die IT) defines binding requirements for IT governance, IT risk management, information security, IT projects and outsourcing for German credit institutions under § 25a KWG.",
+    "version": "2021 (revised)",
+    "lastUpdated": "2021-08-16",
+    "region": "Germany",
+    "type": "Regulation",
+    "category": "German Regulation",
+    "url": "https://www.bafin.de/DE/Aufsicht/BankenFinanzdienstleister/Anforderungen/BAIT/bait_node.html",
+    "color": "#7c2d12",
+    "businessImpact": [
+      "Mandatory for all German credit institutions (banks, savings banks, cooperative banks) under § 25a KWG.",
+      "Specifies binding requirements for IT governance, IT risk management, information security management and IT operations.",
+      "Non-compliance can trigger supervisory measures including fines, remediation orders or management restrictions by BaFin.",
+      "Revised in 2021 to add requirements for critical infrastructure protection (KRITIS alignment) and cloud outsourcing.",
+      "Organisations must appoint an Information Security Officer (ISB) independent of IT operations.",
+      "Regular self-assessments and reporting to senior management on IT risk and information security posture required."
+    ],
+    "structure": [
+      "12 chapters covering the full IT governance and security lifecycle.",
+      "Ch. 1: IT Strategy — board-level IT governance and risk appetite.",
+      "Ch. 2: IT Governance — structures, roles (ISB, IT risk manager), committees.",
+      "Ch. 3: Information Risk Management — risk identification, assessment, treatment and reporting.",
+      "Ch. 4: Information Security Management — ISMS, security policies, awareness.",
+      "Ch. 5: IT Operations — capacity management, availability, configuration and change management.",
+      "Ch. 6: IT Projects and Applications — secure development and project oversight.",
+      "Ch. 7: IT Outsourcing & Third-Party Management — EBA Guidelines alignment.",
+      "Ch. 8–12: Critical infrastructure protection, payment transactions, network security, emergency management, IT-related audit."
+    ]
+  },
+  {
+    "id": "pci-dss",
+    "name": "Payment Card Industry Data Security Standard",
+    "shortName": "PCI DSS",
+    "description": "Global security standard for organisations that store, process or transmit payment card data. Maintained by the PCI Security Standards Council (PCI SSC) and mandated by card brands (Visa, Mastercard, Amex, Discover, JCB).",
+    "version": "v4.0.1",
+    "lastUpdated": "2024-06-11",
+    "region": "International",
+    "type": "Standard",
+    "category": "Industry Standard",
+    "url": "https://www.pcisecuritystandards.org/document_library/",
+    "color": "#15803d",
+    "businessImpact": [
+      "Non-compliance can result in card brand fines ($5k–$100k/month), increased transaction fees or loss of card acceptance rights.",
+      "Applies to all entities that store, process or transmit cardholder data or sensitive authentication data.",
+      "Four merchant levels (based on annual transaction volume) determine the required validation method (QSA audit, SAQ or internal audit).",
+      "v4.0 introduced 64 new requirements (including enhanced phishing protection, MFA expansion and customised approach option).",
+      "Customised approach (new in v4.0) allows organisations to achieve security objectives through alternative controls with rigorous testing."
+    ],
+    "structure": [
+      "12 Requirements organised under 6 control objectives.",
+      "Objective 1 — Build and Maintain a Secure Network: Req. 1 (network security controls), Req. 2 (secure configurations).",
+      "Objective 2 — Protect Account Data: Req. 3 (protect stored data), Req. 4 (encrypt in transit).",
+      "Objective 3 — Maintain a Vulnerability Management Program: Req. 5 (anti-malware), Req. 6 (secure systems & software).",
+      "Objective 4 — Implement Strong Access Control: Req. 7 (access by need-to-know), Req. 8 (user authentication), Req. 9 (physical access).",
+      "Objective 5 — Monitor and Test Networks: Req. 10 (logging & monitoring), Req. 11 (security testing).",
+      "Objective 6 — Maintain an Information Security Policy: Req. 12 (security policy & programme)."
+    ]
+  },
+  {
+    "id": "tisax",
+    "name": "Trusted Information Security Assessment Exchange",
+    "shortName": "TISAX",
+    "description": "Information security assessment and exchange scheme for the automotive industry, based on the VDA Information Security Assessment (VDA ISA). Managed by ENX Association, TISAX allows automotive OEMs and suppliers to share assessment results without repeated audits.",
+    "version": "VDA ISA 6.0.2",
+    "lastUpdated": "2024-01-01",
+    "region": "International",
+    "type": "Standard",
+    "category": "Industry Standard",
+    "url": "https://portal.enx.com/en-US/TISAX/",
+    "color": "#92400e",
+    "businessImpact": [
+      "De facto mandatory for automotive supply chain: most German OEMs (VW, BMW, Mercedes-Benz, Porsche) require TISAX certification from suppliers handling sensitive data.",
+      "Three assessment levels: AL1 (self-assessment, normal protection), AL2 (verified by auditor, high protection / prototype data), AL3 (on-site audit, very high protection / development parts).",
+      "Results shared via ENX portal; avoids duplicate audits across multiple OEM customers.",
+      "Prototype and development data categories require the highest AL3 level with mandatory on-site assessments.",
+      "Scope typically covers IT infrastructure, physical security, and information handling processes at relevant locations.",
+      "Non-certification can disqualify suppliers from OEM contracts involving sensitive information exchange."
+    ],
+    "structure": [
+      "Based on VDA ISA (Information Security Assessment) questionnaire, aligned with ISO/IEC 27001.",
+      "6 domains in VDA ISA 6.x: Information Security, HR Security, Physical Security, Identity & Access Management, IT Security, Supplier Relationships.",
+      "Each requirement rated Must (mandatory), Should (recommended) or Can (optional); maturity rated 0–5.",
+      "Three assessment objectives: Information security (AL1/AL2), Prototype protection (AL2/AL3), Data connected car (AL2/AL3).",
+      "Assessment carried out by ENX-approved audit providers; results valid for 3 years.",
+      "Cross-referenced with ISO/IEC 27001, NIST CSF and IEC 62443 for industrial control systems."
+    ]
+  },
+  {
+    "id": "cobit",
+    "name": "Control Objectives for Information and Related Technologies",
+    "shortName": "COBIT",
+    "description": "IT governance and management framework developed by ISACA. COBIT 2019 provides a comprehensive set of governance and management objectives to help enterprises achieve their IT-related goals while balancing benefits, risk and resources.",
+    "version": "2019",
+    "lastUpdated": "2019-11-01",
+    "region": "International",
+    "type": "Framework",
+    "category": "IT Governance",
+    "url": "https://www.isaca.org/resources/cobit",
+    "color": "#ea580c",
+    "businessImpact": [
+      "Widely adopted by enterprises and IT auditors; referenced by SOX, COSO ERM and internal audit standards.",
+      "Supports alignment of IT goals with business objectives and stakeholder needs through cascading goals.",
+      "40 governance and management objectives cover the full spectrum from board oversight to day-to-day IT operations.",
+      "Design factors (enterprise size, risk profile, sector, etc.) enable tailored framework implementation.",
+      "Recognised by ISACA for CGEIT and CISA certification requirements; used in IT audit engagements globally.",
+      "Version 2019 replaced COBIT 5 and introduced a redesigned performance management system (0–5 capability levels)."
+    ],
+    "structure": [
+      "Two domains: Governance of Enterprise IT (EDM — Evaluate, Direct and Monitor) and Management of Enterprise IT (APO, BAI, DSS, MEA).",
+      "5 governance objectives (EDM01–EDM05): Ensure governance framework, strategy delivery, benefits realisation, risk optimisation and resource optimisation.",
+      "35 management objectives across 4 domains: APO (Align, Plan and Organise), BAI (Build, Acquire and Implement), DSS (Deliver, Service and Support), MEA (Monitor, Evaluate and Assess).",
+      "Each objective has: purpose, goals, components (processes, org structures, information flows, people/skills, policies, culture, services/infrastructure).",
+      "Performance management: 6 capability levels (0–5) with defined attributes per level per objective.",
+      "Design Guide: 12 design factors used to tailor the framework scope and priorities to organisational context."
+    ]
+  },
+  {
+    "id": "iso38500",
+    "name": "ISO/IEC 38500:2024",
+    "shortName": "ISO 38500",
+    "description": "International standard for the governance of IT for organisations. Provides guiding principles for governing bodies on the effective, efficient and acceptable use of IT, applicable to organisations of all types and sizes.",
+    "version": "2024",
+    "lastUpdated": "2024-03-01",
+    "region": "International",
+    "type": "Standard",
+    "category": "IT Governance",
+    "url": "https://www.iso.org/standard/84034.html",
+    "color": "#1e3a5f",
+    "businessImpact": [
+      "Provides high-level governance principles applicable to boards of directors, executive teams and other governing bodies.",
+      "Complements COBIT and ITIL by providing the strategic governance context for IT management frameworks.",
+      "Supports compliance with corporate governance codes and regulations that require boards to address IT risk (e.g., King IV, NIS2 Art. 20).",
+      "Helps governing bodies fulfil accountability obligations for IT decisions, aligning IT with organisational strategy.",
+      "Widely referenced in national governance frameworks and used alongside sector-specific regulations."
+    ],
+    "structure": [
+      "3 core tasks for governing bodies: Evaluate (current and future IT use), Direct (preparation and implementation of plans), Monitor (IT performance and conformance).",
+      "6 principles for good governance of IT: Responsibility, Strategy, Acquisition, Performance, Conformance, Human Behaviour.",
+      "Model shows the relationship between governing body, management activities and IT-enabled business activities.",
+      "Principle 1 — Responsibility: Individuals and groups understand and accept their IT responsibilities.",
+      "Principle 2 — Strategy: IT strategy considers current and future IT capabilities and business strategy.",
+      "Principle 3 — Acquisition: IT acquisitions are made with due diligence and appropriate decision-making.",
+      "Principle 4 — Performance: IT is fit for purpose; supports organisational needs.",
+      "Principle 5 — Conformance: IT complies with mandatory legislation and regulations.",
+      "Principle 6 — Human Behaviour: IT policies respect human behaviour and needs."
+    ]
+  },
+  {
+    "id": "iso31000",
+    "name": "ISO 31000:2018",
+    "shortName": "ISO 31000",
+    "description": "International standard providing principles, framework and process for risk management applicable to any organisation regardless of type, size, activity or sector. Provides universal guidance for designing, implementing, maintaining and continually improving risk management.",
+    "version": "2018",
+    "lastUpdated": "2018-02-15",
+    "region": "International",
+    "type": "Standard",
+    "category": "Risk Management",
+    "url": "https://www.iso.org/standard/65694.html",
+    "color": "#374151",
+    "businessImpact": [
+      "Serves as the foundational risk management standard; referenced by ISO 27005, ISO 22301, ISO 9001, DORA and many sector frameworks.",
+      "Applicable to all types of risk (strategic, operational, financial, reputational, security) — not limited to IT or information security.",
+      "Supports alignment of risk management with organisational governance frameworks and objectives.",
+      "Widely used as the basis for enterprise risk management (ERM) programmes alongside COSO ERM.",
+      "Helps organisations comply with governance regulations that mandate documented risk management frameworks."
+    ],
+    "structure": [
+      "3 parts: Principles, Framework and Process — each interdependent and mutually reinforcing.",
+      "8 principles: integrated, structured & comprehensive, customised, inclusive, dynamic, best available information, human & cultural factors, continual improvement.",
+      "Framework components: Leadership & Commitment, Integration, Design, Implementation, Evaluation, Improvement.",
+      "Risk management process: Communication & Consultation → Scope/Context/Criteria → Risk Assessment (identification, analysis, evaluation) → Risk Treatment → Monitoring & Review → Recording & Reporting.",
+      "Risk assessment sub-process: identify risks, analyse likelihood and consequence, evaluate against risk criteria to determine treatment priority.",
+      "Annex (informative): attributes of enhanced risk management for mature organisations."
+    ]
+  },
+  {
+    "id": "itil-v3",
+    "name": "ITIL v3 (2011 Edition)",
+    "shortName": "ITIL v3",
+    "description": "IT Infrastructure Library version 3 — a widely adopted framework of best practices for IT service management (ITSM). Organised around a service lifecycle model covering strategy, design, transition, operation and continual improvement.",
+    "version": "v3 (2011 Edition)",
+    "lastUpdated": "2011-07-01",
+    "region": "International",
+    "type": "Framework",
+    "category": "IT Governance",
+    "url": "https://www.axelos.com/certifications/itil-service-management",
+    "color": "#9333ea",
+    "businessImpact": [
+      "Globally recognised ITSM framework; basis for hundreds of thousands of ITIL certifications worldwide.",
+      "Adoption typically reduces unplanned IT downtime, improves change success rates and lowers service desk costs.",
+      "Provides the operational process layer complementing governance frameworks (COBIT, ISO 38500).",
+      "ITIL v3 Foundation certification remains one of the most widely held IT certifications globally.",
+      "Many regulators and standards (NIS2, DORA, KRITIS) implicitly require ITIL-aligned practices for incident and change management."
+    ],
+    "structure": [
+      "Service Lifecycle: 5 core publications — Service Strategy, Service Design, Service Transition, Service Operation, Continual Service Improvement.",
+      "Service Strategy: strategy management, service portfolio management, financial management, demand management, business relationship management.",
+      "Service Design: service level management, availability management, capacity management, IT service continuity, information security management, supplier management, design coordination.",
+      "Service Transition: change management, service asset and configuration management, release and deployment management, knowledge management, transition planning.",
+      "Service Operation: incident management, problem management, event management, request fulfilment, access management.",
+      "Continual Service Improvement: 7-step improvement process, service measurement, reporting."
+    ]
+  },
+  {
+    "id": "itil-v4",
+    "name": "ITIL 4",
+    "shortName": "ITIL v4",
+    "description": "IT Infrastructure Library version 4 — the latest evolution of the ITIL framework, published by Axelos in 2019. Introduces the Service Value System (SVS) and 34 management practices, integrating ITSM with Agile, DevOps and Lean approaches.",
+    "version": "v4 (2019)",
+    "lastUpdated": "2019-02-18",
+    "region": "International",
+    "type": "Framework",
+    "category": "IT Governance",
+    "url": "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation",
+    "color": "#7e22ce",
+    "businessImpact": [
+      "Replaces ITIL v3 lifecycle model with a flexible Service Value System (SVS) suited to Agile and DevOps environments.",
+      "34 management practices (replacing ITIL v3 processes) give organisations modular, fit-for-purpose ITSM guidance.",
+      "ITIL 4 Foundation is the current baseline certification; ITIL Strategic Leader and Managing Professional tracks added.",
+      "Explicitly integrates with Agile, Lean, DevOps and cloud delivery models — addresses modern digital delivery.",
+      "Supports digital transformation programmes by embedding service management thinking in product and platform teams.",
+      "Widely required or referenced in IT outsourcing contracts and service provider capability assessments."
+    ],
+    "structure": [
+      "Service Value System (SVS): Guiding Principles → Governance → Service Value Chain → Practices → Continual Improvement.",
+      "7 Guiding Principles: Focus on value, Start where you are, Progress iteratively, Collaborate, Think and work holistically, Keep it simple, Optimise and automate.",
+      "Service Value Chain: Plan, Improve, Engage, Design & Transition, Obtain/Build, Deliver & Support.",
+      "34 Practices across 3 categories: General Management (14), Service Management (17), Technical Management (3).",
+      "General Management practices include risk management, information security management, knowledge management and portfolio management.",
+      "Service Management practices include incident management, problem management, change enablement, service level management and more."
     ]
   }
 ]

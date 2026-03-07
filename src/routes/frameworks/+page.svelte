@@ -32,6 +32,31 @@
 		return counts;
 	});
 
+	const CATEGORY_ORDER = [
+		'Information Security',
+		'EU Regulation',
+		'German Regulation',
+		'IT Governance',
+		'Risk Management',
+		'Industry Standard',
+	];
+
+	/** Frameworks grouped by category, in defined order */
+	const frameworksByCategory = $derived(() => {
+		const groups = {};
+		$frameworks.forEach((fw) => {
+			const cat = fw.category || 'Other';
+			if (!groups[cat]) groups[cat] = [];
+			groups[cat].push(fw);
+		});
+		// Sort categories by defined order, then alphabetically for unknowns
+		const ordered = {};
+		[...CATEGORY_ORDER, ...Object.keys(groups).filter((c) => !CATEGORY_ORDER.includes(c)).sort()].forEach((cat) => {
+			if (groups[cat]) ordered[cat] = groups[cat];
+		});
+		return ordered;
+	});
+
 	const statItems = $derived(() => {
 		if (!stats) return [];
 		return [
@@ -54,8 +79,8 @@
 	<div style="flex:1;min-width:0">
 		<h1 class="text-3xl font-bold">Compliance Mapper</h1>
 		<p class="mt-2 text-base text-gray-600 dark:text-gray-400 max-w-3xl">
-			Explore and compare cybersecurity &amp; privacy compliance frameworks. See how controls map
-			across ISO 27001, NIS2, GDPR, DORA, CIS Controls and NIST CSF — so you can close gaps and
+			Explore and compare cybersecurity &amp; compliance frameworks. See how controls map
+			across ISO 27001, NIS2, GDPR, DORA, NIST CSF, PCI DSS, COBIT, ITIL, BAIT, TISAX and more — so you can close gaps and
 			reduce duplication.
 		</p>
 		{#if stats}
@@ -95,16 +120,21 @@
 {#if $frameworks.length === 0}
 	<div class="text-center py-10 text-gray-400">Loading…</div>
 {:else}
-	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-		{#each $frameworks as fw}
-			<FrameworkCard
-				{fw}
-				controls={$controlsData[fw.id] || []}
-				mappingCount={mappingCountByFw()[fw.id] || 0}
-				progress={$progress}
-				user={$user}
-				onclick={(f) => goto(`/frameworks/${f.id}`)}
-			/>
-		{/each}
-	</div>
+	{#each Object.entries(frameworksByCategory()) as [category, fws]}
+		<div class="mb-8">
+			<h3 class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3 border-b border-gray-100 dark:border-gray-800 pb-1">{category}</h3>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+				{#each fws as fw}
+					<FrameworkCard
+						{fw}
+						controls={$controlsData[fw.id] || []}
+						mappingCount={mappingCountByFw()[fw.id] || 0}
+						progress={$progress}
+						user={$user}
+						onclick={(f) => goto(`/frameworks/${f.id}`)}
+					/>
+				{/each}
+			</div>
+		</div>
+	{/each}
 {/if}

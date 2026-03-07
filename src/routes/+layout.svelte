@@ -116,7 +116,7 @@
 		onsettings={() => navigate('settings')}
 		onsignout={handleSignOut}
 	/>
-	<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+	<main class="{$page.url.pathname === '/controls' ? 'w-full px-4 sm:px-6 lg:px-8 py-8' : 'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8'}">
 		{@render children()}
 	</main>
 </div>
