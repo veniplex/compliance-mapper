@@ -22,6 +22,7 @@
 	const PATH_TO_VIEW = {
 		'/frameworks': 'frameworks',
 		'/controls': 'controls-table',
+		'/compare': 'compare',
 		'/api-docs': 'apidocs',
 		'/dashboard': 'dashboard',
 		'/settings': 'settings',
@@ -30,6 +31,7 @@
 	const VIEW_TO_PATH = {
 		frameworks: '/frameworks',
 		'controls-table': '/controls',
+		compare: '/compare',
 		apidocs: '/api-docs',
 		dashboard: '/dashboard',
 		settings: '/settings',

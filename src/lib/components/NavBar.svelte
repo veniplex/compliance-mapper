@@ -44,6 +44,7 @@
 		{ view: 'dashboard', label: 'Dashboard', authRequired: true },
 		{ view: 'frameworks', label: 'Frameworks', authRequired: false },
 		{ view: 'controls-table', label: 'Controls Table', authRequired: false },
+		{ view: 'compare', label: 'Compare', authRequired: false },
 		{ view: 'apidocs', label: 'API', authRequired: true },
 	]);
 
@@ -64,8 +65,8 @@
 			<span class="text-2xl" aria-hidden="true">🛡️</span>
 			<span class="font-bold text-lg tracking-tight truncate">Compliance Mapper</span>
 			<span
-				class="hidden sm:inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 ml-1"
-				>EU Cybersecurity</span
+				class="hidden sm:inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 ml-1"
+				>beta</span
 			>
 		</a>
 

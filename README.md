@@ -15,7 +15,7 @@
 </div>
 
 > [!IMPORTANT]
-> This tool is currently in pre-alpha and may have inconsistencies, missing and/or incorrect data.
+> This tool is currently in beta and may have inconsistencies, missing and/or incorrect data.
 
 <div align="center">
 
