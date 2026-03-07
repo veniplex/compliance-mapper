@@ -3218,5 +3218,4002 @@
     "targetControlId": "nis2umsg-39",
     "relationship": "related",
     "notes": "BSI IT-Grundschutz OPS.2.3 (Outsourcing to Third Parties) relates to NIS2UmsuCG §39 (supply chain security); the third-party outsourcing security controls in OPS.2.3 address the supply chain security obligations required under §39 for entities subject to NIS2UmsuCG."
+  },
+  {
+    "id": "map-461",
+    "sourceControlId": "iso27001-5.1",
+    "targetControlId": "iso27002-5.1",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.1 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.1."
+  },
+  {
+    "id": "map-462",
+    "sourceControlId": "iso27001-5.2",
+    "targetControlId": "iso27002-5.2",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.2 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.2."
+  },
+  {
+    "id": "map-463",
+    "sourceControlId": "iso27001-5.3",
+    "targetControlId": "iso27002-5.3",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.3 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.3."
+  },
+  {
+    "id": "map-464",
+    "sourceControlId": "iso27001-5.4",
+    "targetControlId": "iso27002-5.4",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.4 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.4."
+  },
+  {
+    "id": "map-465",
+    "sourceControlId": "iso27001-5.5",
+    "targetControlId": "iso27002-5.5",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.5 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.5."
+  },
+  {
+    "id": "map-466",
+    "sourceControlId": "iso27001-5.6",
+    "targetControlId": "iso27002-5.6",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.6 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.6."
+  },
+  {
+    "id": "map-467",
+    "sourceControlId": "iso27001-5.7",
+    "targetControlId": "iso27002-5.7",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.7 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.7."
+  },
+  {
+    "id": "map-468",
+    "sourceControlId": "iso27001-5.8",
+    "targetControlId": "iso27002-5.8",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.8 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.8."
+  },
+  {
+    "id": "map-469",
+    "sourceControlId": "iso27001-5.9",
+    "targetControlId": "iso27002-5.9",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.9 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.9."
+  },
+  {
+    "id": "map-470",
+    "sourceControlId": "iso27001-5.10",
+    "targetControlId": "iso27002-5.10",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.10 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.10."
+  },
+  {
+    "id": "map-471",
+    "sourceControlId": "iso27001-5.11",
+    "targetControlId": "iso27002-5.11",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.11 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.11."
+  },
+  {
+    "id": "map-472",
+    "sourceControlId": "iso27001-5.12",
+    "targetControlId": "iso27002-5.12",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.12 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.12."
+  },
+  {
+    "id": "map-473",
+    "sourceControlId": "iso27001-5.13",
+    "targetControlId": "iso27002-5.13",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.13 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.13."
+  },
+  {
+    "id": "map-474",
+    "sourceControlId": "iso27001-5.14",
+    "targetControlId": "iso27002-5.14",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.14 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.14."
+  },
+  {
+    "id": "map-475",
+    "sourceControlId": "iso27001-5.15",
+    "targetControlId": "iso27002-5.15",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.15 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.15."
+  },
+  {
+    "id": "map-476",
+    "sourceControlId": "iso27001-5.16",
+    "targetControlId": "iso27002-5.16",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.16 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.16."
+  },
+  {
+    "id": "map-477",
+    "sourceControlId": "iso27001-5.17",
+    "targetControlId": "iso27002-5.17",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.17 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.17."
+  },
+  {
+    "id": "map-478",
+    "sourceControlId": "iso27001-5.18",
+    "targetControlId": "iso27002-5.18",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.18 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.18."
+  },
+  {
+    "id": "map-479",
+    "sourceControlId": "iso27001-5.19",
+    "targetControlId": "iso27002-5.19",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.19 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.19."
+  },
+  {
+    "id": "map-480",
+    "sourceControlId": "iso27001-5.20",
+    "targetControlId": "iso27002-5.20",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.20 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.20."
+  },
+  {
+    "id": "map-481",
+    "sourceControlId": "iso27001-5.21",
+    "targetControlId": "iso27002-5.21",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.21 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.21."
+  },
+  {
+    "id": "map-482",
+    "sourceControlId": "iso27001-5.22",
+    "targetControlId": "iso27002-5.22",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.22 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.22."
+  },
+  {
+    "id": "map-483",
+    "sourceControlId": "iso27001-5.23",
+    "targetControlId": "iso27002-5.23",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.23 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.23."
+  },
+  {
+    "id": "map-484",
+    "sourceControlId": "iso27001-5.24",
+    "targetControlId": "iso27002-5.24",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.24 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.24."
+  },
+  {
+    "id": "map-485",
+    "sourceControlId": "iso27001-5.25",
+    "targetControlId": "iso27002-5.25",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.25 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.25."
+  },
+  {
+    "id": "map-486",
+    "sourceControlId": "iso27001-5.26",
+    "targetControlId": "iso27002-5.26",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.26 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.26."
+  },
+  {
+    "id": "map-487",
+    "sourceControlId": "iso27001-5.27",
+    "targetControlId": "iso27002-5.27",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.27 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.27."
+  },
+  {
+    "id": "map-488",
+    "sourceControlId": "iso27001-5.28",
+    "targetControlId": "iso27002-5.28",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.28 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.28."
+  },
+  {
+    "id": "map-489",
+    "sourceControlId": "iso27001-5.29",
+    "targetControlId": "iso27002-5.29",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.29 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.29."
+  },
+  {
+    "id": "map-490",
+    "sourceControlId": "iso27001-5.30",
+    "targetControlId": "iso27002-5.30",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.30 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.30."
+  },
+  {
+    "id": "map-491",
+    "sourceControlId": "iso27001-5.31",
+    "targetControlId": "iso27002-5.31",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.31 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.31."
+  },
+  {
+    "id": "map-492",
+    "sourceControlId": "iso27001-5.32",
+    "targetControlId": "iso27002-5.32",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.32 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.32."
+  },
+  {
+    "id": "map-493",
+    "sourceControlId": "iso27001-5.33",
+    "targetControlId": "iso27002-5.33",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.33 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.33."
+  },
+  {
+    "id": "map-494",
+    "sourceControlId": "iso27001-5.34",
+    "targetControlId": "iso27002-5.34",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.34 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.34."
+  },
+  {
+    "id": "map-495",
+    "sourceControlId": "iso27001-5.35",
+    "targetControlId": "iso27002-5.35",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.35 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.35."
+  },
+  {
+    "id": "map-496",
+    "sourceControlId": "iso27001-5.36",
+    "targetControlId": "iso27002-5.36",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.36 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.36."
+  },
+  {
+    "id": "map-497",
+    "sourceControlId": "iso27001-5.37",
+    "targetControlId": "iso27002-5.37",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:5.37 provides detailed implementation guidance for the corresponding ISO/IEC 27001:2022 Annex A control 5.37."
+  },
+  {
+    "id": "map-498",
+    "sourceControlId": "iso27001-6.1",
+    "targetControlId": "iso27002-6.1",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:6.1 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 6.1."
+  },
+  {
+    "id": "map-499",
+    "sourceControlId": "iso27001-6.2",
+    "targetControlId": "iso27002-6.2",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:6.2 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 6.2."
+  },
+  {
+    "id": "map-500",
+    "sourceControlId": "iso27001-6.3",
+    "targetControlId": "iso27002-6.3",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:6.3 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 6.3."
+  },
+  {
+    "id": "map-501",
+    "sourceControlId": "iso27001-6.4",
+    "targetControlId": "iso27002-6.4",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:6.4 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 6.4."
+  },
+  {
+    "id": "map-502",
+    "sourceControlId": "iso27001-6.5",
+    "targetControlId": "iso27002-6.5",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:6.5 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 6.5."
+  },
+  {
+    "id": "map-503",
+    "sourceControlId": "iso27001-6.6",
+    "targetControlId": "iso27002-6.6",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:6.6 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 6.6."
+  },
+  {
+    "id": "map-504",
+    "sourceControlId": "iso27001-6.7",
+    "targetControlId": "iso27002-6.7",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:6.7 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 6.7."
+  },
+  {
+    "id": "map-505",
+    "sourceControlId": "iso27001-6.8",
+    "targetControlId": "iso27002-6.8",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:6.8 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 6.8."
+  },
+  {
+    "id": "map-506",
+    "sourceControlId": "iso27001-7.1",
+    "targetControlId": "iso27002-7.1",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.1 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.1."
+  },
+  {
+    "id": "map-507",
+    "sourceControlId": "iso27001-7.2",
+    "targetControlId": "iso27002-7.2",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.2 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.2."
+  },
+  {
+    "id": "map-508",
+    "sourceControlId": "iso27001-7.3",
+    "targetControlId": "iso27002-7.3",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.3 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.3."
+  },
+  {
+    "id": "map-509",
+    "sourceControlId": "iso27001-7.4",
+    "targetControlId": "iso27002-7.4",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.4 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.4."
+  },
+  {
+    "id": "map-510",
+    "sourceControlId": "iso27001-7.5",
+    "targetControlId": "iso27002-7.5",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.5 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.5."
+  },
+  {
+    "id": "map-511",
+    "sourceControlId": "iso27001-7.6",
+    "targetControlId": "iso27002-7.6",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.6 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.6."
+  },
+  {
+    "id": "map-512",
+    "sourceControlId": "iso27001-7.7",
+    "targetControlId": "iso27002-7.7",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.7 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.7."
+  },
+  {
+    "id": "map-513",
+    "sourceControlId": "iso27001-7.8",
+    "targetControlId": "iso27002-7.8",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.8 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.8."
+  },
+  {
+    "id": "map-514",
+    "sourceControlId": "iso27001-7.9",
+    "targetControlId": "iso27002-7.9",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.9 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.9."
+  },
+  {
+    "id": "map-515",
+    "sourceControlId": "iso27001-7.10",
+    "targetControlId": "iso27002-7.10",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.10 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.10."
+  },
+  {
+    "id": "map-516",
+    "sourceControlId": "iso27001-7.11",
+    "targetControlId": "iso27002-7.11",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.11 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.11."
+  },
+  {
+    "id": "map-517",
+    "sourceControlId": "iso27001-7.12",
+    "targetControlId": "iso27002-7.12",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.12 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.12."
+  },
+  {
+    "id": "map-518",
+    "sourceControlId": "iso27001-7.13",
+    "targetControlId": "iso27002-7.13",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.13 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.13."
+  },
+  {
+    "id": "map-519",
+    "sourceControlId": "iso27001-7.14",
+    "targetControlId": "iso27002-7.14",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:7.14 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 7.14."
+  },
+  {
+    "id": "map-520",
+    "sourceControlId": "iso27001-8.1",
+    "targetControlId": "iso27002-8.1",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.1 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.1."
+  },
+  {
+    "id": "map-521",
+    "sourceControlId": "iso27001-8.2",
+    "targetControlId": "iso27002-8.2",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.2 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.2."
+  },
+  {
+    "id": "map-522",
+    "sourceControlId": "iso27001-8.3",
+    "targetControlId": "iso27002-8.3",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.3 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.3."
+  },
+  {
+    "id": "map-523",
+    "sourceControlId": "iso27001-8.4",
+    "targetControlId": "iso27002-8.4",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.4 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.4."
+  },
+  {
+    "id": "map-524",
+    "sourceControlId": "iso27001-8.5",
+    "targetControlId": "iso27002-8.5",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.5 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.5."
+  },
+  {
+    "id": "map-525",
+    "sourceControlId": "iso27001-8.6",
+    "targetControlId": "iso27002-8.6",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.6 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.6."
+  },
+  {
+    "id": "map-526",
+    "sourceControlId": "iso27001-8.7",
+    "targetControlId": "iso27002-8.7",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.7 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.7."
+  },
+  {
+    "id": "map-527",
+    "sourceControlId": "iso27001-8.8",
+    "targetControlId": "iso27002-8.8",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.8 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.8."
+  },
+  {
+    "id": "map-528",
+    "sourceControlId": "iso27001-8.9",
+    "targetControlId": "iso27002-8.9",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.9 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.9."
+  },
+  {
+    "id": "map-529",
+    "sourceControlId": "iso27001-8.10",
+    "targetControlId": "iso27002-8.10",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.10 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.10."
+  },
+  {
+    "id": "map-530",
+    "sourceControlId": "iso27001-8.11",
+    "targetControlId": "iso27002-8.11",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.11 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.11."
+  },
+  {
+    "id": "map-531",
+    "sourceControlId": "iso27001-8.12",
+    "targetControlId": "iso27002-8.12",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.12 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.12."
+  },
+  {
+    "id": "map-532",
+    "sourceControlId": "iso27001-8.13",
+    "targetControlId": "iso27002-8.13",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.13 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.13."
+  },
+  {
+    "id": "map-533",
+    "sourceControlId": "iso27001-8.14",
+    "targetControlId": "iso27002-8.14",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.14 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.14."
+  },
+  {
+    "id": "map-534",
+    "sourceControlId": "iso27001-8.15",
+    "targetControlId": "iso27002-8.15",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.15 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.15."
+  },
+  {
+    "id": "map-535",
+    "sourceControlId": "iso27001-8.16",
+    "targetControlId": "iso27002-8.16",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.16 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.16."
+  },
+  {
+    "id": "map-536",
+    "sourceControlId": "iso27001-8.17",
+    "targetControlId": "iso27002-8.17",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.17 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.17."
+  },
+  {
+    "id": "map-537",
+    "sourceControlId": "iso27001-8.18",
+    "targetControlId": "iso27002-8.18",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.18 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.18."
+  },
+  {
+    "id": "map-538",
+    "sourceControlId": "iso27001-8.19",
+    "targetControlId": "iso27002-8.19",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.19 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.19."
+  },
+  {
+    "id": "map-539",
+    "sourceControlId": "iso27001-8.20",
+    "targetControlId": "iso27002-8.20",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.20 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.20."
+  },
+  {
+    "id": "map-540",
+    "sourceControlId": "iso27001-8.21",
+    "targetControlId": "iso27002-8.21",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.21 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.21."
+  },
+  {
+    "id": "map-541",
+    "sourceControlId": "iso27001-8.22",
+    "targetControlId": "iso27002-8.22",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.22 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.22."
+  },
+  {
+    "id": "map-542",
+    "sourceControlId": "iso27001-8.23",
+    "targetControlId": "iso27002-8.23",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.23 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.23."
+  },
+  {
+    "id": "map-543",
+    "sourceControlId": "iso27001-8.24",
+    "targetControlId": "iso27002-8.24",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.24 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.24."
+  },
+  {
+    "id": "map-544",
+    "sourceControlId": "iso27001-8.25",
+    "targetControlId": "iso27002-8.25",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.25 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.25."
+  },
+  {
+    "id": "map-545",
+    "sourceControlId": "iso27001-8.26",
+    "targetControlId": "iso27002-8.26",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.26 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.26."
+  },
+  {
+    "id": "map-546",
+    "sourceControlId": "iso27001-8.27",
+    "targetControlId": "iso27002-8.27",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.27 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.27."
+  },
+  {
+    "id": "map-547",
+    "sourceControlId": "iso27001-8.28",
+    "targetControlId": "iso27002-8.28",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.28 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.28."
+  },
+  {
+    "id": "map-548",
+    "sourceControlId": "iso27001-8.29",
+    "targetControlId": "iso27002-8.29",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.29 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.29."
+  },
+  {
+    "id": "map-549",
+    "sourceControlId": "iso27001-8.30",
+    "targetControlId": "iso27002-8.30",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.30 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.30."
+  },
+  {
+    "id": "map-550",
+    "sourceControlId": "iso27001-8.31",
+    "targetControlId": "iso27002-8.31",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.31 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.31."
+  },
+  {
+    "id": "map-551",
+    "sourceControlId": "iso27001-8.32",
+    "targetControlId": "iso27002-8.32",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.32 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.32."
+  },
+  {
+    "id": "map-552",
+    "sourceControlId": "iso27001-8.33",
+    "targetControlId": "iso27002-8.33",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.33 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.33."
+  },
+  {
+    "id": "map-553",
+    "sourceControlId": "iso27001-8.34",
+    "targetControlId": "iso27002-8.34",
+    "relationship": "equivalent",
+    "notes": "ISO/IEC 27002:8.34 provides detailed implementation guidance for ISO/IEC 27001:2022 Annex A control 8.34."
+  },
+  {
+    "id": "map-554",
+    "sourceControlId": "iso27001-6.1",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "equivalent",
+    "notes": "Both define the information security risk assessment process; ISO 27005 provides the detailed methodology for ISO 27001 Clause 6.1.2."
+  },
+  {
+    "id": "map-555",
+    "sourceControlId": "iso27001-8.3",
+    "targetControlId": "iso27005-5.3",
+    "relationship": "equivalent",
+    "notes": "ISO 27001 Clause 8.3 (information security risk treatment) is directly implemented through the ISO 27005 risk treatment process."
+  },
+  {
+    "id": "map-556",
+    "sourceControlId": "iso27001-5.1",
+    "targetControlId": "iso27005-5.1",
+    "relationship": "related",
+    "notes": "ISO 27001 information security policies inform the organisational context and risk criteria required by ISO 27005 Clause 5.1."
+  },
+  {
+    "id": "map-557",
+    "sourceControlId": "iso27005-5.4",
+    "targetControlId": "iso27001-5.36",
+    "relationship": "related",
+    "notes": "ISO 27005 monitoring and review of the risk management process supports ISO 27001 compliance evaluation activities."
+  },
+  {
+    "id": "map-558",
+    "sourceControlId": "iso27001-5.8",
+    "targetControlId": "iso27005-5.5",
+    "relationship": "related",
+    "notes": "ISO 27001 project security requirements benefit from the ISO 27005 communication and consultation process for stakeholder risk awareness."
+  },
+  {
+    "id": "map-559",
+    "sourceControlId": "iso27001-6.1",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "equivalent",
+    "notes": "ISO 27001 Clause 6.1 risk assessment aligns with the ISO 31000 risk assessment process (identification, analysis and evaluation)."
+  },
+  {
+    "id": "map-560",
+    "sourceControlId": "iso27001-8.3",
+    "targetControlId": "iso31000-6.5",
+    "relationship": "equivalent",
+    "notes": "ISO 27001 information security risk treatment directly corresponds to the ISO 31000 risk treatment process."
+  },
+  {
+    "id": "map-561",
+    "sourceControlId": "iso27001-5.1",
+    "targetControlId": "iso31000-5.2",
+    "relationship": "related",
+    "notes": "ISO 27001 information security policy and management commitment align with ISO 31000 leadership and commitment requirements."
+  },
+  {
+    "id": "map-562",
+    "sourceControlId": "iso27001-5.36",
+    "targetControlId": "iso31000-6.6",
+    "relationship": "related",
+    "notes": "ISO 27001 compliance with legal and regulatory requirements supports the monitoring and review process mandated by ISO 31000."
+  },
+  {
+    "id": "map-563",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "equivalent",
+    "notes": "ISO 27005 information security risk assessment maps directly to the ISO 31000 generic risk assessment process."
+  },
+  {
+    "id": "map-564",
+    "sourceControlId": "iso27005-5.3",
+    "targetControlId": "iso31000-6.5",
+    "relationship": "equivalent",
+    "notes": "ISO 27005 risk treatment (modification, retention, avoidance, sharing) corresponds to ISO 31000 risk treatment option selection."
+  },
+  {
+    "id": "map-565",
+    "sourceControlId": "iso27005-5.4",
+    "targetControlId": "iso31000-6.6",
+    "relationship": "equivalent",
+    "notes": "Both standards define monitoring and review of the risk management process and its outcomes."
+  },
+  {
+    "id": "map-566",
+    "sourceControlId": "iso27005-5.5",
+    "targetControlId": "iso31000-6.2",
+    "relationship": "equivalent",
+    "notes": "ISO 27005 communication and consultation aligns with the ISO 31000 communication and consultation process component."
+  },
+  {
+    "id": "map-567",
+    "sourceControlId": "iso27005-5.6",
+    "targetControlId": "iso31000-6.7",
+    "relationship": "equivalent",
+    "notes": "ISO 27005 recording and reporting maps to the ISO 31000 recording and reporting process for accountability and traceability."
+  },
+  {
+    "id": "map-568",
+    "sourceControlId": "iso27005-5.1",
+    "targetControlId": "iso31000-6.3",
+    "relationship": "equivalent",
+    "notes": "ISO 27005 context establishment directly corresponds to ISO 31000 scope, context and criteria setting."
+  },
+  {
+    "id": "map-569",
+    "sourceControlId": "iso27005-5",
+    "targetControlId": "iso31000-6.1",
+    "relationship": "related",
+    "notes": "ISO 27005 provides the information-security-specific instantiation of the generic ISO 31000 risk management process."
+  },
+  {
+    "id": "map-570",
+    "sourceControlId": "iso27001-5.19",
+    "targetControlId": "iso27017-CLD.6.3.1",
+    "relationship": "related",
+    "notes": "ISO 27017 extends ISO 27001 supplier relationship controls with specific cloud provider/customer role-sharing obligations."
+  },
+  {
+    "id": "map-571",
+    "sourceControlId": "iso27001-5.11",
+    "targetControlId": "iso27017-CLD.8.1.5",
+    "relationship": "related",
+    "notes": "ISO 27017 adds cloud-specific asset return and deletion obligations to the ISO 27001 asset management requirement."
+  },
+  {
+    "id": "map-572",
+    "sourceControlId": "iso27001-5.15",
+    "targetControlId": "iso27017-CLD.9.5.1",
+    "relationship": "related",
+    "notes": "ISO 27017 extends ISO 27001 access control to mandate segregation in virtual computing environments."
+  },
+  {
+    "id": "map-573",
+    "sourceControlId": "iso27001-8.14",
+    "targetControlId": "iso27017-CLD.9.5.2",
+    "relationship": "related",
+    "notes": "ISO 27017 virtual machine hardening requirements extend the ISO 27001 redundancy and availability controls."
+  },
+  {
+    "id": "map-574",
+    "sourceControlId": "iso27001-8.1",
+    "targetControlId": "iso27017-CLD.12.1.5",
+    "relationship": "related",
+    "notes": "ISO 27017 administrator operational security extends the ISO 27001 general operations security controls for cloud environments."
+  },
+  {
+    "id": "map-575",
+    "sourceControlId": "iso27001-8.15",
+    "targetControlId": "iso27017-CLD.12.4.5",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud service monitoring extends ISO 27001 logging and monitoring to cover CSP-provided monitoring capabilities."
+  },
+  {
+    "id": "map-576",
+    "sourceControlId": "iso27001-8.20",
+    "targetControlId": "iso27017-CLD.13.1.4",
+    "relationship": "related",
+    "notes": "ISO 27017 aligns virtual and physical network security requirements with ISO 27001 network security management."
+  },
+  {
+    "id": "map-577",
+    "sourceControlId": "iso27001-5.33",
+    "targetControlId": "iso27017-CLD.13.2.6",
+    "relationship": "related",
+    "notes": "ISO 27017 data portability and deletion upon termination extends ISO 27001 data protection and privacy obligations in cloud contexts."
+  },
+  {
+    "id": "map-578",
+    "sourceControlId": "iso27001-5.1",
+    "targetControlId": "iso27018-A.2",
+    "relationship": "related",
+    "notes": "ISO 27018 purpose legitimacy and specification extends ISO 27001 policy requirements for PII processing in cloud environments."
+  },
+  {
+    "id": "map-579",
+    "sourceControlId": "iso27001-5.31",
+    "targetControlId": "iso27018-A.11",
+    "relationship": "related",
+    "notes": "ISO 27018 privacy compliance requirement aligns with ISO 27001 compliance with legal and contractual requirements."
+  },
+  {
+    "id": "map-580",
+    "sourceControlId": "iso27001-8.11",
+    "targetControlId": "iso27018-A.5",
+    "relationship": "related",
+    "notes": "ISO 27018 PII use and retention limits extend ISO 27001 data lifecycle management to protect personal data."
+  },
+  {
+    "id": "map-581",
+    "sourceControlId": "iso27001-5.33",
+    "targetControlId": "iso27018-A.3",
+    "relationship": "related",
+    "notes": "ISO 27018 collection limitation for PII extends ISO 27001 data minimisation and privacy requirements."
+  },
+  {
+    "id": "map-582",
+    "sourceControlId": "iso27001-5.19",
+    "targetControlId": "iso27018-A.9",
+    "relationship": "related",
+    "notes": "ISO 27018 processor accountability extends ISO 27001 supplier relationship management for cloud PII processing."
+  },
+  {
+    "id": "map-583",
+    "sourceControlId": "iso27001-5.1",
+    "targetControlId": "iso27701-5.2",
+    "relationship": "equivalent",
+    "notes": "ISO 27701 extends the ISO 27001 context of the organisation clause to include privacy-specific requirements and stakeholders."
+  },
+  {
+    "id": "map-584",
+    "sourceControlId": "iso27001-5.2",
+    "targetControlId": "iso27701-5.4",
+    "relationship": "related",
+    "notes": "ISO 27701 leadership and commitment for the PIMS extends ISO 27001 roles and responsibilities to cover privacy obligations."
+  },
+  {
+    "id": "map-585",
+    "sourceControlId": "iso27001-6.1",
+    "targetControlId": "iso27701-6.1",
+    "relationship": "related",
+    "notes": "ISO 27701 extends ISO 27001 risk assessment planning to cover PII-related risks and privacy regulatory obligations."
+  },
+  {
+    "id": "map-586",
+    "sourceControlId": "iso27001-7.2",
+    "targetControlId": "iso27701-7.2.1",
+    "relationship": "related",
+    "notes": "ISO 27701 competence requirements extend ISO 27001 to include privacy-specific knowledge and skills for PII handlers."
+  },
+  {
+    "id": "map-587",
+    "sourceControlId": "iso27001-7.3",
+    "targetControlId": "iso27701-7.3.1",
+    "relationship": "related",
+    "notes": "ISO 27701 awareness requirements extend ISO 27001 to cover staff awareness of privacy policies and data subject rights."
+  },
+  {
+    "id": "map-588",
+    "sourceControlId": "iso27018-A.2",
+    "targetControlId": "iso27701-A.7.2.1",
+    "relationship": "equivalent",
+    "notes": "Both controls require identification and documentation of the purpose for processing PII before collection begins."
+  },
+  {
+    "id": "map-589",
+    "sourceControlId": "iso27018-A.1",
+    "targetControlId": "iso27701-A.7.2.2",
+    "relationship": "related",
+    "notes": "ISO 27701 lawful basis identification extends the ISO 27018 consent and choice requirement to cover all legal bases."
+  },
+  {
+    "id": "map-590",
+    "sourceControlId": "iso27018-A.8",
+    "targetControlId": "iso27701-A.7.4.1",
+    "relationship": "related",
+    "notes": "Both controls require processes to handle PII principals' rights including access, correction and deletion requests."
+  },
+  {
+    "id": "map-591",
+    "sourceControlId": "iso27018-A.7",
+    "targetControlId": "iso27701-A.7.3.1",
+    "relationship": "related",
+    "notes": "ISO 27018 openness and transparency maps to the ISO 27701 requirement to provide privacy notices to PII principals."
+  },
+  {
+    "id": "map-592",
+    "sourceControlId": "iso27018-A.9",
+    "targetControlId": "iso27701-A.8.2.1",
+    "relationship": "equivalent",
+    "notes": "Both controls require PII processors to only act on documented instructions from the PII controller."
+  },
+  {
+    "id": "map-593",
+    "sourceControlId": "iso27018-A.1",
+    "targetControlId": "gdpr-art5-1f",
+    "relationship": "related",
+    "notes": "ISO 27018 consent and choice maps to the GDPR integrity and confidentiality principle and lawful basis for processing."
+  },
+  {
+    "id": "map-594",
+    "sourceControlId": "iso27018-A.2",
+    "targetControlId": "gdpr-art30",
+    "relationship": "related",
+    "notes": "ISO 27018 purpose legitimacy and specification aligns with GDPR records of processing activities purpose documentation."
+  },
+  {
+    "id": "map-595",
+    "sourceControlId": "iso27018-A.8",
+    "targetControlId": "gdpr-art33",
+    "relationship": "related",
+    "notes": "ISO 27018 individual participation procedures support GDPR data subject rights notification obligations."
+  },
+  {
+    "id": "map-596",
+    "sourceControlId": "iso27018-A.10",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ISO 27018 information security controls for PII map to GDPR Art. 32 technical and organisational security measures."
+  },
+  {
+    "id": "map-597",
+    "sourceControlId": "iso27018-A.11",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ISO 27018 privacy compliance requirement covers the GDPR obligation to implement appropriate security measures for personal data."
+  },
+  {
+    "id": "map-598",
+    "sourceControlId": "iso27701-A.7.2.1",
+    "targetControlId": "gdpr-art30",
+    "relationship": "related",
+    "notes": "ISO 27701 purpose identification for PII controllers aligns with GDPR Art. 30 records of processing activities requirements."
+  },
+  {
+    "id": "map-599",
+    "sourceControlId": "iso27701-A.7.2.2",
+    "targetControlId": "gdpr-art30",
+    "relationship": "equivalent",
+    "notes": "ISO 27701 lawful basis identification directly maps to GDPR Art. 6 lawful bases for processing documented in ROPA."
+  },
+  {
+    "id": "map-600",
+    "sourceControlId": "iso27701-A.7.3.1",
+    "targetControlId": "gdpr-art34",
+    "relationship": "related",
+    "notes": "ISO 27701 privacy notice requirements align with GDPR transparency obligations for communication to data subjects."
+  },
+  {
+    "id": "map-601",
+    "sourceControlId": "iso27701-A.7.4.1",
+    "targetControlId": "gdpr-art33",
+    "relationship": "related",
+    "notes": "ISO 27701 data subject rights obligations (access, correction, erasure) correspond to GDPR Chapter III rights."
+  },
+  {
+    "id": "map-602",
+    "sourceControlId": "iso27701-A.8.2.1",
+    "targetControlId": "gdpr-art28",
+    "relationship": "equivalent",
+    "notes": "ISO 27701 customer agreement for PII processors directly corresponds to GDPR Art. 28 data processing agreement requirements."
+  },
+  {
+    "id": "map-603",
+    "sourceControlId": "iso27701-5.2",
+    "targetControlId": "gdpr-art25",
+    "relationship": "related",
+    "notes": "ISO 27701 PIMS context analysis supports GDPR Art. 25 data protection by design and by default obligations."
+  },
+  {
+    "id": "map-604",
+    "sourceControlId": "iso27701-A.8.5.1",
+    "targetControlId": "gdpr-art25",
+    "relationship": "equivalent",
+    "notes": "ISO 27701 privacy by design and default for PII processors maps directly to GDPR Art. 25 requirements."
+  },
+  {
+    "id": "map-605",
+    "sourceControlId": "iso27017-CLD.13.2.6",
+    "targetControlId": "iso27018-A.5",
+    "relationship": "related",
+    "notes": "ISO 27017 data portability and deletion upon contract termination aligns with ISO 27018 PII use and retention limitations."
+  },
+  {
+    "id": "map-606",
+    "sourceControlId": "iso27017-CLD.6.3.1",
+    "targetControlId": "iso27018-A.9",
+    "relationship": "related",
+    "notes": "Both controls address shared roles and responsibilities between cloud service providers and customers for data protection."
+  },
+  {
+    "id": "map-607",
+    "sourceControlId": "iso27017-CLD.9.5.1",
+    "targetControlId": "iso27018-A.10",
+    "relationship": "related",
+    "notes": "ISO 27018 information security for PII in cloud environments requires the virtual segregation controls mandated by ISO 27017."
+  },
+  {
+    "id": "map-608",
+    "sourceControlId": "iso27017-CLD.6.3.1",
+    "targetControlId": "gdpr-art28",
+    "relationship": "related",
+    "notes": "ISO 27017 shared role documentation for cloud providers and customers aligns with GDPR Art. 28 data processor agreements."
+  },
+  {
+    "id": "map-609",
+    "sourceControlId": "iso27017-CLD.13.2.6",
+    "targetControlId": "gdpr-art5-1f",
+    "relationship": "related",
+    "notes": "ISO 27017 data return and deletion obligations on contract termination support GDPR storage limitation and erasure principles."
+  },
+  {
+    "id": "map-610",
+    "sourceControlId": "iso27017-CLD.12.4.5",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud monitoring requirements support GDPR Art. 32 technical measures for ensuring ongoing security and availability."
+  },
+  {
+    "id": "map-611",
+    "sourceControlId": "iso27017-CLD.13.2.6",
+    "targetControlId": "iso27701-A.8.4.1",
+    "relationship": "related",
+    "notes": "ISO 27017 data deletion upon termination and ISO 27701 temporary file management both address data minimisation in cloud processing."
+  },
+  {
+    "id": "map-612",
+    "sourceControlId": "iso27017-CLD.6.3.1",
+    "targetControlId": "iso27701-A.8.2.1",
+    "relationship": "related",
+    "notes": "Both controls define the scope of cloud service provider responsibilities when acting as PII processors."
+  },
+  {
+    "id": "map-613",
+    "sourceControlId": "cobit-APO12",
+    "targetControlId": "iso27001-6.1",
+    "relationship": "equivalent",
+    "notes": "COBIT APO12 (Manage Risk) aligns with ISO 27001 Clause 6.1 information security risk assessment and treatment planning."
+  },
+  {
+    "id": "map-614",
+    "sourceControlId": "cobit-APO13",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "equivalent",
+    "notes": "COBIT APO13 (Manage Security) requires an information security management system equivalent to ISO 27001 Annex A policies and governance."
+  },
+  {
+    "id": "map-615",
+    "sourceControlId": "cobit-EDM03",
+    "targetControlId": "iso27001-6.1",
+    "relationship": "related",
+    "notes": "COBIT EDM03 (Ensure Risk Optimisation) provides governance oversight of the risk management activities required by ISO 27001."
+  },
+  {
+    "id": "map-616",
+    "sourceControlId": "cobit-APO01",
+    "targetControlId": "iso27001-5.2",
+    "relationship": "related",
+    "notes": "COBIT APO01 (Manage the IT Management Framework) defines IT governance structures that align with ISO 27001 roles and responsibilities."
+  },
+  {
+    "id": "map-617",
+    "sourceControlId": "cobit-DSS05",
+    "targetControlId": "iso27001-8.1",
+    "relationship": "related",
+    "notes": "COBIT DSS05 (Manage Security Services) covers technical security operations that correspond to ISO 27001 Annex A operational controls."
+  },
+  {
+    "id": "map-618",
+    "sourceControlId": "cobit-DSS02",
+    "targetControlId": "iso27001-5.24",
+    "relationship": "related",
+    "notes": "COBIT DSS02 (Manage Service Requests and Incidents) aligns with ISO 27001 information security incident management processes."
+  },
+  {
+    "id": "map-619",
+    "sourceControlId": "cobit-DSS04",
+    "targetControlId": "iso27001-5.29",
+    "relationship": "related",
+    "notes": "COBIT DSS04 (Manage Continuity) addresses IT service continuity planning required by ISO 27001 information continuity controls."
+  },
+  {
+    "id": "map-620",
+    "sourceControlId": "cobit-APO14",
+    "targetControlId": "iso27001-5.9",
+    "relationship": "related",
+    "notes": "COBIT APO14 (Manage Data) addresses data governance requirements aligned with ISO 27001 asset management and classification controls."
+  },
+  {
+    "id": "map-621",
+    "sourceControlId": "cobit-BAI06",
+    "targetControlId": "iso27001-8.32",
+    "relationship": "related",
+    "notes": "COBIT BAI06 (Manage IT Changes) implements structured change management corresponding to ISO 27001 change management controls."
+  },
+  {
+    "id": "map-622",
+    "sourceControlId": "cobit-EDM01",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "equivalent",
+    "notes": "COBIT EDM01 governance framework aligns with NIST CSF GV.PO organisational cybersecurity policy establishment and oversight."
+  },
+  {
+    "id": "map-623",
+    "sourceControlId": "cobit-EDM03",
+    "targetControlId": "nistcsf-GV.RM",
+    "relationship": "equivalent",
+    "notes": "COBIT EDM03 risk optimisation directly corresponds to NIST CSF GV.RM risk management strategy and tolerance setting."
+  },
+  {
+    "id": "map-624",
+    "sourceControlId": "cobit-APO12",
+    "targetControlId": "nistcsf-ID.RA",
+    "relationship": "equivalent",
+    "notes": "COBIT APO12 risk management process maps to NIST CSF ID.RA risk assessment including threat and vulnerability identification."
+  },
+  {
+    "id": "map-625",
+    "sourceControlId": "cobit-DSS02",
+    "targetControlId": "nistcsf-RS.MA",
+    "relationship": "related",
+    "notes": "COBIT DSS02 incident management aligns with NIST CSF RS.MA incident management response activities."
+  },
+  {
+    "id": "map-626",
+    "sourceControlId": "cobit-DSS05",
+    "targetControlId": "nistcsf-PR.DS",
+    "relationship": "related",
+    "notes": "COBIT DSS05 security services correspond to NIST CSF PR.DS data security protection controls."
+  },
+  {
+    "id": "map-627",
+    "sourceControlId": "cobit-MEA01",
+    "targetControlId": "nistcsf-GV.OV",
+    "relationship": "related",
+    "notes": "COBIT MEA01 performance monitoring aligns with NIST CSF GV.OV cybersecurity oversight and performance review."
+  },
+  {
+    "id": "map-628",
+    "sourceControlId": "cobit-APO13",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "COBIT APO13 security management programme aligns with NIST CSF governance policy and programme management."
+  },
+  {
+    "id": "map-629",
+    "sourceControlId": "cobit-DSS04",
+    "targetControlId": "nistcsf-RC.RP",
+    "relationship": "related",
+    "notes": "COBIT DSS04 continuity management aligns with NIST CSF RC.RP recovery plan execution and resilience activities."
+  },
+  {
+    "id": "map-630",
+    "sourceControlId": "cobit-EDM01",
+    "targetControlId": "iso38500-T2",
+    "relationship": "equivalent",
+    "notes": "COBIT EDM01 governance framework setup directly implements the ISO 38500 Direct task for governing bodies."
+  },
+  {
+    "id": "map-631",
+    "sourceControlId": "cobit-EDM02",
+    "targetControlId": "iso38500-P4",
+    "relationship": "related",
+    "notes": "COBIT EDM02 benefits delivery aligns with ISO 38500 Principle 4 on IT performance and fitness for purpose."
+  },
+  {
+    "id": "map-632",
+    "sourceControlId": "cobit-EDM03",
+    "targetControlId": "iso38500-T1",
+    "relationship": "related",
+    "notes": "COBIT EDM03 risk optimisation supports the ISO 38500 Evaluate task for assessing IT risk by the governing body."
+  },
+  {
+    "id": "map-633",
+    "sourceControlId": "cobit-EDM04",
+    "targetControlId": "iso38500-P1",
+    "relationship": "related",
+    "notes": "COBIT EDM04 resource optimisation aligns with ISO 38500 Principle 1 on responsibility and authority for IT resources."
+  },
+  {
+    "id": "map-634",
+    "sourceControlId": "cobit-MEA01",
+    "targetControlId": "iso38500-T3",
+    "relationship": "equivalent",
+    "notes": "COBIT MEA01 monitoring and conformance assessment directly implements the ISO 38500 Monitor task for governing bodies."
+  },
+  {
+    "id": "map-635",
+    "sourceControlId": "cobit-APO02",
+    "targetControlId": "iso38500-P2",
+    "relationship": "equivalent",
+    "notes": "COBIT APO02 IT strategy management implements ISO 38500 Principle 2 on aligning IT strategy with business strategy."
+  },
+  {
+    "id": "map-636",
+    "sourceControlId": "cobit-APO05",
+    "targetControlId": "iso38500-P3",
+    "relationship": "related",
+    "notes": "COBIT APO05 portfolio management supports ISO 38500 Principle 3 on acquisition due diligence and investment decisions."
+  },
+  {
+    "id": "map-637",
+    "sourceControlId": "cobit-MEA03",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "COBIT MEA03 compliance management implements ISO 38500 Principle 5 on IT conformance with legislation and regulations."
+  },
+  {
+    "id": "map-638",
+    "sourceControlId": "cobit-APO09",
+    "targetControlId": "itil-v4-SMP-SLM",
+    "relationship": "equivalent",
+    "notes": "COBIT APO09 (Manage Service Agreements) and ITIL 4 Service Level Management both define service targets and monitor service delivery."
+  },
+  {
+    "id": "map-639",
+    "sourceControlId": "cobit-BAI06",
+    "targetControlId": "itil-v4-SMP-CHG",
+    "relationship": "equivalent",
+    "notes": "COBIT BAI06 IT change management directly maps to ITIL 4 Change Enablement practice for controlling change lifecycles."
+  },
+  {
+    "id": "map-640",
+    "sourceControlId": "cobit-DSS01",
+    "targetControlId": "itil-v4-SMP-SDM",
+    "relationship": "related",
+    "notes": "COBIT DSS01 operations management aligns with ITIL 4 Service Desk as the primary channel for operational IT management."
+  },
+  {
+    "id": "map-641",
+    "sourceControlId": "cobit-DSS02",
+    "targetControlId": "itil-v4-SMP-INC",
+    "relationship": "equivalent",
+    "notes": "COBIT DSS02 incident management corresponds exactly to ITIL 4 Incident Management practice for service restoration."
+  },
+  {
+    "id": "map-642",
+    "sourceControlId": "cobit-DSS03",
+    "targetControlId": "itil-v4-SMP-PROB",
+    "relationship": "equivalent",
+    "notes": "COBIT DSS03 problem management maps directly to ITIL 4 Problem Management practice for root cause analysis."
+  },
+  {
+    "id": "map-643",
+    "sourceControlId": "cobit-DSS04",
+    "targetControlId": "itil-v4-SMP-SCM",
+    "relationship": "equivalent",
+    "notes": "COBIT DSS04 continuity management aligns with ITIL 4 Service Continuity Management practice."
+  },
+  {
+    "id": "map-644",
+    "sourceControlId": "cobit-BAI10",
+    "targetControlId": "itil-v4-SMP-SACM",
+    "relationship": "equivalent",
+    "notes": "COBIT BAI10 configuration management maps directly to ITIL 4 Service Configuration Management practice."
+  },
+  {
+    "id": "map-645",
+    "sourceControlId": "cobit-APO12",
+    "targetControlId": "itil-v4-GMP-RISK",
+    "relationship": "equivalent",
+    "notes": "COBIT APO12 risk management corresponds to ITIL 4 Risk Management general management practice."
+  },
+  {
+    "id": "map-646",
+    "sourceControlId": "cobit-BAI08",
+    "targetControlId": "itil-v4-GMP-KM",
+    "relationship": "equivalent",
+    "notes": "COBIT BAI08 knowledge management maps directly to the ITIL 4 Knowledge Management general management practice."
+  },
+  {
+    "id": "map-647",
+    "sourceControlId": "cobit-MEA01",
+    "targetControlId": "itil-v4-GMP-MEA",
+    "relationship": "equivalent",
+    "notes": "COBIT MEA01 performance monitoring aligns with ITIL 4 Measurement and Reporting practice for service performance."
+  },
+  {
+    "id": "map-648",
+    "sourceControlId": "cobit-APO07",
+    "targetControlId": "itil-v4-GMP-WFM",
+    "relationship": "related",
+    "notes": "COBIT APO07 human resources management aligns with ITIL 4 Workforce and Talent Management practice."
+  },
+  {
+    "id": "map-649",
+    "sourceControlId": "cobit-APO02",
+    "targetControlId": "itil-v4-GMP-STR",
+    "relationship": "related",
+    "notes": "COBIT APO02 IT strategy management corresponds to the ITIL 4 Strategy Management general management practice."
+  },
+  {
+    "id": "map-650",
+    "sourceControlId": "cobit-APO09",
+    "targetControlId": "itil-v3-SD-SLM",
+    "relationship": "equivalent",
+    "notes": "COBIT APO09 service agreements management corresponds to ITIL v3 Service Level Management in the Service Design phase."
+  },
+  {
+    "id": "map-651",
+    "sourceControlId": "cobit-BAI06",
+    "targetControlId": "itil-v3-ST-ChM",
+    "relationship": "equivalent",
+    "notes": "COBIT BAI06 IT change management maps to ITIL v3 Change Management in the Service Transition phase."
+  },
+  {
+    "id": "map-652",
+    "sourceControlId": "cobit-DSS02",
+    "targetControlId": "itil-v3-SO-IM",
+    "relationship": "equivalent",
+    "notes": "COBIT DSS02 incident management maps to ITIL v3 Incident Management in the Service Operation phase."
+  },
+  {
+    "id": "map-653",
+    "sourceControlId": "cobit-DSS03",
+    "targetControlId": "itil-v3-SO-PM",
+    "relationship": "equivalent",
+    "notes": "COBIT DSS03 problem management maps to ITIL v3 Problem Management in the Service Operation phase."
+  },
+  {
+    "id": "map-654",
+    "sourceControlId": "cobit-DSS04",
+    "targetControlId": "itil-v3-SD-ITSCM",
+    "relationship": "equivalent",
+    "notes": "COBIT DSS04 continuity management aligns with ITIL v3 IT Service Continuity Management in Service Design."
+  },
+  {
+    "id": "map-655",
+    "sourceControlId": "cobit-BAI10",
+    "targetControlId": "itil-v3-ST-SACM",
+    "relationship": "equivalent",
+    "notes": "COBIT BAI10 configuration management maps to ITIL v3 Service Asset and Configuration Management."
+  },
+  {
+    "id": "map-656",
+    "sourceControlId": "cobit-BAI08",
+    "targetControlId": "itil-v3-ST-KM",
+    "relationship": "equivalent",
+    "notes": "COBIT BAI08 knowledge management maps to ITIL v3 Knowledge Management in Service Transition."
+  },
+  {
+    "id": "map-657",
+    "sourceControlId": "cobit-MEA01",
+    "targetControlId": "itil-v3-CSI-SMR",
+    "relationship": "equivalent",
+    "notes": "COBIT MEA01 performance monitoring aligns with ITIL v3 Service Measurement and Reporting in CSI."
+  },
+  {
+    "id": "map-658",
+    "sourceControlId": "iso38500-T2",
+    "targetControlId": "itil-v4-GMP-STR",
+    "relationship": "related",
+    "notes": "ISO 38500 Direct task for governing bodies provides the governance direction that ITIL 4 Strategy Management translates into IT plans."
+  },
+  {
+    "id": "map-659",
+    "sourceControlId": "iso38500-T3",
+    "targetControlId": "itil-v4-GMP-MEA",
+    "relationship": "equivalent",
+    "notes": "ISO 38500 Monitor task directly corresponds to ITIL 4 Measurement and Reporting practice for tracking IT performance."
+  },
+  {
+    "id": "map-660",
+    "sourceControlId": "iso38500-P2",
+    "targetControlId": "itil-v4-GMP-STR",
+    "relationship": "equivalent",
+    "notes": "ISO 38500 Principle 2 (Strategy) aligns with ITIL 4 Strategy Management practice for formulating and achieving IT goals."
+  },
+  {
+    "id": "map-661",
+    "sourceControlId": "iso38500-P4",
+    "targetControlId": "itil-v4-SMP-SLM",
+    "relationship": "related",
+    "notes": "ISO 38500 Principle 4 (Performance) is operationalised through ITIL 4 Service Level Management targets and monitoring."
+  },
+  {
+    "id": "map-662",
+    "sourceControlId": "iso38500-P1",
+    "targetControlId": "itil-v4-GMP-WFM",
+    "relationship": "related",
+    "notes": "ISO 38500 Principle 1 (Responsibility) aligns with ITIL 4 Workforce and Talent Management for defining IT responsibilities."
+  },
+  {
+    "id": "map-663",
+    "sourceControlId": "iso38500-P5",
+    "targetControlId": "itil-v4-SMP-SCM",
+    "relationship": "related",
+    "notes": "ISO 38500 Principle 5 (Conformance) includes regulatory compliance supported by ITIL 4 Service Continuity Management."
+  },
+  {
+    "id": "map-664",
+    "sourceControlId": "iso38500-P2",
+    "targetControlId": "itil-v3-SS-SM",
+    "relationship": "equivalent",
+    "notes": "ISO 38500 Principle 2 (Strategy) aligns with ITIL v3 Strategy Management in the Service Strategy phase."
+  },
+  {
+    "id": "map-665",
+    "sourceControlId": "iso38500-T3",
+    "targetControlId": "itil-v3-CSI-SMR",
+    "relationship": "related",
+    "notes": "ISO 38500 Monitor task is supported by ITIL v3 Service Measurement and Reporting in the CSI phase."
+  },
+  {
+    "id": "map-666",
+    "sourceControlId": "iso38500-P4",
+    "targetControlId": "itil-v3-SD-SLM",
+    "relationship": "related",
+    "notes": "ISO 38500 Principle 4 (Performance) is operationalised through ITIL v3 Service Level Management agreements."
+  },
+  {
+    "id": "map-667",
+    "sourceControlId": "iso38500-T2",
+    "targetControlId": "itil-v3-SS-SM",
+    "relationship": "related",
+    "notes": "ISO 38500 Direct task sets direction that ITIL v3 Strategy Management translates into service strategy plans."
+  },
+  {
+    "id": "map-668",
+    "sourceControlId": "iso38500-P5",
+    "targetControlId": "iso27001-5.31",
+    "relationship": "related",
+    "notes": "ISO 38500 Principle 5 (Conformance) requires IT compliance with legislation, supported by ISO 27001 legal requirements controls."
+  },
+  {
+    "id": "map-669",
+    "sourceControlId": "iso38500-P2",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "related",
+    "notes": "ISO 38500 IT strategy principle aligns with ISO 27001 information security policies as a component of organisational strategy."
+  },
+  {
+    "id": "map-670",
+    "sourceControlId": "iso38500-T1",
+    "targetControlId": "iso27001-6.1",
+    "relationship": "related",
+    "notes": "ISO 38500 Evaluate task includes evaluation of IT risk, which feeds into the ISO 27001 risk assessment process."
+  },
+  {
+    "id": "map-671",
+    "sourceControlId": "iso38500-T3",
+    "targetControlId": "iso27001-5.36",
+    "relationship": "related",
+    "notes": "ISO 38500 Monitor task encompasses monitoring of IT compliance requirements addressed by ISO 27001 compliance controls."
+  },
+  {
+    "id": "map-672",
+    "sourceControlId": "iso38500-T1",
+    "targetControlId": "nistcsf-GV.RM",
+    "relationship": "related",
+    "notes": "ISO 38500 Evaluate task for governing bodies aligns with NIST CSF GV.RM risk management strategy setting."
+  },
+  {
+    "id": "map-673",
+    "sourceControlId": "iso38500-T2",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "ISO 38500 Direct task by governing bodies corresponds to NIST CSF GV.PO cybersecurity policy direction."
+  },
+  {
+    "id": "map-674",
+    "sourceControlId": "iso38500-T3",
+    "targetControlId": "nistcsf-GV.OV",
+    "relationship": "equivalent",
+    "notes": "ISO 38500 Monitor task aligns with NIST CSF GV.OV cybersecurity oversight and performance review."
+  },
+  {
+    "id": "map-675",
+    "sourceControlId": "iso38500-P5",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "ISO 38500 Conformance principle aligns with NIST CSF GV.PO policy and standards for regulatory compliance."
+  },
+  {
+    "id": "map-676",
+    "sourceControlId": "itil-v3-SD-SLM",
+    "targetControlId": "itil-v4-SMP-SLM",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Service Level Management practice is the direct evolution of ITIL v3 Service Level Management."
+  },
+  {
+    "id": "map-677",
+    "sourceControlId": "itil-v3-SD-AM",
+    "targetControlId": "itil-v4-SMP-AVL",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Availability Management practice directly corresponds to ITIL v3 Availability Management."
+  },
+  {
+    "id": "map-678",
+    "sourceControlId": "itil-v3-SD-CapM",
+    "targetControlId": "itil-v4-SMP-CAP",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Capacity and Performance Management directly evolves from ITIL v3 Capacity Management."
+  },
+  {
+    "id": "map-679",
+    "sourceControlId": "itil-v3-SD-ITSCM",
+    "targetControlId": "itil-v4-SMP-SCM",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Service Continuity Management evolves from ITIL v3 IT Service Continuity Management."
+  },
+  {
+    "id": "map-680",
+    "sourceControlId": "itil-v3-SD-ISM",
+    "targetControlId": "itil-v4-GMP-ISM",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Information Security Management practice is the direct evolution of ITIL v3 Information Security Management."
+  },
+  {
+    "id": "map-681",
+    "sourceControlId": "itil-v3-ST-ChM",
+    "targetControlId": "itil-v4-SMP-CHG",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Change Enablement practice (renamed from Change Management) evolves from ITIL v3 Change Management."
+  },
+  {
+    "id": "map-682",
+    "sourceControlId": "itil-v3-ST-SACM",
+    "targetControlId": "itil-v4-SMP-SACM",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Service Configuration Management evolves directly from ITIL v3 Service Asset and Configuration Management."
+  },
+  {
+    "id": "map-683",
+    "sourceControlId": "itil-v3-ST-RDM",
+    "targetControlId": "itil-v4-SMP-REL",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Release Management practice evolves from ITIL v3 Release and Deployment Management."
+  },
+  {
+    "id": "map-684",
+    "sourceControlId": "itil-v3-ST-KM",
+    "targetControlId": "itil-v4-GMP-KM",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Knowledge Management practice is the direct evolution of ITIL v3 Knowledge Management."
+  },
+  {
+    "id": "map-685",
+    "sourceControlId": "itil-v3-SO-IM",
+    "targetControlId": "itil-v4-SMP-INC",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Incident Management practice is the direct evolution of ITIL v3 Incident Management."
+  },
+  {
+    "id": "map-686",
+    "sourceControlId": "itil-v3-SO-PM",
+    "targetControlId": "itil-v4-SMP-PROB",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Problem Management practice is the direct evolution of ITIL v3 Problem Management."
+  },
+  {
+    "id": "map-687",
+    "sourceControlId": "itil-v3-SO-EvM",
+    "targetControlId": "itil-v4-SMP-MON",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Monitoring and Event Management practice evolves from ITIL v3 Event Management."
+  },
+  {
+    "id": "map-688",
+    "sourceControlId": "itil-v3-SO-RF",
+    "targetControlId": "itil-v4-SMP-SRQ",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Service Request Management practice is the direct evolution of ITIL v3 Request Fulfilment."
+  },
+  {
+    "id": "map-689",
+    "sourceControlId": "itil-v3-SO-AcM",
+    "targetControlId": "itil-v4-GMP-ISM",
+    "relationship": "related",
+    "notes": "ITIL v3 Access Management is absorbed into ITIL 4 Information Security Management and Identity & Access Management aspects."
+  },
+  {
+    "id": "map-690",
+    "sourceControlId": "itil-v3-CSI-7SI",
+    "targetControlId": "itil-v4-GMP-CI",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Continual Improvement practice evolves from the ITIL v3 Seven-Step Improvement Process in CSI."
+  },
+  {
+    "id": "map-691",
+    "sourceControlId": "itil-v3-CSI-SMR",
+    "targetControlId": "itil-v4-GMP-MEA",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Measurement and Reporting practice evolves from ITIL v3 Service Measurement and Reporting in CSI."
+  },
+  {
+    "id": "map-692",
+    "sourceControlId": "itil-v3-SS-SM",
+    "targetControlId": "itil-v4-GMP-STR",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Strategy Management practice is the direct evolution of ITIL v3 Strategy Management for IT Services."
+  },
+  {
+    "id": "map-693",
+    "sourceControlId": "itil-v3-SS-SPM",
+    "targetControlId": "itil-v4-GMP-PFM",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Portfolio Management practice evolves from ITIL v3 Service Portfolio Management."
+  },
+  {
+    "id": "map-694",
+    "sourceControlId": "itil-v3-SS-FM",
+    "targetControlId": "itil-v4-GMP-SFM",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Service Financial Management practice is the direct evolution of ITIL v3 Financial Management for IT Services."
+  },
+  {
+    "id": "map-695",
+    "sourceControlId": "itil-v3-SS-BRM",
+    "targetControlId": "itil-v4-GMP-REL",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Relationship Management practice evolves from ITIL v3 Business Relationship Management."
+  },
+  {
+    "id": "map-696",
+    "sourceControlId": "itil-v3-SD-SM",
+    "targetControlId": "itil-v4-GMP-SPC",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Supplier Management practice is the direct evolution of ITIL v3 Supplier Management in Service Design."
+  },
+  {
+    "id": "map-697",
+    "sourceControlId": "itil-v4-GMP-ISM",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Information Security Management practice covers the same scope as ISO 27001 information security policies and governance."
+  },
+  {
+    "id": "map-698",
+    "sourceControlId": "itil-v4-SMP-INC",
+    "targetControlId": "iso27001-5.24",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Incident Management practice corresponds to ISO 27001 information security incident management."
+  },
+  {
+    "id": "map-699",
+    "sourceControlId": "itil-v4-SMP-PROB",
+    "targetControlId": "iso27001-5.27",
+    "relationship": "related",
+    "notes": "ITIL 4 Problem Management (root cause analysis) supports ISO 27001 lessons learnt from information security incidents."
+  },
+  {
+    "id": "map-700",
+    "sourceControlId": "itil-v4-SMP-AVL",
+    "targetControlId": "iso27001-8.14",
+    "relationship": "related",
+    "notes": "ITIL 4 Availability Management practice aligns with ISO 27001 redundancy and availability of information processing facilities."
+  },
+  {
+    "id": "map-701",
+    "sourceControlId": "itil-v4-GMP-RISK",
+    "targetControlId": "iso27001-6.1",
+    "relationship": "related",
+    "notes": "ITIL 4 Risk Management practice supports the information security risk assessment and treatment required by ISO 27001."
+  },
+  {
+    "id": "map-702",
+    "sourceControlId": "itil-v4-SMP-CHG",
+    "targetControlId": "iso27001-8.32",
+    "relationship": "related",
+    "notes": "ITIL 4 Change Enablement practice implements structured change processes aligned with ISO 27001 change management controls."
+  },
+  {
+    "id": "map-703",
+    "sourceControlId": "itil-v4-SMP-SCM",
+    "targetControlId": "iso27001-5.29",
+    "relationship": "related",
+    "notes": "ITIL 4 Service Continuity Management addresses IT service resilience required by ISO 27001 information continuity controls."
+  },
+  {
+    "id": "map-704",
+    "sourceControlId": "itil-v4-SMP-SACM",
+    "targetControlId": "iso27001-5.9",
+    "relationship": "related",
+    "notes": "ITIL 4 Service Configuration Management supports ISO 27001 inventory of information assets and associated attributes."
+  },
+  {
+    "id": "map-705",
+    "sourceControlId": "itil-v4-SMP-INC",
+    "targetControlId": "nistcsf-RS.MA",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Incident Management and NIST CSF RS.MA both address incident management response activities and escalation."
+  },
+  {
+    "id": "map-706",
+    "sourceControlId": "itil-v4-GMP-CI",
+    "targetControlId": "nistcsf-ID.IM",
+    "relationship": "related",
+    "notes": "ITIL 4 Continual Improvement practice supports NIST CSF ID.IM improvement activities and adaptation to new risks."
+  },
+  {
+    "id": "map-707",
+    "sourceControlId": "itil-v4-GMP-RISK",
+    "targetControlId": "nistcsf-GV.RM",
+    "relationship": "equivalent",
+    "notes": "ITIL 4 Risk Management and NIST CSF GV.RM both address organisational risk management strategy and oversight."
+  },
+  {
+    "id": "map-708",
+    "sourceControlId": "itil-v4-SMP-CHG",
+    "targetControlId": "nistcsf-PR.PS",
+    "relationship": "related",
+    "notes": "ITIL 4 Change Enablement (controlling changes to production) aligns with NIST CSF PR.PS technology infrastructure protection."
+  },
+  {
+    "id": "map-709",
+    "sourceControlId": "itil-v4-GMP-ISM",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "ITIL 4 Information Security Management practice aligns with NIST CSF GV.PO cybersecurity policy and programme management."
+  },
+  {
+    "id": "map-710",
+    "sourceControlId": "itil-v3-SD-ISM",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "equivalent",
+    "notes": "ITIL v3 Information Security Management in Service Design corresponds to ISO 27001 information security management system governance."
+  },
+  {
+    "id": "map-711",
+    "sourceControlId": "itil-v3-SO-IM",
+    "targetControlId": "iso27001-5.24",
+    "relationship": "equivalent",
+    "notes": "ITIL v3 Incident Management maps to ISO 27001 information security incident management planning and response."
+  },
+  {
+    "id": "map-712",
+    "sourceControlId": "itil-v3-SO-PM",
+    "targetControlId": "iso27001-5.27",
+    "relationship": "related",
+    "notes": "ITIL v3 Problem Management (root cause analysis) supports ISO 27001 lessons learnt from information security events."
+  },
+  {
+    "id": "map-713",
+    "sourceControlId": "itil-v3-SD-AM",
+    "targetControlId": "iso27001-8.14",
+    "relationship": "related",
+    "notes": "ITIL v3 Availability Management supports ISO 27001 requirements for redundancy of information processing facilities."
+  },
+  {
+    "id": "map-714",
+    "sourceControlId": "itil-v3-SD-ITSCM",
+    "targetControlId": "iso27001-5.29",
+    "relationship": "related",
+    "notes": "ITIL v3 IT Service Continuity Management addresses ICT continuity required by ISO 27001 information continuity controls."
+  },
+  {
+    "id": "map-715",
+    "sourceControlId": "itil-v3-ST-ChM",
+    "targetControlId": "iso27001-8.32",
+    "relationship": "related",
+    "notes": "ITIL v3 Change Management implements controlled change processes aligned with ISO 27001 change management controls."
+  },
+  {
+    "id": "map-716",
+    "sourceControlId": "itil-v3-ST-SACM",
+    "targetControlId": "iso27001-5.9",
+    "relationship": "related",
+    "notes": "ITIL v3 Service Asset and Configuration Management supports ISO 27001 inventory and management of information assets."
+  },
+  {
+    "id": "map-717",
+    "sourceControlId": "itil-v3-SO-IM",
+    "targetControlId": "nistcsf-RS.MA",
+    "relationship": "equivalent",
+    "notes": "ITIL v3 Incident Management and NIST CSF RS.MA both address incident response activities, escalation and resolution."
+  },
+  {
+    "id": "map-718",
+    "sourceControlId": "itil-v3-CSI-7SI",
+    "targetControlId": "nistcsf-ID.IM",
+    "relationship": "related",
+    "notes": "ITIL v3 Seven-Step Improvement Process supports NIST CSF Improvements identification and implementation activities."
+  },
+  {
+    "id": "map-719",
+    "sourceControlId": "itil-v3-SD-ISM",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "ITIL v3 Information Security Management aligns with NIST CSF GV.PO cybersecurity policy and programme management."
+  },
+  {
+    "id": "map-720",
+    "sourceControlId": "itil-v3-SD-ITSCM",
+    "targetControlId": "nistcsf-RC.RP",
+    "relationship": "related",
+    "notes": "ITIL v3 IT Service Continuity Management aligns with NIST CSF RC.RP recovery plan execution after incidents."
+  },
+  {
+    "id": "map-721",
+    "sourceControlId": "pci-dss-1",
+    "targetControlId": "iso27001-8.20",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 1 (network security controls) maps to ISO 27001 network security management for information processing facilities."
+  },
+  {
+    "id": "map-722",
+    "sourceControlId": "pci-dss-2",
+    "targetControlId": "iso27001-8.9",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 2 (secure configurations) aligns with ISO 27001 configuration management for information systems."
+  },
+  {
+    "id": "map-723",
+    "sourceControlId": "pci-dss-3",
+    "targetControlId": "iso27001-8.24",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 3 (protect stored account data) aligns with ISO 27001 use of cryptography for data protection."
+  },
+  {
+    "id": "map-724",
+    "sourceControlId": "pci-dss-4",
+    "targetControlId": "iso27001-8.24",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 4 (encrypt transmission) maps to ISO 27001 cryptography controls for data in transit."
+  },
+  {
+    "id": "map-725",
+    "sourceControlId": "pci-dss-5",
+    "targetControlId": "iso27001-8.7",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 5 (anti-malware) aligns with ISO 27001 protection against malware controls."
+  },
+  {
+    "id": "map-726",
+    "sourceControlId": "pci-dss-6",
+    "targetControlId": "iso27001-8.25",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 6 (secure development) corresponds to ISO 27001 secure development lifecycle controls."
+  },
+  {
+    "id": "map-727",
+    "sourceControlId": "pci-dss-7",
+    "targetControlId": "iso27001-5.15",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 7 (restrict access by need-to-know) maps to ISO 27001 access control based on business and security requirements."
+  },
+  {
+    "id": "map-728",
+    "sourceControlId": "pci-dss-8",
+    "targetControlId": "iso27001-5.16",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 8 (user authentication) aligns with ISO 27001 identity management and authentication controls."
+  },
+  {
+    "id": "map-729",
+    "sourceControlId": "pci-dss-9",
+    "targetControlId": "iso27001-7.1",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 9 (restrict physical access) maps to ISO 27001 physical security perimeters and physical entry controls."
+  },
+  {
+    "id": "map-730",
+    "sourceControlId": "pci-dss-10",
+    "targetControlId": "iso27001-8.15",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 10 (logging and monitoring) aligns with ISO 27001 logging, monitoring and log protection controls."
+  },
+  {
+    "id": "map-731",
+    "sourceControlId": "pci-dss-11",
+    "targetControlId": "iso27001-8.8",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 11 (security testing) maps to ISO 27001 management of technical vulnerabilities and security testing."
+  },
+  {
+    "id": "map-732",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 12 (security policy programme) aligns with ISO 27001 information security policies and management commitment."
+  },
+  {
+    "id": "map-733",
+    "sourceControlId": "pci-dss-1",
+    "targetControlId": "nistcsf-PR.IR",
+    "relationship": "related",
+    "notes": "PCI DSS network security controls (Req. 1) align with NIST CSF PR.IR technology infrastructure protection."
+  },
+  {
+    "id": "map-734",
+    "sourceControlId": "pci-dss-7",
+    "targetControlId": "nistcsf-PR.AA",
+    "relationship": "related",
+    "notes": "PCI DSS access restriction (Req. 7) maps to NIST CSF PR.AA identity management and access control."
+  },
+  {
+    "id": "map-735",
+    "sourceControlId": "pci-dss-8",
+    "targetControlId": "nistcsf-PR.AA",
+    "relationship": "related",
+    "notes": "PCI DSS user authentication (Req. 8) aligns with NIST CSF PR.AA authentication and authorisation controls."
+  },
+  {
+    "id": "map-736",
+    "sourceControlId": "pci-dss-10",
+    "targetControlId": "nistcsf-DE.CM",
+    "relationship": "related",
+    "notes": "PCI DSS logging and monitoring (Req. 10) maps to NIST CSF DE.CM continuous monitoring capabilities."
+  },
+  {
+    "id": "map-737",
+    "sourceControlId": "pci-dss-11",
+    "targetControlId": "nistcsf-DE.CM",
+    "relationship": "related",
+    "notes": "PCI DSS security testing (Req. 11) aligns with NIST CSF DE.CM security continuous monitoring and assessment."
+  },
+  {
+    "id": "map-738",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "PCI DSS information security policy programme (Req. 12) aligns with NIST CSF GV.PO governance and policy management."
+  },
+  {
+    "id": "map-739",
+    "sourceControlId": "pci-dss-1",
+    "targetControlId": "cis-12",
+    "relationship": "related",
+    "notes": "PCI DSS network security controls (Req. 1) align with CIS Control 12 (Network Infrastructure Management)."
+  },
+  {
+    "id": "map-740",
+    "sourceControlId": "pci-dss-2",
+    "targetControlId": "cis-4",
+    "relationship": "related",
+    "notes": "PCI DSS secure configuration (Req. 2) maps to CIS Control 4 (Secure Configuration of Enterprise Assets)."
+  },
+  {
+    "id": "map-741",
+    "sourceControlId": "pci-dss-5",
+    "targetControlId": "cis-10",
+    "relationship": "related",
+    "notes": "PCI DSS anti-malware protection (Req. 5) aligns with CIS Control 10 (Malware Defences)."
+  },
+  {
+    "id": "map-742",
+    "sourceControlId": "pci-dss-7",
+    "targetControlId": "cis-6",
+    "relationship": "related",
+    "notes": "PCI DSS access control (Req. 7) maps to CIS Control 6 (Access Control Management)."
+  },
+  {
+    "id": "map-743",
+    "sourceControlId": "pci-dss-8",
+    "targetControlId": "cis-5",
+    "relationship": "related",
+    "notes": "PCI DSS user authentication (Req. 8) aligns with CIS Control 5 (Account Management)."
+  },
+  {
+    "id": "map-744",
+    "sourceControlId": "pci-dss-10",
+    "targetControlId": "cis-8",
+    "relationship": "related",
+    "notes": "PCI DSS audit log management (Req. 10) directly aligns with CIS Control 8 (Audit Log Management)."
+  },
+  {
+    "id": "map-745",
+    "sourceControlId": "pci-dss-11",
+    "targetControlId": "cis-7",
+    "relationship": "related",
+    "notes": "PCI DSS security testing (Req. 11) maps to CIS Control 7 (Continuous Vulnerability Management)."
+  },
+  {
+    "id": "map-746",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "cis-17",
+    "relationship": "related",
+    "notes": "PCI DSS security programme management (Req. 12) aligns with CIS Control 17 (Incident Response Management)."
+  },
+  {
+    "id": "map-747",
+    "sourceControlId": "pci-dss-3",
+    "targetControlId": "dora-art9",
+    "relationship": "related",
+    "notes": "PCI DSS protection of stored cardholder data aligns with DORA Art. 9 data protection and encryption requirements."
+  },
+  {
+    "id": "map-748",
+    "sourceControlId": "pci-dss-8",
+    "targetControlId": "dora-art9",
+    "relationship": "related",
+    "notes": "PCI DSS strong authentication (Req. 8) aligns with DORA Art. 9 identity and access management security controls."
+  },
+  {
+    "id": "map-749",
+    "sourceControlId": "pci-dss-10",
+    "targetControlId": "dora-art17",
+    "relationship": "related",
+    "notes": "PCI DSS logging and monitoring (Req. 10) aligns with DORA Art. 17 requirements for ICT-related incident detection."
+  },
+  {
+    "id": "map-750",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "dora-art5",
+    "relationship": "related",
+    "notes": "PCI DSS security policy programme (Req. 12) maps to DORA Art. 5 ICT risk management framework and governance."
+  },
+  {
+    "id": "map-751",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "bait-4",
+    "relationship": "related",
+    "notes": "PCI DSS information security policy (Req. 12) aligns with BAIT Chapter 4 information security management system requirements."
+  },
+  {
+    "id": "map-752",
+    "sourceControlId": "pci-dss-8",
+    "targetControlId": "bait-10",
+    "relationship": "related",
+    "notes": "PCI DSS authentication requirements (Req. 8) correspond to BAIT Chapter 10 network and system security access controls."
+  },
+  {
+    "id": "map-753",
+    "sourceControlId": "pci-dss-9",
+    "targetControlId": "bait-10",
+    "relationship": "related",
+    "notes": "PCI DSS physical security of cardholder data (Req. 9) aligns with BAIT Chapter 10 physical and network security measures."
+  },
+  {
+    "id": "map-754",
+    "sourceControlId": "pci-dss-6",
+    "targetControlId": "bait-6",
+    "relationship": "related",
+    "notes": "PCI DSS secure software development (Req. 6) aligns with BAIT Chapter 6 IT projects and application security requirements."
+  },
+  {
+    "id": "map-755",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "related",
+    "notes": "PCI DSS security policy programme (Req. 12) aligns with NIS2 Art. 20 governance and management body oversight of security."
+  },
+  {
+    "id": "map-756",
+    "sourceControlId": "pci-dss-10",
+    "targetControlId": "nis2-art23-1",
+    "relationship": "related",
+    "notes": "PCI DSS logging and monitoring (Req. 10) supports NIS2 Art. 23 significant incident detection and reporting obligations."
+  },
+  {
+    "id": "map-757",
+    "sourceControlId": "pci-dss-11",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "related",
+    "notes": "PCI DSS security testing (Req. 11) supports NIS2 Art. 21(2)(a) risk assessment and vulnerability management measures."
+  },
+  {
+    "id": "map-758",
+    "sourceControlId": "bait-1",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "related",
+    "notes": "BAIT Chapter 1 IT strategy aligns with ISO 27001 information security policies as the governance foundation."
+  },
+  {
+    "id": "map-759",
+    "sourceControlId": "bait-2",
+    "targetControlId": "iso27001-5.2",
+    "relationship": "related",
+    "notes": "BAIT Chapter 2 IT governance structures (ISB, committees) align with ISO 27001 roles and responsibilities controls."
+  },
+  {
+    "id": "map-760",
+    "sourceControlId": "bait-3",
+    "targetControlId": "iso27001-6.1",
+    "relationship": "equivalent",
+    "notes": "BAIT Chapter 3 information risk management directly maps to ISO 27001 information security risk assessment and treatment."
+  },
+  {
+    "id": "map-761",
+    "sourceControlId": "bait-4",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "related",
+    "notes": "BAIT Chapter 4 ISMS requirements align with ISO 27001 information security policies and ISMS establishment."
+  },
+  {
+    "id": "map-762",
+    "sourceControlId": "bait-5",
+    "targetControlId": "iso27001-8.1",
+    "relationship": "related",
+    "notes": "BAIT Chapter 5 IT operations controls (availability, monitoring, change) align with ISO 27001 operations security controls."
+  },
+  {
+    "id": "map-763",
+    "sourceControlId": "bait-6",
+    "targetControlId": "iso27001-8.25",
+    "relationship": "related",
+    "notes": "BAIT Chapter 6 secure IT project and application development aligns with ISO 27001 secure development lifecycle controls."
+  },
+  {
+    "id": "map-764",
+    "sourceControlId": "bait-7",
+    "targetControlId": "iso27001-5.19",
+    "relationship": "related",
+    "notes": "BAIT Chapter 7 IT outsourcing requirements align with ISO 27001 supplier relationship management and service agreements."
+  },
+  {
+    "id": "map-765",
+    "sourceControlId": "bait-10",
+    "targetControlId": "iso27001-8.20",
+    "relationship": "related",
+    "notes": "BAIT Chapter 10 network and system security aligns with ISO 27001 network security management controls."
+  },
+  {
+    "id": "map-766",
+    "sourceControlId": "bait-11",
+    "targetControlId": "iso27001-5.29",
+    "relationship": "related",
+    "notes": "BAIT Chapter 11 emergency management and BCP aligns with ISO 27001 information security continuity controls."
+  },
+  {
+    "id": "map-767",
+    "sourceControlId": "bait-1",
+    "targetControlId": "dora-art5",
+    "relationship": "related",
+    "notes": "BAIT IT strategy requirements align with DORA Art. 5 ICT risk management framework and strategy obligations."
+  },
+  {
+    "id": "map-768",
+    "sourceControlId": "bait-3",
+    "targetControlId": "dora-art6",
+    "relationship": "equivalent",
+    "notes": "BAIT information risk management directly corresponds to DORA Art. 6 ICT risk management systems and controls."
+  },
+  {
+    "id": "map-769",
+    "sourceControlId": "bait-5",
+    "targetControlId": "dora-art9",
+    "relationship": "related",
+    "notes": "BAIT IT operations requirements align with DORA Art. 9 data protection and information security for ICT operations."
+  },
+  {
+    "id": "map-770",
+    "sourceControlId": "bait-7",
+    "targetControlId": "dora-art28",
+    "relationship": "related",
+    "notes": "BAIT IT outsourcing management aligns with DORA Art. 28 management of ICT third-party risk requirements."
+  },
+  {
+    "id": "map-771",
+    "sourceControlId": "bait-9",
+    "targetControlId": "dora-art13",
+    "relationship": "related",
+    "notes": "BAIT payment transaction security aligns with DORA Art. 13 ICT security controls for financial transaction protection."
+  },
+  {
+    "id": "map-772",
+    "sourceControlId": "bait-11",
+    "targetControlId": "dora-art11",
+    "relationship": "equivalent",
+    "notes": "BAIT emergency management and IT BCP directly corresponds to DORA Art. 11 ICT business continuity management."
+  },
+  {
+    "id": "map-773",
+    "sourceControlId": "bait-2",
+    "targetControlId": "dora-art5",
+    "relationship": "related",
+    "notes": "BAIT IT governance structures (ISB, board oversight) align with DORA Art. 5 governance and management body responsibilities."
+  },
+  {
+    "id": "map-774",
+    "sourceControlId": "bait-8",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "equivalent",
+    "notes": "BAIT Chapter 8 critical infrastructure protection requirements correspond to KRITIS § 8a BSIG security measures obligation."
+  },
+  {
+    "id": "map-775",
+    "sourceControlId": "bait-5",
+    "targetControlId": "kritis-8a-2",
+    "relationship": "related",
+    "notes": "BAIT IT operations security controls (monitoring, detection) align with KRITIS attack detection system requirements (§ 8a)."
+  },
+  {
+    "id": "map-776",
+    "sourceControlId": "bait-12",
+    "targetControlId": "kritis-8b-4",
+    "relationship": "related",
+    "notes": "BAIT IT audit requirements align with KRITIS biennial proof-of-compliance obligation submitted to BSI."
+  },
+  {
+    "id": "map-777",
+    "sourceControlId": "bait-3",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "related",
+    "notes": "BAIT information risk management aligns with NIS2 Art. 21(2)(a) risk analysis and information system security requirements."
+  },
+  {
+    "id": "map-778",
+    "sourceControlId": "bait-4",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "related",
+    "notes": "BAIT ISMS requirements align with NIS2 Art. 20 governance obligation for management body oversight of security measures."
+  },
+  {
+    "id": "map-779",
+    "sourceControlId": "bait-7",
+    "targetControlId": "nis2-art21-d",
+    "relationship": "related",
+    "notes": "BAIT IT outsourcing management aligns with NIS2 Art. 21(2)(d) security in supply chain and third-party relationships."
+  },
+  {
+    "id": "map-780",
+    "sourceControlId": "bait-11",
+    "targetControlId": "nis2-art21-c",
+    "relationship": "related",
+    "notes": "BAIT emergency management and BCP aligns with NIS2 Art. 21(2)(c) business continuity and crisis management requirements."
+  },
+  {
+    "id": "map-781",
+    "sourceControlId": "bait-1",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "BAIT IT strategy aligns with NIST CSF GV.PO cybersecurity policy and programme management governance."
+  },
+  {
+    "id": "map-782",
+    "sourceControlId": "bait-2",
+    "targetControlId": "nistcsf-GV.RR",
+    "relationship": "related",
+    "notes": "BAIT IT governance structures (defined roles, ISB) align with NIST CSF GV.RR roles, responsibilities and authorities."
+  },
+  {
+    "id": "map-783",
+    "sourceControlId": "bait-3",
+    "targetControlId": "nistcsf-ID.RA",
+    "relationship": "related",
+    "notes": "BAIT information risk management aligns with NIST CSF ID.RA risk assessment including threat and vulnerability analysis."
+  },
+  {
+    "id": "map-784",
+    "sourceControlId": "bait-4",
+    "targetControlId": "nistcsf-GV.OC",
+    "relationship": "related",
+    "notes": "BAIT ISMS aligns with NIST CSF GV.OC organisational context and cybersecurity programme management."
+  },
+  {
+    "id": "map-785",
+    "sourceControlId": "bait-11",
+    "targetControlId": "nistcsf-RC.RP",
+    "relationship": "related",
+    "notes": "BAIT emergency management and BCP aligns with NIST CSF RC.RP recovery plan execution and resilience restoration."
+  },
+  {
+    "id": "map-786",
+    "sourceControlId": "bait-4",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "BAIT ISMS requirements align with BSI IT-Baseline Protection ISMS building block (ISMS.1) for establishing and maintaining an ISMS."
+  },
+  {
+    "id": "map-787",
+    "sourceControlId": "bait-3",
+    "targetControlId": "bsi-gs-con-1",
+    "relationship": "related",
+    "notes": "BAIT information risk management aligns with BSI Grundschutz CON.1 crypto concept and risk-based security requirements."
+  },
+  {
+    "id": "map-788",
+    "sourceControlId": "bait-7",
+    "targetControlId": "bsi-gs-orp-5",
+    "relationship": "related",
+    "notes": "BAIT outsourcing requirements align with BSI Grundschutz ORP.5 compliance and outsourcing management requirements."
+  },
+  {
+    "id": "map-789",
+    "sourceControlId": "bait-3",
+    "targetControlId": "nis2umsg-30",
+    "relationship": "related",
+    "notes": "BAIT information risk management aligns with NIS2UmsuCG § 30 mandatory risk management measure categories."
+  },
+  {
+    "id": "map-790",
+    "sourceControlId": "bait-2",
+    "targetControlId": "nis2umsg-38",
+    "relationship": "related",
+    "notes": "BAIT IT governance and ISB roles align with NIS2UmsuCG § 38 management body liability and oversight provisions."
+  },
+  {
+    "id": "map-791",
+    "sourceControlId": "bait-11",
+    "targetControlId": "nis2umsg-30",
+    "relationship": "related",
+    "notes": "BAIT business continuity and emergency management aligns with NIS2UmsuCG § 30 continuity management requirements."
+  },
+  {
+    "id": "map-792",
+    "sourceControlId": "tisax-IS-1",
+    "targetControlId": "iso27001-5.1",
+    "relationship": "related",
+    "notes": "TISAX IS-1 information security policy and governance aligns with ISO 27001 Annex A information security policies."
+  },
+  {
+    "id": "map-793",
+    "sourceControlId": "tisax-IS-2",
+    "targetControlId": "iso27001-6.1",
+    "relationship": "equivalent",
+    "notes": "TISAX IS-2 risk management process directly corresponds to ISO 27001 information security risk assessment methodology."
+  },
+  {
+    "id": "map-794",
+    "sourceControlId": "tisax-IS-3",
+    "targetControlId": "iso27001-5.9",
+    "relationship": "related",
+    "notes": "TISAX IS-3 asset inventory and classification aligns with ISO 27001 inventory and classification of information assets."
+  },
+  {
+    "id": "map-795",
+    "sourceControlId": "tisax-IS-4",
+    "targetControlId": "iso27001-6.3",
+    "relationship": "related",
+    "notes": "TISAX IS-4 HR security (screening, training, exit procedures) aligns with ISO 27001 human resource security controls."
+  },
+  {
+    "id": "map-796",
+    "sourceControlId": "tisax-IS-5",
+    "targetControlId": "iso27001-7.1",
+    "relationship": "related",
+    "notes": "TISAX IS-5 physical and environmental security aligns with ISO 27001 physical security areas and entry controls."
+  },
+  {
+    "id": "map-797",
+    "sourceControlId": "tisax-IS-6",
+    "targetControlId": "iso27001-5.15",
+    "relationship": "related",
+    "notes": "TISAX IS-6 identity and access management aligns with ISO 27001 access control based on need-to-know principles."
+  },
+  {
+    "id": "map-798",
+    "sourceControlId": "tisax-IS-7",
+    "targetControlId": "iso27001-8.24",
+    "relationship": "related",
+    "notes": "TISAX IS-7 cryptography and key management aligns with ISO 27001 use of cryptography and key management controls."
+  },
+  {
+    "id": "map-799",
+    "sourceControlId": "tisax-IS-8",
+    "targetControlId": "iso27001-8.1",
+    "relationship": "related",
+    "notes": "TISAX IS-8 operations security (patch, backup, malware) aligns with ISO 27001 operations security controls."
+  },
+  {
+    "id": "map-800",
+    "sourceControlId": "tisax-IS-9",
+    "targetControlId": "iso27001-5.24",
+    "relationship": "related",
+    "notes": "TISAX IS-9 incident management aligns with ISO 27001 information security incident management processes."
+  },
+  {
+    "id": "map-801",
+    "sourceControlId": "tisax-IS-10",
+    "targetControlId": "iso27001-5.19",
+    "relationship": "related",
+    "notes": "TISAX IS-10 supplier security requirements align with ISO 27001 supplier relationship management controls."
+  },
+  {
+    "id": "map-802",
+    "sourceControlId": "tisax-IS-2",
+    "targetControlId": "nistcsf-ID.RA",
+    "relationship": "related",
+    "notes": "TISAX IS-2 risk management process aligns with NIST CSF ID.RA risk assessment category."
+  },
+  {
+    "id": "map-803",
+    "sourceControlId": "tisax-IS-6",
+    "targetControlId": "nistcsf-PR.AA",
+    "relationship": "related",
+    "notes": "TISAX IS-6 identity and access management aligns with NIST CSF PR.AA identity management and access control."
+  },
+  {
+    "id": "map-804",
+    "sourceControlId": "tisax-IS-8",
+    "targetControlId": "nistcsf-DE.CM",
+    "relationship": "related",
+    "notes": "TISAX IS-8 operations security monitoring aligns with NIST CSF DE.CM continuous monitoring capabilities."
+  },
+  {
+    "id": "map-805",
+    "sourceControlId": "tisax-IS-9",
+    "targetControlId": "nistcsf-RS.MA",
+    "relationship": "related",
+    "notes": "TISAX IS-9 incident management aligns with NIST CSF RS.MA incident management response activities."
+  },
+  {
+    "id": "map-806",
+    "sourceControlId": "tisax-IS-1",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "TISAX IS-1 security policy aligns with NIST CSF GV.PO organisational cybersecurity policy management."
+  },
+  {
+    "id": "map-807",
+    "sourceControlId": "tisax-IS-1",
+    "targetControlId": "bait-4",
+    "relationship": "related",
+    "notes": "TISAX IS-1 information security policy aligns with BAIT Chapter 4 information security management requirements."
+  },
+  {
+    "id": "map-808",
+    "sourceControlId": "tisax-IS-2",
+    "targetControlId": "bait-3",
+    "relationship": "related",
+    "notes": "TISAX IS-2 risk management aligns with BAIT Chapter 3 information risk management process."
+  },
+  {
+    "id": "map-809",
+    "sourceControlId": "tisax-IS-10",
+    "targetControlId": "bait-7",
+    "relationship": "equivalent",
+    "notes": "Both TISAX IS-10 and BAIT Chapter 7 require contractual information security obligations for third-party and supplier relationships."
+  },
+  {
+    "id": "map-810",
+    "sourceControlId": "tisax-IS-8",
+    "targetControlId": "bait-5",
+    "relationship": "related",
+    "notes": "TISAX IS-8 IT operations security aligns with BAIT Chapter 5 IT operations and availability requirements."
+  },
+  {
+    "id": "map-811",
+    "sourceControlId": "tisax-IS-1",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "related",
+    "notes": "TISAX IS-1 security governance aligns with NIS2 Art. 20 management body responsibility for cybersecurity oversight."
+  },
+  {
+    "id": "map-812",
+    "sourceControlId": "tisax-IS-2",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "related",
+    "notes": "TISAX IS-2 risk management aligns with NIS2 Art. 21(2)(a) risk analysis and security measures."
+  },
+  {
+    "id": "map-813",
+    "sourceControlId": "tisax-IS-9",
+    "targetControlId": "nis2-art23-1",
+    "relationship": "related",
+    "notes": "TISAX IS-9 incident management and reporting aligns with NIS2 Art. 23 significant incident notification obligations."
+  },
+  {
+    "id": "map-814",
+    "sourceControlId": "tisax-IS-3",
+    "targetControlId": "cis-1",
+    "relationship": "related",
+    "notes": "TISAX IS-3 asset inventory aligns with CIS Control 1 (Inventory and Control of Enterprise Assets)."
+  },
+  {
+    "id": "map-815",
+    "sourceControlId": "tisax-IS-6",
+    "targetControlId": "cis-5",
+    "relationship": "related",
+    "notes": "TISAX IS-6 access management aligns with CIS Control 5 (Account Management) and CIS Control 6 (Access Control)."
+  },
+  {
+    "id": "map-816",
+    "sourceControlId": "tisax-IS-8",
+    "targetControlId": "cis-7",
+    "relationship": "related",
+    "notes": "TISAX IS-8 vulnerability management aligns with CIS Control 7 (Continuous Vulnerability Management)."
+  },
+  {
+    "id": "map-817",
+    "sourceControlId": "tisax-IS-9",
+    "targetControlId": "cis-17",
+    "relationship": "related",
+    "notes": "TISAX IS-9 incident management aligns with CIS Control 17 (Incident Response Management)."
+  },
+  {
+    "id": "map-818",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "nistcsf-ID.RA",
+    "relationship": "equivalent",
+    "notes": "ISO 31000 risk assessment process (identification, analysis, evaluation) directly corresponds to NIST CSF ID.RA risk assessment."
+  },
+  {
+    "id": "map-819",
+    "sourceControlId": "iso31000-6.3",
+    "targetControlId": "nistcsf-GV.RM",
+    "relationship": "related",
+    "notes": "ISO 31000 scope, context and risk criteria setting aligns with NIST CSF GV.RM risk management strategy and tolerance."
+  },
+  {
+    "id": "map-820",
+    "sourceControlId": "iso31000-5.2",
+    "targetControlId": "nistcsf-GV.PO",
+    "relationship": "related",
+    "notes": "ISO 31000 leadership and commitment for risk management aligns with NIST CSF GV.PO policy and programme governance."
+  },
+  {
+    "id": "map-821",
+    "sourceControlId": "iso31000-6.5",
+    "targetControlId": "nistcsf-GV.RM",
+    "relationship": "related",
+    "notes": "ISO 31000 risk treatment option selection aligns with NIST CSF GV.RM risk management strategy implementation."
+  },
+  {
+    "id": "map-822",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "cobit-APO12",
+    "relationship": "equivalent",
+    "notes": "ISO 31000 risk assessment process directly corresponds to COBIT APO12 risk identification, analysis and response planning."
+  },
+  {
+    "id": "map-823",
+    "sourceControlId": "iso31000-6.3",
+    "targetControlId": "cobit-EDM03",
+    "relationship": "related",
+    "notes": "ISO 31000 risk context and criteria setting aligns with COBIT EDM03 governance-level risk optimisation direction."
+  },
+  {
+    "id": "map-824",
+    "sourceControlId": "iso31000-5.2",
+    "targetControlId": "cobit-EDM01",
+    "relationship": "related",
+    "notes": "ISO 31000 leadership and commitment for risk management aligns with COBIT EDM01 governance framework and executive oversight."
+  },
+  {
+    "id": "map-825",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "itil-v4-GMP-RISK",
+    "relationship": "equivalent",
+    "notes": "ISO 31000 risk assessment process aligns with ITIL 4 Risk Management general management practice."
+  },
+  {
+    "id": "map-826",
+    "sourceControlId": "iso31000-6.6",
+    "targetControlId": "itil-v4-GMP-CI",
+    "relationship": "related",
+    "notes": "ISO 31000 monitoring and review of risk management aligns with ITIL 4 Continual Improvement practice."
+  },
+  {
+    "id": "map-827",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "itil-v3-SD-ISM",
+    "relationship": "related",
+    "notes": "ISO 31000 risk assessment provides the risk management methodology supporting ITIL v3 Information Security Management."
+  },
+  {
+    "id": "map-828",
+    "sourceControlId": "iso31000-6.6",
+    "targetControlId": "itil-v3-CSI-7SI",
+    "relationship": "related",
+    "notes": "ISO 31000 monitoring and review of risk management supports ITIL v3 continual service improvement measurement activities."
+  },
+  {
+    "id": "map-829",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "iso27701-6.1",
+    "relationship": "related",
+    "notes": "ISO 31000 risk assessment methodology provides the foundation for ISO 27701 privacy risk assessment planning."
+  },
+  {
+    "id": "map-830",
+    "sourceControlId": "iso31000-5.2",
+    "targetControlId": "iso27701-5.4",
+    "relationship": "related",
+    "notes": "ISO 31000 leadership and commitment for risk management aligns with ISO 27701 leadership and commitment for PIMS."
+  },
+  {
+    "id": "map-831",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "gdpr-art35",
+    "relationship": "related",
+    "notes": "ISO 31000 risk assessment methodology supports GDPR Art. 35 Data Protection Impact Assessment process."
+  },
+  {
+    "id": "map-832",
+    "sourceControlId": "iso31000-6.3",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ISO 31000 risk context and criteria setting informs the risk-appropriate technical measures required by GDPR Art. 32."
+  },
+  {
+    "id": "map-833",
+    "sourceControlId": "iso27002-5.1",
+    "targetControlId": "iso27005-5.1",
+    "relationship": "related",
+    "notes": "ISO 27002 information security policies inform the organisational context and risk criteria required by ISO 27005."
+  },
+  {
+    "id": "map-834",
+    "sourceControlId": "iso27002-5.12",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "related",
+    "notes": "ISO 27002 information classification controls support ISO 27005 asset identification during risk assessment."
+  },
+  {
+    "id": "map-835",
+    "sourceControlId": "iso27002-5.23",
+    "targetControlId": "iso27017-CLD.12.4.5",
+    "relationship": "equivalent",
+    "notes": "ISO 27002 control 5.23 (information security for cloud services) provides requirements implemented by ISO 27017 cloud monitoring controls."
+  },
+  {
+    "id": "map-836",
+    "sourceControlId": "iso27002-8.20",
+    "targetControlId": "iso27017-CLD.13.1.4",
+    "relationship": "related",
+    "notes": "ISO 27002 network security controls (8.20) are extended by ISO 27017 to address virtual network alignment in cloud environments."
+  },
+  {
+    "id": "map-837",
+    "sourceControlId": "iso27002-5.33",
+    "targetControlId": "iso27018-A.3",
+    "relationship": "related",
+    "notes": "ISO 27002 privacy and protection of PII (5.33) provides the implementation basis for ISO 27018 collection limitation for cloud PII."
+  },
+  {
+    "id": "map-838",
+    "sourceControlId": "iso27002-8.11",
+    "targetControlId": "iso27018-A.5",
+    "relationship": "related",
+    "notes": "ISO 27002 data masking (8.11) aligns with ISO 27018 restrictions on use, retention and disclosure of PII in cloud services."
+  },
+  {
+    "id": "map-839",
+    "sourceControlId": "iso27002-5.33",
+    "targetControlId": "iso27701-A.7.2.1",
+    "relationship": "related",
+    "notes": "ISO 27002 privacy and PII protection control aligns with ISO 27701 purpose identification requirements for PII controllers."
+  },
+  {
+    "id": "map-840",
+    "sourceControlId": "iso27002-5.31",
+    "targetControlId": "iso27701-5.2",
+    "relationship": "related",
+    "notes": "ISO 27002 legal and regulatory compliance extends to privacy law compliance addressed by ISO 27701 PIMS context requirements."
+  },
+  {
+    "id": "map-841",
+    "sourceControlId": "iso27002-5.33",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ISO 27002 privacy and PII protection (5.33) provides technical and organisational measures required by GDPR Art. 32."
+  },
+  {
+    "id": "map-842",
+    "sourceControlId": "iso27002-8.11",
+    "targetControlId": "gdpr-art5-1f",
+    "relationship": "related",
+    "notes": "ISO 27002 data masking (8.11) supports GDPR integrity and confidentiality principle for personal data protection."
+  },
+  {
+    "id": "map-843",
+    "sourceControlId": "iso27002-5.31",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ISO 27002 compliance with legal requirements (5.31) covers GDPR obligations for appropriate security of personal data."
+  },
+  {
+    "id": "map-844",
+    "sourceControlId": "iso27002-8.24",
+    "targetControlId": "pci-dss-3",
+    "relationship": "related",
+    "notes": "ISO 27002 use of cryptography (8.24) provides implementation guidance for PCI DSS cardholder data encryption requirements."
+  },
+  {
+    "id": "map-845",
+    "sourceControlId": "iso27002-5.15",
+    "targetControlId": "pci-dss-7",
+    "relationship": "related",
+    "notes": "ISO 27002 access control (5.15) provides implementation guidance for PCI DSS access restriction requirements."
+  },
+  {
+    "id": "map-846",
+    "sourceControlId": "iso27002-8.7",
+    "targetControlId": "pci-dss-5",
+    "relationship": "related",
+    "notes": "ISO 27002 protection against malware (8.7) aligns with PCI DSS Requirement 5 anti-malware controls."
+  },
+  {
+    "id": "map-847",
+    "sourceControlId": "iso27002-5.1",
+    "targetControlId": "cobit-APO13",
+    "relationship": "related",
+    "notes": "ISO 27002 information security policy implementation guidance aligns with COBIT APO13 security management programme."
+  },
+  {
+    "id": "map-848",
+    "sourceControlId": "iso27002-8.20",
+    "targetControlId": "cobit-DSS05",
+    "relationship": "related",
+    "notes": "ISO 27002 network security implementation guidance aligns with COBIT DSS05 security services delivery controls."
+  },
+  {
+    "id": "map-849",
+    "sourceControlId": "iso27002-5.1",
+    "targetControlId": "bait-4",
+    "relationship": "related",
+    "notes": "ISO 27002 information security policy guidance provides the implementation basis for BAIT Chapter 4 ISMS requirements."
+  },
+  {
+    "id": "map-850",
+    "sourceControlId": "iso27002-8.24",
+    "targetControlId": "bait-10",
+    "relationship": "related",
+    "notes": "ISO 27002 cryptography implementation guidance supports BAIT Chapter 10 network and system security encryption requirements."
+  },
+  {
+    "id": "map-851",
+    "sourceControlId": "iso27002-5.1",
+    "targetControlId": "tisax-IS-1",
+    "relationship": "related",
+    "notes": "ISO 27002 information security policy guidance supports TISAX IS-1 security policy and governance implementation."
+  },
+  {
+    "id": "map-852",
+    "sourceControlId": "iso27002-8.24",
+    "targetControlId": "tisax-IS-7",
+    "relationship": "related",
+    "notes": "ISO 27002 cryptography implementation guidance directly supports TISAX IS-7 cryptography and key management requirements."
+  },
+  {
+    "id": "map-853",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "cobit-APO12",
+    "relationship": "equivalent",
+    "notes": "ISO 27005 risk assessment methodology provides the information security-specific implementation of COBIT APO12 risk management."
+  },
+  {
+    "id": "map-854",
+    "sourceControlId": "iso27005-5.3",
+    "targetControlId": "cobit-APO12",
+    "relationship": "related",
+    "notes": "ISO 27005 risk treatment planning directly feeds into COBIT APO12 risk response activities."
+  },
+  {
+    "id": "map-855",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "tisax-IS-2",
+    "relationship": "equivalent",
+    "notes": "ISO 27005 risk assessment methodology provides the formal risk assessment process required by TISAX IS-2."
+  },
+  {
+    "id": "map-856",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "bait-3",
+    "relationship": "related",
+    "notes": "ISO 27005 risk assessment methodology supports BAIT Chapter 3 information risk management process implementation."
+  },
+  {
+    "id": "map-857",
+    "sourceControlId": "itil-v4-SMP-INC",
+    "targetControlId": "dora-art17",
+    "relationship": "related",
+    "notes": "ITIL 4 Incident Management practice supports DORA Art. 17 ICT-related incident detection, classification and reporting."
+  },
+  {
+    "id": "map-858",
+    "sourceControlId": "itil-v4-SMP-SCM",
+    "targetControlId": "dora-art11",
+    "relationship": "related",
+    "notes": "ITIL 4 Service Continuity Management aligns with DORA Art. 11 ICT business continuity management requirements."
+  },
+  {
+    "id": "map-859",
+    "sourceControlId": "itil-v4-GMP-RISK",
+    "targetControlId": "dora-art6",
+    "relationship": "related",
+    "notes": "ITIL 4 Risk Management practice supports DORA Art. 6 ICT risk management systems and processes."
+  },
+  {
+    "id": "map-860",
+    "sourceControlId": "itil-v4-SMP-CHG",
+    "targetControlId": "dora-art9",
+    "relationship": "related",
+    "notes": "ITIL 4 Change Enablement controls changes to production systems aligning with DORA Art. 9 change management controls."
+  },
+  {
+    "id": "map-861",
+    "sourceControlId": "itil-v3-SO-IM",
+    "targetControlId": "dora-art17",
+    "relationship": "related",
+    "notes": "ITIL v3 Incident Management supports DORA Art. 17 ICT-related incident classification and reporting requirements."
+  },
+  {
+    "id": "map-862",
+    "sourceControlId": "itil-v3-SD-ITSCM",
+    "targetControlId": "dora-art11",
+    "relationship": "related",
+    "notes": "ITIL v3 IT Service Continuity Management aligns with DORA Art. 11 ICT business continuity management."
+  },
+  {
+    "id": "map-863",
+    "sourceControlId": "itil-v3-ST-ChM",
+    "targetControlId": "dora-art9",
+    "relationship": "related",
+    "notes": "ITIL v3 Change Management controls changes to production systems aligning with DORA Art. 9 change management."
+  },
+  {
+    "id": "map-864",
+    "sourceControlId": "itil-v4-GMP-ISM",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ITIL 4 Information Security Management practice implements security measures required by GDPR Art. 32."
+  },
+  {
+    "id": "map-865",
+    "sourceControlId": "itil-v4-SMP-ITM",
+    "targetControlId": "gdpr-art5-1f",
+    "relationship": "related",
+    "notes": "ITIL 4 IT Asset Management supports GDPR data integrity and confidentiality through controlled asset lifecycle management."
+  },
+  {
+    "id": "map-866",
+    "sourceControlId": "itil-v3-SD-ISM",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ITIL v3 Information Security Management supports GDPR Art. 32 technical and organisational security measures."
+  },
+  {
+    "id": "map-867",
+    "sourceControlId": "itil-v4-SMP-INC",
+    "targetControlId": "bait-5",
+    "relationship": "related",
+    "notes": "ITIL 4 Incident Management practice supports BAIT Chapter 5 IT operations incident management requirements."
+  },
+  {
+    "id": "map-868",
+    "sourceControlId": "itil-v4-SMP-CHG",
+    "targetControlId": "bait-5",
+    "relationship": "related",
+    "notes": "ITIL 4 Change Enablement aligns with BAIT Chapter 5 IT operations change management requirements."
+  },
+  {
+    "id": "map-869",
+    "sourceControlId": "itil-v4-SMP-SLM",
+    "targetControlId": "bait-5",
+    "relationship": "related",
+    "notes": "ITIL 4 Service Level Management supports BAIT Chapter 5 IT service availability and capacity requirements."
+  },
+  {
+    "id": "map-870",
+    "sourceControlId": "itil-v3-SO-IM",
+    "targetControlId": "bait-5",
+    "relationship": "related",
+    "notes": "ITIL v3 Incident Management supports BAIT Chapter 5 IT operations incident handling requirements."
+  },
+  {
+    "id": "map-871",
+    "sourceControlId": "itil-v3-ST-ChM",
+    "targetControlId": "bait-5",
+    "relationship": "related",
+    "notes": "ITIL v3 Change Management aligns with BAIT Chapter 5 IT operations change management requirements."
+  },
+  {
+    "id": "map-872",
+    "sourceControlId": "cobit-EDM03",
+    "targetControlId": "dora-art5",
+    "relationship": "related",
+    "notes": "COBIT EDM03 risk optimisation governance aligns with DORA Art. 5 ICT risk management framework at board level."
+  },
+  {
+    "id": "map-873",
+    "sourceControlId": "cobit-APO12",
+    "targetControlId": "dora-art6",
+    "relationship": "related",
+    "notes": "COBIT APO12 risk management process aligns with DORA Art. 6 ICT risk management systems and identification procedures."
+  },
+  {
+    "id": "map-874",
+    "sourceControlId": "cobit-DSS02",
+    "targetControlId": "dora-art17",
+    "relationship": "related",
+    "notes": "COBIT DSS02 incident management aligns with DORA Art. 17 ICT-related incident handling and reporting."
+  },
+  {
+    "id": "map-875",
+    "sourceControlId": "cobit-DSS04",
+    "targetControlId": "dora-art11",
+    "relationship": "related",
+    "notes": "COBIT DSS04 continuity management aligns with DORA Art. 11 ICT business continuity management requirements."
+  },
+  {
+    "id": "map-876",
+    "sourceControlId": "cobit-APO10",
+    "targetControlId": "dora-art28",
+    "relationship": "related",
+    "notes": "COBIT APO10 vendor management aligns with DORA Art. 28 management of ICT third-party risk requirements."
+  },
+  {
+    "id": "map-877",
+    "sourceControlId": "cobit-APO14",
+    "targetControlId": "gdpr-art30",
+    "relationship": "related",
+    "notes": "COBIT APO14 data management governance supports GDPR Art. 30 records of processing activities requirements."
+  },
+  {
+    "id": "map-878",
+    "sourceControlId": "cobit-MEA03",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "COBIT MEA03 compliance management covers GDPR Art. 32 obligation to implement appropriate security measures."
+  },
+  {
+    "id": "map-879",
+    "sourceControlId": "cobit-APO13",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "COBIT APO13 security management programme implements security controls aligned with GDPR Art. 32 requirements."
+  },
+  {
+    "id": "map-880",
+    "sourceControlId": "cobit-EDM01",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "related",
+    "notes": "COBIT EDM01 governance framework aligns with NIS2 Art. 20 requirement for management body oversight of cybersecurity measures."
+  },
+  {
+    "id": "map-881",
+    "sourceControlId": "cobit-APO12",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "related",
+    "notes": "COBIT APO12 risk management aligns with NIS2 Art. 21(2)(a) risk analysis and information system security measures."
+  },
+  {
+    "id": "map-882",
+    "sourceControlId": "cobit-DSS02",
+    "targetControlId": "nis2-art23-1",
+    "relationship": "related",
+    "notes": "COBIT DSS02 incident management supports NIS2 Art. 23 significant incident notification obligations."
+  },
+  {
+    "id": "map-883",
+    "sourceControlId": "cobit-EDM03",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "related",
+    "notes": "COBIT EDM03 risk optimisation supports KRITIS § 8a state-of-the-art security measures obligation for critical infrastructure."
+  },
+  {
+    "id": "map-884",
+    "sourceControlId": "cobit-MEA03",
+    "targetControlId": "kritis-8b-4",
+    "relationship": "related",
+    "notes": "COBIT MEA03 compliance management supports KRITIS biennial proof-of-compliance submission requirements."
+  },
+  {
+    "id": "map-885",
+    "sourceControlId": "cobit-EDM01",
+    "targetControlId": "bsi-gs-isms-1",
+    "relationship": "related",
+    "notes": "COBIT governance framework aligns with BSI IT-Baseline Protection ISMS building block (ISMS.1)."
+  },
+  {
+    "id": "map-886",
+    "sourceControlId": "cobit-APO12",
+    "targetControlId": "bsi-gs-con-1",
+    "relationship": "related",
+    "notes": "COBIT APO12 risk management aligns with BSI Grundschutz CON.1 risk-based security concept requirements."
+  },
+  {
+    "id": "map-887",
+    "sourceControlId": "iso38500-P5",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "related",
+    "notes": "ISO 38500 Principle 5 (Conformance) aligns with NIS2 Art. 20 management body obligation for cybersecurity oversight."
+  },
+  {
+    "id": "map-888",
+    "sourceControlId": "iso38500-T1",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "related",
+    "notes": "ISO 38500 Evaluate task (including IT risk) aligns with NIS2 Art. 21 risk analysis requirements."
+  },
+  {
+    "id": "map-889",
+    "sourceControlId": "iso38500-T2",
+    "targetControlId": "dora-art5",
+    "relationship": "related",
+    "notes": "ISO 38500 Direct task by governing bodies aligns with DORA Art. 5 management body oversight of ICT risk management."
+  },
+  {
+    "id": "map-890",
+    "sourceControlId": "iso38500-P5",
+    "targetControlId": "dora-art5",
+    "relationship": "related",
+    "notes": "ISO 38500 Conformance principle aligns with DORA Art. 5 ICT risk management obligations for financial entities."
+  },
+  {
+    "id": "map-891",
+    "sourceControlId": "iso38500-P5",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "ISO 38500 Conformance principle (compliance with legislation) covers GDPR security obligations for IT governance bodies."
+  },
+  {
+    "id": "map-892",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "dora-art6",
+    "relationship": "related",
+    "notes": "ISO 31000 risk assessment methodology provides the generic risk management approach underpinning DORA Art. 6 ICT risk management."
+  },
+  {
+    "id": "map-893",
+    "sourceControlId": "iso31000-5.2",
+    "targetControlId": "dora-art5",
+    "relationship": "related",
+    "notes": "ISO 31000 leadership and commitment for risk management aligns with DORA Art. 5 management body responsibilities."
+  },
+  {
+    "id": "map-894",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "nis2-art21-a",
+    "relationship": "related",
+    "notes": "ISO 31000 risk assessment methodology provides the foundation for NIS2 Art. 21(2)(a) risk analysis requirements."
+  },
+  {
+    "id": "map-895",
+    "sourceControlId": "iso31000-5.2",
+    "targetControlId": "nis2-art20-1",
+    "relationship": "related",
+    "notes": "ISO 31000 leadership commitment for risk management aligns with NIS2 Art. 20 management body responsibility."
+  },
+  {
+    "id": "map-896",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "bait-3",
+    "relationship": "related",
+    "notes": "ISO 31000 risk assessment process provides the generic methodology underlying BAIT Chapter 3 information risk management."
+  },
+  {
+    "id": "map-897",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "kritis-8a-1",
+    "relationship": "related",
+    "notes": "ISO 31000 risk assessment provides the risk management methodology underpinning KRITIS § 8a security measures determination."
+  },
+  {
+    "id": "map-898",
+    "sourceControlId": "iso31000-6.4",
+    "targetControlId": "tisax-IS-2",
+    "relationship": "related",
+    "notes": "ISO 31000 generic risk assessment methodology provides the foundation for TISAX IS-2 risk management requirements."
+  },
+  {
+    "id": "map-899",
+    "sourceControlId": "pci-dss-3",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 3 (protect stored cardholder data) aligns with GDPR Art. 32 security of personal data processing."
+  },
+  {
+    "id": "map-900",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "gdpr-art30",
+    "relationship": "related",
+    "notes": "PCI DSS Requirement 12 (security policy programme) aligns with GDPR Art. 30 records of processing and accountability obligations."
+  },
+  {
+    "id": "map-901",
+    "sourceControlId": "tisax-IS-2",
+    "targetControlId": "dora-art6",
+    "relationship": "related",
+    "notes": "TISAX IS-2 risk management aligns with DORA Art. 6 ICT risk management systems required for financial entities."
+  },
+  {
+    "id": "map-902",
+    "sourceControlId": "tisax-IS-9",
+    "targetControlId": "dora-art17",
+    "relationship": "related",
+    "notes": "TISAX IS-9 incident management aligns with DORA Art. 17 ICT-related incident classification and reporting."
+  },
+  {
+    "id": "map-903",
+    "sourceControlId": "tisax-IS-1",
+    "targetControlId": "gdpr-art32",
+    "relationship": "related",
+    "notes": "TISAX IS-1 information security governance supports GDPR Art. 32 organisational measures for personal data protection."
+  },
+  {
+    "id": "map-904",
+    "sourceControlId": "tisax-IS-6",
+    "targetControlId": "pci-dss-7",
+    "relationship": "related",
+    "notes": "TISAX IS-6 identity and access management aligns with PCI DSS Requirement 7 restricting access by business need-to-know."
+  },
+  {
+    "id": "map-905",
+    "sourceControlId": "tisax-IS-7",
+    "targetControlId": "pci-dss-3",
+    "relationship": "related",
+    "notes": "TISAX IS-7 cryptography controls align with PCI DSS Requirement 3 protection of stored account data through encryption."
+  },
+  {
+    "id": "map-906",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "bait-3",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 risk management measures align with BAIT Chapter 3 information risk management requirements."
+  },
+  {
+    "id": "map-907",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "cobit-APO12",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 risk management measures align with COBIT APO12 risk management objectives."
+  },
+  {
+    "id": "map-908",
+    "sourceControlId": "nis2umsg-38",
+    "targetControlId": "cobit-EDM01",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 38 management liability provisions align with COBIT EDM01 governance framework oversight requirements."
+  },
+  {
+    "id": "map-909",
+    "sourceControlId": "bsi-gs-isms-1",
+    "targetControlId": "cobit-EDM01",
+    "relationship": "related",
+    "notes": "BSI IT-Baseline Protection ISMS module (ISMS.1) aligns with COBIT EDM01 IT governance framework establishment."
+  },
+  {
+    "id": "map-910",
+    "sourceControlId": "bsi-gs-con-1",
+    "targetControlId": "pci-dss-3",
+    "relationship": "related",
+    "notes": "BSI Grundschutz CON.1 cryptographic concepts aligns with PCI DSS Requirement 3 cardholder data encryption requirements."
+  },
+  {
+    "id": "map-911",
+    "sourceControlId": "bsi-gs-der-1",
+    "targetControlId": "itil-v4-SMP-MON",
+    "relationship": "related",
+    "notes": "BSI Grundschutz DER.1 (event detection/monitoring) aligns with ITIL 4 Monitoring and Event Management practice."
+  },
+  {
+    "id": "map-912",
+    "sourceControlId": "bsi-gs-orp-5",
+    "targetControlId": "cobit-APO10",
+    "relationship": "related",
+    "notes": "BSI Grundschutz ORP.5 (compliance/outsourcing) aligns with COBIT APO10 vendor management objectives."
+  },
+  {
+    "id": "map-913",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "iso27002-5.1",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 policy controls correspond to ISO 27002:2022 guidance controls (updated edition)."
+  },
+  {
+    "id": "map-914",
+    "sourceControlId": "iso27001-2013-A.12.1.1",
+    "targetControlId": "iso27005-5.1",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 operational procedures support ISO 27005 context establishment for risk assessment."
+  },
+  {
+    "id": "map-915",
+    "sourceControlId": "iso27001-2013-A.12.6.1",
+    "targetControlId": "iso27017-CLD.12.4.5",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 vulnerability management extends to ISO 27017 cloud monitoring in cloud environments."
+  },
+  {
+    "id": "map-916",
+    "sourceControlId": "iso27001-2013-A.18.1.1",
+    "targetControlId": "iso27018-A.11",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 compliance with legal requirements aligns with ISO 27018 PII compliance obligations."
+  },
+  {
+    "id": "map-917",
+    "sourceControlId": "iso27001-2013-A.18.1.4",
+    "targetControlId": "iso27701-5.2",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 privacy and PII protection aligns with ISO 27701 PIMS context requirements."
+  },
+  {
+    "id": "map-918",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "bait-4",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 security policies align with BAIT Chapter 4 ISMS requirements for banks."
+  },
+  {
+    "id": "map-919",
+    "sourceControlId": "iso27001-2013-A.9.1.1",
+    "targetControlId": "pci-dss-7",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 access control policy maps to PCI DSS Requirement 7 need-to-know access restriction."
+  },
+  {
+    "id": "map-920",
+    "sourceControlId": "iso27001-2013-A.5.1.1",
+    "targetControlId": "tisax-IS-1",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 security policy aligns with TISAX IS-1 information security policy requirement."
+  },
+  {
+    "id": "map-921",
+    "sourceControlId": "iso27001-2013-A.6.1.1",
+    "targetControlId": "cobit-APO01",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 security roles and responsibilities align with COBIT APO01 IT management framework."
+  },
+  {
+    "id": "map-922",
+    "sourceControlId": "iso27001-2013-A.6.1.1",
+    "targetControlId": "iso38500-P1",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 security roles align with ISO 38500 Principle 1 on responsibility for IT."
+  },
+  {
+    "id": "map-923",
+    "sourceControlId": "iso27001-2013-A.12.6.1",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 vulnerability management supports ISO 31000 risk assessment process."
+  },
+  {
+    "id": "map-924",
+    "sourceControlId": "iso27001-2013-A.16.1.1",
+    "targetControlId": "itil-v3-SO-IM",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 incident management aligns with ITIL v3 Incident Management process."
+  },
+  {
+    "id": "map-925",
+    "sourceControlId": "iso27001-2013-A.16.1.1",
+    "targetControlId": "itil-v4-SMP-INC",
+    "relationship": "related",
+    "notes": "ISO 27001:2013 incident management aligns with ITIL 4 Incident Management practice."
+  },
+  {
+    "id": "map-926",
+    "sourceControlId": "nis2-art21-a",
+    "targetControlId": "iso27002-5.1",
+    "relationship": "related",
+    "notes": "NIS2 Art. 21 risk management measures are implemented using ISO 27002 information security policy controls."
+  },
+  {
+    "id": "map-927",
+    "sourceControlId": "nis2-art21-a",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "related",
+    "notes": "NIS2 Art. 21(2)(a) risk analysis is supported by ISO 27005 information security risk assessment methodology."
+  },
+  {
+    "id": "map-928",
+    "sourceControlId": "nis2-art21-a",
+    "targetControlId": "iso27017-CLD.12.4.5",
+    "relationship": "related",
+    "notes": "NIS2 security measures for cloud services are supported by ISO 27017 cloud-specific security controls."
+  },
+  {
+    "id": "map-929",
+    "sourceControlId": "nis2-art21-a",
+    "targetControlId": "iso27018-A.10",
+    "relationship": "related",
+    "notes": "NIS2 security of personal data processing is supported by ISO 27018 PII security controls in cloud."
+  },
+  {
+    "id": "map-930",
+    "sourceControlId": "nis2-art21-a",
+    "targetControlId": "iso27701-5.2",
+    "relationship": "related",
+    "notes": "NIS2 security measures overlap with ISO 27701 PIMS requirements when processing personal data."
+  },
+  {
+    "id": "map-931",
+    "sourceControlId": "nis2-art23-1",
+    "targetControlId": "itil-v3-SO-IM",
+    "relationship": "related",
+    "notes": "NIS2 Art. 23 incident reporting is supported by ITIL v3 Incident Management detection and logging."
+  },
+  {
+    "id": "map-932",
+    "sourceControlId": "nis2-art23-1",
+    "targetControlId": "itil-v4-SMP-INC",
+    "relationship": "related",
+    "notes": "NIS2 Art. 23 incident notification obligations are supported by ITIL 4 Incident Management practice."
+  },
+  {
+    "id": "map-933",
+    "sourceControlId": "gdpr-art35",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "related",
+    "notes": "GDPR Art. 35 DPIA employs risk assessment methodology provided by ISO 27005."
+  },
+  {
+    "id": "map-934",
+    "sourceControlId": "gdpr-art32",
+    "targetControlId": "bait-4",
+    "relationship": "related",
+    "notes": "GDPR Art. 32 security measures align with BAIT Chapter 4 information security management for banks."
+  },
+  {
+    "id": "map-935",
+    "sourceControlId": "dora-art6",
+    "targetControlId": "iso27002-5.1",
+    "relationship": "related",
+    "notes": "DORA Art. 6 ICT risk management uses ISO 27002 security policy implementation guidance."
+  },
+  {
+    "id": "map-936",
+    "sourceControlId": "dora-art6",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "related",
+    "notes": "DORA Art. 6 ICT risk management employs ISO 27005 risk assessment methodology."
+  },
+  {
+    "id": "map-937",
+    "sourceControlId": "dora-art9",
+    "targetControlId": "iso27017-CLD.12.4.5",
+    "relationship": "related",
+    "notes": "DORA Art. 9 ICT security in cloud environments is supported by ISO 27017 cloud security monitoring."
+  },
+  {
+    "id": "map-938",
+    "sourceControlId": "dora-art9",
+    "targetControlId": "iso27018-A.10",
+    "relationship": "related",
+    "notes": "DORA Art. 9 data protection requirements align with ISO 27018 PII security controls in cloud services."
+  },
+  {
+    "id": "map-939",
+    "sourceControlId": "dora-art9",
+    "targetControlId": "iso27701-A.8.2.1",
+    "relationship": "related",
+    "notes": "DORA Art. 9 data protection aligns with ISO 27701 processor obligations for PII security in financial services."
+  },
+  {
+    "id": "map-940",
+    "sourceControlId": "cis-1",
+    "targetControlId": "iso27002-5.9",
+    "relationship": "related",
+    "notes": "CIS Control 1 asset inventory aligns with ISO 27002 inventory of information and associated assets."
+  },
+  {
+    "id": "map-941",
+    "sourceControlId": "cis-7",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "related",
+    "notes": "CIS Control 7 vulnerability management supports ISO 27005 risk identification and assessment activities."
+  },
+  {
+    "id": "map-942",
+    "sourceControlId": "cis-12",
+    "targetControlId": "iso27017-CLD.13.1.4",
+    "relationship": "related",
+    "notes": "CIS Control 12 network infrastructure management aligns with ISO 27017 virtual network security in cloud."
+  },
+  {
+    "id": "map-943",
+    "sourceControlId": "cis-3",
+    "targetControlId": "iso27018-A.5",
+    "relationship": "related",
+    "notes": "CIS Control 3 data protection aligns with ISO 27018 PII use and retention limitation controls."
+  },
+  {
+    "id": "map-944",
+    "sourceControlId": "cis-3",
+    "targetControlId": "iso27701-A.7.4.1",
+    "relationship": "related",
+    "notes": "CIS Control 3 data protection management aligns with ISO 27701 data subject rights management."
+  },
+  {
+    "id": "map-945",
+    "sourceControlId": "cis-17",
+    "targetControlId": "bait-5",
+    "relationship": "related",
+    "notes": "CIS Control 17 incident response management aligns with BAIT Chapter 5 IT operations incident handling."
+  },
+  {
+    "id": "map-946",
+    "sourceControlId": "cis-1",
+    "targetControlId": "cobit-APO14",
+    "relationship": "related",
+    "notes": "CIS Control 1 asset inventory aligns with COBIT APO14 data and asset governance management."
+  },
+  {
+    "id": "map-947",
+    "sourceControlId": "cis-17",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "CIS Control 17 incident response aligns with ISO 38500 Principle 5 conformance with policies and laws."
+  },
+  {
+    "id": "map-948",
+    "sourceControlId": "cis-7",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "related",
+    "notes": "CIS Control 7 vulnerability management supports ISO 31000 risk assessment identification activities."
+  },
+  {
+    "id": "map-949",
+    "sourceControlId": "cis-17",
+    "targetControlId": "itil-v3-SO-IM",
+    "relationship": "related",
+    "notes": "CIS Control 17 incident response management aligns with ITIL v3 Incident Management process."
+  },
+  {
+    "id": "map-950",
+    "sourceControlId": "cis-17",
+    "targetControlId": "itil-v4-SMP-INC",
+    "relationship": "related",
+    "notes": "CIS Control 17 incident response management aligns with ITIL 4 Incident Management practice."
+  },
+  {
+    "id": "map-951",
+    "sourceControlId": "nistcsf-GV.PO",
+    "targetControlId": "iso27002-5.1",
+    "relationship": "related",
+    "notes": "NIST CSF GV.PO cybersecurity policy management aligns with ISO 27002 information security policy implementation."
+  },
+  {
+    "id": "map-952",
+    "sourceControlId": "nistcsf-ID.RA",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "equivalent",
+    "notes": "NIST CSF ID.RA risk assessment corresponds to ISO 27005 information security risk assessment methodology."
+  },
+  {
+    "id": "map-953",
+    "sourceControlId": "nistcsf-PR.IR",
+    "targetControlId": "iso27017-CLD.13.1.4",
+    "relationship": "related",
+    "notes": "NIST CSF PR.IR infrastructure protection aligns with ISO 27017 virtual network security for cloud environments."
+  },
+  {
+    "id": "map-954",
+    "sourceControlId": "nistcsf-PR.DS",
+    "targetControlId": "iso27018-A.10",
+    "relationship": "related",
+    "notes": "NIST CSF PR.DS data security aligns with ISO 27018 information security controls for PII in cloud."
+  },
+  {
+    "id": "map-955",
+    "sourceControlId": "nistcsf-GV.PO",
+    "targetControlId": "iso27701-5.2",
+    "relationship": "related",
+    "notes": "NIST CSF GV.PO policy management supports ISO 27701 PIMS context and privacy policy requirements."
+  },
+  {
+    "id": "map-956",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "iso27002-5.1",
+    "relationship": "related",
+    "notes": "KRITIS § 8a security measures are implemented using ISO 27002 security policy and control guidance."
+  },
+  {
+    "id": "map-957",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "related",
+    "notes": "KRITIS § 8a security measures determination uses ISO 27005 risk assessment methodology."
+  },
+  {
+    "id": "map-958",
+    "sourceControlId": "kritis-8a-2",
+    "targetControlId": "iso27017-CLD.12.4.5",
+    "relationship": "related",
+    "notes": "KRITIS attack detection requirements for cloud environments are supported by ISO 27017 cloud monitoring controls."
+  },
+  {
+    "id": "map-959",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "iso27018-A.10",
+    "relationship": "related",
+    "notes": "KRITIS security measures for critical infrastructure processing personal data include ISO 27018 PII protection."
+  },
+  {
+    "id": "map-960",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "iso27701-5.2",
+    "relationship": "related",
+    "notes": "KRITIS operators processing personal data must complement security measures with ISO 27701 PIMS requirements."
+  },
+  {
+    "id": "map-961",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "pci-dss-12",
+    "relationship": "related",
+    "notes": "KRITIS § 8a security measures for financial critical infrastructure align with PCI DSS security programme requirements."
+  },
+  {
+    "id": "map-962",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "tisax-IS-2",
+    "relationship": "related",
+    "notes": "KRITIS risk-based security measures align with TISAX IS-2 risk management requirements."
+  },
+  {
+    "id": "map-963",
+    "sourceControlId": "kritis-8a-1",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "KRITIS § 8a compliance obligation aligns with ISO 38500 Principle 5 conformance with legislation."
+  },
+  {
+    "id": "map-964",
+    "sourceControlId": "kritis-8a-2",
+    "targetControlId": "itil-v3-SO-IM",
+    "relationship": "related",
+    "notes": "KRITIS attack detection and incident handling aligns with ITIL v3 Incident Management process."
+  },
+  {
+    "id": "map-965",
+    "sourceControlId": "kritis-8a-2",
+    "targetControlId": "itil-v4-SMP-INC",
+    "relationship": "related",
+    "notes": "KRITIS attack detection and incident handling aligns with ITIL 4 Incident Management practice."
+  },
+  {
+    "id": "map-966",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "iso27002-5.1",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 risk management measures are implemented using ISO 27002 security control guidance."
+  },
+  {
+    "id": "map-967",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 risk measures use ISO 27005 risk assessment methodology as implementation basis."
+  },
+  {
+    "id": "map-968",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "iso27017-CLD.12.4.5",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 security measures include cloud-specific controls supported by ISO 27017."
+  },
+  {
+    "id": "map-969",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "iso27018-A.10",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 measures covering personal data processing are supported by ISO 27018 PII security controls."
+  },
+  {
+    "id": "map-970",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "iso27701-5.2",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 measures for personal data overlap with ISO 27701 PIMS privacy management requirements."
+  },
+  {
+    "id": "map-971",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "pci-dss-12",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 security measures for financial entities align with PCI DSS security programme requirements."
+  },
+  {
+    "id": "map-972",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "tisax-IS-2",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 risk management measures align with TISAX IS-2 risk management requirements."
+  },
+  {
+    "id": "map-973",
+    "sourceControlId": "nis2umsg-38",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 38 management liability aligns with ISO 38500 Principle 5 conformance obligations."
+  },
+  {
+    "id": "map-974",
+    "sourceControlId": "nis2umsg-30",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG § 30 risk measures use ISO 31000 generic risk assessment as methodological foundation."
+  },
+  {
+    "id": "map-975",
+    "sourceControlId": "nis2umsg-32",
+    "targetControlId": "itil-v3-SO-IM",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG incident reporting obligations are supported by ITIL v3 Incident Management detection and logging."
+  },
+  {
+    "id": "map-976",
+    "sourceControlId": "nis2umsg-32",
+    "targetControlId": "itil-v4-SMP-INC",
+    "relationship": "related",
+    "notes": "NIS2UmsuCG incident reporting obligations are supported by ITIL 4 Incident Management practice."
+  },
+  {
+    "id": "map-977",
+    "sourceControlId": "bsi-gs-isms-1",
+    "targetControlId": "iso27002-5.1",
+    "relationship": "related",
+    "notes": "BSI IT-Baseline Protection ISMS module aligns with ISO 27002 information security policy implementation guidance."
+  },
+  {
+    "id": "map-978",
+    "sourceControlId": "bsi-gs-con-1",
+    "targetControlId": "iso27005-5.2",
+    "relationship": "related",
+    "notes": "BSI Grundschutz CON.1 risk analysis aligns with ISO 27005 information security risk assessment methodology."
+  },
+  {
+    "id": "map-979",
+    "sourceControlId": "bsi-gs-ops-1",
+    "targetControlId": "iso27017-CLD.12.4.5",
+    "relationship": "related",
+    "notes": "BSI Grundschutz OPS.1 operations controls extend to cloud environments supported by ISO 27017 monitoring."
+  },
+  {
+    "id": "map-980",
+    "sourceControlId": "bsi-gs-con-2",
+    "targetControlId": "iso27018-A.3",
+    "relationship": "related",
+    "notes": "BSI Grundschutz CON.2 data protection aligns with ISO 27018 PII collection limitation in cloud services."
+  },
+  {
+    "id": "map-981",
+    "sourceControlId": "bsi-gs-con-2",
+    "targetControlId": "iso27701-5.2",
+    "relationship": "related",
+    "notes": "BSI Grundschutz CON.2 data protection aligns with ISO 27701 PIMS privacy management context requirements."
+  },
+  {
+    "id": "map-982",
+    "sourceControlId": "bsi-gs-isms-1",
+    "targetControlId": "tisax-IS-1",
+    "relationship": "related",
+    "notes": "BSI Grundschutz ISMS module aligns with TISAX IS-1 information security governance requirements."
+  },
+  {
+    "id": "map-983",
+    "sourceControlId": "bsi-gs-isms-1",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "BSI Grundschutz ISMS compliance framework aligns with ISO 38500 Principle 5 conformance with legislation."
+  },
+  {
+    "id": "map-984",
+    "sourceControlId": "bsi-gs-con-1",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "related",
+    "notes": "BSI Grundschutz CON.1 risk analysis aligns with ISO 31000 generic risk assessment process."
+  },
+  {
+    "id": "map-985",
+    "sourceControlId": "bsi-gs-der-1",
+    "targetControlId": "itil-v3-SO-EvM",
+    "relationship": "related",
+    "notes": "BSI Grundschutz DER.1 event detection aligns with ITIL v3 Event Management in Service Operation."
+  },
+  {
+    "id": "map-986",
+    "sourceControlId": "iso27002-5.1",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "ISO 27002 policy controls support ISO 38500 Principle 5 conformance with legislation and regulations."
+  },
+  {
+    "id": "map-987",
+    "sourceControlId": "iso27002-5.1",
+    "targetControlId": "iso31000-5.2",
+    "relationship": "related",
+    "notes": "ISO 27002 information security policy aligns with ISO 31000 leadership and commitment for risk management."
+  },
+  {
+    "id": "map-988",
+    "sourceControlId": "iso27002-5.24",
+    "targetControlId": "itil-v3-SD-ISM",
+    "relationship": "related",
+    "notes": "ISO 27002 information security incident management (5.24) aligns with ITIL v3 Information Security Management."
+  },
+  {
+    "id": "map-989",
+    "sourceControlId": "iso27002-5.24",
+    "targetControlId": "itil-v4-GMP-ISM",
+    "relationship": "related",
+    "notes": "ISO 27002 incident management guidance (5.24) aligns with ITIL 4 Information Security Management practice."
+  },
+  {
+    "id": "map-990",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "iso27017-CLD.6.3.1",
+    "relationship": "related",
+    "notes": "ISO 27005 risk assessment in cloud contexts uses ISO 27017 shared responsibility as a risk factor."
+  },
+  {
+    "id": "map-991",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "iso27018-A.10",
+    "relationship": "related",
+    "notes": "ISO 27005 risk assessment for PII processing systems considers ISO 27018 PII security controls as treatment."
+  },
+  {
+    "id": "map-992",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "iso27701-6.1",
+    "relationship": "related",
+    "notes": "ISO 27005 information security risk assessment provides the methodology for ISO 27701 privacy risk planning."
+  },
+  {
+    "id": "map-993",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "pci-dss-12",
+    "relationship": "related",
+    "notes": "ISO 27005 risk assessment methodology supports PCI DSS Requirement 12 risk assessment programme."
+  },
+  {
+    "id": "map-994",
+    "sourceControlId": "iso27005-5.1",
+    "targetControlId": "iso38500-T1",
+    "relationship": "related",
+    "notes": "ISO 27005 context establishment supports the ISO 38500 Evaluate task for governing body risk evaluation."
+  },
+  {
+    "id": "map-995",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "itil-v3-SD-ISM",
+    "relationship": "related",
+    "notes": "ISO 27005 risk assessment provides the risk methodology used by ITIL v3 Information Security Management."
+  },
+  {
+    "id": "map-996",
+    "sourceControlId": "iso27005-5.2",
+    "targetControlId": "itil-v4-GMP-RISK",
+    "relationship": "related",
+    "notes": "ISO 27005 information security risk assessment methodology supports ITIL 4 Risk Management practice."
+  },
+  {
+    "id": "map-997",
+    "sourceControlId": "iso27017-CLD.6.3.1",
+    "targetControlId": "bait-7",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud provider/customer role sharing aligns with BAIT Chapter 7 IT outsourcing and cloud requirements."
+  },
+  {
+    "id": "map-998",
+    "sourceControlId": "iso27017-CLD.12.4.5",
+    "targetControlId": "pci-dss-10",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud monitoring controls support PCI DSS Requirement 10 logging and monitoring in cloud environments."
+  },
+  {
+    "id": "map-999",
+    "sourceControlId": "iso27017-CLD.6.3.1",
+    "targetControlId": "tisax-IS-10",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud role sharing aligns with TISAX IS-10 third-party and cloud supplier security requirements."
+  },
+  {
+    "id": "map-1000",
+    "sourceControlId": "iso27017-CLD.6.3.1",
+    "targetControlId": "cobit-APO10",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud service provider role sharing aligns with COBIT APO10 vendor management controls."
+  },
+  {
+    "id": "map-1001",
+    "sourceControlId": "iso27017-CLD.12.4.5",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud compliance controls support ISO 38500 Principle 5 conformance with legislation."
+  },
+  {
+    "id": "map-1002",
+    "sourceControlId": "iso27017-CLD.6.3.1",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud risk factors (shared responsibility) feed into the ISO 31000 risk assessment process."
+  },
+  {
+    "id": "map-1003",
+    "sourceControlId": "iso27017-CLD.12.4.5",
+    "targetControlId": "itil-v3-SO-EvM",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud monitoring controls align with ITIL v3 Event Management in cloud-hosted IT services."
+  },
+  {
+    "id": "map-1004",
+    "sourceControlId": "iso27017-CLD.12.4.5",
+    "targetControlId": "itil-v4-SMP-MON",
+    "relationship": "related",
+    "notes": "ISO 27017 cloud monitoring controls align with ITIL 4 Monitoring and Event Management practice."
+  },
+  {
+    "id": "map-1005",
+    "sourceControlId": "iso27018-A.9",
+    "targetControlId": "bait-7",
+    "relationship": "related",
+    "notes": "ISO 27018 PII processor instructions align with BAIT Chapter 7 outsourcing and cloud contractual requirements."
+  },
+  {
+    "id": "map-1006",
+    "sourceControlId": "iso27018-A.10",
+    "targetControlId": "pci-dss-3",
+    "relationship": "related",
+    "notes": "ISO 27018 PII security controls complement PCI DSS cardholder data protection in cloud environments."
+  },
+  {
+    "id": "map-1007",
+    "sourceControlId": "iso27018-A.2",
+    "targetControlId": "tisax-PP-1",
+    "relationship": "related",
+    "notes": "ISO 27018 purpose specification for PII aligns with TISAX PP-1 prototype and data protection requirements."
+  },
+  {
+    "id": "map-1008",
+    "sourceControlId": "iso27018-A.9",
+    "targetControlId": "cobit-APO14",
+    "relationship": "related",
+    "notes": "ISO 27018 processor obligations for PII align with COBIT APO14 data governance and management objectives."
+  },
+  {
+    "id": "map-1009",
+    "sourceControlId": "iso27018-A.11",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "ISO 27018 privacy compliance aligns with ISO 38500 Principle 5 conformance with laws and regulations."
+  },
+  {
+    "id": "map-1010",
+    "sourceControlId": "iso27018-A.10",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "related",
+    "notes": "ISO 27018 PII risk controls are selected based on the ISO 31000 risk assessment and treatment process."
+  },
+  {
+    "id": "map-1011",
+    "sourceControlId": "iso27018-A.10",
+    "targetControlId": "itil-v3-SD-ISM",
+    "relationship": "related",
+    "notes": "ISO 27018 PII security measures align with ITIL v3 Information Security Management in cloud service delivery."
+  },
+  {
+    "id": "map-1012",
+    "sourceControlId": "iso27018-A.10",
+    "targetControlId": "itil-v4-GMP-ISM",
+    "relationship": "related",
+    "notes": "ISO 27018 PII security controls align with ITIL 4 Information Security Management practice for cloud services."
+  },
+  {
+    "id": "map-1013",
+    "sourceControlId": "iso27701-5.2",
+    "targetControlId": "bait-4",
+    "relationship": "related",
+    "notes": "ISO 27701 PIMS context requirements complement BAIT Chapter 4 ISMS for banks processing personal data."
+  },
+  {
+    "id": "map-1014",
+    "sourceControlId": "iso27701-A.7.2.1",
+    "targetControlId": "pci-dss-12",
+    "relationship": "related",
+    "notes": "ISO 27701 purpose identification for PII processing aligns with PCI DSS security programme accountability."
+  },
+  {
+    "id": "map-1015",
+    "sourceControlId": "iso27701-A.7.4.1",
+    "targetControlId": "tisax-PP-2",
+    "relationship": "related",
+    "notes": "ISO 27701 data subject rights management aligns with TISAX PP-2 data protection and privacy controls."
+  },
+  {
+    "id": "map-1016",
+    "sourceControlId": "iso27701-5.2",
+    "targetControlId": "cobit-APO14",
+    "relationship": "related",
+    "notes": "ISO 27701 PIMS context aligns with COBIT APO14 data governance for organisations processing personal data."
+  },
+  {
+    "id": "map-1017",
+    "sourceControlId": "iso27701-5.2",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "ISO 27701 privacy compliance aligns with ISO 38500 Principle 5 IT conformance with privacy legislation."
+  },
+  {
+    "id": "map-1018",
+    "sourceControlId": "iso27701-5.2",
+    "targetControlId": "itil-v3-SD-ISM",
+    "relationship": "related",
+    "notes": "ISO 27701 privacy-extended ISMS aligns with ITIL v3 Information Security Management in service delivery."
+  },
+  {
+    "id": "map-1019",
+    "sourceControlId": "iso27701-5.2",
+    "targetControlId": "itil-v4-GMP-ISM",
+    "relationship": "related",
+    "notes": "ISO 27701 PIMS aligns with ITIL 4 Information Security Management practice for privacy-aware service delivery."
+  },
+  {
+    "id": "map-1020",
+    "sourceControlId": "bait-2",
+    "targetControlId": "cobit-EDM01",
+    "relationship": "related",
+    "notes": "BAIT Chapter 2 IT governance structures (ISB) align with COBIT EDM01 governance framework design."
+  },
+  {
+    "id": "map-1021",
+    "sourceControlId": "bait-2",
+    "targetControlId": "iso38500-T2",
+    "relationship": "related",
+    "notes": "BAIT Chapter 2 IT governance responsibilities align with ISO 38500 Direct task for IT governing bodies."
+  },
+  {
+    "id": "map-1022",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "cobit-EDM03",
+    "relationship": "related",
+    "notes": "PCI DSS security programme management aligns with COBIT EDM03 risk optimisation governance objectives."
+  },
+  {
+    "id": "map-1023",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "PCI DSS security programme compliance aligns with ISO 38500 Principle 5 IT conformance with regulations."
+  },
+  {
+    "id": "map-1024",
+    "sourceControlId": "pci-dss-12",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "related",
+    "notes": "PCI DSS risk assessment requirement (Req. 12) uses ISO 31000 risk assessment methodology."
+  },
+  {
+    "id": "map-1025",
+    "sourceControlId": "pci-dss-10",
+    "targetControlId": "itil-v3-SO-EvM",
+    "relationship": "related",
+    "notes": "PCI DSS logging and monitoring (Req. 10) aligns with ITIL v3 Event Management in Service Operation."
+  },
+  {
+    "id": "map-1026",
+    "sourceControlId": "pci-dss-10",
+    "targetControlId": "itil-v4-SMP-MON",
+    "relationship": "related",
+    "notes": "PCI DSS logging and monitoring (Req. 10) aligns with ITIL 4 Monitoring and Event Management practice."
+  },
+  {
+    "id": "map-1027",
+    "sourceControlId": "tisax-IS-2",
+    "targetControlId": "cobit-APO12",
+    "relationship": "related",
+    "notes": "TISAX IS-2 risk management aligns with COBIT APO12 risk identification and response management."
+  },
+  {
+    "id": "map-1028",
+    "sourceControlId": "tisax-IS-1",
+    "targetControlId": "iso38500-P5",
+    "relationship": "related",
+    "notes": "TISAX IS-1 security governance aligns with ISO 38500 Principle 5 conformance with laws and standards."
+  },
+  {
+    "id": "map-1029",
+    "sourceControlId": "tisax-IS-9",
+    "targetControlId": "itil-v3-SO-IM",
+    "relationship": "related",
+    "notes": "TISAX IS-9 incident management aligns with ITIL v3 Incident Management process."
+  },
+  {
+    "id": "map-1030",
+    "sourceControlId": "tisax-IS-9",
+    "targetControlId": "itil-v4-SMP-INC",
+    "relationship": "related",
+    "notes": "TISAX IS-9 incident management aligns with ITIL 4 Incident Management practice."
+  },
+  {
+    "id": "map-1031",
+    "sourceControlId": "iso38500-T1",
+    "targetControlId": "iso31000-6.4",
+    "relationship": "related",
+    "notes": "ISO 38500 Evaluate task for governing bodies uses ISO 31000 risk assessment methodology."
   }
 ]

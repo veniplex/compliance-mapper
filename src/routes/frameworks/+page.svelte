@@ -79,8 +79,8 @@
 	<div style="flex:1;min-width:0">
 		<h1 class="text-3xl font-bold">Compliance Mapper</h1>
 		<p class="mt-2 text-base text-gray-600 dark:text-gray-400 max-w-3xl">
-			Explore and compare cybersecurity &amp; privacy compliance frameworks. See how controls map
-			across ISO 27001, NIS2, GDPR, DORA, CIS Controls and NIST CSF — so you can close gaps and
+			Explore and compare cybersecurity &amp; compliance frameworks. See how controls map
+			across ISO 27001, NIS2, GDPR, DORA, NIST CSF, PCI DSS, COBIT, ITIL, BAIT, TISAX and more — so you can close gaps and
 			reduce duplication.
 		</p>
 		{#if stats}
