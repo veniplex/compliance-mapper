@@ -18,6 +18,9 @@ export const mappings = writable([]);
 /** Progress map: controlId → status */
 export const progress = writable({});
 
+/** Todo checks map: controlId → { todoIndex → boolean } */
+export const todoChecks = writable({});
+
 /** Whether the database/auth is enabled */
 export const dbEnabled = writable(true);
 
@@ -60,5 +63,6 @@ export function clearAuth() {
 	user.set(null);
 	token.set(null);
 	progress.set({});
+	todoChecks.set({});
 	persistAuth(null, null);
 }

@@ -4,7 +4,9 @@
 	import FwBadge from '$lib/components/FwBadge.svelte';
 	import ProgressBadge from '$lib/components/ProgressBadge.svelte';
 	import MappingDetailModal from '$lib/components/MappingDetailModal.svelte';
+	import ControlDetailModal from '$lib/components/ControlDetailModal.svelte';
 	import { PROGRESS_CYCLE, getPreferences, getDeduplicatedMappings, getFromControl } from '$lib/utils.js';
+	import todosData from '../../../data/todos.json';
 
 	const DEFAULT_FW = 'iso27001';
 
@@ -22,12 +24,22 @@
 	/** @type {{ mapping: any, otherControl: any, fromRelationship: string, toRelationship: string, isAsymmetric: boolean } | null} */
 	let selectedEntry = $state(null);
 
+	// Control-detail modal (todos & details for a single control)
+	let controlDetailOpen = $state(false);
+	/** @type {any} */
+	let selectedControl = $state(null);
+
 	const selectedControls = $derived(selectedFwId ? ($controlsData[selectedFwId] || []) : []);
 	const otherFrameworks = $derived($frameworks.filter((f) => f.id !== selectedFwId));
 
 	function openMappingDetail(entry) {
 		selectedEntry = entry;
 		mappingModalOpen = true;
+	}
+
+	function openControlDetail(control) {
+		selectedControl = control;
+		controlDetailOpen = true;
 	}
 
 	function getMappingToFw(controlId, fwId) {
@@ -133,7 +145,10 @@
 								{/if}
 								<div class="control-cell min-w-0">
 									<div class="ref" style="color:{$frameworks.find(f=>f.id===selectedFwId)?.color ?? 'inherit'}">{control.ref}</div>
-									<div class="title text-gray-600 dark:text-gray-400">{control.title}</div>
+									<button
+										class="title text-gray-600 dark:text-gray-400 text-left hover:text-blue-600 dark:hover:text-blue-400 hover:underline cursor-pointer bg-transparent border-0 p-0 font-[inherit] text-[inherit]"
+										onclick={() => openControlDetail(control)}
+									>{control.title}</button>
 									{#if control.theme}
 										<span class="text-xs px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 mt-1 inline-block">{control.theme}</span>
 									{/if}
@@ -169,7 +184,7 @@
 	<p class="mt-3 text-xs text-gray-500 dark:text-gray-400 text-center">
 		<span class="mapping-sym equivalent" style="display:inline-flex">≡</span> Equivalent &nbsp;
 		<span class="mapping-sym related" style="display:inline-flex">~</span> Related &nbsp;
-		<span class="mapping-sym none" style="display:inline-flex">—</span> No mapping &nbsp;· Click an icon to view details
+		<span class="mapping-sym none" style="display:inline-flex">—</span> No mapping &nbsp;· Click an icon to view mapping details · Click a control name to view todos
 	</p>
 {/if}
 
@@ -180,4 +195,12 @@
 	fromFramework={selectedFromFw}
 	toFramework={selectedToFw}
 	onclose={() => (mappingModalOpen = false)}
+/>
+
+<ControlDetailModal
+	open={controlDetailOpen}
+	control={selectedControl}
+	framework={selectedControl ? $frameworks.find((f) => f.id === selectedControl.frameworkId) : null}
+	todos={selectedControl ? (todosData[selectedControl.id] ?? []) : []}
+	onclose={() => (controlDetailOpen = false)}
 />

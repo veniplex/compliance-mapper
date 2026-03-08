@@ -1,11 +1,23 @@
 <script>
 	import { frameworks, controlsData, mappings } from '$lib/stores.js';
 	import FwBadge from '$lib/components/FwBadge.svelte';
+	import ControlDetailModal from '$lib/components/ControlDetailModal.svelte';
 	import { getDeduplicatedMappings } from '$lib/utils.js';
+	import todosData from '../../../data/todos.json';
 
 	let fwAId = $state('');
 	let fwBId = $state('');
 	let filterRelation = $state('all');
+
+	// Control detail modal
+	/** @type {any} */
+	let detailControl = $state(null);
+	let detailOpen = $state(false);
+
+	function openControlDetail(control) {
+		detailControl = control;
+		detailOpen = true;
+	}
 
 	// Default to first two frameworks once loaded
 	$effect(() => {
@@ -152,7 +164,7 @@
 							{#if fwA}<FwBadge fw={fwA} />{/if}
 						</div>
 						<span class="inline-block font-mono text-xs font-bold px-2 py-0.5 rounded mb-1" style="background:{fwA?.color ?? '#6b7280'}20;color:{fwA?.color ?? '#6b7280'}">{leftControl.ref}</span>
-						<p class="font-semibold text-sm mt-1">{leftControl.title}</p>
+						<p class="font-semibold text-sm mt-1"><button class="ctrl-title-btn" onclick={() => openControlDetail(leftControl)}>{leftControl.title}</button></p>
 						{#if leftControl.description}
 							<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">{leftControl.description}</p>
 						{/if}
@@ -198,7 +210,7 @@
 							{#if fwB}<FwBadge fw={fwB} />{/if}
 						</div>
 						<span class="inline-block font-mono text-xs font-bold px-2 py-0.5 rounded mb-1" style="background:{fwB?.color ?? '#6b7280'}20;color:{fwB?.color ?? '#6b7280'}">{toControl.ref}</span>
-						<p class="font-semibold text-sm mt-1">{toControl.title}</p>
+						<p class="font-semibold text-sm mt-1"><button class="ctrl-title-btn" onclick={() => openControlDetail(toControl)}>{toControl.title}</button></p>
 						{#if toControl.description}
 							<p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">{toControl.description}</p>
 						{/if}
@@ -237,6 +249,31 @@
 	<p class="mt-4 text-xs text-gray-500 dark:text-gray-400 text-center">
 		<span class="mapping-sym equivalent" style="display:inline-flex">≡</span> Equivalent &nbsp;
 		<span class="mapping-sym related" style="display:inline-flex">~</span> Related &nbsp;
-		<span class="mapping-sym asymmetric related" style="display:inline-flex">~</span> Asymmetric (A→B ≠ B→A)
+		<span class="mapping-sym asymmetric related" style="display:inline-flex">~</span> Asymmetric (A→B ≠ B→A) &nbsp;·&nbsp; Click a control name to view its implementation checklist
 	</p>
 {/if}
+
+<ControlDetailModal
+	open={detailOpen}
+	control={detailControl}
+	framework={detailControl ? $frameworks.find((f) => f.id === detailControl.frameworkId) : null}
+	todos={detailControl ? (todosData[detailControl.id] ?? []) : []}
+	onclose={() => (detailOpen = false)}
+/>
+
+
+<style>
+.ctrl-title-btn {
+background: transparent;
+border: 0;
+padding: 0;
+text-align: left;
+font: inherit;
+font-weight: 600;
+cursor: pointer;
+}
+.ctrl-title-btn:hover {
+text-decoration: underline;
+color: #2563eb; /* blue-600 */
+}
+</style>
