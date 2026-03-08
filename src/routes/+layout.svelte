@@ -26,6 +26,7 @@
 		'/compare': 'compare',
 		'/api-docs': 'apidocs',
 		'/dashboard': 'dashboard',
+		'/roadmap': 'roadmap',
 		'/settings': 'settings',
 	};
 
@@ -35,6 +36,7 @@
 		compare: '/compare',
 		apidocs: '/api-docs',
 		dashboard: '/dashboard',
+		roadmap: '/roadmap',
 		settings: '/settings',
 	};
 
