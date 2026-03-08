@@ -1,0 +1,4433 @@
+{
+  "iso27001-2013-A.5.1.1": [
+    "Draft and document the policies for information security policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.5.1.2": [
+    "Draft and document the review of the policies for information security policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.6.1.1": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-2013-A.6.1.2": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-2013-A.6.1.3": [
+    "Document the implementation approach for 'Contact with authorities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.6.1.4": [
+    "Document the implementation approach for 'Contact with special interest groups'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.6.1.5": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-2013-A.6.2.1": [
+    "Draft and document the mobile device policy policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.6.2.2": [
+    "Document the implementation approach for 'Teleworking'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.7.1.1": [
+    "Document the implementation approach for 'Screening'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.7.1.2": [
+    "Document the implementation approach for 'Terms and conditions of employment'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.7.2.1": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-2013-A.7.2.2": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "iso27001-2013-A.7.2.3": [
+    "Document the implementation approach for 'Disciplinary process'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.7.3.1": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-2013-A.8.1.1": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "iso27001-2013-A.8.1.2": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "iso27001-2013-A.8.1.3": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "iso27001-2013-A.8.1.4": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "iso27001-2013-A.8.2.1": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-2013-A.8.2.2": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-2013-A.8.2.3": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27001-2013-A.8.3.1": [
+    "Document the implementation approach for 'Management of removable media'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.8.3.2": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-2013-A.8.3.3": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.9.1.1": [
+    "Draft and document the access control policy policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.9.1.2": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.2.1": [
+    "Document the implementation approach for 'User registration and de-registration'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.9.2.2": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.2.3": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.2.4": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.2.5": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.9.2.6": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.3.1": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.4.1": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.4.2": [
+    "Draft and document the secure log-on procedures policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.9.4.3": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.4.4": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.9.4.5": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-2013-A.10.1.1": [
+    "Draft and document the policy on the use of cryptographic controls policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.10.1.2": [
+    "Define approved cryptographic algorithms and key lengths",
+    "Implement encryption for data at rest and in transit",
+    "Establish key management procedures (generation, storage, rotation)",
+    "Document key custodian responsibilities",
+    "Schedule annual cryptography policy review"
+  ],
+  "iso27001-2013-A.11.1.1": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.1.2": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.1.3": [
+    "Document the implementation approach for 'Securing offices, rooms and facilities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.11.1.4": [
+    "Subscribe to relevant threat intelligence sources",
+    "Define a process for consuming and acting on intelligence",
+    "Share applicable threat information with peers",
+    "Integrate intelligence into risk assessment activities",
+    "Review intelligence sources and relevance annually"
+  ],
+  "iso27001-2013-A.11.1.5": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.1.6": [
+    "Document the implementation approach for 'Delivery and loading areas'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.11.2.1": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.2.2": [
+    "Document the implementation approach for 'Supporting utilities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.11.2.3": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.2.4": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.2.5": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "iso27001-2013-A.11.2.6": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.2.7": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.2.8": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-2013-A.11.2.9": [
+    "Draft and document the clear desk and clear screen policy policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.12.1.1": [
+    "Draft and document the documented operating procedures policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.12.1.2": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-2013-A.12.1.3": [
+    "Document the implementation approach for 'Capacity management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.12.1.4": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-2013-A.12.2.1": [
+    "Document the implementation approach for 'Controls against malware'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.12.3.1": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27001-2013-A.12.4.1": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.12.4.2": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.12.4.3": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.12.4.4": [
+    "Document the implementation approach for 'Clock synchronisation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.12.5.1": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-2013-A.12.6.1": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "iso27001-2013-A.12.6.2": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-2013-A.12.7.1": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.13.1.1": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "iso27001-2013-A.13.1.2": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "iso27001-2013-A.13.1.3": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-2013-A.13.2.1": [
+    "Draft and document the information transfer policies and procedures policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.13.2.2": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-2013-A.13.2.3": [
+    "Document the implementation approach for 'Electronic messaging'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.13.2.4": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "iso27001-2013-A.14.1.1": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27001-2013-A.14.1.2": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "iso27001-2013-A.14.1.3": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-2013-A.14.2.1": [
+    "Draft and document the secure development policy policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.14.2.2": [
+    "Draft and document the system change control procedures policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.14.2.3": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.14.2.4": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-2013-A.14.2.5": [
+    "Document the implementation approach for 'Secure system engineering principles'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.14.2.6": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-2013-A.14.2.7": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27001-2013-A.14.2.8": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-2013-A.14.2.9": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-2013-A.14.3.1": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-2013-A.15.1.1": [
+    "Draft and document the information security policy for supplier relationships policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.15.1.2": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27001-2013-A.15.1.3": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.15.2.1": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.15.2.2": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27001-2013-A.16.1.1": [
+    "Draft and document the responsibilities and procedures policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.16.1.2": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.16.1.3": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.16.1.4": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27001-2013-A.16.1.5": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27001-2013-A.16.1.6": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27001-2013-A.16.1.7": [
+    "Document the implementation approach for 'Collection of evidence'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.17.1.1": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27001-2013-A.17.1.2": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27001-2013-A.17.1.3": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.17.2.1": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-2013-A.18.1.1": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "iso27001-2013-A.18.1.2": [
+    "Document the implementation approach for 'Intellectual property rights'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-2013-A.18.1.3": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.18.1.4": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-2013-A.18.1.5": [
+    "Define approved cryptographic algorithms and key lengths",
+    "Implement encryption for data at rest and in transit",
+    "Establish key management procedures (generation, storage, rotation)",
+    "Document key custodian responsibilities",
+    "Schedule annual cryptography policy review"
+  ],
+  "iso27001-2013-A.18.2.1": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-2013-A.18.2.2": [
+    "Draft and document the compliance with security policies and standards policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-2013-A.18.2.3": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-5.1": [
+    "Draft and document the policies for information security policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-5.2": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-5.3": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-5.4": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-5.5": [
+    "Document the implementation approach for 'Contact with authorities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-5.6": [
+    "Document the implementation approach for 'Contact with special interest groups'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-5.7": [
+    "Subscribe to relevant threat intelligence sources",
+    "Define a process for consuming and acting on intelligence",
+    "Share applicable threat information with peers",
+    "Integrate intelligence into risk assessment activities",
+    "Review intelligence sources and relevance annually"
+  ],
+  "iso27001-5.8": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.9": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.10": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.11": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "iso27001-5.12": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.13": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.14": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.15": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-5.16": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-5.17": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-5.18": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-5.19": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27001-5.20": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27001-5.21": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.22": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-5.23": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27001-5.24": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27001-5.25": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27001-5.26": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27001-5.27": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27001-5.28": [
+    "Document the implementation approach for 'Collection of evidence'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-5.29": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.30": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27001-5.31": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "iso27001-5.32": [
+    "Document the implementation approach for 'Intellectual property rights'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-5.33": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-5.34": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-5.35": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-5.36": [
+    "Draft and document the compliance with policies, rules and standards for information security policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-5.37": [
+    "Draft and document the documented operating procedures policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27001-6.1": [
+    "Document the implementation approach for 'Screening'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-6.2": [
+    "Document the implementation approach for 'Terms and conditions of employment'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-6.3": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "iso27001-6.4": [
+    "Document the implementation approach for 'Disciplinary process'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-6.5": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-6.6": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "iso27001-6.7": [
+    "Document the implementation approach for 'Remote working'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-6.8": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-7.1": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-7.2": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-7.3": [
+    "Document the implementation approach for 'Securing offices, rooms and facilities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-7.4": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-7.5": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-7.6": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-7.7": [
+    "Document the implementation approach for 'Clear desk and clear screen'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-7.8": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-7.9": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-7.10": [
+    "Document the implementation approach for 'Storage media'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-7.11": [
+    "Document the implementation approach for 'Supporting utilities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-7.12": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-7.13": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-7.14": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27001-8.1": [
+    "Document the implementation approach for 'User endpoint devices'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-8.2": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-8.3": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-8.4": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-8.5": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-8.6": [
+    "Document the implementation approach for 'Capacity management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-8.7": [
+    "Document the implementation approach for 'Protection against malware'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-8.8": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "iso27001-8.9": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "iso27001-8.10": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-8.11": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-8.12": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27001-8.13": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27001-8.14": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27001-8.15": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-8.16": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27001-8.17": [
+    "Document the implementation approach for 'Clock synchronisation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-8.18": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27001-8.19": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-8.20": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "iso27001-8.21": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "iso27001-8.22": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-8.23": [
+    "Document the implementation approach for 'Web filtering'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-8.24": [
+    "Define approved cryptographic algorithms and key lengths",
+    "Implement encryption for data at rest and in transit",
+    "Establish key management procedures (generation, storage, rotation)",
+    "Document key custodian responsibilities",
+    "Schedule annual cryptography policy review"
+  ],
+  "iso27001-8.25": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-8.26": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-8.27": [
+    "Document the implementation approach for 'Secure system architecture and engineering principles'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-8.28": [
+    "Document the implementation approach for 'Secure coding'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27001-8.29": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-8.30": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27001-8.31": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27001-8.32": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27001-8.33": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27001-8.34": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "nis2-art21-a": [
+    "Draft and document the policies on risk analysis and information system security policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "nis2-art21-b": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "nis2-art21-c": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "nis2-art21-d": [
+    "Document the implementation approach for 'Supply chain security'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nis2-art21-e": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "nis2-art21-f": [
+    "Draft and document the policies and procedures to assess effectiveness of cybersecurity measures policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "nis2-art21-g": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "nis2-art21-h": [
+    "Draft and document the policies and procedures regarding cryptography policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "nis2-art21-i": [
+    "Draft and document the human resources security, access control policies and asset management policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "nis2-art21-j": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "nis2-art23-1": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "nis2-art23-3": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "nis2-art20-1": [
+    "Draft and document the governance — management body responsibility policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "nis2-art20-2": [
+    "Draft and document the governance — management body training policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "gdpr-art5-1f": [
+    "Document the implementation approach for 'Integrity and confidentiality'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "gdpr-art25": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "gdpr-art30": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "gdpr-art32": [
+    "Document the implementation approach for 'Security of processing'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "gdpr-art33": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "gdpr-art34": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "gdpr-art35": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "gdpr-art37": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "gdpr-art28": [
+    "Document the implementation approach for 'Processor'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "dora-art5": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "dora-art6": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "dora-art7": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "dora-art8": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "dora-art9": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "dora-art10": [
+    "Document the implementation approach for 'Detection'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "dora-art11": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "dora-art12": [
+    "Draft and document the backup policies and restoration policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "dora-art13": [
+    "Document the implementation approach for 'Learning and evolving'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "dora-art17": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "dora-art19": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "dora-art24": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "dora-art28": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "dora-art30": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "cis-1": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "cis-2": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "cis-3": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "cis-4": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "cis-5": [
+    "Document the implementation approach for 'Account Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cis-6": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "cis-7": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "cis-8": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "cis-9": [
+    "Document the implementation approach for 'Email and Web Browser Protections'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cis-10": [
+    "Document the implementation approach for 'Malware Defences'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cis-11": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "cis-12": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "cis-13": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "cis-14": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "cis-15": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "cis-16": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "cis-17": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "cis-18": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "nistcsf-GV.OC": [
+    "Document the implementation approach for 'Organisational Context'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nistcsf-GV.RM": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "nistcsf-GV.RR": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "nistcsf-GV.PO": [
+    "Draft and document the policy policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "nistcsf-GV.OV": [
+    "Document the implementation approach for 'Oversight'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nistcsf-GV.SC": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "nistcsf-ID.AM": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "nistcsf-ID.RA": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "nistcsf-ID.IM": [
+    "Document the implementation approach for 'Improvement'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nistcsf-PR.AA": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "nistcsf-PR.AT": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "nistcsf-PR.DS": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "nistcsf-PR.PS": [
+    "Document the implementation approach for 'Platform Security'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nistcsf-PR.IR": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "nistcsf-DE.CM": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "nistcsf-DE.AE": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "nistcsf-RS.MA": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "nistcsf-RS.AN": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "nistcsf-RS.CO": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "nistcsf-RS.MI": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "nistcsf-RC.RP": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "nistcsf-RC.CO": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "kritis-8a-1": [
+    "Document the implementation approach for 'State-of-the-art technical and organisational security measures'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "kritis-8a-1a": [
+    "Document the implementation approach for 'Systems for attack detection'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "kritis-8a-3": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "kritis-8b-3": [
+    "Document the implementation approach for 'Registration with BSI'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "kritis-8b-4a": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "kritis-8d": [
+    "Document the implementation approach for 'Critical components and manufacturers'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "kritis-8a-2": [
+    "Draft and document the industry-specific security standards as compliance reference policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "kritis-8a-4": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "kritis-8b-4": [
+    "Document the implementation approach for 'Contact point always reachable'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "kritis-8c": [
+    "Document the implementation approach for 'Obligations for digital infrastructure operators'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "kritis-8f": [
+    "Document the implementation approach for 'Security obligations for entities of special public interest (UNBÖFI)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nis2umsg-30": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "nis2umsg-32": [
+    "Document the implementation approach for 'Minimum security measures for important entities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nis2umsg-35": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "nis2umsg-38": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "nis2umsg-39": [
+    "Document the implementation approach for 'Supply chain security'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nis2umsg-43": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "nis2umsg-28": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "nis2umsg-31": [
+    "Document the implementation approach for 'Minimum security measures — 12 categories'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nis2umsg-34": [
+    "Document the implementation approach for 'Supervisory and enforcement measures for essential entities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nis2umsg-36": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "nis2umsg-40": [
+    "Document the implementation approach for 'Use of European cybersecurity certification'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "nis2umsg-41": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "nis2umsg-65": [
+    "Document the implementation approach for 'Administrative fines'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-isms-1": [
+    "Document the implementation approach for 'Security Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-orp-1": [
+    "Document the implementation approach for 'Organisation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-orp-2": [
+    "Document the implementation approach for 'Personnel'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-orp-3": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "bsi-gs-orp-4": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "bsi-gs-con-1": [
+    "Define approved cryptographic algorithms and key lengths",
+    "Implement encryption for data at rest and in transit",
+    "Establish key management procedures (generation, storage, rotation)",
+    "Document key custodian responsibilities",
+    "Schedule annual cryptography policy review"
+  ],
+  "bsi-gs-con-3": [
+    "Draft and document the data backup policy policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "bsi-gs-ops-1": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "bsi-gs-der-1": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "bsi-gs-der-2": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "bsi-gs-der-4": [
+    "Document the implementation approach for 'IT Emergency Management (BCM)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-net-1": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "bsi-gs-sys-1": [
+    "Document the implementation approach for 'General Server'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-orp-5": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "bsi-gs-con-2": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "bsi-gs-con-6": [
+    "Document the implementation approach for 'Delete and Destroy'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-ops-1-1-2": [
+    "Document the implementation approach for 'Proper IT Operations'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-ops-1-1-4": [
+    "Document the implementation approach for 'Protection Against Malware'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-ops-1-1-5": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "bsi-gs-ops-2-2": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "bsi-gs-ops-2-3": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "bsi-gs-der-3-1": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "bsi-gs-net-3-2": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "bsi-gs-inf-1": [
+    "Document the implementation approach for 'General Buildings'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-inf-2": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "bsi-gs-sys-2-1": [
+    "Document the implementation approach for 'General Client'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bsi-gs-app-3-1": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27002-5.1": [
+    "Draft and document the policies for information security policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27002-5.2": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27002-5.3": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27002-5.4": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27002-5.5": [
+    "Document the implementation approach for 'Contact with authorities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-5.6": [
+    "Document the implementation approach for 'Contact with special interest groups'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-5.7": [
+    "Subscribe to relevant threat intelligence sources",
+    "Define a process for consuming and acting on intelligence",
+    "Share applicable threat information with peers",
+    "Integrate intelligence into risk assessment activities",
+    "Review intelligence sources and relevance annually"
+  ],
+  "iso27002-5.8": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.9": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.10": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.11": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "iso27002-5.12": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.13": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.14": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.15": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-5.16": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-5.17": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-5.18": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-5.19": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27002-5.20": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27002-5.21": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.22": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27002-5.23": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27002-5.24": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27002-5.25": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27002-5.26": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27002-5.27": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27002-5.28": [
+    "Document the implementation approach for 'Collection of evidence'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-5.29": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.30": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27002-5.31": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "iso27002-5.32": [
+    "Document the implementation approach for 'Intellectual property rights'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-5.33": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27002-5.34": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-5.35": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27002-5.36": [
+    "Draft and document the compliance with policies, rules and standards for information security policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27002-5.37": [
+    "Draft and document the documented operating procedures policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27002-6.1": [
+    "Document the implementation approach for 'Screening'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-6.2": [
+    "Document the implementation approach for 'Terms and conditions of employment'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-6.3": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "iso27002-6.4": [
+    "Document the implementation approach for 'Disciplinary process'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-6.5": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27002-6.6": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "iso27002-6.7": [
+    "Document the implementation approach for 'Remote working'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-6.8": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27002-7.1": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-7.2": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-7.3": [
+    "Document the implementation approach for 'Securing offices, rooms and facilities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-7.4": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27002-7.5": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-7.6": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-7.7": [
+    "Document the implementation approach for 'Clear desk and clear screen'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-7.8": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-7.9": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-7.10": [
+    "Document the implementation approach for 'Storage media'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-7.11": [
+    "Document the implementation approach for 'Supporting utilities'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-7.12": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-7.13": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-7.14": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27002-8.1": [
+    "Document the implementation approach for 'User endpoint devices'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-8.2": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-8.3": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-8.4": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-8.5": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-8.6": [
+    "Document the implementation approach for 'Capacity management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-8.7": [
+    "Document the implementation approach for 'Protection against malware'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-8.8": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "iso27002-8.9": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "iso27002-8.10": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-8.11": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-8.12": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "iso27002-8.13": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27002-8.14": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "iso27002-8.15": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27002-8.16": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27002-8.17": [
+    "Document the implementation approach for 'Clock synchronisation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-8.18": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27002-8.19": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27002-8.20": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "iso27002-8.21": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "iso27002-8.22": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27002-8.23": [
+    "Document the implementation approach for 'Web filtering'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-8.24": [
+    "Define approved cryptographic algorithms and key lengths",
+    "Implement encryption for data at rest and in transit",
+    "Establish key management procedures (generation, storage, rotation)",
+    "Document key custodian responsibilities",
+    "Schedule annual cryptography policy review"
+  ],
+  "iso27002-8.25": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27002-8.26": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27002-8.27": [
+    "Document the implementation approach for 'Secure system architecture and engineering principles'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-8.28": [
+    "Document the implementation approach for 'Secure coding'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27002-8.29": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27002-8.30": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27002-8.31": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27002-8.32": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "iso27002-8.33": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27002-8.34": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27005-5": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27005-5.1": [
+    "Document the implementation approach for 'Context establishment'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27005-5.2": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27005-5.2.1": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27005-5.2.2": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27005-5.2.3": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27005-5.3": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27005-5.3.1": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27005-5.3.2": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27005-5.4": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27005-5.5": [
+    "Document the implementation approach for 'Communication and consultation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27005-5.6": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27017-CLD.6.3.1": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27017-CLD.8.1.5": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "iso27017-CLD.9.5.1": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27017-CLD.9.5.2": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "iso27017-CLD.12.1.5": [
+    "Document the implementation approach for 'Administrator's operational security'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27017-CLD.12.4.5": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso27017-CLD.13.1.4": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "iso27017-CLD.13.2.6": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27017-6.1": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso27017-12.1": [
+    "Draft and document the operational procedures and responsibilities (cloud) policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "iso27018-A.1": [
+    "Document the implementation approach for 'Consent and choice'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27018-A.2": [
+    "Document the implementation approach for 'Purpose legitimacy and specification'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27018-A.3": [
+    "Document the implementation approach for 'Collection limitation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27018-A.4": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27018-A.5": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27018-A.6": [
+    "Document the implementation approach for 'Accuracy and quality'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27018-A.7": [
+    "Document the implementation approach for 'Openness, transparency and notice'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27018-A.8": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27018-A.9": [
+    "Document the implementation approach for 'Accountability'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27018-A.10": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27018-A.11": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27701-5.2": [
+    "Document the implementation approach for 'Understanding the organisation and its context (PIMS)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27701-5.4": [
+    "Document the implementation approach for 'Leadership and commitment (PIMS)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27701-6.1": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso27701-7.2.1": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "iso27701-7.3.1": [
+    "Identify training needs per role",
+    "Develop or source relevant training content",
+    "Deliver training to all relevant personnel",
+    "Track completion and maintain training records",
+    "Review training effectiveness annually"
+  ],
+  "iso27701-A.7.2.1": [
+    "Document the implementation approach for 'Identify and document purpose (controller)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27701-A.7.2.2": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "iso27701-A.7.3.1": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "iso27701-A.7.4.1": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "iso27701-A.8.2.1": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "iso27701-A.8.4.1": [
+    "Document the implementation approach for 'Temporary files (processor)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso27701-A.8.5.1": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "bait-1": [
+    "Document the implementation approach for 'IT Strategy'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bait-2": [
+    "Draft and document the it governance policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "bait-3": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "bait-4": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "bait-5": [
+    "Document the implementation approach for 'IT Operations and Availability'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bait-6": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "bait-7": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "bait-8": [
+    "Document the implementation approach for 'Critical Infrastructure Protection (KRITIS)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bait-9": [
+    "Document the implementation approach for 'Payment Transactions Security'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "bait-10": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "bait-11": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "bait-12": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "pci-dss-1": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "pci-dss-2": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "pci-dss-3": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "pci-dss-4": [
+    "Define approved cryptographic algorithms and key lengths",
+    "Implement encryption for data at rest and in transit",
+    "Establish key management procedures (generation, storage, rotation)",
+    "Document key custodian responsibilities",
+    "Schedule annual cryptography policy review"
+  ],
+  "pci-dss-5": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "pci-dss-6": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "pci-dss-7": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "pci-dss-8": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "pci-dss-9": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "pci-dss-10": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "pci-dss-11": [
+    "Document network architecture and segmentation design",
+    "Implement and configure network security controls",
+    "Restrict inbound/outbound traffic by least-privilege rules",
+    "Monitor network traffic for anomalies",
+    "Review and update firewall rules quarterly"
+  ],
+  "pci-dss-12": [
+    "Draft and document the support information security with organisational policies and programs policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "tisax-IS-1": [
+    "Draft and document the information security policy and organisation policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "tisax-IS-2": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "tisax-IS-3": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "tisax-IS-4": [
+    "Document the implementation approach for 'Human Resources Security'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "tisax-IS-5": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "tisax-IS-6": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "tisax-IS-7": [
+    "Define approved cryptographic algorithms and key lengths",
+    "Implement encryption for data at rest and in transit",
+    "Establish key management procedures (generation, storage, rotation)",
+    "Document key custodian responsibilities",
+    "Schedule annual cryptography policy review"
+  ],
+  "tisax-IS-8": [
+    "Document the implementation approach for 'Operations Security'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "tisax-IS-9": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "tisax-IS-10": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "tisax-PP-1": [
+    "Define and document physical security perimeters",
+    "Implement physical access controls and visitor procedures",
+    "Inspect physical security controls regularly",
+    "Label and inventory physical assets",
+    "Dispose of equipment securely in accordance with policy"
+  ],
+  "tisax-PP-2": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "cobit-EDM01": [
+    "Draft and document the ensure governance framework setting and maintenance policy",
+    "Obtain formal management approval and sign-off",
+    "Distribute the policy to all affected personnel",
+    "Set up an annual review cycle for the policy",
+    "Record acknowledgment from relevant staff"
+  ],
+  "cobit-EDM02": [
+    "Document the implementation approach for 'Ensure Benefits Delivery'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-EDM03": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "cobit-EDM04": [
+    "Document the implementation approach for 'Ensure Resource Optimisation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-EDM05": [
+    "Document the implementation approach for 'Ensure Stakeholder Engagement'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO01": [
+    "Document the implementation approach for 'Manage the IT Management Framework'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO02": [
+    "Document the implementation approach for 'Manage Strategy'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO03": [
+    "Document the implementation approach for 'Manage Enterprise Architecture'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO04": [
+    "Document the implementation approach for 'Manage Innovation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO05": [
+    "Document the implementation approach for 'Manage Portfolio'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO06": [
+    "Document the implementation approach for 'Manage Budget and Costs'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO07": [
+    "Document the implementation approach for 'Manage Human Resources'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO08": [
+    "Document the implementation approach for 'Manage Relationships'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO09": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "cobit-APO10": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "cobit-APO11": [
+    "Document the implementation approach for 'Manage Quality'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO12": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "cobit-APO13": [
+    "Document the implementation approach for 'Manage Security'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-APO14": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "cobit-BAI01": [
+    "Document the implementation approach for 'Manage Programs'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-BAI02": [
+    "Document the implementation approach for 'Manage Requirements Definition'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-BAI03": [
+    "Document the implementation approach for 'Manage Solutions Identification and Build'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-BAI04": [
+    "Document the implementation approach for 'Manage Availability and Capacity'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-BAI05": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "cobit-BAI06": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "cobit-BAI07": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "cobit-BAI08": [
+    "Document the implementation approach for 'Manage Knowledge'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-BAI09": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "cobit-BAI10": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "cobit-BAI11": [
+    "Document the implementation approach for 'Manage Projects'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-DSS01": [
+    "Document the implementation approach for 'Manage Operations'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-DSS02": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "cobit-DSS03": [
+    "Document the implementation approach for 'Manage Problems'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-DSS04": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "cobit-DSS05": [
+    "Document the implementation approach for 'Manage Security Services'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-DSS06": [
+    "Document the implementation approach for 'Manage Business Process Controls'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-MEA01": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "cobit-MEA02": [
+    "Document the implementation approach for 'Manage System of Internal Control'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "cobit-MEA03": [
+    "Identify applicable legal and regulatory obligations",
+    "Document compliance requirements in the control framework",
+    "Assign responsibility for monitoring regulatory changes",
+    "Conduct annual compliance gap assessment",
+    "Remediate identified compliance gaps within agreed timelines"
+  ],
+  "cobit-MEA04": [
+    "Document the implementation approach for 'Manage Assurance'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso38500-P1": [
+    "Define and document roles and responsibilities",
+    "Assign named owners for each responsibility",
+    "Review for conflicts of interest or segregation gaps",
+    "Communicate assignments to relevant personnel",
+    "Review and update assignments annually"
+  ],
+  "iso38500-P2": [
+    "Document the implementation approach for 'Strategy'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso38500-P3": [
+    "Document the implementation approach for 'Acquisition'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso38500-P4": [
+    "Document the implementation approach for 'Performance'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso38500-P5": [
+    "Document the implementation approach for 'Conformance'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso38500-P6": [
+    "Document the implementation approach for 'Human Behaviour'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso38500-T1": [
+    "Document the implementation approach for 'Evaluate (Governing Body Task)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso38500-T2": [
+    "Document the implementation approach for 'Direct (Governing Body Task)'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso38500-T3": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso31000-4": [
+    "Document the implementation approach for 'Principles'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-5": [
+    "Document the implementation approach for 'Framework'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-5.2": [
+    "Document the implementation approach for 'Leadership and commitment'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-5.3": [
+    "Document the implementation approach for 'Integration'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-5.4": [
+    "Document the implementation approach for 'Design'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-5.5": [
+    "Document the implementation approach for 'Implementation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-5.6": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso31000-5.7": [
+    "Document the implementation approach for 'Improvement'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-6.1": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso31000-6.2": [
+    "Document the implementation approach for 'Communication and consultation'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-6.3": [
+    "Document the implementation approach for 'Scope, context and criteria'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "iso31000-6.4": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso31000-6.4.2": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso31000-6.4.3": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso31000-6.4.4": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso31000-6.5": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "iso31000-6.6": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "iso31000-6.7": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "itil-v3-SS-SM": [
+    "Document the implementation approach for 'Strategy Management for IT Services'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SS-SPM": [
+    "Document the implementation approach for 'Service Portfolio Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SS-FM": [
+    "Document the implementation approach for 'Financial Management for IT Services'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SS-DM": [
+    "Document the implementation approach for 'Demand Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SS-BRM": [
+    "Document the implementation approach for 'Business Relationship Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SD-SLM": [
+    "Document the implementation approach for 'Service Level Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SD-AM": [
+    "Document the implementation approach for 'Availability Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SD-CapM": [
+    "Document the implementation approach for 'Capacity Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SD-ITSCM": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "itil-v3-SD-ISM": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "itil-v3-SD-SM": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "itil-v3-SD-DC": [
+    "Document the implementation approach for 'Design Coordination'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-ST-ChM": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "itil-v3-ST-SACM": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "itil-v3-ST-RDM": [
+    "Document the implementation approach for 'Release and Deployment Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-ST-KM": [
+    "Document the implementation approach for 'Knowledge Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-ST-SEV": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "itil-v3-SO-IM": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "itil-v3-SO-PM": [
+    "Document the implementation approach for 'Problem Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SO-EvM": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "itil-v3-SO-RF": [
+    "Document the implementation approach for 'Request Fulfilment'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-SO-AcM": [
+    "Define access control requirements and criteria",
+    "Implement least-privilege access provisioning",
+    "Enforce multi-factor authentication where required",
+    "Conduct quarterly access rights reviews",
+    "Remove or disable access promptly upon role change"
+  ],
+  "itil-v3-CSI-7SI": [
+    "Document the implementation approach for 'Seven-Step Improvement Process'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v3-CSI-SMR": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "itil-v4-GMP-ARC": [
+    "Document the implementation approach for 'Architecture Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-GMP-CI": [
+    "Document the implementation approach for 'Continual Improvement'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-GMP-ISM": [
+    "Define data classification categories and criteria",
+    "Label all data assets according to classification",
+    "Implement controls aligned to each classification level",
+    "Establish data retention and disposal procedures",
+    "Train staff on data handling requirements"
+  ],
+  "itil-v4-GMP-KM": [
+    "Document the implementation approach for 'Knowledge Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-GMP-MEA": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "itil-v4-GMP-ORM": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "itil-v4-GMP-PFM": [
+    "Document the implementation approach for 'Portfolio Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-GMP-PROJ": [
+    "Document the implementation approach for 'Project Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-GMP-REL": [
+    "Document the implementation approach for 'Relationship Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-GMP-RISK": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "itil-v4-GMP-SFM": [
+    "Document the implementation approach for 'Service Financial Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-GMP-STR": [
+    "Document the implementation approach for 'Strategy Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-GMP-SPC": [
+    "Identify and inventory all relevant suppliers/third parties",
+    "Include security requirements in contracts and SLAs",
+    "Conduct supplier security assessments",
+    "Monitor supplier compliance regularly",
+    "Define exit and contingency procedures for critical suppliers"
+  ],
+  "itil-v4-GMP-WFM": [
+    "Document the implementation approach for 'Workforce and Talent Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-AVL": [
+    "Document the implementation approach for 'Availability Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-BCA": [
+    "Identify and catalogue applicable risks",
+    "Assess likelihood and impact for each risk",
+    "Document risk treatment decisions",
+    "Assign risk owners and treatment timelines",
+    "Schedule periodic risk assessment reviews"
+  ],
+  "itil-v4-SMP-CAP": [
+    "Document the implementation approach for 'Capacity and Performance Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-CHG": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "itil-v4-SMP-INC": [
+    "Document the incident response procedure",
+    "Assign an incident response team/owner",
+    "Define escalation paths and contact lists",
+    "Conduct at least one tabletop exercise",
+    "Review and update procedure after each incident"
+  ],
+  "itil-v4-SMP-ITM": [
+    "Create and maintain a comprehensive asset inventory",
+    "Assign owners to all assets",
+    "Classify assets by sensitivity and criticality",
+    "Review and update asset inventory regularly",
+    "Define acceptable use rules for assets"
+  ],
+  "itil-v4-SMP-MON": [
+    "Define audit scope and objectives",
+    "Configure logging and monitoring tooling",
+    "Establish log retention periods and storage",
+    "Schedule regular audit/review activities",
+    "Assign responsibility for reviewing audit output"
+  ],
+  "itil-v4-SMP-PROB": [
+    "Document the implementation approach for 'Problem Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-REL": [
+    "Document the implementation approach for 'Release Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-SACM": [
+    "Define vulnerability management procedure and SLAs",
+    "Run regular vulnerability scans on in-scope systems",
+    "Triage and prioritise findings by severity",
+    "Apply patches within defined SLA timelines",
+    "Verify remediation and record closure evidence"
+  ],
+  "itil-v4-SMP-SCM": [
+    "Define backup scope, frequency, and retention",
+    "Implement and test automated backup procedures",
+    "Document and test restoration procedures",
+    "Maintain an up-to-date business continuity plan",
+    "Conduct annual business continuity tests"
+  ],
+  "itil-v4-SMP-SD": [
+    "Document the implementation approach for 'Service Design'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-SDM": [
+    "Document the implementation approach for 'Service Desk'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-SLM": [
+    "Document the implementation approach for 'Service Level Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-SRQ": [
+    "Document the implementation approach for 'Service Request Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-SMP-SVC": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ],
+  "itil-v4-TMP-DEP": [
+    "Document the implementation approach for 'Deployment Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-TMP-IIM": [
+    "Document the implementation approach for 'Infrastructure and Platform Management'",
+    "Assign a responsible owner for this control",
+    "Implement the required technical or organisational measures",
+    "Test and validate the effectiveness of the control",
+    "Schedule an annual review of the control"
+  ],
+  "itil-v4-TMP-SWD": [
+    "Define a formal change management / SDLC process",
+    "Require security review and testing before deployment",
+    "Maintain a change log with approvals",
+    "Test changes in a non-production environment first",
+    "Review and update change procedures annually"
+  ]
+}

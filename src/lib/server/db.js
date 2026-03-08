@@ -46,6 +46,16 @@ export async function initDb() {
       created_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       last_used_at TIMESTAMPTZ
     );
+
+    CREATE TABLE IF NOT EXISTS control_todo_checks (
+      id         SERIAL PRIMARY KEY,
+      user_id    INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      control_id TEXT NOT NULL,
+      todo_index INTEGER NOT NULL,
+      checked    BOOLEAN NOT NULL DEFAULT false,
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+      UNIQUE (user_id, control_id, todo_index)
+    );
   `);
 	await pool.query(`ALTER TABLE users ADD COLUMN IF NOT EXISTS username TEXT UNIQUE;`);
 }

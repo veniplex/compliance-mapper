@@ -10,6 +10,7 @@
 		controlsData,
 		mappings,
 		progress,
+		todoChecks,
 		dbEnabled,
 		initAuthFromStorage,
 		clearAuth,
@@ -61,7 +62,18 @@
 		}
 	}
 
+	async function loadTodoChecks() {
+		if (!$token) return;
+		try {
+			const data = await authFetch('GET', '/todos');
+			todoChecks.set(data);
+		} catch (err) {
+			if (err.status === 401) clearAuth();
+		}
+	}
+
 	setContext('loadProgress', loadProgress);
+	setContext('loadTodoChecks', loadTodoChecks);
 
 	onMount(async () => {
 		// Load config
@@ -103,7 +115,10 @@
 			console.error('Failed to load data:', err);
 		}
 
-		if ($token) await loadProgress();
+		if ($token) {
+			await loadProgress();
+			await loadTodoChecks();
+		}
 	});
 </script>
 
