@@ -42,6 +42,7 @@
 
 	const navItems = $derived([
 		{ view: 'dashboard', label: 'Dashboard', authRequired: true },
+		{ view: 'roadmap', label: 'Roadmap', authRequired: true },
 		{ view: 'frameworks', label: 'Frameworks', authRequired: false },
 		{ view: 'controls-table', label: 'Controls Table', authRequired: false },
 		{ view: 'compare', label: 'Compare', authRequired: false },
