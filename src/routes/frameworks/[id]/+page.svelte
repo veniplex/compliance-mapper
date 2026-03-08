@@ -8,7 +8,9 @@ import FwBadge from '$lib/components/FwBadge.svelte';
 import ProgressBadge from '$lib/components/ProgressBadge.svelte';
 import Modal from '$lib/components/Modal.svelte';
 import MappingDetailModal from '$lib/components/MappingDetailModal.svelte';
+import TodoChecklist from '$lib/components/TodoChecklist.svelte';
 import { PROGRESS_CYCLE, getPreferences, getDeduplicatedMappings, getFromControl } from '$lib/utils.js';
+import todosData from '../../../../data/todos.json';
 
 const loadProgress = getContext('loadProgress');
 
@@ -319,6 +321,7 @@ onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && openMappingDetail(entr
 </tbody>
 </table>
 </div>
+<TodoChecklist control={modalControl} todos={todosData[modalControl.id] ?? []} />
 </Modal>
 {/if}
 
